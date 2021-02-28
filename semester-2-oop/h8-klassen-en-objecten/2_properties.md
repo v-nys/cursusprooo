@@ -1,9 +1,4 @@
 # Properties
-
-{% hint style="success" %}
-[Kennisclip voor deze inhoud](https://youtu.be/qIg23NniDkM)
-{% endhint %}
-
 Properties zijn een feature van C♯ om de leesbaarheid van code te verhogen. Ze zien er uit zoals attributen, maar werken zoals methoden.
 
 {% hint style="info" %}

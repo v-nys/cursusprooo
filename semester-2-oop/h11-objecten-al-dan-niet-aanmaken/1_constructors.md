@@ -2,10 +2,6 @@
 
 ## Constructors
 
-{% hint style="success" %}
-[Kennisclip **tot vlak voor constructors met parameters**](https://youtu.be/SeQGk9MH9e8)\*\*\*\*
-{% endhint %}
-
 ### Werking new operator
 
 Objecten die je aanmaakt komen niet zomaar tot leven. Nieuwe objecten maken we aan met behulp van de `new` operator zoals we al gezien hebben:

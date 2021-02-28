@@ -379,7 +379,7 @@ Dit programma maakt enkele rechthoeken en driehoeken met gegeven afmetingen \(in
 
 ### Technische analyse
 
-Er is een klasse `Rectangle` met **full properties** `Width` en `Height` en een klasse `Triangle` met `Base` en `Height`. Je programma maakt de figuren die hierboven beschreven worden aan met beginwaarde `1.0` voor elke afmeting en stelt daarna hun afmetingen in via de setters voor deze properties. De oppervlakte wordt bepaald in een read-only property \(dus met alleen een getter en geen setter\). Deze heet `Surface` en is van het type `double`.
+Er is een klasse `Rechthoek` met **full properties** `Breedte` en `Hoogte` en een klasse `Driehoek` met `Basis` en `Hoogte`. Je programma maakt de figuren die hierboven beschreven worden aan met beginwaarde `1.0` voor elke afmeting en stelt daarna hun afmetingen in via de setters voor deze properties. De oppervlakte wordt bepaald in een read-only property \(dus met alleen een getter en geen setter\). Deze heet `Surface` en is van het type `double`.
 
 Indien om het even welk van deze properties wordt ingesteld op `0` of minder, signaleer je dit via de code `Console.WriteLine($"Het is verboden een (afmeting) van (waarde) in te stellen!")` \(zie voorbeeldcode\).
 
@@ -387,11 +387,11 @@ Indien om het even welk van deze properties wordt ingesteld op `0` of minder, si
 De wiskundige formule voor de oppervlakte van een driehoek is basis \* hoogte / 2.
 {% endhint %}
 
-Schrijf de voorbeelden uit in een `static` methode `CreateFigures` van de klasse `CustomObjectExercises`.
+Schrijf de voorbeelden uit in een `static` methode `DemonstreerFiguren` van de klasse `EigenObjectOefeningen`.
 
 #### Voorbeeldinteractie\(s\)
 
-\(Er worden twee rechthoeken en twee driehoeken aangemaakt. De afmetingen van de eerste rechthoek worden eerst op `-1` en `0` ingesteld.
+\(Er worden twee rechthoeken en twee driehoeken aangemaakt. De afmetingen van de eerste rechthoek worden eerst op `-1` en `0` ingesteld. Daarna krijgen ze de waarden die je ziet in het bericht hieronder. Formatteer ook met 1 cijfer na de komma.\)
 
 ```text
 Het is verboden een breedte van -1 in te stellen!
@@ -401,6 +401,3 @@ Een rechthoek met een breedte van 3m en een hoogte van 1m heeft een oppervlakte 
 Een driehoek met een basis van 3m en een hoogte van 1m heeft een oppervlakte van 1,5m².
 Een driehoek met een basis van 2m en een hoogte van 2m heeft een oppervlakte van 2m².
 ```
-
-## 
-
