@@ -246,5 +246,6 @@ public class Auto
 
 Dit maakt achter de schermen een privé-attribuut aan zoals `benzine` met kleine "b", maar met een een verborgen naam. We kunnen dus niet rechtstreeks aan dat attribuut.
 
-Wij zullen niet veel gebruik maken van autoproperties, omdat het verschil met publieke attributen pas in meer geavanceerde scenario's zichtbaar wordt. We geven ze hier mee zodat je ze kan herkennen als je ze tegenkomt.
-
+{% hint style="danger" %}
+Wij zullen geen gebruik maken van autoproperties, omdat het verschil met publieke attributen pas in meer geavanceerde scenario's zichtbaar wordt. We geven ze hier mee zodat je ze kan herkennen als je ze tegenkomt.
+{% endhint %}
