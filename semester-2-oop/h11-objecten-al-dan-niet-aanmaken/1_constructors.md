@@ -2,6 +2,10 @@
 
 ## Constructors
 
+{% hint style="success" %}
+[Kennisclip voor deze inhoud](https://youtu.be/f4HwuIax5IM)
+{% endhint %}
+
 ### Werking new operator
 
 Objecten die je aanmaakt komen niet zomaar tot leven. Nieuwe objecten maken we aan met behulp van de `new` operator zoals we al gezien hebben:
@@ -78,21 +82,17 @@ De constructor moet de naam van de klasse hebben, public zijn en geen returntype
 
 Vervolgens voegen we de code toe die we nodig hebben:
 
-{% hint style="danger" %}
-Dit is in veel programmeertalen slecht gebruik van `Random`, maar we hebben nog niet de nodige achtergrond om de juiste werkwijze te tonen. Dat komt binnenkort!
-{% endhint %}
-
 ```csharp
 class Auto
 {
     private int benzine = 5;
     private int kilometers;
+    private static Random randomGen = new Random();
     
-    public Student()
+    public Auto()
     {
-        Random r = new Random();
         // ook in de constructor kan je this gebruiken
-        this.kilometers = r.Next(0,200000);
+        this.kilometers = randomGen.Next(0,200000);
     }
 }
 ```
@@ -103,28 +103,7 @@ Telkens we nu een object zouden aanmaken met `new Auto()` zal deze een willekeur
 Zelfs als er een letterlijke initiële waarde wordt toegekend, gebeurt dit meestal in de constructor. Het is een kwestie van smaak, maar een constructor dient toch om te initialiseren.
 {% endhint %}
 
-#### Opmerking bij voorgaande code
-
-* Als je op een gelijkaardige manier in andere programmeertalen twee of meerdere Auto-objecten snel na mekaar aanmaakt zullen deze dezelfde kilometerstand hebben. Dit is omdat ieder object z'n eigen `Random` aanmaakt en zoals we weten zal een random generator dezelfde getallen genereren als deze vlak na mekaar \(in tijd\) zijn aangemaakt. Een oplossing zullen we hier later voor zien. Spoiler, `static` is de oplossing hiervoor:
-
-```csharp
-class Auto
-{
-    static Random r = new Random();
-    private int kilometers;
-    public Auto()
-    {
-        this.kilometers = r.Next(0,200000);
-    }
-}
-```
-
 #### Constructor met parameter\(s\)
-
-{% hint style="success" %}
-[Kennisclip voor constructors met parameters](https://youtu.be/9mWODDPE-fk)
-{% endhint %}
-
 Soms wil je argumenten aan een object meegeven bij creatie. We willen bijvoorbeeld de inhoud van de tank en de kilometerstand meegeven die het object moet hebben bij het aanmaken. Met andere woorden, stel dat we dit willen schrijven:
 
 ```csharp
@@ -180,11 +159,7 @@ Constructoren helpen dit probleem te voorkomen. Als we één constructor hebben,
 
 Samengevat: **als er eigenschappen zijn die je meteen bij het aanmaken van een object wil instellen, maak er dan parameters van een constructor voor**.
 
-**Constructor chaining**
-
-{% hint style="success" %}
-[Kennisclip voor constructor chaining](https://youtu.be/XMqVmywX22w)
-{% endhint %}
+### Constructor chaining**
 
 Als je meerdere overloaded constructoren hebt, hoef je niet in elke constructor alle code voor objectinitialisatie te schrijven. Het sleutelwoordje `this` biedt ook de mogelijkheid **eerst** een andere constructor aan te roepen en eventueel andere operaties toe te voegen. Dit heet **constructor chaining**. In bovenstaand voorbeeld kan je ook dit schrijven:
 

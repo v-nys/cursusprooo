@@ -2,7 +2,11 @@
 Properties zijn een feature van C♯ om de leesbaarheid van code te verhogen. Ze zien er uit zoals attributen, maar werken zoals methoden.
 
 {% hint style="info" %}
-Methoden behoren tot een algemenere categorie onderdelen van objecten genaamd **members**.
+Properties behoren tot een algemenere categorie onderdelen van objecten genaamd **members**.
+{% endhint %}
+
+{% hint style="success" %}
+[Kennisclip voor deze inhoud](https://youtu.be/jdvTOYza-xw). De camerabeelden zijn wat wazig, maar de schermopname is in orde.
 {% endhint %}
 
 ## Properties
