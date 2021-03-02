@@ -379,7 +379,7 @@ Dit programma maakt enkele rechthoeken en driehoeken met gegeven afmetingen \(in
 
 ### Technische analyse
 
-Er is een klasse `Rechthoek` met **full properties** `Breedte` en `Hoogte` en een klasse `Driehoek` met `Basis` en `Hoogte`. Je programma maakt de figuren die hierboven beschreven worden aan met beginwaarde `1.0` voor elke afmeting en stelt daarna hun afmetingen in via de setters voor deze properties. De oppervlakte wordt bepaald in een read-only property \(dus met alleen een getter en geen setter\). Deze heet `Surface` en is van het type `double`.
+Er is een klasse `Rechthoek` met **full properties** `Breedte` en `Hoogte` en een klasse `Driehoek` met `Basis` en `Hoogte`. Je programma maakt de figuren die hierboven beschreven worden aan met beginwaarde `1.0` voor elke afmeting en stelt daarna hun afmetingen in via de setters voor deze properties. De oppervlakte wordt bepaald in een read-only property \(dus met alleen een getter en geen setter\). Deze heet `Oppervlakte` en is van het type `double`.
 
 Indien om het even welk van deze properties wordt ingesteld op `0` of minder, signaleer je dit via de code `Console.WriteLine($"Het is verboden een (afmeting) van (waarde) in te stellen!")` \(zie voorbeeldcode\).
 
