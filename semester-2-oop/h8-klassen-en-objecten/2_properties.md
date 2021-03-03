@@ -1,4 +1,5 @@
 # Properties
+
 Properties zijn een feature van C♯ om de leesbaarheid van code te verhogen. Ze zien er uit zoals attributen, maar werken zoals methoden.
 
 {% hint style="info" %}
@@ -248,3 +249,4 @@ Dit maakt achter de schermen een privé-attribuut aan zoals `benzine` met kleine
 {% hint style="danger" %}
 Wij zullen geen gebruik maken van autoproperties, omdat het verschil met publieke attributen pas in meer geavanceerde scenario's zichtbaar wordt. We geven ze hier mee zodat je ze kan herkennen als je ze tegenkomt.
 {% endhint %}
+

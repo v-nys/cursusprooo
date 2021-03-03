@@ -40,7 +40,7 @@ Je kan "eender waar" een klasse aanmaken, maar het is een goede gewoonte om per 
 **De naam van je klasse moet voldoen aan de identifier regels die ook gelden voor het aanmaken van variabelen!**
 {% endhint %}
 
-![Klasse toevoegen in VS](../../.gitbook/assets/klassadd%20%282%29.png)
+![Klasse toevoegen in VS](../../.gitbook/assets/klassadd%20%282%29%20%281%29.png)
 
 ## Objecten aanmaken
 
@@ -58,7 +58,7 @@ Let goed op dat je dus op de juiste plekken dit alles doet \(bekijk de onderstaa
 * Klassen maak je aan als aparte files in je project
 * Objecten creëer je in je code op de plekken dat je deze nodig hebt, bijvoorbeeld in je `Main` methode bij een Console-applicatie
 
-![basics oop same in vv](../../.gitbook/assets/allessamen%20%282%29.png)
+![basics oop same in vv](../../.gitbook/assets/allessamen%20%282%29%20%282%29.png)
 
 {% hint style="info" %}
 Je hebt dus in het verleden ook al objecten aangemaakt met `new`. Telkens je met Random werkt deed je dit al. Dit wil zeggen dat er dus in .NET ergens reeds een voorgeprogrammeerde klasse `Random` bestaat met de interne werking.

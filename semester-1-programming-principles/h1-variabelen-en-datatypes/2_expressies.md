@@ -110,7 +110,7 @@ Je zal deze verkorte notatie vaak tegenkomen. Ze zijn identiek aan elkaar en zul
 
 ## Expressiedatatypes
 
-![](../../.gitbook/assets/attention%20%285%29.jpg)
+![](../../.gitbook/assets/attention%20%285%29%20%282%29.jpg)
 
 De types die je in je berekeningen gebruikt bepalen ook het type van het resultaat. Als je bijvoorbeeld twee `int` variabelen of literals optelt zal het resultaat terug een `int` geven.
 

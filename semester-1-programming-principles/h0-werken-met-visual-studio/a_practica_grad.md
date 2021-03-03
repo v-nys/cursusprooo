@@ -48,7 +48,7 @@ We gaan een methode toevoegen die goedendag wenst aan de persoon die zijn naam h
 14. We gaan het programma uitproberen, selecter **Debug** en druk op het groene pijltje bovenaan.
 15. En dat is het resultaat:
 
-![ZegGoedendag runt in de console](../../.gitbook/assets/image%20%2858%29.png)
+![ZegGoedendag runt in de console](../../.gitbook/assets/image%20%2859%29%20%282%29.png)
 
 ### Debuggen
 
@@ -120,7 +120,7 @@ Eén van de voordelen van het gebruik van klassen bestaat erin dat je je code ka
 
 Het belangrijkse is hier dat je de methode moet `public` maken. Je moet die immers kunnen oproepen vanuit een andere klasse. Zoals je hieronder zal zien, zullen we die methode oproepen vanuit de `Program` klasse:
 
-![Visual Studio De methode ZegGoedendag verplaatsen naar eigen klasse](../../.gitbook/assets/image%20%2849%29.png)
+![Visual Studio De methode ZegGoedendag verplaatsen naar eigen klasse](../../.gitbook/assets/image%20%2849%29%20%281%29.png)
 
 ## Oefening: H1-MijnEerste**KlasseOproep**
 
@@ -140,7 +140,7 @@ Open Program.cs in de editor. Vermits we de `ZegGoedendag` methode naar een ande
 
 Dat doen we door de naam van de klasse ervoor te plaatsen, gevolgd door een punt:
 
-![Visual Studio Roep ZegGoedendag op in Program](../../.gitbook/assets/image%20%2848%29.png)
+![Visual Studio Roep ZegGoedendag op in Program](../../.gitbook/assets/image%20%2849%29.png)
 
 ## Oefening: H1-rommelzin
 

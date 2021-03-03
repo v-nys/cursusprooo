@@ -69,7 +69,7 @@ class Auto
 {
     private int benzine = 5;
     private int kilometers;
-    
+
     public Auto()
     {
         // zet hier de code die bij initialisatie moet gebeuren
@@ -88,7 +88,7 @@ class Auto
     private int benzine = 5;
     private int kilometers;
     private static Random randomGen = new Random();
-    
+
     public Auto()
     {
         // ook in de constructor kan je this gebruiken
@@ -104,6 +104,7 @@ Zelfs als er een letterlijke initiële waarde wordt toegekend, gebeurt dit meest
 {% endhint %}
 
 #### Constructor met parameter\(s\)
+
 Soms wil je argumenten aan een object meegeven bij creatie. We willen bijvoorbeeld de inhoud van de tank en de kilometerstand meegeven die het object moet hebben bij het aanmaken. Met andere woorden, stel dat we dit willen schrijven:
 
 ```csharp
@@ -119,7 +120,7 @@ class Auto
 {
     int benzine;
     int kilometers;
-    
+
     public Auto(int benzine, int kilometers)
     {
         this.benzine = benzine;
@@ -135,13 +136,13 @@ class Auto
 {
     int benzine;
     int kilometers;
-    
+
     public Auto(int benzine, int kilometers)
     {
         this.benzine = benzine;
         this.kilometers = kilometers;
     }
-    
+
     public Auto() {
     }
 }

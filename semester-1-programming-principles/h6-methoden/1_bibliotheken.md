@@ -10,7 +10,7 @@ Dit zijn dus alle 3 methoden: stukken code die een specifieke taak uitvoeren.
 
 Sommige methoden, zoals `WriteLine()`, vereisen dat je een aantal parameters meegeeft. De parameters dien je tussen de ronde haakjes te zetten. Hierbij is het uiterst belangrijk dat je de volgorde respecteert die de ontwikkelaar van de methode heeft gebruikt. Indien je niet weet wat deze volgorde is kan je altijd Intellisense gebruiken. Typ gewoon de methode in je code en stop met typen na het eerste ronde haakje, vervolgens verschijnen alle mogelijke manieren waarop je deze methoden kan oproepen.
 
-![](../../.gitbook/assets/methoden1%20%282%29.png)
+![](../../.gitbook/assets/methoden1%20%282%29%20%281%29.png)
 
 Tussen de haakjes zien we welke parameters en hun type je mag meegeven aan de methode, gevolgd door het return-type van de methode en een eventuele beschrijving \(merk dus op dat je de WriteLine-methode ook mag aanroepen zonder parameters, dit zal resulteren in een lege lijn in de console\).
 
@@ -18,7 +18,7 @@ Met behulp van de F1-toets kunnen meer info over de methode in kwestie tonen. Hi
 
 Voor `WriteLine` geeft dit:
 
-![](../../.gitbook/assets/methoden2%20%282%29.png)
+![](../../.gitbook/assets/methoden2%20%282%29%20%281%29.png)
 
 In de overload list zien we de verschillende manieren waarop je de methode in kwestie kan aanroepen. Je kan op iedere methode klikken voor meer informatie en een codevoorbeeld.
 

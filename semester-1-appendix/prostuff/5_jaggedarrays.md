@@ -29,5 +29,5 @@ Zoals je kan zien moeten de interne arrays dus niet de zelfde grootte hebben.
 
 ## Indexering
 
-De indexering blijft dezelfde, uiteraard moet je er wel rekening mee houden dat niet eender welke index binnen een bepaalde sub-array zal werken. ![indexering bij jagged arrays](../../.gitbook/assets/jagged2%20%282%29.png)
+De indexering blijft dezelfde, uiteraard moet je er wel rekening mee houden dat niet eender welke index binnen een bepaalde sub-array zal werken. ![indexering bij jagged arrays](../../.gitbook/assets/jagged2%20%282%29%20%282%29.png)
 

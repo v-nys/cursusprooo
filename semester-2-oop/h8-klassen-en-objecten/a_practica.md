@@ -401,3 +401,4 @@ Een rechthoek met een breedte van 3m en een hoogte van 1m heeft een oppervlakte 
 Een driehoek met een basis van 3m en een hoogte van 1m heeft een oppervlakte van 1,5m².
 Een driehoek met een basis van 2m en een hoogte van 2m heeft een oppervlakte van 2m².
 ```
+

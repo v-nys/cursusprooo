@@ -25,7 +25,7 @@ De tabel bevat geen emoji of andere speciale karakters die je soms toch op je sc
 
 Een string is een reeks van 0, 1 of meerdere `char`-elementen, zoals je ook kan zien als je even met je muis boven een string keyword _hovert_ in je code:
 
-![](../../.gitbook/assets/stringenchars%20%282%29.png)
+![](../../.gitbook/assets/stringenchars%20%282%29%20%281%29.png)
 
 ### Strings declareren
 

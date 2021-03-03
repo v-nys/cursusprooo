@@ -24,7 +24,7 @@ double result = Math.Pow(getal, 3);
 
 Als je in Visual Studio `Math` schrijft, gevolgd door een punt `.` krijg je alles te zien wat de Math-klasse kan doen:
 
-![](../../.gitbook/assets/methoden3%20%282%29.png)
+![](../../.gitbook/assets/methoden3%20%282%29%20%282%29.png)
 
 Een doosje voor een naam wil zeggen dat het om een **methode** gaat \(zoals `Console.ReadLine()`\). Een vierkantje met twee streepjes in zijn constanten \(zoals het getal `Pi` , dat erg van pas komt in de meetkunde\).
 

@@ -170,7 +170,7 @@ Maak een basis-versie van het spel.
      * **Fase 3**: vraag aan gebruiker welke held punten moet genereren
    * Na iedere fase ververs je het beeld \(`Console.Clear()`\) en herteken je de kaarten en toon je de volgende extra info aan de gebruiker, namelijk Mana, Punten en Beurt
 
-     ![](../.gitbook/assets/heroap1%20%282%29.png) 
+     ![](../.gitbook/assets/heroap1%20%282%29%20%282%29.png) 
 3. Na de loop wordt getoond hoeveel beurten de gebruiker heeft nodig gehad
 
 ### Deel 3 Extras

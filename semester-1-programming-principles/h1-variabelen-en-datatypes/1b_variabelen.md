@@ -78,7 +78,7 @@ eenGetal = "4";
 
 Als je bovenstaande probeert te compileren dan krijg je volgende error-boodschappen:
 
-![](../../.gitbook/assets/errorliteraltoekenning%20%282%29.png)
+![](../../.gitbook/assets/errorliteraltoekenning%20%282%29%20%281%29.png)
 
 #### Literal bepaalt het datatype
 

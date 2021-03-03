@@ -39,7 +39,7 @@ B
 
 Indien `number` groter of gelijk aan 5 was dan zou er enkel `B` op het scherm zijn verschenen. De lijn `Console.WriteLine("B")` zal sowieso uitgevoerd worden zoals je ook kan zien aan de volgende flowchart:
 
-![](../../.gitbook/assets/ifflow%20%282%29.png)
+![](../../.gitbook/assets/ifflow%20%282%29%20%282%29.png)
 
 Hierboven had `nummer` een vaste waarde, maar dat hoeft niet. Deze variabele kan ook willekeurig geïnitialiseerd worden of kan een waarde krijgen die door de gebruiker wordt ingegeven. In dat geval zal het programma zich tijdens verschillende uitvoeringen anders gedragen.
 
@@ -69,7 +69,7 @@ if ( number < 5 )
     Console.WriteLine ("D");
 ```
 
-![](../../.gitbook/assets/ifflownobrace%20%282%29.png)
+![](../../.gitbook/assets/ifflownobrace%20%282%29%20%281%29.png)
 
 Merk ook op dat je code anders uitlijnen géén invloed heeft op de uitvoer \(wat bijvoorbeeld wel zo is bij de programmeertaal Python\).
 

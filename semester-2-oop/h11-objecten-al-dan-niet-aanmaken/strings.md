@@ -1,8 +1,7 @@
 # Spelen met strings
 
 {% hint style="success" %}
-[Kennisclip voor alles tot en met strings vergelijken](https://youtu.be/L2uNdNxdJ8s)
-\(Deze clip is iets ouder, dus als je de demonstraties gevolgd hebt, zal jouw code een beetje verschillen. Dat is geen probleem, de demonstratie staat op zich.\)
+[Kennisclip voor alles tot en met strings vergelijken](https://youtu.be/L2uNdNxdJ8s) \(Deze clip is iets ouder, dus als je de demonstraties gevolgd hebt, zal jouw code een beetje verschillen. Dat is geen probleem, de demonstratie staat op zich.\)
 {% endhint %}
 
 We gebruiken het einde van klassen en objecten om iets dieper in de `String` klasse te duiken en aan te tonen dat er tal van nuttige zaken bestaan om met strings te werken. We zullen ook zien dat je objecten kan aanmaken door een omschrijving ervan in tekst om te zetten naar een constructoroproep.
@@ -187,7 +186,7 @@ for (int i = 0; i < lines.Length; i++)
     string[] components = {Convert.ToString(i), namen[i], Convert.ToString(leeftijden[i])};
     lines[i] = String.Join(",",components);
     */
-    
+
 }
 
 System.IO.File.WriteAllLines("ages.csv", lines);
