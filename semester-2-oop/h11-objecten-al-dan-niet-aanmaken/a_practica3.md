@@ -24,11 +24,11 @@ Schrijf `DemonstreerFigurenMetConstructor` zodanig dat je exact onderstaande int
 
 ```text
 Het is verboden een breedte van -1 in te stellen!
-Het is verboden een breedte van 0 in te stellen!
+Het is verboden een hoogte van 0 in te stellen!
 Een rechthoek met een breedte van 2,2m en een hoogte van 1,5m heeft een oppervlakte van 3,3m².
-Een rechthoek met een breedte van 3m en een hoogte van 1m heeft een oppervlakte van 3m².
+Een rechthoek met een breedte van 3m en een hoogte van 1m heeft een oppervlakte van 3,0m².
 Een driehoek met een basis van 3m en een hoogte van 1m heeft een oppervlakte van 1,5m².
-Een driehoek met een basis van 2m en een hoogte van 2m heeft een oppervlakte van 2m².
+Een driehoek met een basis van 2m en een hoogte van 2m heeft een oppervlakte van 2,0m².
 ```
 
 ## Uitbreiding CursusResultaat \(SchoolAdmin project\)
