@@ -113,3 +113,19 @@ Deze methode vereist geen bestaande `Student`. Ze heeft wel te maken met de klas
 De student hoeft niet opgenomen te worden in de array `Studenten` van een `Cursus`-object. We verbeteren dit later nog.
 {% endhint %}
 
+### Voorbeeldinteractie
+
+```text
+Geef de tekstvoorstelling van 1 student in CSV-formaat:
+>Bart Van Steen;04;03;1998;Boekhouden;14;Macro-economie;8;Frans, deel 2;18
+
+Bart Van Steen, 22 jaar
+
+Cijferrapport:
+**********
+Boekhouden:     14
+Macro-economie: 8
+Frans, deel 2:  18
+Gemiddelde      13,3
+```
+
