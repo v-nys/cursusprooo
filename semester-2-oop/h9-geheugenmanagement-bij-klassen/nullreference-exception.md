@@ -1,7 +1,7 @@
 # NullReference exception
 
 {% hint style="success" %}
-Kennisclip voor deze inhoud
+[Kennisclip voor deze inhoud](https://youtu.be/Q5bdntXXQe4)
 {% endhint %}
 
 ## Null en NullReferenceException

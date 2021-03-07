@@ -1,10 +1,18 @@
 # value en reference met eigen objecten
 
-## Herhaling
-
 {% hint style="info" %}
 Het verschil tussen value en reference is eerder al eens behandeld op [deze pagina](../../semester-1-programming-principles/h7-arrays/value-types-en-reference-types.md) \(waar je ook een uitgebreide kennisclip terugvindt\). Die leerstof blijft te kennen, maar onderstaande uitleg maakt het verschil duidelijker.
 {% endhint %}
+
+{% hint style="success" %}
+[Kennisclip](https://youtu.be/1uNugk3wMho)
+{% endhint %}
+
+{% hint style="success" %}
+[Oudere kennisclip](https://youtu.be/N6f6S9aQukU) over stack en heap. Bekijk deze als het voorgaande materiaal niet helemaal duidelijk is. **De voorbeeldklasse Student heeft niets met SchoolAdmin te maken.**
+{% endhint %}
+
+## Herhaling
 
 ### Klassen zijn reference types
 
@@ -19,14 +27,6 @@ Deze "stack" is dezelfde stack waarover je informatie kan terugvinden wanneer je
 {% endhint %}
 
 ## Demonstratie: wat als klassen value types waren?
-
-{% hint style="success" %}
-Kennisclip
-{% endhint %}
-
-{% hint style="success" %}
-[Oudere kennisclip](https://youtu.be/N6f6S9aQukU) over stack en heap. Handig als je deze concepten moet opfrissen. **De voorbeeldklasse Student heeft niets met SchoolAdmin te maken.**
-{% endhint %}
 
 Het feit dat klassen reference types zijn, heeft praktische gevolgen. We zullen dit demonstreren door dezelfde functionaliteit te implementeren met een `class` en een `struct`. Je kan `struct` zien als bijna hetzelfde als `class`, in die zin dat je er ook objecten van kan maken, maar `struct`-objecten zijn value types.
 
