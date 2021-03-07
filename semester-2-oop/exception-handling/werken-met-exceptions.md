@@ -171,7 +171,7 @@ De MSDN bibliotheek is de manier om te weten te komen welke exceptions een metho
 [Kennisclip stack \(trace\)](https://youtu.be/E2RdKJ1BFXg)
 {% endhint %}
 
-Herinner je uit [het hoofdstuk rond geheugenbeheer](../h9-geheugenmanagement-bij-klassen/6_memorymanagement.md) dat elke methode-oproep data op de stack plaatst, het "snelle programmageheugen". Dus als methode A methode B oproept en methode B roept methode C op, krijg je een stack die er als volgt uitziet:
+Herinner je uit [het hoofdstuk rond geheugenbeheer]() dat elke methode-oproep data op de stack plaatst, het "snelle programmageheugen". Dus als methode A methode B oproept en methode B roept methode C op, krijg je een stack die er als volgt uitziet:
 
 |  |
 | :---: |
