@@ -1,85 +1,132 @@
 # Labo
 
+## SchoolAdmin project: alle cursussen opvolgen
+
+### Functionele analyse
+
+We willen een lijst bijhouden met alle objecten van de klasse `Cursus`. Zorg dat deze lijst automatisch wordt ingevuld.
+
+### Technische analyse
+
+Voorzie op klasseniveau een array met plaats voor 10 `Cursus` objecten en noem hem `AlleCursussen`. Zorg ervoor dat een cursus bij aanmaak in de eerste vrije positie in deze array wordt geplaatst. Schrijf hiervoor een private hulpmethode `registreerCursus(Cursus cursus)`. Deze kan je uitvoeren zonder bestaand `Cursus` object. Ze gaat op zoek naar de eerste vrije positie in de array en slaat `cursus` op op deze positie.
+
+Je kan `registreerCursus` als volgt implementeren:
+
+* start met een variabele `vrijePositie` van type `int?` met waarde `null`
+* controleer één voor één de posities in de array
+  * onthoud de eerste positie waarop je `null` tegenkomt
+* controleer nadat de array doorlopen is of er nog een vrije positie is
+  * zo ja, sla de cursus daar op
+  * zo nee, print `"Er zijn geen vrije posities meer"`
+
 {% hint style="warning" %}
-Dit is een behoorlijk abstract hoofdstuk. Daarom wordt er veel gedemonsteerd. Volg de demonstraties en doe zelf dezelfde aanpassingen in je eigen code voor je de opdrachten maakt.
+Commit je aanpassingen.
 {% endhint %}
 
-## SchoolAdmin project
+## SchoolAdmin project: cursussen opzoeken op Id
 
-### Bugfix array studenten als argument voor constructor
+### Functionele analyse
 
-Volg onderstaande demonstratie en pas toe op de modeloplossing:
+We willen cursussen makkelijk kunnen opvragen via Id. Schrijf een methode `ZoekCursusOpId` die dit doet.
 
-{% hint style="success" %}
-[Demonstratie](https://youtu.be/yY30nsUMMtE)
+### Technische analyse
+
+Deze methode werkt op klasseniveau, want je hebt geen cursus nodig om een andere cursus te vinden. Ze heeft één parameter, `id`. Het return type is `Cursus`, maar het kan zijn dat je geen cursus met het gevraagde Id kan terugvinden.
+
+De methode werkt door `AlleCursussen` element per element te doorlopen en de waarde van het attribuut `Id` van elk element te vergelijken met het meegegeven argument. Als de gevraagde cursus niet bestaat, mag je programma niet crashen, maar krijg je `null` terug.
+
+{% hint style="warning" %}
+Commit je aanpassingen.
 {% endhint %}
 
-### Bugfix ontbrekend reference type
+## SchoolAdmin project: gelinkte objecten
 
-Volg onderstaande demonstratie en pas toe op de modeloplossing:
+### Functionele analyse
 
-{% hint style="success" %}
-[Demonstratie](https://youtu.be/ozZwxgWOjIM)
+Het is niet handig dat onze klasse `VakInschrijving` een cursus voorstelt als string. Dat maakt dat we de functionaliteit van `Cursus` niet kunnen gebruiken. Pas daarom VakInschrijving aan zodat de klasse echt gelinkt is aan `Cursus`. Dit vereist aanpassingen op een aantal plaatsen.
+
+### Technische analyse
+
+Voor de aanpassing heb je dit:
+
+![](../../.gitbook/assets/vakinschrijving1.png)
+
+Erna heb je dit:
+
+![](../../.gitbook/assets/vakinschrijving2.png)
+
+Controleer ook dat al je testmethodes nog dezelfde resultaten leveren als eerder.
+
+{% hint style="warning" %}
+Commit je aanpassingen.
 {% endhint %}
 
-#### Opdracht
+## SchoolAdmin project: automatisch Id studenten
 
-Pas dezelfde controle op `null` waarden toe op alle setters van reference types.
+Momenteel krijgen studenten nog niet vanzelf een studentennummer. Pas je code aan zodat student 1 automatisch het nummer 1 krijgt, enzovoort.
 
-### Verbetering: cursussen registreren in bestaande array
+## SchoolAdmin project: Studieprogramma \(stap 1\)
 
-Volg onderstaande demonstratie en pas toe op de modeloplossing:
+We wensen cursussen te groeperen in studieprogramma's.
 
-{% hint style="success" %}
-[Demonstratie](https://youtu.be/56Kp2LviIsg)
-{% endhint %}
+### Functionele analyse
 
-#### Opdracht
+Schrijf een klasse `StudieProgramma`. Deze heeft een naam, bevat een aantal cursussen en kan getoond worden op het scherm.
 
-Voeg een constructor toe aan `StudyProgram` die een lege array met ruimte voor 5 cursussen aanmaakt. Voeg je cursussen toe door gebruik te maken van `RegisterCourse` in plaats van door een opgevulde array mee te geven.
+### Technische analyse
 
-### Property `Students` toevoegen aan `StudyProgram`
+Implementeer als volgt:
 
-Volg onderstaande demonstratie en pas toe op de modeloplossing:
+![](../../.gitbook/assets/studieprogramma%20%281%29.png)
 
-{% hint style="danger" %}
-Het filmpje mist nog een instructie. Na de toekenning aan `usableIndex` in de lus moet je een `break` toevoegen. Anders wordt de nieuwe cursus op de laatste vrije plaats ingevoegd en niet op de eerste.
-{% endhint %}
+Gebruik volgende code voor de demonstratiemethode:
 
-{% hint style="success" %}
-[Demonstratie](https://youtu.be/M2VGxVpZDsY) \(zet de `break` die hierboven vermeld wordt wel in je code!\)
-{% endhint %}
-
-### Property `Grades` toevoegen aan `StudyProgram`
-
-Volg onderstaande demonstratie en pas toe op de modeloplossing:
-
-{% hint style="success" %}
-[Demonstratie](https://youtu.be/UuM0XN0xFE8)
-{% endhint %}
-
-#### Opdracht
-
-Voeg een read-only property `CompactGrades` toe die een array van cijfers van de studenten teruggeeft, maar gekwoteerd op vijf in plaats van op twintig. Je mag de kwotering op vijf berekenen door het oorspronkelijke cijfer te delen door vier.
-
-Let op: je code mag het cijfer van een student niet aanpassen en mag hooguit acht regels code tellen. Elk statement zet je op een eigen regel en je volgt dezelfde stijl voor blokken omgeven door accolades als onder normale omstandigheden.
-
-### Opdracht: correctie `ApplyBonusCredit`
-
-Je krijgt onderstaande methode, die elke student in een programma een bonuspunt geeft. Ze werkt niet. Corrigeer zelf. Het is niet erg dat sommige studenten op dit moment meermaals een bonuspunt kunnen krijgen omdat ze meermaals in de `Students` property voorkomen. Dat lossen we in een volgend labo op.
-
-```text
-public void ApplyBonusCredit() {
-    for(int i = 0; i < this.Students.Length; i++) {
-        Student student = this.Students[i];
-        int oldGrade = student.Grade;
-        int newGrade = oldGrade + 1;
-        oldGrade = newGrade;
-    }
-}
+```csharp
+Cursus communicatie = new Cursus("Communicatie");
+Cursus programmeren = new Cursus("Programmeren");
+Cursus databanken = new Cursus("Databanken", new Student[7], 5);
+Cursus[] cursussen = { communicatie, programmeren, databanken };
+StudieProgramma programmerenProgramma = new StudieProgramma("Programmeren");
+StudieProgramma snbProgramma = new StudieProgramma("Systeem- en netwerkbeheer");
+programmerenProgramma.cursussen = cursussen;
+snbProgramma.cursussen = cursussen;
+// later wordt Databanken geschrapt uit het programma SNB
+snbProgramma.cursussen[2] = null;
+programmerenProgramma.ToonOverzicht();
+snbProgramma.ToonOverzicht();
 ```
 
-{% hint style="info" %}
-Je weet nog niet hoe je een exception moet afhandelen, dus controleer of het cijfer al 20 is met een `if`.
+Hier loopt iets mis. Benoem zelf de oorzaak en corrigeer de fout.
+
+{% hint style="warning" %}
+Commit je aanpassing.
+{% endhint %}
+
+## Schooladmin project: Studieprogramma \(stap 2\)
+
+Zoals boven, maar gebruik nu volgende code voor de demonstratiemethode:
+
+```csharp
+Cursus communicatie = new Cursus("Communicatie");
+Cursus programmeren = new Cursus("Programmeren");
+Cursus databanken = new Cursus("Databanken", new Student[7], 5);
+Cursus[] cursussen1 = { communicatie, programmeren, databanken };
+Cursus[] cursussen2 = { communicatie, programmeren, databanken };
+StudieProgramma programmerenProgramma = new StudieProgramma("Programmeren");
+StudieProgramma snbProgramma = new StudieProgramma("Systeem- en netwerkbeheer");
+programmerenProgramma.cursussen = cursussen1;
+snbProgramma.cursussen = cursussen2;
+// later wordt Databanken geschrapt uit het programma SNB
+// voor SNB wordt bovendien Programmeren hernoemd naar Scripting
+snbProgramma.cursussen[2] = null;
+snbProgramma.cursussen[1].Titel = "Scripting";
+programmerenProgramma.ToonOverzicht();
+snbProgramma.ToonOverzicht();
+```
+
+Opnieuw loopt het fout. Benoem zelf de oorzaak en corrigeer de fout.
+
+{% hint style="warning" %}
+Commit je aanpassing.
 {% endhint %}
 
