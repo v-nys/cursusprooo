@@ -129,3 +129,91 @@ Frans, deel 2:  18
 Gemiddelde      13,3
 ```
 
+## Dobbelsteen \(h11-dobbelsteen\)
+
+### Leerdoelen
+
+* denken in objecten
+* properties
+* methodes
+
+### Functionele analyse
+
+We willen een herbruikbare, gebruiksvriendelijke oplossing voor willekeurige getallen in een videospelletje. `Random` is te gedetailleerd en niet erg intuïtief, dus we schrijven een klasse `Dobbelsteen` die achter de schermen gebruik maakt van `Random` \(encapsulatie!\).
+
+### Technische analyse
+
+Schrijf in je project IndividueleOefeningen een nieuwe klasse `Dobbelsteen`. De UML-voorstelling van deze klasse ziet er als volgt uit:
+
+![](../../.gitbook/assets/dobbelsteen.png)
+
+Als je de constructor zonder parameter gebruikt, wordt je dobbelsteen sowieso aangemaakt met 6 zijden. Gebruik hiervoor constructor chaining.
+
+Alle dobbelstenen gebruiken achter de scherm dezelfde generator voor willekeurige getallen. De methode `Werp` toont een resultaat op het scherm.
+
+{% hint style="warning" %}
+Je hoeft geen rekening te houden met een dobbelsteen met 0 zijden.
+{% endhint %}
+
+Je kan deze code gebruiken om te demonstreren. Zet in een methode `DemonstreerDobbelsteen`:
+
+```text
+Dobbelsteen d1 = new Dobbelsteen();
+Dobbelsteen d2 = new Dobbelsteen(20);
+d1.Werp();
+d1.Werp();
+d1.Werp();
+d2.Werp();
+d2.Werp();
+d2.Werp();
+```
+
+### Voorbeeldinteractie
+
+{% hint style="warning" %}
+Jouw resultaten zullen niet identiek zijn.
+{% endhint %}
+
+```text
+6
+1
+3
+14
+17
+20
+```
+
+## Klasse `Opdracht`\(h11-opdrachtklasse\)
+
+### Functionele analyse
+
+Schrijf in het project `IndividueleOefeningen` een klasse `Opdracht` waarmee een klusjesman opdrachten kan bijhouden.
+
+### Technische analyse
+
+Je krijgt ditmaal geen diagram, alleen de vereisten:
+
+* Op het niveau van de klasse moet het huidige BTW-tarief voor klusjes bijgehouden worden met waarde `21.0`. Gebruik hiervoor een read-only property met naam `BTWTarief`.
+* Op het niveau van elke `Opdracht` moet bijgehouden worden hoe veel BTW voor die Opdracht wordt aangerekend. Gebruik hiervoor een read-only property met naam `ToegepasteBTW`. Dit drukt het toegepaste BTW-percentage uit.
+* Elke opdracht heeft een omschrijving \(in tekst\). Stel voor met een read-only property `Omschrijving`.
+* Er zijn twee manieren om een `Opdracht` aan te maken:
+  * met omschrijving **en** toegepast BTW-tarief
+  * met alleen een omschrijving
+    * dit moet altijd \(ook bij latere wijzigingen\) identiek werken aan constructie op de andere manier, maar dan met het algemene BTW-tarief als toegepast BTW-tarief
+* Er is een methode `GeefWeer` die op de console info over de opdracht laat zien.
+* Er is een methode `DemonstreerOpdrachten` om te laten zien dat alles werkt. Deze doet het volgende:
+  * ze maakt een opdracht "lek in de gootsteen" aan met de constructor met één parameter
+  * ze maakt een opdracht "dakpannen vervangen" aan waarvoor de toegepaste BTW 6% bedraagt
+  * ze geeft beide opdrachten weer met `GeefWeer`
+
+### Voorbeeldinteractie
+
+```text
+lek in de gootsteen: 21% BTW
+dakpannen vervangen: 6% BTW
+```
+
+
+
+
+
