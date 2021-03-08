@@ -172,7 +172,7 @@ Je ziet dat het stuk `} while(input...);` achteraan buiten de accolades van de l
 
 ## Kennisclip
 
-![](../../.gitbook/assets/infoclip%20%282%29.png)
+![](../../.gitbook/assets/infoclip%20%282%29%20%282%29.png)
 
 * [De while loop en soorten loops](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=3d1f021e-0152-4dcd-9e73-a99800b53707)
 * [Do-while loops](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=82314092-f4bf-408b-bb3f-a99800b6f1c8)

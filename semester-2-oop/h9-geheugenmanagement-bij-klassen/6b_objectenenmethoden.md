@@ -126,7 +126,7 @@ if(m3 != null)
 
 ## Kennisclip
 
-![](../../.gitbook/assets/infoclip%20%282%29.png)
+![](../../.gitbook/assets/infoclip%20%282%29%20%282%29.png)
 
 * [Objecten als parameter of returnwaarde](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=8dbbc3f8-56ed-4657-82a7-ab7400e422bc) \(opname uit hoorcollege 4/3/20\)
 

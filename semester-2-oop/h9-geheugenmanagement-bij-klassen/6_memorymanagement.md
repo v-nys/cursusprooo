@@ -29,7 +29,7 @@ Als je volgende tabel begrijpt dan beheers je geheugenmanagement in C\#:
 | Beginwaarde | `0`,`0.0`, `""`,`false`, etc. | `null` |
 | Effect van = operator | Kopieert de actuele waarde | Kopieert het adres naar de actuele waarde |
 
-![](../../.gitbook/assets/gc1.png)
+![](../../.gitbook/assets/gc1%20%281%29.png)
 
 #### Waarom twee geheugens?
 
@@ -222,7 +222,7 @@ Meer info, lees zeker volgende artikels:
 
 ## Kennisclip
 
-![](../../.gitbook/assets/infoclip%20%282%29.png)
+![](../../.gitbook/assets/infoclip%20%282%29%20%282%29.png)
 
 * [Stack vs heap](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=bf7ea9bc-7469-446b-b226-ab5e008085a8)
 

@@ -86,7 +86,7 @@ foreach(int prime in integerList)
 
 ## Kennisclip
 
-![](../../.gitbook/assets/infoclip%20%282%29.png)
+![](../../.gitbook/assets/infoclip%20%282%29%20%282%29.png)
 
 * [List&lt;&gt; klasse](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ac1bfe58-b55b-4e7e-98f3-ab7a009085bc)
 

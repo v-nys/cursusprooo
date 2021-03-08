@@ -24,7 +24,7 @@ We tonen nu kort de verschillende program flow elementen en hoe ze in een flowch
 
 ### If-else element
 
-![](../../.gitbook/assets/ifelse%20%282%29.png)
+![](../../.gitbook/assets/ifelse%20%282%29%20%281%29.png)
 
 ### While-element
 
@@ -44,7 +44,7 @@ Merk op dat bij if en if-else de flow niet naar een eerder punt in de code gaat.
 
 Door de eerder beschreven elementen nu samen te voegen kunnen we een programma als een flowchart voorstellen. Stel dat we een programma "Faculteit" maken. Hierin is het de bedoeling om de faculteit van een gegeven getal N dat door de gebruiker wordt ingevoerd, te berekenen \(bijvoorbeeld N=5 geeft dan `5! = 5x4x3x2x1 = 120` \). De finale flowchart ziet er als volgt uit:
 
-![](../../.gitbook/assets/fullflow%20%282%29.png)
+![](../../.gitbook/assets/fullflow%20%282%29%20%281%29.png)
 
 Zoals verteld kunnen we een flowchart in beide richtingen gebruiken. We hebben de flowchart hiervoor gemaakt, gebaseerd op onze oplossing van het vorige labo. Maar stel dat je deze flowchart krijgt, dan kan je dus ook deze chart rechtstreeks omzetten in C\#.
 

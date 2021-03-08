@@ -4,7 +4,7 @@
 
 Niets is zo leuk als de vreemdste tekens op het scherm tonen. In oude console-games werden deze tekens vaak gebruikt om _complexe_ tekeningen op het scherm te tonen: om je filmpjes nog cooler te maken leggen we daarom uit hoe je dit kan doen, gebruikmakende van je kennis over converteren.
 
-![Dwarven fortress](../../.gitbook/assets/kerosenethunder_mockup%20%282%29.png)
+![Dwarven fortress](../../.gitbook/assets/kerosenethunder_mockup%20%282%29%20%281%29.png)
 
 ### Unicode karakters tonen
 

@@ -102,5 +102,5 @@ Uiteraard mag je ook de default constructor aanroepen vanuit de child-constructo
 
 ## Kennisclip
 
-![](../../.gitbook/assets/infoclip%20%282%29.png) \*[Constructors bij overerving](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a83a530e-11ff-47eb-b4cf-ab7c00b75401)
+![](../../.gitbook/assets/infoclip%20%282%29%20%282%29.png) \*[Constructors bij overerving](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a83a530e-11ff-47eb-b4cf-ab7c00b75401)
 

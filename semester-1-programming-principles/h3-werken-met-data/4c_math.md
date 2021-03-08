@@ -24,7 +24,7 @@ double result= Math.Pow(getal, 3);
 
 Als je in Visual Studio `Math` schrijft, gevolgd door een punt `.` krijg je alles te zien wat de Math-bibliotheek kan doen:
 
-![](../../.gitbook/assets/methoden3%20%282%29.png)
+![](../../.gitbook/assets/methoden3%20%282%29%20%282%29.png)
 
 Een doosje voor een naam wil zeggen dat het om een **Methode** gaat \(zoals `Console.ReadLine()`\). Een vierkantje met twee streepjes in zijn constanten \(zoals `Pi`\(`π`\) en `e`\).
 
@@ -83,7 +83,7 @@ Wanneer we met loops leren werken zullen lopende sommen zéér nuttig worden.
 
 ## Kennisclip
 
-![](../../.gitbook/assets/infoclip%20%282%29.png)
+![](../../.gitbook/assets/infoclip%20%282%29%20%282%29.png)
 
 * [De Math-bibliotheek](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=4d790ab9-e3b9-4e4b-bf59-a976007197fa)
 

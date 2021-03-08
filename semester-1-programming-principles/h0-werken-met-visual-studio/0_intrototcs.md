@@ -28,7 +28,7 @@ Bij de geboorte van .NET in 2000 zat dus ook de taal C\#. .NET is een zogenaamd 
 
 Om een uitvoerbaar bestand te maken \(**executable**, vandaar de extensie .exe bij uitvoerbare programma's in windows\) zal de broncode die je hebt geschreven in C\# worden omgezet naar **Intermediate Language** \(IL\) code. Op zich is deze IL code nog niet uitvoerbaar, maar dat is niet ons probleem. Wanneer een gebruiker een in IL geschreven bestand wil uitvoeren dan zal, achter de schermen, de CLR deze code ogenblikkelijk naar machine code omzetten \(**Just -In-Time** of JIT compilatie\) en uitvoeren. De gebruiker zal dus nooit dit proces merken \(tenzij er geen .NET framework werd geïnstalleerd op het systeem\).
 
-![Compiler process](../../.gitbook/assets/compiler%20%282%29.png)
+![Compiler process](../../.gitbook/assets/compiler%20%282%29%20%282%29.png)
 
 [\(Bron afbeelding\)](https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework)
 

@@ -45,7 +45,7 @@ Maak een array die 6 strings kan bevatten. Ieder element van de array bevat een 
 
 Na de 6 vragen toon je vervolgens de vragen opnieuw met achter iedere vraag het antwoord van de gebruiker.
 
-![](../../.gitbook/assets/arvraag%20%282%29.png)
+![](../../.gitbook/assets/arvraag%20%282%29%20%281%29.png)
 
 ### Array Zoeker
 
@@ -194,7 +194,7 @@ Toon in je main aan dat je methoden werken \(door bijvoorbeeld aan de gebruiker 
 >
 > Een klassiek encryptie-algoritme uit de oudheid is de Caesar substitutie. Hierbij gaan we het alfabet met x plaatsen opschuiven en vervolgens de te vercijferen tekst letter per letter te vervangen met z’n respectievelijke opgeschoven versie. Hierbij is x dus de geheime sleutel die zender en ontvanger moeten afspreken.
 
-![](../../.gitbook/assets/practarray8%20%282%29.png)
+![](../../.gitbook/assets/practarray8.png)
 
 Stel bijvoorbeeld dat x=3 dan krijgen we volgende nieuwe alfabet:
 
@@ -305,7 +305,7 @@ Maak een spel , vergelijkbaar als galgje, waarin de speler een woord moet raden.
 
 Voorbeeld output:
 
-![](../../.gitbook/assets/practarray9%20%282%29.png)
+![](../../.gitbook/assets/practarray9%20%282%29%20%281%29.png)
 
 ### Grote Som
 

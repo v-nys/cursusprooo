@@ -6,7 +6,7 @@ Dit zijn dus alle 3 methoden: stukken code die een specifieke taak uitvoeren.
 
 Sommige methoden, zoals `WriteLine()`, vereisen dat je een aantal parameters meegeeft. De parameters dien je tussen de ronde haakjes te zetten. Hierbij is het uiterst belangrijk dat je de volgorde respecteert die de ontwikkelaar van de methode heeft gebruikt. Indien je niet weet wat deze volgorde is kan je altijd Intellisense gebruiken. Typ gewoon de methode in je code en stop met typen na het eerste ronde haakje, vervolgens verschijnen alle mogelijke manieren waarop je deze methoden kan oproepen.
 
-![](../../.gitbook/assets/methoden1%20%282%29.png)
+![](../../.gitbook/assets/methoden1%20%282%29%20%281%29.png)
 
 Tussen de haakjes zien we welke parameters en hun type je mag meegeven aan de methode, gevolgd door het return-type van de methode en een eventuele beschrijving \(merk dus op dat je de WriteLine-methode ook mag aanroepen zonder parameters, dit zal resulteren in een lege lijn in de console\).
 
@@ -14,7 +14,7 @@ Met behulp van de F1-toets kunnen meer info over de methode in kwestie tonen. Hi
 
 Voor `WriteLine` geeft dit:
 
-![](../../.gitbook/assets/methoden2%20%282%29.png)
+![](../../.gitbook/assets/methoden2%20%282%29%20%281%29.png)
 
 In de overload list zien we de verschillende manieren waarop je de methode in kwestie kan aanroepen. Je kan op iedere methode klikken voor meer informatie en een codevoorbeeld.
 
@@ -32,7 +32,7 @@ System.Console.
 
 Wacht nu even en er zal na het punt \(`.`\) een lijst komen van methoden en fields die beschikbaar zijn. Je kan hier met de muis doorheen scrollen en zo zien welke methoden allemaal bij de Console klasse horen.
 
-![](../../.gitbook/assets/methoden4%20%282%29.png)
+![](../../.gitbook/assets/methoden4%20%282%29%20%282%29.png)
 
 Scroll maar eens naar de WriteLine-methode en klik er op. Je krijgt dan extra informatie over die methode te zien:
 
@@ -40,11 +40,11 @@ Scroll maar eens naar de WriteLine-methode en klik er op. Je krijgt dan extra in
 
 Doe hetzelfde voor de ReadLine methode:
 
-![](../../.gitbook/assets/methoden6%20%282%29.png)
+![](../../.gitbook/assets/methoden6%20%282%29%20%282%29.png)
 
 Je ziet bovenaan `string Console.ReadLine()` staan. Bij de WriteLine stond er `void Console.WriteLine()`. Die void wil zeggen dat de methode WriteLine niets terugstuurt. In tegenstelling tot ReadLine dat een string teruggeeft. Indien de methode één of meerdere parameters vereist dan zullen deze hier ook getoond worden:
 
-![](../../.gitbook/assets/methoden7%20%282%29.png)
+![](../../.gitbook/assets/methoden7%20%282%29%20%281%29.png)
 
 De `Math.Pow` methode vereist dus bijvoorbeeld 2 parameters van het type double. Wanneer je nu begint te typen dan zal intellisense tonen waarvoor iedere parameter staat wanneer je aan die parameter gaat beginnen typen:
 

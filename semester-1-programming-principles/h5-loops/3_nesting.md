@@ -4,7 +4,7 @@
 
 Wanneer we 1 of meerdere loops in een andere loop plaatsen dan spreken we over **geneste loops**. Geneste loops komen vaak voor, maar zijn wel een ras apart wanneer je deze zaken wilt debuggen en correct schrijven.
 
-![Deze afbeelding komt uit het zeer aan te raden handboek &quot;Microsoft Visual C\# .NET&quot; van Joyce Farrell.](../../.gitbook/assets/nesting%20%282%29.png)
+![Deze afbeelding komt uit het zeer aan te raden handboek &quot;Microsoft Visual C\# .NET&quot; van Joyce Farrell.](../../.gitbook/assets/nesting%20%282%29%20%282%29.png)
 
 We spreken steeds over de **outer loop** als de omhullende of "grootste" loop. Waarbij de binnenste loops de **inner loop\(s\)** zijn.
 
@@ -28,7 +28,7 @@ while(tellerA < 3 )  //outer loop
 
 De uitvoer hiervan zal als volgt zijn:
 
-![](../../.gitbook/assets/nestedoutput%20%282%29.png)
+![](../../.gitbook/assets/nestedoutput%20%282%29%20%281%29.png)
 
 {% hint style="info" %}
 **Begrijp je hoe we aan deze uitvoer komen? \(tip: analyseer de inner en outer loop apart\)**

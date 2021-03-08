@@ -45,7 +45,7 @@ Encryptie is de kunst van het vercijferen van data. Hierbij gaat men een gewone 
 Een klassiek encryptie-algoritme uit de oudheid is de Caesar substitutie. Hierbij gaan we het alfabet met x plaatsen opschuiven en vervolgens de te vercijferen tekst letter per letter vervangen met z’n respectievelijke opgeschoven versie. Hierbij is x dus de geheime sleutel die zender en ontvanger moeten afspreken.
 {% endhint %}
 
-![](../../.gitbook/assets/practarray8%20%282%29.png)
+![](../../.gitbook/assets/practarray8.png)
 
 Stel bijvoorbeeld dat x=3 dan krijgen we volgende nieuwe alfabet:
 
@@ -192,7 +192,7 @@ Maak een spel, vergelijkbaar met galgje, waarin de speler een woord moet raden. 
 
 Voorbeeld output:
 
-![](../../.gitbook/assets/practarray9%20%282%29.png)
+![](../../.gitbook/assets/practarray9%20%282%29%20%281%29.png)
 
 ### Grote Som
 
