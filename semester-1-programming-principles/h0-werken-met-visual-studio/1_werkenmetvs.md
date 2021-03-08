@@ -4,7 +4,7 @@
 
 Visual Studio \(VS\) is een pakket dat een groot deel tools samenvoegt \(debugger, code editor, compiler, etc\) zodat je niet tientallen paketten moet gebruiken om software te schrijven.
 
-![VS2019 Logo](../../.gitbook/assets/vslogo%20%281%29.png)
+![VS2019 Logo](../../.gitbook/assets/vslogo%20%282%29%20%282%29.png)
 
 Visual Studio is een zogenaamde IDE\("Integrated Development Environment"\) en is op maat gemaakt om C\#.NET applicaties te ontwikkelen. Je bent echter verre van verplicht om enkel C\# applicaties in VS te ontwikkelen, je kan gerust VB.NET, TypeScript, Python en andere talen gebruiken.
 
@@ -12,7 +12,7 @@ Visual Studio is een zogenaamde IDE\("Integrated Development Environment"\) en i
 
 Jouw taak als programmeur in deze cursus is algoritmes in C\# taal uitschrijven. We zouden dit in een eenvoudige tekstverwerker kunnen doen, maar dan maken we het onszelf lastig. Net zoals je tekst in notepad kunt schrijven, is het handiger dit in bijvoorbeeld Word te doen: je krijgt een spellingchecker en allerlei handige extra's. Ook voor het schrijven van computer code is het handiger om een zogenaamde IDE te gebruiken, een omgeving die ons zal helpen foutloze C\# code te schrijven.
 
-Het hart van Visual Studio bestaat uit de **compiler** die we hiervoor besproken. De compiler zal je C\# code omzetten naar de IL-code zodat jij \(of anderen\) je applicatie op een computer \(of ander apparaat\) kunnen gebruiken. Zolang de C\# niet exact voldoet aan de C\# syntax \(zie verder\) zal de compiler het vertikken een uitvoerbaar bestand voor je te genereren. ![Vereenvoudigd compiler overzicht](../../.gitbook/assets/compilereenvoudig%20%281%29.png)
+Het hart van Visual Studio bestaat uit de **compiler** die we hiervoor besproken. De compiler zal je C\# code omzetten naar de IL-code zodat jij \(of anderen\) je applicatie op een computer \(of ander apparaat\) kunnen gebruiken. Zolang de C\# niet exact voldoet aan de C\# syntax \(zie verder\) zal de compiler het vertikken een uitvoerbaar bestand voor je te genereren. ![Vereenvoudigd compiler overzicht](../../.gitbook/assets/compilereenvoudig%20%282%29%20%281%29.png)
 
 **Opmerking**: In deze cursus zullen we steeds werken met Visual Studio. Niet met Visual Studio Code. Visual Studio code is een zogenaamde lightweight versie van VS die echter zeker ook z'n voordelen heeft \(gratis, snel, compact, etc\). Visual Studio vindt dankzij VS Code eindelijk ook z'n weg op andere platformen dan enkel die van Microsoft. Zoek je een lightweight versie dan moet je zeker eens [Visual Studio Code](https://code.visualstudio.com/) eens proberen.
 
@@ -22,15 +22,15 @@ In deze cursus zullen de voorbeelden steeds met de **Community** editie van VS g
 
 Het is belangrijk bij de installatie dat je minimaal
 
-* de **.NET desktop development** workload selecteert als te installeren tools. ![VS Installeren](../../.gitbook/assets/vsinstall.png)
-* kies verderop ook **.NET Core cross-platform development** ![VS Installeren](../../.gitbook/assets/coreinst.png)
+* de **.NET desktop development** workload selecteert als te installeren tools. ![VS Installeren](../../.gitbook/assets/vsinstall%20%281%29.png)
+* kies verderop ook **.NET Core cross-platform development** ![VS Installeren](../../.gitbook/assets/coreinst%20%281%29.png)
 * Uiteraard ben je vrij om meerdere zaken te installeren.
 
 ## Visual studio opstarten
 
 Na het opstarten van VS krijg je het startvenster te zien van waaruit je verschillende dingen kan doen.
 
-![VS Opstarten](../../.gitbook/assets/vsstart.png)
+![VS Opstarten](../../.gitbook/assets/vsstart%20%282%29.png)
 
 ### Een nieuw project aanmaken
 
@@ -40,7 +40,7 @@ We zullen nu een nieuw project aanmaken, kies hiervoor "Create a new project".
 
 Dit semester kiezen we steeds als Project Type **Console App \(.NET Core\)**. Kies dit type en klik 'Next'.
 
-![VS Project maken](../../.gitbook/assets/vsproject.png)
+![VS Project maken](../../.gitbook/assets/vsproject%20%282%29.png)
 
 Op het volgende scherm kan je een naam geven voor je project alsook de locatie op de harde schijf waar het project dient opgeslagen te worden. **Onthoudt waar je je project aanmaakt zodat je dit later terugvindt**.
 
@@ -50,7 +50,7 @@ Op het volgende scherm kan je een naam geven voor je project alsook de locatie o
 
 Geef je project de naam "MyFirstProject" en kies een goede locatie \(ik raad je aan dit steeds in Dropbox of Onedrive te doen\)
 
-![VS Project maken](../../.gitbook/assets/vsprojectname.PNG)
+![VS Project maken](../../.gitbook/assets/vsprojectname%20%281%29.PNG)
 
 **Klik nu op create**.
 
@@ -64,7 +64,7 @@ Laat je niet afschrikken door VS. Het is een imponerend programma, maar je zal e
 
 We zullen nu eerst eens bekijken wat we allemaal zien in VS na het aanmaken van een nieuw programma.
 
-![VS Ide Overzicht](../../.gitbook/assets/vside%20%281%29.png)
+![VS Ide Overzicht](../../.gitbook/assets/vside%20%282%29%20%281%29.png)
 
 * Je kan meerdere bestanden tegelijkertijd openen in VS. Ieder bestand zal z'n eigen **tab** krijgen. De actieve tab is het bestand wiens inhoud je in het hoofdgedeelte eronder te zien krijgt. Merk op dat enkel open bestanden een tab krijgen.
 * De "**solution explorer**" toont alle bestanden en elementen die tot het huidige project behoren. Als we dus later nieuwe bestanden toevoegen dan kan je die hier zien \(en openen\).
@@ -77,17 +77,17 @@ De layout van VS kan je volledig naar je hand zetten. Je kan ieder \(deel-\)vens
 * Om eenvoudig een venster terug te krijgen, bijvoorbeeld het properties window of de solution explorer: klik bovenaan in de menubalk op "View" en kies dan het gewenste venster \(soms staat dit in een submenu\).
 * Je kan ook altijd je layout in z'n geheel **resetten**: ga naar "Window" en kies "Reset window layout".
 
-![VS Layout resetten](../../.gitbook/assets/vsreset%20%281%29.png)
+![VS Layout resetten](../../.gitbook/assets/vsreset%20%282%29%20%281%29.png)
 
 ## Je programma starten
 
 De code die VS voor je heeft gemaakt is reeds een werkend, maar weinig nuttig, programma. Je kan de code compileren en uitvoeren door op de groene driehoek bovenaan te klikken:
 
-![Command shell](../../.gitbook/assets/startprogram.PNG)
+![Command shell](../../.gitbook/assets/startprogram%20%281%29.PNG)
 
 Als alles goed gaat krijg je nu "Hello world" te zien en wat extra informatie omtrent het programma dat net werd uitgevoerd:
 
-![Command shell](../../.gitbook/assets/vscmd%20%281%29.png)
+![Command shell](../../.gitbook/assets/vscmd%20%282%29%20%282%29.png)
 
 Veel doet je programma nog niet natuurlijk, dus sluit dit venster maar terug af door een willekeurige toets in te drukken.
 
@@ -101,7 +101,7 @@ Als AP-student heb je ook recht op een Visual Studio Enterprise licentie. Wil je
 
 ## Kennisclip
 
-![](../../.gitbook/assets/infoclip.png)
+![](../../.gitbook/assets/infoclip%20%282%29.png)
 
 * [De VS omgeving](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=7f6e9867-6b45-4c98-9255-aacd00880111)
 * [De fodlerstructuur van projecten](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f021b918-db11-43e4-93bf-a969006a6868)

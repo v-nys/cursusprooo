@@ -24,7 +24,7 @@ double result= Math.Pow(getal, 3);
 
 Als je in Visual Studio `Math` schrijft, gevolgd door een punt `.` krijg je alles te zien wat de Math-bibliotheek kan doen:
 
-![](../../.gitbook/assets/methoden3%20%281%29.png)
+![](../../.gitbook/assets/methoden3%20%282%29%20%281%29.png)
 
 Een doosje voor een naam wil zeggen dat het om een **Methode** gaat \(zoals `Console.ReadLine()`\). Een vierkantje met twee streepjes in zijn constanten \(zoals `Pi`\(`π`\) en `e`\).
 
@@ -40,7 +40,7 @@ double complex= 3+ DerdeMachtVan20 * Math.Round(sineHoekA);
 
 Twijfel je over de werking van een methode, gebruik dan de help als volgt:
 
-1. Schrijf de Methode zonder argumenten. Bijvoorbeeld `Math.Pow()` \(je mag de rode error negeren\). ![](../../.gitbook/assets/math.png)
+1. Schrijf de Methode zonder argumenten. Bijvoorbeeld `Math.Pow()` \(je mag de rode error negeren\). ![](../../.gitbook/assets/math%20%282%29%20%281%29.png)
 2. Plaats je cursor op `Pow`.
 3. Druk op `F1` op je toetsenbord.
 4. Je krijgt nu de help-files te zien van deze methode op MDSDN.
@@ -81,7 +81,7 @@ Console.WriteLine($"Gemiddelde temperatuur deze week was: {totaal/7}");
 
 ## Kennisclip
 
-![](../../.gitbook/assets/infoclip.png)
+![](../../.gitbook/assets/infoclip%20%282%29.png)
 
 * [De Math-bibliotheek](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=4d790ab9-e3b9-4e4b-bf59-a976007197fa)
 

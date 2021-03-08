@@ -34,7 +34,7 @@ B
 
 Indien `number` groter of gelijk aan 5 was dan zou er enkel `B` op het scherm zijn verschenen. De lijn `Console.WriteLine("B")` zal sowieso uitgevoerd worden zoals je ook kan zien aan de volgende flowchart:
 
-![](../../.gitbook/assets/ifflow%20%281%29.png)
+![](../../.gitbook/assets/ifflow%20%282%29%20%281%29.png)
 
 ## if met een block
 
@@ -50,7 +50,7 @@ if ( number < 5 )
 }
 ```
 
-![](../../.gitbook/assets/iffflowblock.png)
+![](../../.gitbook/assets/iffflowblock%20%282%29.png)
 
 De booleaanse expressie die je tussen de `if` haakjes plaats moet een stuk code zijn dat altijd een `bool` als resultaat teruggeeft.
 
@@ -76,7 +76,7 @@ if ( number < 5 )
     Console.WriteLine ("D");
 ```
 
-![](../../.gitbook/assets/ifflownobrace.png)
+![](../../.gitbook/assets/ifflownobrace%20%282%29.png)
 
 Merk ook op dat je code anders uitlijnen géén invloed heeft op de uitvoer \(wat bijvoorbeeld wel zo is bij de programmeertaal Python\).
 
@@ -90,7 +90,7 @@ if ( number < 5 );
     Console.WriteLine ("D");
 ```
 
-![](../../.gitbook/assets/ifflowsemicolon.png)
+![](../../.gitbook/assets/ifflowsemicolon%20%282%29%20%281%29.png)
 
 ## Gebruik relationele operatoren
 

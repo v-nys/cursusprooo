@@ -17,7 +17,7 @@ Je kan eender welk [UNICODE-teken](https://en.wikipedia.org/wiki/Unicode) in een
 
 Een string is een reeks van 0, 1 of meerdere `char`-elementen, zoals je ook kan zien als je even met je muis boven een string keyword _hovert_ in je code:
 
-![](../../.gitbook/assets/stringenchars.png)
+![](../../.gitbook/assets/stringenchars%20%282%29.png)
 
 ### Strings declareren
 

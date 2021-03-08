@@ -35,7 +35,7 @@ static void EenVoorbeeldMethode(ref int[6] inArray)
 
 En zal volgende error genereren:
 
-![](../../.gitbook/assets/arrays3%20%281%29.png)
+![](../../.gitbook/assets/arrays3%20%282%29%20%282%29.png)
 
 ## Arraymethode voorbeeld
 

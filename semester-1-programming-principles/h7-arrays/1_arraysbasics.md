@@ -113,7 +113,7 @@ We plaatsen de naam van de array, gevolgd door brackets waarbinnen een getal _i_
 
 **De index van een C\#-array start steeds bij 0. Indien je dus een array aanmaakt met lengte 10 dan heb je de indices 0 tot en met 9.**
 
-![](../../.gitbook/assets/arrays1%20%281%29.png)
+![](../../.gitbook/assets/arrays1%20%282%29%20%282%29.png)
 
 #### Veelgemaakte fouten: Lengte en indexering van arrays
 

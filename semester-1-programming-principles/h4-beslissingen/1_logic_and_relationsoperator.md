@@ -56,7 +56,7 @@ Wat zal de uitkomst zijn van volgende expressies? \(protip: het zal steeds `true
 
 ## Kennisclip
 
-![](../../.gitbook/assets/infoclip.png)
+![](../../.gitbook/assets/infoclip%20%282%29.png)
 
 * [Logische operators en expressies ](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=4602c8f9-1540-427e-8fd8-a91100bc3abb)
 

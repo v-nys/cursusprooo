@@ -27,7 +27,7 @@ Als je volgende tabel begrijpt dan beheers je geheugenmanagement in C\#:
 | Beginwaarde | `0`,`0.0`, `""`,`false`, etc. | `null` |
 | Effect van = operator | Kopieert de actuele waarde | Kopieert het adres naar de actuele waarde |
 
-![](../../.gitbook/assets/gc1.png)
+![](../../.gitbook/assets/gc1%20%281%29.png)
 
 ### Waarom twee geheugens?
 

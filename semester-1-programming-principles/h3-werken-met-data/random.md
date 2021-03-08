@@ -56,7 +56,7 @@ double randomgetal= myran.NextDouble() * 10.0;
 
 ## Kennisclip
 
-![](../../.gitbook/assets/infoclip.png)
+![](../../.gitbook/assets/infoclip%20%282%29.png)
 
 * [Random toepassen](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ffa0ea68-0b47-4446-9922-a91100d3f61e)
 

@@ -31,13 +31,13 @@ Maak een programma dat aan de gebruiker vraagt om 10 waarden \(int\) in te voere
 
 Vervolgens vraagt het programma de gebruiker om een getal in te voeren. Het programma toont dan alle getallen die groter of gelijk zijn aan dit ingevoerde getal zijn die in de array aanwezig zijn. Indien geen getallen groter zijn dan verschijnt een bericht `Niets is groter` op het scherm.
 
-![](../../.gitbook/assets/practarray1.png)
+![](../../.gitbook/assets/practarray1%20%282%29%20%281%29.png)
 
 ### ArrayOefener 2
 
 Maak een programma dat aan de gebruiker vraagt om 2 keer 5 getallen in te voeren. Bewaar de eerste reeks waarden in een array A, de tweede reeks waarden in array B. Maak een nieuwe array C aan die steeds de som bevat van het respectievelijke element uit arrays A en B. Toon het resultaat.
 
-![](../../.gitbook/assets/practarray2.png)
+![](../../.gitbook/assets/practarray2%20%282%29%20%281%29.png)
 
 ### Vraag Array
 
@@ -45,7 +45,7 @@ Maak een array die 6 strings kan bevatten. Ieder element van de array bevat een 
 
 Na de 6 vragen toon je vervolgens de vragen opnieuw met achter iedere vraag het antwoord van de gebruiker.
 
-![](../../.gitbook/assets/arvraag%20%281%29.png)
+![](../../.gitbook/assets/arvraag%20%282%29%20%282%29.png)
 
 ### Array Zoeker
 
@@ -59,7 +59,7 @@ Toon vervolgens alle waarden van de array.
 
 Indien de te zoeken waarde meer dan 1 keer voorkomt, wordt enkel de eerst gevonden waarde verwijderd.
 
-![](../../.gitbook/assets/practarray3%20%281%29.png)
+![](../../.gitbook/assets/practarray3%20%282%29%20%282%29.png)
 
 ### LeveringsBedrijf
 
@@ -125,11 +125,11 @@ Schrijf een programma dat het verschuldigde bedrag toont gegeven de duur van een
 
 Voorbeeldoutput: Opstart:
 
-![](../../.gitbook/assets/practarray4%20%281%29.png)
+![](../../.gitbook/assets/practarray4%20%282%29%20%282%29.png)
 
 Resultaat:
 
-![](../../.gitbook/assets/practarray5.png)
+![](../../.gitbook/assets/practarray5%20%282%29%20%281%29.png)
 
 ### Voetbalcoach
 
@@ -180,7 +180,7 @@ VisualiseerArray(array2);
 
 Geeft volgende output:
 
-![](../../.gitbook/assets/practarray6%20%281%29.png)
+![](../../.gitbook/assets/practarray6%20%282%29%20%282%29.png)
 
 ### Caesar-encryptie
 
@@ -194,7 +194,7 @@ Toon in je main aan dat je methoden werken \(door bijvoorbeeld aan de gebruiker 
 >
 > Een klassiek encryptie-algoritme uit de oudheid is de Caesar substitutie. Hierbij gaan we het alfabet met x plaatsen opschuiven en vervolgens de te vercijferen tekst letter per letter te vervangen met z’n respectievelijke opgeschoven versie. Hierbij is x dus de geheime sleutel die zender en ontvanger moeten afspreken.
 
-![](../../.gitbook/assets/practarray8%20%281%29.png)
+![](../../.gitbook/assets/practarray8%20%282%29.png)
 
 Stel bijvoorbeeld dat x=3 dan krijgen we volgende nieuwe alfabet:
 
@@ -305,7 +305,7 @@ Maak een spel , vergelijkbaar als galgje, waarin de speler een woord moet raden.
 
 Voorbeeld output:
 
-![](../../.gitbook/assets/practarray9.png)
+![](../../.gitbook/assets/practarray9%20%282%29.png)
 
 ### Grote Som
 

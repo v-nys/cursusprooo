@@ -186,7 +186,7 @@ In dit geval zullen Maandag tot Vrijdag intern als 1 tot en met 5 bewaard worden
 
 ## Why should I care?
 
-![](../../.gitbook/assets/care%20%281%29.jpg)
+![](../../.gitbook/assets/care%20%284%29%20%281%29.jpg)
 
 Je kan perfect leven zonder `enum`. Vele programmeurs voor je hebben dit bewezen. Echter, van zodra ze `enum`ontdekten \(en begrepen\) zijn nog maar weinig programmeurs ervan af gestapt.
 
@@ -218,7 +218,7 @@ switch(playerGameState)
 
 ## Kennisclip
 
-![](../../.gitbook/assets/infoclip.png)
+![](../../.gitbook/assets/infoclip%20%282%29.png)
 
 * [Enums gebruiken](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9273e56b-1bfa-4393-a14a-aaed00bd4eaf)
 

@@ -10,11 +10,11 @@ Schrijf een programma dat het verschuldigde bedrag toont gegeven de duur dat de 
 
 Voorbeeldoutput: Opstart:
 
-![](../../.gitbook/assets/practarray4%20%281%29.png)
+![](../../.gitbook/assets/practarray4%20%282%29%20%282%29.png)
 
 Resultaat:
 
-![](../../.gitbook/assets/practarray5.png)
+![](../../.gitbook/assets/practarray5%20%282%29%20%281%29.png)
 
 ### Array Viewer
 
@@ -29,7 +29,7 @@ VisualiseerArray(array2);
 
 Geeft volgende output:
 
-![](../../.gitbook/assets/practarray6%20%281%29.png)
+![](../../.gitbook/assets/practarray6%20%282%29%20%282%29.png)
 
 ### Caesar-encryptie
 
@@ -43,7 +43,7 @@ Toon in je main aan dat je methoden werken \(door bijvoorbeeld aan de gebruiker 
 >
 > Een klassiek encryptie-algoritme uit de oudheid is de Caesar substitutie. Hierbij gaan we het alfabet met x plaatsen opschuiven en vervolgens de te vercijferen tekst letter per letter vervangen met z’n respectievelijke opgeschoven versie. Hierbij is x dus de geheime sleutel die zender en ontvanger moeten afspreken.
 
-![](../../.gitbook/assets/practarray8%20%281%29.png)
+![](../../.gitbook/assets/practarray8%20%282%29.png)
 
 Stel bijvoorbeeld dat x=3 dan krijgen we volgende nieuwe alfabet:
 
@@ -190,7 +190,7 @@ Maak een spel, vergelijkbaar met galgje, waarin de speler een woord moet raden. 
 
 Voorbeeld output:
 
-![](../../.gitbook/assets/practarray9.png)
+![](../../.gitbook/assets/practarray9%20%282%29.png)
 
 ### Grote Som
 

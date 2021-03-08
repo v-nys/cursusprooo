@@ -8,7 +8,7 @@ Neem volgende korte demonstratie van debugging door: [Debugging in Visual Studio
 
 ## Kennisclip
 
-![](../../.gitbook/assets/infoclip.png)
+![](../../.gitbook/assets/infoclip%20%282%29.png)
 
 * [Debuggen in VS ](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a78b3bf5-ef96-4c2a-8248-a976006fabd1)
 

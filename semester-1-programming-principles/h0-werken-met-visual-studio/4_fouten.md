@@ -1,6 +1,6 @@
 # Fouten in je code
 
-![](../../.gitbook/assets/attention%20%281%29.jpg)
+![](../../.gitbook/assets/attention%20%285%29%20%281%29.jpg)
 
 Je code kan niet gecompileerd en uitgevoerd worden zolang er fouten in je code staan \(dit bespraken we reeds in [een eerder hoofdstuk](0_intrototcs.md)\).
 
@@ -15,13 +15,13 @@ Zolang er dus fouten in je code staan moet je deze eerst oplossen voor je verder
 * Fouten in code worden met een rode squigly onderlijnt.
 * Onderaan zie je in de statusbalk of je fouten hebt.
 
-![Zie je de fout?](../../.gitbook/assets/error.PNG)
+![Zie je de fout?](../../.gitbook/assets/error%20%281%29.PNG)
 
 ## Fouten vinden
 
 Uiteraard ga je vaak code hebben die meerdere schermen omvat. Je kan via de error-list snel naar al je fouten gaan. Open deze door op het error-icoontje onderaan te klikken:
 
-![De errorlist](../../.gitbook/assets/errorlist.PNG)
+![De errorlist](../../.gitbook/assets/errorlist%20%281%29.PNG)
 
 In deze list kan je nu op iedere error klikken om ogenblikkelijk naar de correcte lijn te gaan.
 
@@ -29,7 +29,7 @@ In deze list kan je nu op iedere error klikken om ogenblikkelijk naar de correct
 
 Wanneer je je cursor op een lijn met een fout zet dan zal je soms vooraan een geel error-lampje zien verschijnen:
 
-![Lampje](../../.gitbook/assets/errorlampje%20%281%29.png)
+![Lampje](../../.gitbook/assets/errorlampje%20%282%29%20%281%29.png)
 
 Je kan hier op klikken en heel vaak krijg je dan ineens een mogelijke oplossing. **Wees steeds kritisch** hierover want VS is niet alomwetend en kan niet altijd raden wat je bedoelt. Neem dus het voorstel niet zomaar over zonder goed na te denken of het dat was wat je bedoelde.
 

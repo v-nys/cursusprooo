@@ -17,7 +17,7 @@ Zolang de conditie `true` is zal de code binnen de accolades uitgevoerd worden. 
 
 Telkens wanneer het programma aan het einde van het `while` codeblock komt springt het terug naar de conditie bovenaan en zal de test wederom uitvoeren. Is deze weer `true` dan wordt de code weer uitgevoerd. Van zodra de test `false` is zal de code voorbij het codeblock springen en na het `while` codeblok doorgaan.
 
-Het diagramma is duidelijk: ![](../../.gitbook/assets/while.png)
+Het diagramma is duidelijk: ![](../../.gitbook/assets/while%20%283%29%20%281%29.png)
 
 Een voorbeeld van een eenvoudige while loop:
 
@@ -41,7 +41,7 @@ In tegenstelling tot een while loop, zal een do-while loop sowieso **minstens 1 
 
 Vergelijk volgende diagramma van de `do while`:
 
-![](../../.gitbook/assets/dowhile.png)
+![](../../.gitbook/assets/dowhile%20%282%29%20%281%29.png)
 
 met die hierboven van de `while`.
 
@@ -164,7 +164,7 @@ Merk op dat we de variabele `string input` VOOR de `do while` moeten aanmaken. Z
 
 ## Kennisclip
 
-![](../../.gitbook/assets/infoclip%20%281%29.png)
+![](../../.gitbook/assets/infoclip%20%282%29%20%281%29.png)
 
 * [De while loop en soorten loops](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=3d1f021e-0152-4dcd-9e73-a99800b53707)
 * [Do-while loops](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=82314092-f4bf-408b-bb3f-a99800b6f1c8)

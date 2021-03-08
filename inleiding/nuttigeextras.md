@@ -25,7 +25,7 @@ Leren programmeren door enkele de opdrachten in deze cursus te maken zal je niet
 
 Volgende document bevat een overzicht van de basis C\# syntax zaken van het eerste en \(deel van het\) tweede semester: [download hier](https://github.com/v-nys/cursusprogrammeren/tree/3b283bda757cfdba19fe43834e477039dccf587d/assets/0_intro/cheat-sheet.pdf)
 
-![Cheat sheet preview](../.gitbook/assets/cheatprev%20%281%29.jpg)
+![Cheat sheet preview](../.gitbook/assets/cheatprev%20%282%29%20%282%29.jpg)
 
 ### Game-based programmeren
 

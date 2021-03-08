@@ -74,7 +74,7 @@ eenGetal = "4";
 
 Als je bovenstaande probeert te compileren dan krijg je volgende error-boodschappen:
 
-![](../../.gitbook/assets/errorliteraltoekenning%20%281%29.png)
+![](../../.gitbook/assets/errorliteraltoekenning%20%282%29%20%282%29.png)
 
 #### Literal bepaald het datatype
 
@@ -136,7 +136,7 @@ We hebben dus aan het einde van het programma zowel de temperatuur van eergister
 
 ## Kennisclip
 
-![](../../.gitbook/assets/infoclip.png)
+![](../../.gitbook/assets/infoclip%20%282%29.png)
 
 * [Variabelen en datatypes](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=22d326cf-b619-4cf0-80fc-a966007ffef5)
 

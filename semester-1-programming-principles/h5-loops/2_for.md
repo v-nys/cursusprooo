@@ -32,7 +32,7 @@ for (setup; finish test; update)
 * _finish test_: Hier plaatsen we een booleaanse expressie die de wachter-variabele uit de setup gebruikt om te testen of de loop-code moet uitgevoerd worden.
 * _update_: Hier plaatsen we wat er moet gebeuren telkens de loop z'n codeblock heeft uitgevoerd. Meestal zullen we hier de wachter-variabele verhogen of verlagen.
 
-  ![](../../.gitbook/assets/for%20%282%29.png)
+  ![](../../.gitbook/assets/for%20%283%29%20%283%29.png)
 
 Gebruiken we deze kennis nu, dan kunnen we de eerder vermelde code om de even getallen van 0 tot en met 10 tonen als volgt:
 
@@ -65,7 +65,7 @@ Lees meer over het gebruik van `break` [hier](https://www.dotnetperls.com/break)
 
 ## Kennisclip
 
-![](../../.gitbook/assets/infoclip.png)
+![](../../.gitbook/assets/infoclip%20%282%29.png)
 
 * [De for loop](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=2df9d5bb-ecc8-489b-a1d4-a99800b79a5c)
 
