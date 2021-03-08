@@ -155,7 +155,7 @@ Alle dobbelstenen gebruiken achter de scherm dezelfde generator voor willekeurig
 Je hoeft geen rekening te houden met een dobbelsteen met 0 zijden.
 {% endhint %}
 
-Je kan deze code gebruiken om te demonstreren. Zet in een methode `DemonstreerDobbelsteen`:
+Je kan deze code gebruiken om te demonstreren. Zet in een methode `DemonstreerDobbelsteen`, die je kan oproepen via het submenu van `EigenObjectOefeningen`:
 
 ```text
 Dobbelsteen d1 = new Dobbelsteen();
@@ -201,7 +201,7 @@ Je krijgt ditmaal geen diagram, alleen de vereisten:
   * met alleen een omschrijving
     * dit moet altijd \(ook bij latere wijzigingen\) identiek werken aan constructie op de andere manier, maar dan met het algemene BTW-tarief als toegepast BTW-tarief
 * Er is een methode `GeefWeer` die op de console info over de opdracht laat zien.
-* Er is een methode `DemonstreerOpdrachten` om te laten zien dat alles werkt. Deze doet het volgende:
+* Er is een methode `DemonstreerOpdrachten` om te laten zien dat alles werkt. Deze kan je oproepen via het submenu van `EigenObjectOefeningen` en ze doet het volgende:
   * ze maakt een opdracht "lek in de gootsteen" aan met de constructor met één parameter
   * ze maakt een opdracht "dakpannen vervangen" aan waarvoor de toegepaste BTW 6% bedraagt
   * ze geeft beide opdrachten weer met `GeefWeer`
