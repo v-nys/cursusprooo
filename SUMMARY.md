@@ -103,6 +103,7 @@
   * [NullReference exception](semester-2-oop/h9-geheugenmanagement-bij-klassen/nullreference-exception.md)
   * [Labo](semester-2-oop/h9-geheugenmanagement-bij-klassen/geheugenmgmt-labo.md)
 * [H13: Datastructuren](semester-2-oop/h11-datastructuren/README.md)
+  * [N-dimensionale arrays](semester-2-oop/h11-datastructuren/n-dimensionale-arrays.md)
   * [Foreach en var](semester-2-oop/h11-datastructuren/3_foreach.md)
   * [List](semester-2-oop/h11-datastructuren/4_list.md)
   * [Dictionary](semester-2-oop/h11-datastructuren/dictionary.md)
