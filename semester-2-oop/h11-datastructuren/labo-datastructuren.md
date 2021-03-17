@@ -99,7 +99,7 @@ Als je alles eerder mee hebt kunnen volgen, werk dan vanaf je recentste commit. 
 
 ### `StudieProgramma.ToonOverzicht()` , `Cursus.ToonOverzicht()` en `Student.ToonOverzicht()` met `foreach`
 
-Pas je ShowOverview methodes aan zodat er geen gebruik wordt gemaakt van een klassieke `for`, maar wel van een `foreach`. Om het gebruik van een index te vermijden, zal je de array van `string` ook moeten vervangen door een `List<string>`.
+Pas je ToonOverzicht-methodes aan zodat er geen gebruik wordt gemaakt van een klassieke `for`, maar wel van een `foreach`.
 
 ### Alle studenten in het systeem bijhouden
 
