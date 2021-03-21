@@ -72,6 +72,10 @@ Interessante methoden en properties voorts zijn:
 * `IndexOf()`: geeft de index terug van het element item in de rij. Indien deze niet in de lijst aanwezig is dan wordt -1 teruggegeven.
 * `RemoveAt()`: verwijder een element op de index die je als parameter meegeeft.
 
+{% hint style="danger" %}
+Deze zaken zullen zich met jouw eigen custom objecten niet noodzakelijk gedragen zoals je verwacht. De verklaring hierachter komt later aan bod, wanneer we [Equals en GetHashCode](../h13-geavanceerde-overerving/4_system_object.md) bekijken.
+{% endhint %}
+
 ### Foreach loops
 
 Je kan met een eenvoudige `for` of while-loop over een lijst itereren, maar het gebruik van een foreach-loop is toch handiger.
