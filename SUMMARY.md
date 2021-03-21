@@ -113,6 +113,7 @@
   * [Constructors bij overerving](semester-2-oop/h12-overerving/3_constructors_inheritance.md)
   * [Virtual en override](semester-2-oop/h12-overerving/1_virtual_override.md)
   * [Abstract](semester-2-oop/h12-overerving/5_abstract.md)
+  * [Oefeningen](semester-2-oop/h12-overerving/oefeningen.md)
 * [H15: Exception handling](semester-2-oop/exception-handling/README.md)
   * [Werken met exceptions](semester-2-oop/exception-handling/werken-met-exceptions.md)
   * [Zelf uitzonderingen maken](semester-2-oop/exception-handling/zelf-uitzonderingen-maken.md)
