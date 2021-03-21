@@ -13,7 +13,7 @@ Dit programma demonstreert het gebruik van enkele klassen die van elkaar overerv
 
 Van meetkundige figuren kunnen we steeds hun oppervlakte bepalen. Indien deze figuren bovendien _regelmatig_ zijn - m.a.w. ze voldoen aan bepaalde criteria - kunnen we hun oppervlakte berekenen met gekende formules. Zo zijn er formules om de oppervlakte van verschillende soorten regelmatige vierhoeken te berekenen, maar ook voor driehoeken en cirkels bestaan deze formules. 
 
-Het programma onderscheid volgende regelmatige figuren:
+Het programma onderscheidt volgende regelmatige figuren:
 
 * Parallellogram: vierhoekige figuur, waarvan de zijden 2-aan-2 evenwijdig zijn.  De formule om de oppervlakte te berekenen is: basis x hoogte.
   * Rechthoek: parallellogram, waarvan de hoeken 90° meten. Oppervlakte rechthoek: lengte x breedte.
@@ -83,6 +83,6 @@ We willen echter wél de correcte benamingen voor de afmetingen kunnen gebruiken
 * `Ruit.Diagonaal1` en `Ruit.Diagonaal2`
 * `Rechthoek.Breedte` en `Rechthoek.Lengte`
 
-in plaats van `Basis` in `Hoogte`. Je zal in resp. `Vierkant`, `Ruit` en `Rechthoek` dus iets moeten toevoegen zodat, wanneer iemand de waarde van resp. `Zijde`, `Diagonaal1` en `Lengte` aanpast, de onderliggende waarde `Basis` wordt aangepast.
+in plaats van `Basis` in `Hoogte`. Je zal in resp. `Vierkant`, `Ruit` en `Rechthoek` dus iets moeten toevoegen zodat, wanneer iemand de waarde van bijvoorbeeld resp. `Zijde`, `Diagonaal1` of `Lengte` aanpast, de onderliggende waarde `Basis` wordt aangepast.
 {% endhint %}
 
