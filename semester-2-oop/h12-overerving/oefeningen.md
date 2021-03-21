@@ -37,7 +37,7 @@ De oppervlakte van de driehoek is 16.5.
 
 Je schrijft dit programma als een methode `DemonstreerFigurenOvererving` van de klasse `EigenObjectOefeningen` in het project **IndividueleOefeningen**:
 
-```text
+```csharp
 public static void DemonstreerFigurenOvererving()
 {
     Parallellogram parallellogram = new Parallellogram(6, 2);
