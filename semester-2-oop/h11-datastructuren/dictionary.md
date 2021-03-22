@@ -6,7 +6,7 @@
 
 Naast de generieke `List` collectie, zijn er nog enkele andere nuttige generieke 'collectie-klassen' die je geregeld in je projecten kan gebruiken.
 
-In een **dictionary** wordt ieder element voorgesteld door een sleutel \(**key**\) en de waarde \(**value**\) van het element. Het idee is dat je de sleutel kan gebruiken om de waarde snel op te zoeken. De sleutel moet dan ook uniek zijn.
+In een **dictionary** wordt ieder element voorgesteld door een sleutel \(**key**\) en de waarde \(**value**\) van het element. Het idee is dat je de sleutel kan gebruiken om de waarde snel op te zoeken. De sleutel moet dan ook uniek zijn. **Dictionaries stellen geen reeks met een volgorde voor, maar geven je de mogelijkheid data met elkaar in verband te brengen.**
 
 Enkele voorbeeldjes die het idee achter Dictionary kunnen verduidelijken:
 
@@ -36,12 +36,16 @@ customers.Add(700, "James Bond");
 
 Bij de declaratie van `customers` plaatsen we dus tussen de `< >` twee datatypes: het eerste duidt het datatype van de key aan, het tweede dat van de values.
 
-Merk op dat je niet verplicht bent om een `int` als key te gebruiken, dit mag eender wat zijn, zelfs een klasse.
+Merk op dat je niet verplicht bent om een `int` als type van de key \(of value\) te gebruiken, dit mag eender wat zijn, zelfs een klasse.
 
 ```csharp
 Dictionary<int,Pokemon> pokedex;
 Dictionary<Student,PuntenLijst> puntenTabel;
 ```
+
+{% hint style="warning" %}
+Bij dit laatste horen wel enkele nuances. Deze worden pas behandeld [in een later hoofdstuk](../h13-geavanceerde-overerving/4_system_object.md). Voorlopig zullen we alleen voorgedefinieerde types opnemen in dictionaries.
+{% endhint %}
 
 We kunnen nu met behulp van bijvoorbeeld een `foreach`-loop alle elementen tonen. Hier kunnen we de key met de `.Key`-property uitlezen en het achterliggende object of waarde met `.Value`. `Value` en `Key` hebben daarbij ieder het type dat we hebben gedefinieerd toen we het `Dictionary`-object aanmaakten, in het volgende geval is de `Key` dus van het type `int` en `Value` van het type `string`:
 
@@ -51,11 +55,11 @@ foreach (var item in customers){
 }
 ```
 
-We kunnen echter ook een specifiek element opvragen aan de hand van de key. Stel dat we de waarde \(naam\) van de klant met key \(id\) gelijk aan 123 willen tonen:
+We kunnen echter ook een specifiek element opvragen aan de hand van de key. Stel dat we de waarde van de klant met key 123 willen tonen:
 
 ```csharp
 Console.WriteLine(customers[123]);
 ```
 
-De key werkt dus net als de index bij gewone arrays, alleen heeft de key nu geen relatie meer met de positie van het element in de collectie.
+De key werkt dus net als de index bij gewone arrays, **alleen heeft de key nu geen relatie meer met de positie van het element in de collectie**.
 

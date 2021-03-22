@@ -39,7 +39,7 @@ myStringList.Add("And another one!");
 
 ### Elementen indexeren
 
-**Het leuke van een List is dat je deze ook kan gebruiken als een gewone array**, waarbij je mbv de indexer elementen kan aanroepen. Stel bijvoorbeeld dat we een lijst hebben met minstens 4 strings in. Volgende code toont hoe we de string op positie 3 kunnen uitlezen en hoe we die op positie 2 overschrijven:
+**Het leuke van een List is dat je deze ook kan gebruiken als een gewone array**, waarbij je met de indexer elementen kan aanspreken. Stel bijvoorbeeld dat we een lijst hebben met minstens 4 strings in. Volgende code toont hoe we de string op positie 3 kunnen uitlezen en hoe we die op positie 2 overschrijven:
 
 ```csharp
 Console.WriteLine(myStringList[3]);
@@ -68,12 +68,12 @@ Interessante methoden en properties voorts zijn:
 
   voegt de string toe op de tweede plek en schuift de rest naar achter
 
-* `Contains()`: geef als parameter een specifiek object mee \(van het type dat de List&lt;&gt; bevat\) om te weten te komen of dat specifieke object in de List&lt;&gt; terug te vinden is. Indien ja dan zal true worden teruggeven.
+* `Contains()`: geef als parameter een specifiek object mee \(van het type `T` dat de `List<T>` bevat\) om te weten te komen of dat specifieke object in de `List<>` terug te vinden is. Indien ja dan zal true worden teruggeven.
 * `IndexOf()`: geeft de index terug van het element item in de rij. Indien deze niet in de lijst aanwezig is dan wordt -1 teruggegeven.
 * `RemoveAt()`: verwijder een element op de index die je als parameter meegeeft.
 
 {% hint style="danger" %}
-Deze zaken zullen zich met jouw eigen custom objecten niet noodzakelijk gedragen zoals je verwacht. De verklaring hierachter komt later aan bod, wanneer we [Equals en GetHashCode](../h13-geavanceerde-overerving/4_system_object.md) bekijken.
+`Contains` en `IndexOf` zullen zich met jouw eigen klassen niet noodzakelijk gedragen zoals je verwacht. De verklaring hierachter komt later aan bod, wanneer we [Equals en GetHashCode](../h13-geavanceerde-overerving/4_system_object.md) bekijken. Ze zullen wel werken zoals verwacht voor voorgedefinieerde types, inclusief `DateTime`.
 {% endhint %}
 
 ### Foreach loops

@@ -107,6 +107,8 @@
   * [Foreach en var](semester-2-oop/h11-datastructuren/3_foreach.md)
   * [List](semester-2-oop/h11-datastructuren/4_list.md)
   * [Dictionary](semester-2-oop/h11-datastructuren/dictionary.md)
+  * [Immutable datastructuren](semester-2-oop/h11-datastructuren/immutable-datastructuren.md)
+  * [Verdere datastructuren](semester-2-oop/h11-datastructuren/verdere-datastructuren.md)
   * [Labo](semester-2-oop/h11-datastructuren/labo-datastructuren.md)
 * [H14: Overerving](semester-2-oop/h12-overerving/README.md)
   * [Overerving intro](semester-2-oop/h12-overerving/0_overerving_intro.md)

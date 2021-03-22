@@ -28,9 +28,9 @@ Het voordeel is dat je dus geen teller/index nodig hebt en dat foreach zelf de l
 C\# heeft een **`var`** keyword. Je mag dit keyword gebruiken ter vervanging van het type \(bv int\) op voorwaarde dat de compiler kan achterhalen wat het type moet zijn.
 
 ```csharp
-var getal= 5; //var zal int zijn
-var myArray= new double[20]; //var zal double[] zijn
-var tekst= "Hi there handsome"; //var zal string zijn
+var getal = 5; // var zal int zijn
+var myArray = new double[20]; // var zal double[] zijn
+var tekst = "Hi there handsome"; // var zal string zijn
 ```
 
 {% hint style="warning" %}
