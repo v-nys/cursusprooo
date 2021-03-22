@@ -25,7 +25,7 @@ Om te verhinderen dat een datastructuur wordt aangepast, kan je er een immutable
 
 Om deze versies te gebruiken, moet je de `System.Collections.Immutable` namespace gebruiken. Wanneer je hier een `using` directief voor hebt staan, kan je methodes zoals `ToImmutableList<T>` oproepen op een lijst om er een immutable versie van te produceren. Deze immutable versie kan je dan veilig delen met code waarvan je niet wenst dat ze de inhoud van je lijst aanpast.
 
-Een tweede manier om een immutable datastructuur te maken, is met een **builder**. Dit is een object waar je via `Add` data aan toevoegt en dat je achteraf vraagt een immutable list te produceren. Je kan er een aanmaken met de statische methode `CreateBuilder`. Bijvoorbeeld:
+Een tweede manier om een immutable datastructuur te maken, is met een **builder**. Dit is een object waar je via `Add` data aan toevoegt en dat je achteraf vraagt een immutable list te produceren. Je kan er een aanmaken met de statische methode `CreateBuilder` van de immutable datastructuur die je wil gebruiken. Bijvoorbeeld:
 
 ```csharp
 public static void PrintData(ImmutableList<string> data) {
