@@ -95,7 +95,7 @@ Vraag hierin eerst aan de gebruiker welke afmetingen hij wil gebruiken voor zijn
 
 ## SchoolAdmin project
 
-Als je alles eerder mee hebt kunnen volgen, werk dan vanaf je recentste commit. Anders is er een modeloplossing voorzien waarvan je kan verder werken.
+Als je alles eerder mee hebt kunnen volgen, werk dan vanaf je recentste commit.
 
 ### `StudieProgramma.ToonOverzicht()` , `Cursus.ToonOverzicht()` en `Student.ToonOverzicht()` met `foreach`
 
