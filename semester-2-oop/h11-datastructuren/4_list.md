@@ -71,9 +71,10 @@ Interessante methoden en properties voorts zijn:
 * `Contains()`: geef als parameter een specifiek object mee \(van het type `T` dat de `List<T>` bevat\) om te weten te komen of dat specifieke object in de `List<>` terug te vinden is. Indien ja dan zal true worden teruggeven.
 * `IndexOf()`: geeft de index terug van het element item in de rij. Indien deze niet in de lijst aanwezig is dan wordt -1 teruggegeven.
 * `RemoveAt()`: verwijder een element op de index die je als parameter meegeeft.
+* `Remove():` verwijder het gegeven element
 
 {% hint style="danger" %}
-`Contains` en `IndexOf` zullen zich met jouw eigen klassen niet noodzakelijk gedragen zoals je verwacht. De verklaring hierachter komt later aan bod, wanneer we [Equals en GetHashCode](../h13-geavanceerde-overerving/4_system_object.md) bekijken. Ze zullen wel werken zoals verwacht voor voorgedefinieerde types, inclusief `DateTime`.
+`Contains, Remove` en `IndexOf` zullen zich met jouw eigen klassen niet noodzakelijk gedragen zoals je verwacht. De verklaring hierachter komt later aan bod, wanneer we [Equals en GetHashCode](../h13-geavanceerde-overerving/4_system_object.md) bekijken. Ze zullen wel werken zoals verwacht voor voorgedefinieerde types, inclusief `DateTime`.
 {% endhint %}
 
 ### Foreach loops

@@ -63,3 +63,13 @@ Console.WriteLine(customers[123]);
 
 De key werkt dus net als de index bij gewone arrays, **alleen heeft de key nu geen relatie meer met de positie van het element in de collectie**.
 
+Je kan de syntax met rechte haakjes ook gebruiken om een element toe te voegen. In tegenstelling tot Add, geeft deze syntax geen fout als de key al bestaat, maar vervangt hij het bestaande verband:
+
+```csharp
+// dit gaat, terwijl het met Add verboden is
+customers[123] = "klant A";
+customers[123] = "klant A, opnieuw";
+```
+
+Als je wil weten of een bepaalde key voorkomt in een Dictionary, gebruik je de instantiemethode `ContainsKey`.
+
