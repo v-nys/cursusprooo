@@ -93,6 +93,26 @@ Vraag hierin eerst aan de gebruiker welke afmetingen hij wil gebruiken voor zijn
 
 ![](../../.gitbook/assets/paint.png)
 
+## H13-boodschappenlijstje
+
+Pas je [boodschappenlijstje uit hoofdstuk 8](../../semester-1-programming-principles/h7-arrays/oefeningen.md#oefening-h-8-boodschappenlijst) aan zodat het gebruik maakt van een lijst. Op deze manier hoef je niet op voorhand te vragen hoe veel items gekocht zullen worden. Maak deze versie deel van de klasse `Datastructuren`.
+
+Zorg hierbij dat het programma pas stopt als er een lege regel wordt ingegeven als "item" op het boodschappenlijstje.
+
+### Voorbeeldinteractie
+
+![](../../.gitbook/assets/screenshot-from-2021-03-22-21-54-50%20%281%29.png)
+
+## H13-kerstinkopen
+
+Pas je [programma voor kerstinkopen](../../semester-1-programming-principles/h7-arrays/oefeningen.md#oefening-h-8-kerstinkopen) van eerder aan zodat het gebruik maakt van een lijst. Hierdoor hoef je niet op voorhand aan te geven hoe veel cadeautjes je wil kopen.
+
+### Voorbeeldinteractie
+
+![](../../.gitbook/assets/screenshot-from-2021-03-22-22-00-56.png)
+
+## 
+
 ## SchoolAdmin project
 
 Als je alles eerder mee hebt kunnen volgen, werk dan vanaf je recentste commit.
