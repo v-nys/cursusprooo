@@ -55,3 +55,11 @@ aDier.Hinnik(); // compilatiefout!
 
 Overerving in C\# is transitief, dit wil zeggen dat de child-klasse niet alleen overerft van haar ouderklasse, maar ook van grootouderklassen enzovoort. Je zou bijvoorbeeld een subklasse `Pony` van de klasse `Paard` kunnen toevoegen. Een `Pony` is een `Paard` en een `Paard` is een `Dier`, dus een `Pony` is ook een `Dier` en heeft bijvoorbeeld een methode `Eet`.
 
+### UML
+
+In UML-klassediagram zien deze relaties er zo uit:
+
+![Voorbeeld UML-klassediagram](../../.gitbook/assets/image%20%2811%29.png)
+
+De ervende klasse verwijst met een gesloten, maar niet-ingekleurde pijl naar de geërfde klasse. Deze pijlen worden soms bovenop elkaar getekend, zoals bij de relaties tussen Hond, Paard en Dier: zowel Hond als Paard erven van Dier.
+
