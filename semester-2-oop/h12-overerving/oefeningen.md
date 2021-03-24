@@ -18,7 +18,7 @@ Het programma onderscheidt volgende regelmatige figuren:
 * Parallellogram: vierhoekige figuur, waarvan de zijden 2-aan-2 evenwijdig zijn.  De formule om de oppervlakte te berekenen is: basis x hoogte.
   * Rechthoek: parallellogram, waarvan de hoeken 90° meten. Oppervlakte rechthoek: lengte x breedte.
     * Vierkant: rechthoek, waarvan alle zijden even lang zijn. Oppervlakte vierkant: zijde²
-  * Ruit: parallellogram, waarvan de diagonalen elkaar loodrecht snijden. Oppervlakte ruit: lange diagonaal x korte diagonaal
+  * Ruit: parallellogram, waarvan de diagonalen elkaar loodrecht in het midden snijden. Oppervlakte ruit: lange diagonaal x korte diagonaal / 2
 * Driehoek: driehoekige figuur Oppervlakte driehoek: basis x hoogte. \(hoogte: de afstand tussen het overstaande hoekpunt en de basis\)
 * Cirkel: figuur zonder hoeken, waarvan alle punten op de omtrek zich even ver van een middelpunt bevinden. Oppervlakte cirkel: straal² x π
 
@@ -28,7 +28,7 @@ Het programma maakt elk van deze figuren aan, geeft ze de nodige afmetingen en t
 De oppervlakte van het parallellogram met basis 6 en hoogte 2 is 12.
 De oppervlakte van de rechthoek met lengte 5 en breedte 6 is 30.
 De oppervlakte van het vierkant met zijde 3 is 9.
-De oppervlakte van de ruit met diagonalen 4 en 5 is 20.
+De oppervlakte van de ruit met diagonalen 4 en 5 is 10.
 De oppervlakte van de cirkel is 113.10.
 De oppervlakte van de driehoek is 16.5.
 ```
@@ -68,23 +68,33 @@ Zorg er voor dat je deze methode kan opstarten via de methode `ToonSubmenu` in d
 
 Bouw vervolgens de klassen, volgens volgend klassediagram:
 
-![Visual Studio klassediagram H14 Figuren](../../.gitbook/assets/figuren.png)
+![](../../.gitbook/assets/figuren%20%282%29.png)
 
 Begin bij `Figuur` en werk het diagram tak per tak af.
 
 Het kan zijn dat de klassen `Driehoek` en `Rechthoek` bij jou al bestaan en afwijken van het diagram. Refactor de klassen zodanig dat ze overeenkomen met het diagram.
 
 {% hint style="warning" %}
-Gezien vierkanten, ruiten en rechthoeken allemaal van parallellogrammen zijn, implementeren we in de subklassen `Vierkant`, `Ruit` en `Rechthoek` _niet_ de readonly property `Oppervlakte`, maar laten we dit afhandelen door de klasse `Parallellogram`.
+Gezien vierkanten en rechthoeken allemaal van parallellogrammen zijn, implementeren we in de subklassen `Vierkant` en `Rechthoek`_niet_ de readonly property `Oppervlakte`, maar laten we dit afhandelen door de klasse `Parallellogram`.
 
 We willen echter wél de correcte benamingen voor de afmetingen kunnen gebruiken:
 
 * `Vierkant.Zijde`
-* `Ruit.Diagonaal1` en `Ruit.Diagonaal2`
 * `Rechthoek.Breedte` en `Rechthoek.Lengte`
 
-in plaats van `Basis` in `Hoogte`. Je zal in resp. `Vierkant`, `Ruit` en `Rechthoek` dus iets moeten toevoegen zodat, wanneer iemand de waarde van bijvoorbeeld resp. `Zijde`, `Diagonaal1` of `Lengte` aanpast, de onderliggende waarde `Basis` wordt aangepast.
+in plaats van `Basis` in `Hoogte`. Je zal in resp. `Vierkant` en `Rechthoek` dus iets moeten toevoegen zodat, wanneer iemand de waarde van bijvoorbeeld resp. `Zijde` of `Lengte` aanpast, de onderliggende waarde `Basis` wordt aangepast, net als voor `Zijde` of `Breedte`, die `Hoogte` zullen moeten aanpassen.
 {% endhint %}
+
+{% hint style="danger" %}
+Opgelet voor `Ruit`: je kan deze klasse op dezelfde manier laten overerven van `Parallellogram` als `Rechthoek` en dus de property `Oppervlakte` van `Parallellogram` laten gebruiken.
+
+Je zal dan echter code moeten voorzien die de `Basis` en `Hoogte` zal aanpassen elke keer een diagonaal aangepast wordt, maar de formule hiervoor is vrij ingewikkeld \(zie hieronder\). Als dit te complex blijkt, mag je `Oppervlakte` gewoon overriden in Ruit, met de formule `diagonaal1 * diagonaal2 / 2`. Aan de base constructor van geef je vanuit `Ruit` dan gewoon twee nullen mee.
+{% endhint %}
+
+$$
+{basis} =  \sqrt{\left(\frac{diagonaal_1} 2\right)^2+\left(\frac{diagonaal_1} 2\right)^2} \newline \newline
+{hoogte} = \frac{diagonaal_1  \cdot diagonaal_2} {2 \cdot basis}
+$$
 
 ## SchoolAdmin: overerving
 
@@ -110,6 +120,8 @@ Elke nieuwe persoon die gemaakt wordt, wordt bewaard in een lijst met alle perso
 ### Student
 
 Deze klasse wordt een kind van `Persoon`. Zorg er dus voor dat deze klasse de verplichte zaken uit Persoon implementeert, maar dat duplicate functionaliteit \(bv. Studentnummer, Naam, Geboortedatum\) vanaf nu aan `Persoon` worden overgelaten: haal deze dus weg uit Student.
+
+Voeg op Student ook een attribuut `dossier` toe. Dit is een collectie waarin opmerkingen genoteerd kunnen worden. De opmerkingen worden geïndexeerd met de datum en het tijdstip waarop ze worden ingegeven.
 
 ### Personeel
 
