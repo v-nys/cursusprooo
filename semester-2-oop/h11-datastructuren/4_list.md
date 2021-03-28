@@ -74,7 +74,7 @@ Interessante methoden en properties voorts zijn:
 * `Remove():` verwijder het gegeven element
 
 {% hint style="danger" %}
-`Contains, Remove` en `IndexOf` zullen zich met jouw eigen klassen niet noodzakelijk gedragen zoals je verwacht. De verklaring hierachter komt later aan bod, wanneer we [Equals en GetHashCode](../h13-geavanceerde-overerving/4_system_object.md) bekijken. Ze zullen wel werken zoals verwacht voor voorgedefinieerde types, inclusief `DateTime`.
+`Contains, Remove` en `IndexOf` zullen zich met jouw eigen klassen niet noodzakelijk gedragen zoals je verwacht. De verklaring hierachter komt later aan bod, wanneer we [Equals en GetHashCode](../geavanceerde-overerving/4_system_object.md) bekijken. Ze zullen wel werken zoals verwacht voor voorgedefinieerde types, inclusief `DateTime`.
 {% endhint %}
 
 ### Foreach loops
