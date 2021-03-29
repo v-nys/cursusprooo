@@ -191,5 +191,5 @@ Doorloop vervolgens met een `foreach` de lijst met alle personeel en toon zo all
 
 Om je hierbij te helpen, kan je dit klassediagram bekijken:
 
-![Visual Studio Klassediagram na implementatie Persoon](../../.gitbook/assets/week-6.png)
+![](../../.gitbook/assets/schooladmin.png)
 
