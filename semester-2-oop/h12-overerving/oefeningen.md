@@ -66,7 +66,7 @@ public static void DemonstreerFigurenOvererving()
 
 Zorg er voor dat je deze methode kan opstarten via de methode `ToonSubmenu` in dezelfde klasse.
 
-Bouw vervolgens de klassen, volgens volgend klassediagram:
+Bouw vervolgens de klassen, volgens volgend klassediagram. Merk op dat `Oppervlakte` cursief gedrukt staat, omdat het een abstracte methode is:
 
 ![](../../.gitbook/assets/figuren%20%283%29.png)
 
