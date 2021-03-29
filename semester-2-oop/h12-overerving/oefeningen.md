@@ -68,7 +68,7 @@ Zorg er voor dat je deze methode kan opstarten via de methode `ToonSubmenu` in d
 
 Bouw vervolgens de klassen, volgens volgend klassediagram:
 
-![](../../.gitbook/assets/figuren%20%282%29.png)
+![](../../.gitbook/assets/figuren%20%283%29.png)
 
 Begin bij `Figuur` en werk het diagram tak per tak af.
 
@@ -88,7 +88,9 @@ in plaats van `Basis` in `Hoogte`. Je zal in resp. `Vierkant` en `Rechthoek` dus
 {% hint style="danger" %}
 Opgelet voor `Ruit`: je kan deze klasse op dezelfde manier laten overerven van `Parallellogram` als `Rechthoek` en dus de property `Oppervlakte` van `Parallellogram` laten gebruiken.
 
-Je zal dan echter code moeten voorzien die de `Basis` en `Hoogte` zal aanpassen elke keer een diagonaal aangepast wordt, maar de formule hiervoor is vrij ingewikkeld \(zie hieronder\). Als dit te complex blijkt, mag je `Oppervlakte` gewoon overriden in Ruit, met de formule `diagonaal1 * diagonaal2 / 2`. Aan de base constructor van geef je vanuit `Ruit` dan gewoon twee nullen mee.
+Je zal dan echter code moeten voorzien die de `Basis` en `Hoogte` zal aanpassen elke keer een diagonaal aangepast wordt. De formule hiervoor staat hieronder. Overschrijf dan `Basis` en `Hoogte` zodat de setters niets meer doen.
+
+Als dit te complex blijkt, mag je `Oppervlakte` gewoon overriden in Ruit, met de formule `diagonaal1 * diagonaal2 / 2`. Aan de base constructor van geef je vanuit `Ruit` dan gewoon twee nullen mee.
 {% endhint %}
 
 $$
