@@ -94,7 +94,7 @@ Als dit te complex blijkt, mag je `Oppervlakte` gewoon overriden in Ruit, met de
 {% endhint %}
 
 $$
-{basis} =  \sqrt{\left(\frac{diagonaal_1} 2\right)^2+\left(\frac{diagonaal_1} 2\right)^2} \newline \newline
+{basis} =  \sqrt{\left(\frac{diagonaal_1} 2\right)^2+\left(\frac{diagonaal_2} 2\right)^2} \newline \newline
 {hoogte} = \frac{diagonaal_1  \cdot diagonaal_2} {2 \cdot basis}
 $$
 
@@ -127,7 +127,7 @@ Voeg op Student ook een attribuut `dossier` toe. Dit is een collectie waarin opm
 
 ### Intermezzo: controle
 
-Test nu de methode eerdere methodes `DemonstreerStudenten` en `DemonstreerStudentUitTekstFormaat` opnieuw uit. Alles zou nog moeten werken.
+Test nu de eerdere methodes `DemonstreerStudenten` en `DemonstreerStudentUitTekstFormaat` opnieuw uit. Alles zou nog moeten werken.
 
 ### Personeel
 
@@ -151,7 +151,9 @@ De werkbelasting van een administratief personeelslid wordt bepaald aan de hand 
 
 Het naamkaartje van een administratief personeelslid bevat de naam van het personeelslid, met daarachter de vermelding `(ADMINISTRATIE)`. Bv. 
 
-> Ahmed Azzaoui \(ADMINISTRATIE\)
+```text
+Ahmed Azzaoui (ADMINISTRATIE)
+```
 
 Er is ook een lijst van alle administratief personeel. Ook hier kan je alleen de immutable versie krijgen buiten de klasse.
 
@@ -173,7 +175,7 @@ De werkbelasting van een lector wordt bepaald aan de hand van de cursussen die h
 
 Het naamkaartje van een lector bevat de naam van de lector, met op een nieuwe lijn `Lector voor:` . Vervolgens worden de titels van alle cursussen die deze lector geeft op telkens een nieuwe lijn toegevoegd. Bv. 
 
-```csharp
+```text
 Anna Bolzano
 Lector voor:
 Economie
