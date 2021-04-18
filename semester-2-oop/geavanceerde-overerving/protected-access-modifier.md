@@ -13,7 +13,7 @@ We nemen volgende code als voorbeeld:
         {
             get
             {
-                return this.Naam;
+                return this.naam;
             }
         }
         public virtual string NaamKaartje()
