@@ -26,7 +26,7 @@ Wanneer je een lege klasse maakt dan zal je zien dat instanties van deze klasse 
 Stel dat je een klasse Student hebt gemaakt in je project. Je kan dan op een object van deze klasse de GetType\(\) -methode aanroepen om te weten wat het type van dit object is:
 
 ```csharp
-Student stud1 = new Student();
+Student stud1 = new Student("Wolfgang Amadeus Mozart");
 Console.WriteLine(stud1.GetType());
 ```
 
@@ -35,7 +35,7 @@ Dit zal als uitvoer de namespace gevolgd door het type op het scherm geven. Als 
 Wil je enkel het type zonder namespace dan is het nuttig te beseffen dat GetType\(\) een object teruggeeft van het type `Type` met meerdere eigenschappen, waaronder `Name`. Volgende code zal dus enkel `Student` op het scherm tonen:
 
 ```csharp
-Student stud1 = new Student();
+Student stud1 = new Student("Wolfgang Amadeus Mozart");
 Console.WriteLine(stud1.GetType().Name);
 ```
 
@@ -79,7 +79,12 @@ Het zou natuurlijk fijner zijn dat de ToString\(\) van onze student nuttigere in
 class Student
 {
 public int Leeftijd {get;set;}
-public string Naam {get;set;}
+private string naam;
+public string Naam {get;}
+
+public Student(string naam) {
+    this.naam = naam;
+}
 
 public override string ToString()
 {
@@ -88,7 +93,7 @@ public override string ToString()
 }
 ```
 
-Wanneer je nu `Console.WriteLine(stud1);` \(gelet dat hij een Naam en Leeftijd heeft\) zou schrijven dan wordt je output: `Student Tim Dams (Leeftijd:35)`.
+Wanneer je nu `Console.WriteLine(stud1);` \(gelet dat hij een Naam en Leeftijd heeft\) zou schrijven dan wordt je output bijvoorbeeld: `Student Wolfgang Amadeus Mozart (Leeftijd:35)`.
 
 ### Equals\(\)
 
@@ -146,5 +151,20 @@ De lijn `Student temp = (Student) o;` zal het `object o` casten naar een `Studen
 
 Een efficiënte hashfunctie voor een type `K` zorgt er bijvoorbeeld voor dat opzoekingen van keys in een `Dictionary<K,V>` erg snel verlopen. Een minder efficiënte hashfunctie zal opzoekingen in datzelfde `Dictionary` trager laten verlopen. Een foute hashfunctie kan er voor zorgen dat je `Dictionary` niet meer werkt zoals verwacht.
 
-Wij behandelen het schrijven van een eigen hashfunctie hier niet. Wanneer we gebruik maken van hashes \(mogelijk impliciet\), dan zullen we hashfuncties aanbieden die je zo mag gebruiken.
+Wij behandelen de theorie achter goede hashfuncties hier niet. Je kan gewoon deze vuistregel onthouden: als je een nieuwe hashfunctie moet voorzien \(bijvoorbeeld omdat je `Equals` hebt overschreven\), kan je de hashwaarde van een onderdeel laten berekenen dat gelijk is voor twee objecten die gelijk zijn, op voorwaarde dat dat onderdeel niet verandert.
+
+Bijvoorbeeld:
+
+```csharp
+//In de Student class
+public override int GetHashcode()
+{
+    return this.Naam.GetHashcode();
+}
+```
+
+In ons systeem is dit voldoende, want:
+
+* als twee studenten gelijk zijn onder `Equals`, is hun naam gelijk \(en dus de hashcode van hun naam\)
+* `Naam` wordt ingesteld bij constructie en kan daarna niet veranderd worden op basis van de code die we hebben
 
