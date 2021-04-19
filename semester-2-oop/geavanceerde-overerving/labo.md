@@ -34,7 +34,7 @@ We schrijven software om bestellingen van pizza's op te volgen. Deze software sp
 
 Je krijgt volgende klasse `Pizza`:
 
-```text
+```csharp
 abstract class Pizza {
     private List<string> ingredienten;
     
@@ -50,10 +50,12 @@ abstract class Pizza {
     }
     
     public double Prijs {
-        return this.BasisPrijs + (this.ingredienten.Count * 0.5);
+        get {
+            return this.BasisPrijs + (this.ingredienten.Count * 0.5);
+        }
     }
     
-    public void ToonIngredienten {
+    public void ToonIngredienten() {
         foreach(var ingredient in ingredienten) {
             Console.WriteLine(ingredient);
         }
@@ -68,10 +70,12 @@ Schrijf nu twee klassen `Margarita` en `Veggie` die overerven van `Pizza`, met b
 ### Voorbeeldinteractie
 
 ```text
-Een margarita zonder extra's kost: 
+Een margarita zonder extra's kost: (hier het resultaat)
 De ingredienten zijn: 
+(hieronder het effect van ToonIngredienten)
 Een veggie zonder extra's kost:
 De ingredienten zijn: 
+(hieronder het effect van ToonIngredienten)
 ```
 
 ### h15-menukaart
