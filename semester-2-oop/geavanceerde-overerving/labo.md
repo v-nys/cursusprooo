@@ -101,5 +101,9 @@ Kabouterschnitzel             12.00(deze regel verschijnt in een willekeurige kl
 Tabs zijn eigenlijk niet ideaal. Zoek, als je sneller klaar bent, uit hoe je stringformattering kan gebruiken om de naam van elk gerecht met exact 35 tekens weer te geven.
 {% endhint %}
 
-## 
+## H15-figuren
+
+{% hint style="info" %}
+Kopieer eerst je code van [h14-figuren](../h12-overerving/oefeningen.md#oefening-h-14-figuren) naar een nieuwe klasse `VergelijkbareFiguur` met kindklassen `VergelijkbareCirkel` enzovoort. 
+{% endhint %}
 
