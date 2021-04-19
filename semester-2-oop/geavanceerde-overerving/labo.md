@@ -107,3 +107,113 @@ Tabs zijn eigenlijk niet ideaal. Zoek, als je sneller klaar bent, uit hoe je str
 Kopieer eerst je code van [h14-figuren](../h12-overerving/oefeningen.md#oefening-h-14-figuren) naar een nieuwe klasse `VergelijkbareFiguur` met kindklassen `VergelijkbareCirkel` enzovoort. 
 {% endhint %}
 
+### Functionele analyse
+
+We willen wat basisfunctionaliteit toevoegen aan onze figuren.
+
+### Technische analyse
+
+Voorzie de niet-abstracte subklassen van `VergelijkbareFiguur` van een `Equals` methode. Twee figuren zijn gelijk als ze van hetzelfde type zijn \(bijvoorbeeld beide cirkels, beide rechthoeken,...\) en dezelfde afmetingen hebben.
+
+Hierna moet je ook de hash code aanpassen. Dit zie je als waarschuwing bovenaan de klasse in Visual Studio. Verwijder eerst de setters voor de afmetingen en zorg dat de afmetingen alleen bij constructie worden vastgelegd. Gebruik daarna de som van de hash codes van alle afmetingen als hash code voor de figuur.
+
+{% hint style="warning" %}
+De reden dat je de setters verwijdert is dat een object niet van hash code mag veranderen wanneer het al in gebruik is.
+{% endhint %}
+
+Voorzie ten slotte een aantal implementaties van `ToString`:
+
+* voor cirkels toon je: `"Dit is een object van klasse VergelijkbareCirkel met straal <straal>"`  \(je vult &lt;straal&gt; correct in en de code moet juist blijven ook als je de klasse van naam verandert\)
+* voor driehoeken toon je: `"Dit is een object van klasse VergelijkbareDriehoek met basis <basis> en hoogte <hoogte>"`  \(je vult de afmetingen correct in en de code moet juist blijven ook als je de klasse van naam verandert\)
+* voor parallellogram zoals bij de vorige twee
+* voor een rechthoek \(en dus vanzelf ook voor een vierkant\) genereer je een tekening bestaande uit puntjes. Je doet dit door de breedte en lengte naar boven af te ronden en daaruit het aantal rijen en kolommen in je tekening af te leiden.
+
+Bijvoorbeeld, voor een rechthoek met breedte exact 31 en hoogte 4.5:
+
+```text
+...............................
+...............................
+...............................
+...............................
+...............................
+```
+
+### Voorbeeldinteractie
+
+Schrijf een methode `DemonstreerVergelijkbareFiguren` die de werking van Equals test door figuren met dezelfde afmetingen met elkaar te vergelijken, figuren van verschillende types met elkaar te vergelijken, figuren met verschillende afmetingen met elkaar te vergelijken. Gebruik elk type figuur. Toon dan ook voor elke figuur de voorstelling als string.
+
+## Uitbreidingen SchoolAdmin
+
+### XML-serialisatie
+
+Voorzie de klasse `Persoon` van een abstracte methode `NaarXML()`. Deze genereert een stringvoorstelling van de persoon in een XML-formaat. De klassen `Lector`, `AdministratiefPersoneel` en `Student` moeten een concrete implementatie voorzien. Mogelijk moet je aanpassingen doen om de code te laten werken.
+
+Voor een lector is volgend resultaat mogelijk:
+
+```text
+<Lector>
+<Id>7</Id>
+<Naam>Plinius</Naam>
+<Geboortedatum>01/02/0023</Geboortedatum>
+<Cursussen>
+<Paar>
+  <Cursus>Filosofie</Cursus>
+  <Duurtijd>4</Duurtijd>
+</Paar>
+</Cursussen>
+</Lector>
+```
+
+Voor administratief personeel:
+
+```text
+<AdministratiefPersoneel>
+<Id>7</Id>
+<Naam>Plinius</Naam>
+<Geboortedatum>01/02/0023</Geboortedatum>
+<Taken>
+<Paar>
+  <Taak>Schrijven</Taak>
+  <Duurtijd>4</Duurtijd>
+</Paar>
+</Taken>
+</AdministratiefPersoneel>
+```
+
+Voor studenten stellen we dit uit. Je mag gewoon `<Student></Student>` teruggeven.
+
+### Vergelijkbare objecten
+
+Voorzie `VakInschrijving`, `Persoon` en `Cursus` van een eigen versie van Equals. Hiermee zullen we later nagaan dat een van deze objecten niet dubbel voorkomt in de lijst met geregistreerde objecten.
+
+Een persoon is gelijk aan een andere persoon met hetzelfde ID. Je hoeft hier niet na te gaan dat de objecten van exact hetzelfde type zijn. In plaats daarvan kan je schrijven: `if (obj is Person) { ... }`
+
+Een cursus is gelijk aan een andere cursus met hetzelfde ID.
+
+Een vakinschrijving is gelijk aan een andere vakinschrijving als de gekoppelde persoon en de gekoppelde cursus gelijk zijn.
+
+Voorzie ook overal een hash code volgens de vuistregel in de cursus.
+
+### `ToString`
+
+Voorzie `Persoon` van een `ToString` methode die een resultaat van volgende vorm toont:
+
+```text
+Persoon
+-------
+Naam: Wouter Roelants
+Leeftijd: 43
+```
+
+Zorg dat de concrete klassen hier ook het statuut van de persoon aan koppelen, bijvoorbeeld:
+
+```text
+Persoon
+-------
+Naam: Geertrui Willems
+Leeftijd: 51
+Meerbepaald, administratief personeel
+```
+
+Doe dit niet met `GetType`, want dan is de schrijfwijze anders. Doe het met de hand per klasse.
+
