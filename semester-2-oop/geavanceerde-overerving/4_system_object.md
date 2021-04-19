@@ -61,7 +61,7 @@ Op het scherm verschijnt dan `StudentManager.Student`. Waarom? Wel, de methode T
 
 ```csharp
 public virtual string ToString()
- { return GetType(); }
+ { return GetType().ToString(); }
 ```
 
 Merk twee zaken op:
@@ -78,18 +78,18 @@ Het zou natuurlijk fijner zijn dat de ToString\(\) van onze student nuttigere in
 ```csharp
 class Student
 {
-public int Leeftijd {get;set;}
-private string naam;
-public string Naam {get;}
+   public int Leeftijd {get;set;}
+   private string naam;
+   public string Naam {get;}
 
-public Student(string naam) {
-    this.naam = naam;
-}
+   public Student(string naam) {
+       this.naam = naam;
+   }
 
-public override string ToString()
-{
-   return $"Student genaamd {Naam} (Leeftijd:{Leeftijd})";
-}
+   public override string ToString()
+   {
+      return $"Student genaamd {Naam} (Leeftijd:{Leeftijd})";
+   }
 }
 ```
 
@@ -144,6 +144,14 @@ public override bool Equals(Object o)
 ```
 
 De lijn `Student temp = (Student) o;` zal het `object o` casten naar een `Student`. Doe je dit niet dan kan je niet aan de interne `Student`-variabelen van het `object o`. Het feit dat een object met het statische type \(d.w.z.: zo staat het bij de parameter\) `Object` tijdens de uitvoering ook een object met runtime type `Student` \(d.w.z.: dat is het soort data dat op de heap staat\) kan zijn is een voorbeeld van polymorfisme.
+
+#### Het verschil met `==`
+
+`Equals` en `==` doen verschillende zaken. `==` is strenger. Het controleert volgende zaken:
+
+* Voor de meeste reference types: gaat het om exact dezelfde data \(op heap\)
+* Voor strings: gaat het om dezelfde tekst?
+* Voor value types: is de waarde aan de linkerkant een kopie van die aan de rechterkant?
 
 ### GetHashcode\(\)
 
