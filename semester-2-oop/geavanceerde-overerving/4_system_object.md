@@ -133,6 +133,7 @@ Stel dat we vinden dat een student gelijk is aan een andere student indien z'n `
 //In de Student class
 public override bool Equals(Object o)
 {
+   if (o is null) { return false; }
      bool gelijk;
      if(GetType() != o.GetType()) 
          gelijk=false;

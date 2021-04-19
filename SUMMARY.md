@@ -120,6 +120,7 @@
   * [protected access modifier](semester-2-oop/geavanceerde-overerving/protected-access-modifier.md)
   * [Base keyword](semester-2-oop/geavanceerde-overerving/2_base.md)
   * [System.Object](semester-2-oop/geavanceerde-overerving/4_system_object.md)
+  * [Labo](semester-2-oop/geavanceerde-overerving/labo.md)
 * [H16: Exception handling](semester-2-oop/exception-handling/README.md)
   * [Werken met exceptions](semester-2-oop/exception-handling/werken-met-exceptions.md)
   * [Zelf uitzonderingen maken](semester-2-oop/exception-handling/zelf-uitzonderingen-maken.md)
