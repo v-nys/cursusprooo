@@ -21,9 +21,13 @@ Wanneer je een lege klasse maakt dan zal je zien dat instanties van deze klasse 
 | `GetType()` | Geeft het type \(of klasse\) van het object terug. Dit is een object van het type `Type`! |
 | `ToString()` | Geeft een string terug die het object voorstelt. |
 
+{% hint style="info" %}
+Er zijn er nog een paar, maar de rest ga je minder vaak tegenkomen.
+{% endhint %}
+
 ### GetType\(\)
 
-Stel dat je een klasse Student hebt gemaakt in je project. Je kan dan op een object van deze klasse de GetType\(\) -methode aanroepen om te weten wat het type van dit object is:
+Stel dat je een klasse `Student` hebt gemaakt in je project. Je kan dan op een object van deze klasse de GetType\(\) -methode aanroepen om te weten wat het type van dit object is:
 
 ```csharp
 Student stud1 = new Student("Wolfgang Amadeus Mozart");
@@ -32,7 +36,7 @@ Console.WriteLine(stud1.GetType());
 
 Dit zal als uitvoer de namespace gevolgd door het type op het scherm geven. Als je klasse dus in de namespace `StudentManager` staat, zal er verschijnen: `StudentManager.Student`.
 
-Wil je enkel het type zonder namespace dan is het nuttig te beseffen dat GetType\(\) een object teruggeeft van het type `Type` met meerdere eigenschappen, waaronder `Name`. Volgende code zal dus enkel `Student` op het scherm tonen:
+Wil je enkel het type zonder namespace dan is het nuttig te beseffen dat `GetType()` een object teruggeeft van het type `Type` met meerdere eigenschappen, waaronder `Name`. Volgende code zal dus enkel `Student` op het scherm tonen:
 
 ```csharp
 Student stud1 = new Student("Wolfgang Amadeus Mozart");
@@ -57,7 +61,7 @@ wordt je code eigenlijk herschreven naar:
 Console.WriteLine(stud1.ToString());
 ```
 
-Op het scherm verschijnt dan `StudentManager.Student`. Waarom? Wel, de methode ToString\(\) wordt in System.Object\(\) ongeveer als volgt beschreven:
+Op het scherm verschijnt dan `StudentManager.Student`. Waarom? Wel, de methode `ToString()` wordt in `System.Object()` ongeveer als volgt beschreven:
 
 ```csharp
 public virtual string ToString()
@@ -66,14 +70,14 @@ public virtual string ToString()
 
 Merk twee zaken op:
 
-1. GetType wordt aangeroepen en die output krijg je terug.
+1. `GetType` wordt aangeroepen en die output krijg je terug.
 2. De methode is **virtual** gedefinieerd.
 
-   **Alle 4 hierboven vermelde methoden in `System.Object` zijn `virtual` , en je kan deze overschrijven!**
+   **De hierboven vermelde methoden \(behalve `GetType`\) in `System.Object` zijn `virtual` , en je kan deze overschrijven!**
 
 **ToString\(\) overriden**
 
-Het zou natuurlijk fijner zijn dat de ToString\(\) van onze student nuttigere info teruggeeft, zoals bv de interne Naam \(string autoprop\) en Leeftijd \(int autoprop\). We kunnen dat eenvoudig krijgen door gewoon `ToString` to overriden:
+Het zou natuurlijk fijner zijn dat de `ToString()` van onze student nuttigere info teruggeeft, zoals bv de interne Naam \(string autoproperty\) en Leeftijd \(int autoproperty\). We kunnen dat eenvoudig krijgen door gewoon `ToString` to overriden:
 
 ```csharp
 class Student
@@ -93,11 +97,11 @@ class Student
 }
 ```
 
-Wanneer je nu `Console.WriteLine(stud1);` \(gelet dat hij een Naam en Leeftijd heeft\) zou schrijven dan wordt je output bijvoorbeeld: `Student Wolfgang Amadeus Mozart (Leeftijd:35)`.
+Wanneer je nu `Console.WriteLine(stud1);` zou schrijven, dan wordt je output bijvoorbeeld: `Student Wolfgang Amadeus Mozart (Leeftijd:35)`.
 
 ### Equals\(\)
 
-Ook deze methode kan je dus overriden om twee objecten met elkaar te vergelijken. Hierbij moet je een applicatiespecifiek antwoord kunnen geven op de vraag "wanneer zijn twee objecten aan elkaar gelijk?"
+Ook deze methode kan je dus overriden om twee objecten met elkaar te vergelijken. Hierbij moet je een **applicatiespecifiek** antwoord kunnen geven op de vraag "wanneer zijn twee objecten aan elkaar gelijk?"
 
 ```csharp
 if(stud1.Equals(stud2))
@@ -123,7 +127,7 @@ Volgt je eigen code deze afspraken niet, dan krijg je geen compilatiefouten, maa
 
 #### Equals overriden
 
-Stel dat we vinden dat een student gelijk is aan een andere student indien z'n Naam en Leeftijd dezelfde is, we kunnen dan de Equals-methode overriden als volgt:
+Stel dat we vinden dat een student gelijk is aan een andere student indien z'n `Naam` en `Leeftijd` dezelfde zijn, we kunnen dan de `Equals`-methode overriden als volgt:
 
 ```csharp
 //In de Student class
@@ -134,10 +138,13 @@ public override bool Equals(Object o)
          gelijk=false;
      else
      {
-         Student temp = (Student)o; //Zie opmerking na code!
-         if(Leeftijd== temp.Leeftijd && Naam== temp.Naam)
+         Student temp = (Student) o; //Zie opmerking na code!
+         if(Leeftijd == temp.Leeftijd && Naam == temp.Naam) {
             gelijk=true;
-         else gelijk=false;
+         }
+         else {
+            gelijk=false;
+         }
       }
        return gelijk;
 }
@@ -149,7 +156,7 @@ De lijn `Student temp = (Student) o;` zal het `object o` casten naar een `Studen
 
 `Equals` en `==` doen verschillende zaken. `==` is strenger. Het controleert volgende zaken:
 
-* Voor de meeste reference types: gaat het om exact dezelfde data \(op heap\)
+* Voor de meeste reference types: gaat het om exact dezelfde data \(d.w.z. hetzelfde adres op de heap\)?
 * Voor strings: gaat het om dezelfde tekst?
 * Voor value types: is de waarde aan de linkerkant een kopie van die aan de rechterkant?
 
@@ -159,7 +166,7 @@ De lijn `Student temp = (Student) o;` zal het `object o` casten naar een `Studen
 
 Een efficiënte hashfunctie voor een type `K` zorgt er bijvoorbeeld voor dat opzoekingen van keys in een `Dictionary<K,V>` erg snel verlopen. Een minder efficiënte hashfunctie zal opzoekingen in datzelfde `Dictionary` trager laten verlopen. Een foute hashfunctie kan er voor zorgen dat je `Dictionary` niet meer werkt zoals verwacht.
 
-Wij behandelen de theorie achter goede hashfuncties hier niet. Je kan gewoon deze vuistregel onthouden: als je een nieuwe hashfunctie moet voorzien \(bijvoorbeeld omdat je `Equals` hebt overschreven\), kan je de hashwaarde van een onderdeel laten berekenen dat gelijk is voor twee objecten die gelijk zijn, op voorwaarde dat dat onderdeel niet verandert. Dat komt omdat je niet wil dat een object nog van hashcode verandert nadat je het in een Dictionary, HashSet of andere structuur hebt geplaatst.
+Wij behandelen de theorie achter goede hashfuncties hier niet. Je kan gewoon deze vuistregel onthouden: als je een nieuwe hashfunctie moet voorzien \(normaal omdat je `Equals` hebt overschreven; de compiler waarschuwt je hier ook voor\), kan je de hashwaarde van een onderdeel laten berekenen dat gelijk is voor twee objecten die gelijk zijn, op voorwaarde dat dat onderdeel niet verandert. Dat komt omdat je niet wil dat een object nog van hashcode verandert nadat je het in een `Dictionary`, `HashSet` of andere structuur hebt geplaatst.
 
 Bijvoorbeeld:
 

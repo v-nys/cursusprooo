@@ -68,7 +68,7 @@ Zorg er voor dat je deze methode kan opstarten via de methode `ToonSubmenu` in d
 
 Bouw vervolgens de klassen, volgens volgend klassediagram. Merk op dat `Oppervlakte` cursief gedrukt staat, omdat het een abstracte methode is:
 
-![](../../.gitbook/assets/figuren%20%283%29.png)
+![Onderverdeling in soorten figuren. Technisch gezien is een vierkant een rechthoek &#xE9;n een ruit, maar dat kunnen we voorlopig niet voorstellen omdat je maar &#xE9;&#xE9;n ouderklasse kan hebben. Later zien we wel een alternatief.](../../.gitbook/assets/figuren%20%283%29.png)
 
 Begin bij `Figuur` en werk het diagram tak per tak af.
 
