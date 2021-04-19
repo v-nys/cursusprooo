@@ -159,7 +159,7 @@ De lijn `Student temp = (Student) o;` zal het `object o` casten naar een `Studen
 
 Een efficiënte hashfunctie voor een type `K` zorgt er bijvoorbeeld voor dat opzoekingen van keys in een `Dictionary<K,V>` erg snel verlopen. Een minder efficiënte hashfunctie zal opzoekingen in datzelfde `Dictionary` trager laten verlopen. Een foute hashfunctie kan er voor zorgen dat je `Dictionary` niet meer werkt zoals verwacht.
 
-Wij behandelen de theorie achter goede hashfuncties hier niet. Je kan gewoon deze vuistregel onthouden: als je een nieuwe hashfunctie moet voorzien \(bijvoorbeeld omdat je `Equals` hebt overschreven\), kan je de hashwaarde van een onderdeel laten berekenen dat gelijk is voor twee objecten die gelijk zijn, op voorwaarde dat dat onderdeel niet verandert.
+Wij behandelen de theorie achter goede hashfuncties hier niet. Je kan gewoon deze vuistregel onthouden: als je een nieuwe hashfunctie moet voorzien \(bijvoorbeeld omdat je `Equals` hebt overschreven\), kan je de hashwaarde van een onderdeel laten berekenen dat gelijk is voor twee objecten die gelijk zijn, op voorwaarde dat dat onderdeel niet verandert. Dat komt omdat je niet wil dat een object nog van hashcode verandert nadat je het in een Dictionary, HashSet of andere structuur hebt geplaatst.
 
 Bijvoorbeeld:
 
