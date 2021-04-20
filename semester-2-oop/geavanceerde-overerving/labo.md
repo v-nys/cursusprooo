@@ -90,6 +90,7 @@ We willen een digitale menukaart tonen in een online restaurant. Op deze kaart v
   * De methode `ToonOpMenu` print de naam, gevolgd door 3 tabs, gevolgd door de prijs
 * Schrijf een kindklasse `KinderGerecht`
   * Dit werkt hetzelfde als een gewoon gerecht, maar de weergave op het menu gebruikt een willekeurige kleur. Als we bijvoorbeeld het aantal tabs aanpassen naar 5, moet KinderGerecht zonder aanpassingen mee volgen.
+    * Je kan een willekeurige kleur krijgen door een willekeurig getal tussen 1 en 15 te bepalen en dat dan te casten naar een waarde van de enum `ConsoleColor`.
 * Maak een methode `DemonstreerGerechten`. Hierin maak je een lijst met minstens 4 gerechten \(waarvan minstens 2 kindergerechten\) naar keuze en doorloop je de lijst zodat elk gerecht getoond wordt op het menu.
 
 ### Voorbeeldinteractie
