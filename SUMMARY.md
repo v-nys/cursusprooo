@@ -138,6 +138,7 @@
 
 ## Appendix
 
+* [Visual Studio Tips & Tricks](appendix/visual-studio-tips-and-tricks.md)
 * [Ea-ict coding guidelines](appendix/codingguidelines.md)
 * [Oefeningen kerkhof](appendix/graveyard.md)
 
@@ -157,9 +158,11 @@
 
 ## Semester 2 appendix
 
+* [Operator overloading](semester-2-appendix/8_operatoroverloading.md)
+* [Object Initializer Syntax](semester-2-appendix/object-initializer-syntax.md)
+* [Compositie en aggregatie](semester-2-appendix/compositie-en-aggregatie.md)
 * [Nice to know stuff](semester-2-appendix/nice-to-know-stuff/README.md)
   * [Klassen herbruiken](semester-2-appendix/nice-to-know-stuff/namespaces.md)
-  * [Operator overloading](semester-2-appendix/nice-to-know-stuff/8_operatoroverloading.md)
   * [Expression bodied members](semester-2-appendix/nice-to-know-stuff/6_exprbody.md)
 * [All-In-Projecten](semester-2-appendix/all-in-projecten/README.md)
   * [Overzicht](semester-2-appendix/all-in-projecten/overzicht.md)
