@@ -188,13 +188,11 @@ Voor studenten stellen we dit uit. Je mag gewoon `<Student></Student>` teruggeve
 
 ### Vergelijkbare objecten
 
-Voorzie `VakInschrijving`, `Persoon` en `Cursus` van een eigen versie van Equals. Hiermee zullen we later nagaan dat een van deze objecten niet dubbel voorkomt in de lijst met geregistreerde objecten.
+Voorzie `Persoon` en `Cursus` van een eigen versie van Equals. Hiermee zullen we later nagaan dat een van deze objecten niet dubbel voorkomt in de lijst met geregistreerde objecten.
 
 Een persoon is gelijk aan een andere persoon met hetzelfde ID. Je hoeft hier niet na te gaan dat de objecten van exact hetzelfde type zijn. In plaats daarvan kan je schrijven: `if (obj is Person) { ... }`
 
 Een cursus is gelijk aan een andere cursus met hetzelfde ID.
-
-Een vakinschrijving is gelijk aan een andere vakinschrijving als de gekoppelde persoon en de gekoppelde cursus gelijk zijn.
 
 Voorzie ook overal een hash code volgens de vuistregel in de cursus.
 
