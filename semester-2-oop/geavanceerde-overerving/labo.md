@@ -120,7 +120,7 @@ We willen wat basisfunctionaliteit toevoegen aan onze figuren.
 
 Voorzie de niet-abstracte subklassen van `VergelijkbareFiguur` van een `Equals` methode. Twee figuren zijn gelijk als ze van hetzelfde type zijn \(bijvoorbeeld beide cirkels, beide rechthoeken,...\) en dezelfde afmetingen hebben.
 
-Hierna moet je ook de hash code aanpassen. Dit zie je als waarschuwing bovenaan de klasse in Visual Studio. Maak de setters voor de afmetingen `private` en zorg dat de afmetingen alleen bij constructie worden vastgelegd. Gebruik daarna de som van de hash codes van alle afmetingen als hash code voor de figuur.
+Hierna moet je ook de hash code aanpassen. Dit zie je als waarschuwing bovenaan de klasse in Visual Studio. Maak de setters voor de afmetingen `private` \(of `protected` waar je ze in de kindklassen gebruikt\) en zorg dat de afmetingen alleen bij constructie worden vastgelegd. Gebruik daarna de som van de hash codes van alle afmetingen als hash code voor de figuur.
 
 {% hint style="warning" %}
 De reden dat je de setters afschermt is dat een object niet van hash code mag veranderen wanneer het al in gebruik is.
