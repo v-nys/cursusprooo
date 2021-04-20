@@ -78,7 +78,7 @@ De ingredienten zijn:
 (hieronder het effect van ToonIngredienten)
 ```
 
-### h15-menukaart
+## h15-menukaart
 
 ### Functionele analyse
 
