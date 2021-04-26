@@ -149,44 +149,6 @@ Schrijf een methode `DemonstreerVergelijkbareFiguren` die de werking van Equals 
 
 ## Uitbreidingen SchoolAdmin
 
-### XML-serialisatie
-
-Voorzie de klasse `Persoon` van een abstracte methode `NaarXML()`. Deze genereert een stringvoorstelling van de persoon in een XML-formaat. De klassen `Lector`, `AdministratiefPersoneel` en `Student` moeten een concrete implementatie voorzien. Mogelijk moet je aanpassingen doen om de code te laten werken.
-
-Voor een lector is volgend resultaat mogelijk:
-
-```text
-<Lector>
-<Id>7</Id>
-<Naam>Plinius</Naam>
-<Geboortedatum>01/02/0023</Geboortedatum>
-<Cursussen>
-<Paar>
-  <Cursus>Filosofie</Cursus>
-  <Duurtijd>4</Duurtijd>
-</Paar>
-</Cursussen>
-</Lector>
-```
-
-Voor administratief personeel:
-
-```text
-<AdministratiefPersoneel>
-<Id>7</Id>
-<Naam>Plinius</Naam>
-<Geboortedatum>01/02/0023</Geboortedatum>
-<Taken>
-<Paar>
-  <Taak>Schrijven</Taak>
-  <Duurtijd>4</Duurtijd>
-</Paar>
-</Taken>
-</AdministratiefPersoneel>
-```
-
-Voor studenten stellen we dit uit. Je mag gewoon `<Student></Student>` teruggeven.
-
 ### Vergelijkbare objecten
 
 Voorzie `Persoon` en `Cursus` van een eigen versie van Equals. Hiermee zullen we later nagaan dat een van deze objecten niet dubbel voorkomt in de lijst met geregistreerde objecten.
@@ -219,4 +181,35 @@ Meerbepaald, administratief personeel
 ```
 
 Doe dit niet met `GetType`, want dan is de schrijfwijze anders. Doe het met de hand per klasse.
+
+### Eenmaking statische lijsten personen
+
+Je hebt momenteel volgende statische properties voor \(immutable\) lijsten met personen:
+
+* AllePersonen
+* AlleLectoren
+* AlleStudenten
+* AlleAdministratiefPersoneel
+
+Het is niet ideaal om al deze lijsten te hebben. Elke persoon wordt nu op twee plaatsen bijgehouden, dus als je het systeem zou aanpassen om personen te verwijderen, moet je er aan denken dat op twee plaatsen te doen. Als je klassen zoals `Gastlector`, `Uitwisselingsstudent` of `Roosterverantwoordelijke` zou toevoegen, zou je dat zelfs op nog meer plaatsen moeten doen.
+
+Vervang daarom de lijsten voor de subklassen van `Persoon` zodat er geen achterliggend attribuut wordt bijgehouden. In plaats daarvan, moet de lijst met personen "on-the-fly" berekend worden. Met andere woorden, je moet nog steeds een getter `AlleLectoren` enzovoort voorzien, maar deze verzamelt alle lectoren door `AllePersonen` te doorlopen. Gebruik hier opnieuw het woordje `is` dat we bij `Equals` hebben gebruikt.
+
+### Tweerichtingsverkeer voor `VakInschrijving`
+
+In je huidige code heeft de klasse `Student` een lijst `vakInschrijvingen`. Zo wordt een student gelinkt aan de cursussen die hij of zij volgt. Dit is niet ideaal, want in werkelijkheid willen we ook vaak te weten komen welke studenten in een bepaalde cursus zijn ingeschreven. We moeten dus in twee richtingen kunnen gaan.
+
+Een mogelijke oplossing: voorzie de klasse `VakInschrijving` van een \(immutable\) lijst `AlleVakInschrijvingen`. Zo hoef je geen data dubbel bij te houden en kan je toch de functionaliteit verder uitbreiden. Schrap de huidige lijst met vakinschrijvingen in de klasse `Student`. Voorzie ter vervanging daarvan een property `VakInschrijvingen` die ook deze data "on-the-fly" berekent. Voorzie ook een property `Cursussen`. Voorzie bovendien in de klasse Cursus een property `VakInschrijvingen` en een property `Studenten`. Al deze properties zijn onveranderlijke lijsten.
+
+### Cursussen in semesters
+
+Momenteel bestaat een studieprogramma gewoon uit een vlakke lijst cursussen. Dat stemt niet goed overeen met de werkelijkheid. In werkelijkheid wordt een cursus in een bepaald semester ingepland. Eén manier om dit voor te stellen: vervang de vlakke lijst met cursussen door een `Dictionary` met cursussen als keys en getalwaarden \(semesters\) als values. Doe deze aanpassing in je code.
+
+### Manueel data invoeren
+
+De demonstratiemethodes hebben bijna overal objecten aangemaakt door ze te "hard coden". Dat wil zeggen dat de instructies C\# code zijn en niet gewijzigd kunnen worden eens je programma gecompileerd is. In een echte systeem voor schoolbeheer zou het administratief personeel voortdurend nieuwe entiteiten kunnen toevoegen aan het systeem.
+
+Voorzie daarom vier nieuwe mogelijkheden in je keuzemenu: "student aanmaken", "cursus aanmaken", "vakinschrijving aanmaken" en "inschrijvingsgegevens tonen". De eerste drie vragen om de nodige gegevens om een object van een van deze klassen aan te maken. De laatste toont eerst alle studenten in het systeem, dan alle cursussen, dan alle inschrijvingen.
+
+
 
