@@ -1,39 +1,5 @@
 # Uitgewerkte voorbeelden
 
-## Voorbeeld: stack overflows bij fout gebruik properties
-
-{% hint style="success" %}
-[Kennisclip](https://youtu.be/X_DeD2mWSJY)
-{% endhint %}
-
-Wij volgen de afspraak dat we full properties schrijven met een publieke getter met een hoofdletter en met een achterliggend privaat attribuut met een kleine letter. Deze getter geeft normaal het achterliggend attribuut terug. Beginners schrijven vaak code zoals de volgende:
-
-```csharp
-class VoorbeeldKlasse {
-
-    private string naam;
-    public string Naam {
-        get {
-            return Naam;
-        }
-    }
-    
-    public static void Main() {
-        VoorbeeldKlasse voorbeeld = new VoorbeeldKlasse();
-        Console.WriteLine(voorbeeld.Naam);
-    }
-
-}
-```
-
-Deze code is recursief, maar ze mist een basisgeval. We vragen `Naam` \(met hoofdletter\) op en als gevolg daarvan vragen we opnieuw `Naam` \(met hoofdletter\) op. Elke recursieve call gebruikt wat ruimte op de stack, totdat deze volledig vol is.
-
-{% hint style="warning" %}
-Een belangrijke les: als je stack overflow krijgt, is dit bijna altijd omdat je recursieve code hebt geschreven zonder basisgeval of waarvan het basisgeval niet correct wordt gedetecteerd.
-{% endhint %}
-
-Deze code is niet meer recursief als je het juist doet: `return naam`.
-
 ## Voorbeeld: een bestand met een bepaalde naam opzoeken
 
 {% hint style="success" %}
@@ -154,4 +120,38 @@ class XMLLeaf : IXML {
 ```
 
 Terug omzetten naar tekst met `Render` is één mogelijkheid. Het voordeel van deze omzetting naar objecten is dat je nu allerlei methodes kan schrijven om het element in een programma te doorzoeken, data aan te passen,... op een manier die meer rekening kan houden met de structuur dan als je het document puur als een string tekst zou beschouwen \(en bv. aanpassingen zou doen met alleen `string.Replace` en dergelijke\).
+
+## Voorbeeld: fout gebruik van Properties leidt tot ongewenste recursie en stack overflow
+
+{% hint style="success" %}
+[Kennisclip](https://youtu.be/X_DeD2mWSJY)
+{% endhint %}
+
+Wij volgen de afspraak dat we full properties schrijven met een publieke getter met een hoofdletter en met een achterliggend privaat attribuut met een kleine letter. Deze getter geeft normaal het achterliggend attribuut terug. Beginners schrijven vaak code zoals de volgende:
+
+```csharp
+class VoorbeeldKlasse {
+
+    private string naam;
+    public string Naam {
+        get {
+            return Naam;
+        }
+    }
+    
+    public static void Main() {
+        VoorbeeldKlasse voorbeeld = new VoorbeeldKlasse();
+        Console.WriteLine(voorbeeld.Naam);
+    }
+
+}
+```
+
+Deze code is recursief, maar ze mist een basisgeval. We vragen `Naam` \(met hoofdletter\) op en als gevolg daarvan vragen we opnieuw `Naam` \(met hoofdletter\) op. Elke recursieve call gebruikt wat ruimte op de stack, totdat deze volledig vol is.
+
+{% hint style="warning" %}
+Een belangrijke les: als je stack overflow krijgt, is dit bijna altijd omdat je recursieve code hebt geschreven zonder basisgeval of waarvan het basisgeval niet correct wordt gedetecteerd.
+{% endhint %}
+
+Deze code is niet meer recursief als je het juist doet: `return naam`.
 

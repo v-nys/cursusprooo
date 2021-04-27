@@ -76,7 +76,7 @@ In bovenstaande voorbeelden is recursie vooral een alternatief voor een lus. Voo
 ## Recursieve data
 
 {% hint style="success" %}
-[Kennisclip 4](https://youtu.be/rSBDs1KUTHo)
+[Kennisclip 4](https://youtu.be/xvkfE0OSIJs)
 {% endhint %}
 
 Recursieve data is data die hetzelfde soort data bevat. In IT wordt voortdurend gebruik gemaakt van boomstructuren:

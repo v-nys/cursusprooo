@@ -135,6 +135,7 @@
   * [Wat is recursie?](semester-2-oop/recursie/wat-is-recursie.md)
   * [Uitgewerkte voorbeelden](semester-2-oop/recursie/uitgewerkte-voorbeelden.md)
   * [Labo](semester-2-oop/recursie/labo.md)
+  * [SchoolAdmin - Recursie \(versie 2020\)](semester-2-oop/recursie/schooladmin-recursie-versie-2020.md)
 
 ## Appendix
 

@@ -1,36 +1,39 @@
 # Labo
 
-## Uitbreiding cursussen met volgtijdelijkheden
+## Faculteiten berekenen
 
-We willen dat sommige cursussen enkel opgenomen kunnen worden als je een eerdere cursus hebt gevolgd. Daarom zullen we elke cursus voorzien van een volgtijdelijkheden, d.w.z. een lijst met andere cursussen die rechtstreeks vereiste voorkennis vormen voor deze cursus. We zullen dit voorstellen elke `Course` een property `Prerequisites` te geven. Hieronder volgt een filmpje dat dit helemaal demonstreert, maar lees eerst de opgave.
+Een gekend voorbeeld van recursie uit de wiskunde is het berekenen van de [faculteit van een getal](https://nl.wikipedia.org/wiki/Faculteit_%28wiskunde%29). Dit wordt vooral gebruikt in de kansrekening, bijvoorbeeld om te bepalen op hoeveel verschillende manieren n verschillende voorwerpen geordend kunnen worden: dit heet het aantal [permutaties](https://nl.wikipedia.org/wiki/Permutatie).
 
-We starten vanaf code die hieronder gegeven wordt en die dit diagram implementeert:
+De faculteit van n noteren we in de wiskunde als n! en dit wordt gedefinieerd als:
 
-![](../../.gitbook/assets/cursussenzondervolgtijdelijkheden.png)
+$$
+n! = \prod_{i=1}^{n} i = 1 \cdot 2 \cdot 3 \cdot \ldots \cdot n
+$$
 
-We zullen dit aanpassen naar:
+Oftewel: de faculteit van natuurlijk getal n, is het product van alle natuurlijke getallen van 1 tot n.
 
-![](../../.gitbook/assets/cursussenmetvolgtijdelijkheden.png)
+Dit kan je echter ook recursief schrijven:
 
-Nadat we deze aanpassing gedaan hebben, zullen we er voor zorgen dat we voor een gegeven cursus de lijst kunnen opbouwen die eerder gevolgd moeten zijn. We doen dit met een recursieve objectmethode `CollectAllPrerequisites(HashSet<Course> courses)`. Om dit te doen, passen we ook de `Equals` methode en de `GetHashcode` methode van `Course` aan. We demonstreren dit allemaal met een methode `DemonstratePrerequisites` die we kunnen oproepen uit onze keuzemenu. Deze maakt minstens vijf cursussen aan en verbindt ze met elkaar.
+$$
+\begin{cases}n! = n \cdot (n-1)! \\
+0! = 1 \end{cases}
+$$
 
-De code om van te starten krijg je hier:
+De faculteit van 5 is dus:
 
-{% file src="../../.gitbook/assets/schooladmin \(2\).zip" caption="SchoolAdmin project" %}
+$$
+5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 120
+$$
 
-{% hint style="success" %}
-[Het filmpje](https://youtu.be/PWvfcZjUGOw)
-{% endhint %}
+Schrijf in de klasse Recursie een methode public static ulong Faculteit \(byte n\) die je kan oproepen om de faculteit van een getal te bereken.
 
-## Studieprogramma's met volgtijdelijkheden
-
-Niet alleen cursussen hebben soms volgtijdelijkheden, het kan ook zijn dat je een studieprogramma moet hebben afgewerkt voor je aan een ander studieprogramma mag beginnen. Doe zelf de overeenkomstige aanpassing aan StudyProgram en implementeer `CollectAllPrerequisites(StudyProgram studyProgram, HashSet<StudyProgram>)`.
+Schrijf vervolgens een methode DemoFaculteiten\(\) die de faculteiten van 5, 8 en 20 aan de gebruiker toont.
 
 ## Ruimtegebruik .cs files tellen
 
 We willen nagaan hoe veel ruimte onze .cs files in een bepaalde directory en alle subdirectories hiervan in beslag nemen. Dit geeft ons een beeld van hoe groot onze code is.
 
-Maak hiervoor in je algemeen oefeningenproject \(niet SchoolAdmin\) een klasse `Recursie`. Maak deze met een methode ShowSubmenu zoals [eerder](../h8-klassen-en-objecten/a_practica.md). Voeg een optie toe `H18-cs-bestanden`. Als de gebruiker deze optie kiest, wordt er een methode `TelCSBestanden` opgestart om de grootte van alle CS-bestanden \(genest\) in een bepaalde map op te tellen. Deze methode heeft return type `void`, vraagt om de map in kwestie, start de \(recursieve\) berekening en toont het resultaat, uitgedrukt in KB.
+Maak hiervoor in je algemeen oefeningenproject \(IndividueleOefeningen\) een klasse `Recursie`. Maak deze met een methode ShowSubmenu zoals [eerder](../h8-klassen-en-objecten/a_practica.md). Voeg een optie toe `H18-cs-bestanden`. Als de gebruiker deze optie kiest, wordt er een methode `TelCSBestanden` opgestart om de grootte van alle CS-bestanden \(genest\) in een bepaalde map op te tellen. Deze methode heeft return type `void`, vraagt om de map in kwestie, start de \(recursieve\) berekening en toont het resultaat, uitgedrukt in KB.
 
 Om de recursieve berekening zelf uit te voeren, gebruik je een methode `TotalCSBytes(DirectoryInfo di)` met return type `long` . Deze geeft de totale omvang van alle CS-bestanden in de gevraagde directory terug als resultaat. De omvang in bytes van één bestand kan je verkrijgen via `FileInfo.Length`. Je kan omzetten van bytes naar kilobytes door te delen door 1024.
 
