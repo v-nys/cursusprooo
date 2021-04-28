@@ -25,15 +25,21 @@ $$
 5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 120
 $$
 
-Schrijf in de klasse Recursie een methode public static ulong Faculteit \(byte n\) die je kan oproepen om de faculteit van een getal te bereken.
+Schrijf in de klasse Recursie een methode `public static ulong Faculteit (byte n)` die je kan oproepen om de faculteit van een getal te bereken.
 
-Schrijf vervolgens een methode DemoFaculteiten\(\) die de faculteiten van 5, 8 en 20 aan de gebruiker toont.
+Schrijf vervolgens een methode `DemoFaculteiten()` die de faculteiten van 5, 8 en 20 aan de gebruiker toont:
+
+```text
+5! = 120
+8! = 40320
+20! = 2432902008176640000
+```
 
 ## Ruimtegebruik .cs files tellen
 
 We willen nagaan hoe veel ruimte onze .cs files in een bepaalde directory en alle subdirectories hiervan in beslag nemen. Dit geeft ons een beeld van hoe groot onze code is.
 
-Maak hiervoor in je algemeen oefeningenproject \(IndividueleOefeningen\) een klasse `Recursie`. Maak deze met een methode ShowSubmenu zoals [eerder](../h8-klassen-en-objecten/a_practica.md). Voeg een optie toe `H18-cs-bestanden`. Als de gebruiker deze optie kiest, wordt er een methode `TelCSBestanden` opgestart om de grootte van alle CS-bestanden \(genest\) in een bepaalde map op te tellen. Deze methode heeft return type `void`, vraagt om de map in kwestie, start de \(recursieve\) berekening en toont het resultaat, uitgedrukt in KB.
+Maak hiervoor in je algemeen oefeningenproject \(IndividueleOefeningen\) een klasse `Recursie`. Maak deze met een methode ShowSubmenu zoals [eerder](../h8-klassen-en-objecten/a_practica.md). Voeg een optie toe `TelCSBestanden`. Als de gebruiker deze optie kiest, wordt er een methode `TelCSBestanden` opgestart om de grootte van alle CS-bestanden \(genest\) in een bepaalde map op te tellen. Deze methode heeft return type `void`, vraagt om de map in kwestie, start de \(recursieve\) berekening en toont het resultaat, uitgedrukt in KB.
 
 Om de recursieve berekening zelf uit te voeren, gebruik je een methode `TotalCSBytes(DirectoryInfo di)` met return type `long` . Deze geeft de totale omvang van alle CS-bestanden in de gevraagde directory terug als resultaat. De omvang in bytes van één bestand kan je verkrijgen via `FileInfo.Length`. Je kan omzetten van bytes naar kilobytes door te delen door 1024.
 
@@ -47,8 +53,9 @@ Topic van de uit te voeren oefening?
 3. Recursie
 > 3
 Uit te voeren oefening?
-1. H18-cs-bestanden
-> 1
+1. DemoFaculteiten
+2. TelCSBestanden
+> 2
 Wat is de rootmap van de .cs-bestanden?
 > C:\Users\Vincent Nys\
 Je hebt 25.42KB aan .cs-bestanden.
@@ -58,7 +65,7 @@ Topic van de uit te voeren oefening?
 
 ## Contact tracing
 
-We zullen recursie gebruiken om na te gaan wie zich moet laten testen voor Covid19. Maak een klasse `Person` met twee properties: een naam en een `HashSet<Person> Contacts` .  Twee personen zijn gelijk onder `Equals` als ze dezelfde naam hebben. De hash code van een persoon is de hash code van zijn/haar naam. Voeg aan je submenu een optie toe `H18-contacttracing`. Dit start een `void` methode `Person.SetupTracing()`.
+We zullen recursie gebruiken om na te gaan wie zich moet laten testen voor Covid19. Maak een klasse `Person` met twee properties: een naam en een `HashSet<Person> Contacts` .  Twee personen zijn gelijk onder `Equals` als ze dezelfde naam hebben. De hash code van een persoon is de hash code van zijn/haar naam. Voeg aan je submenu van de klasse Recursie een optie toe `ContactTracing`. Dit start een `void` methode `Person.SetupTracing()`.
 
 `Person.SetupTracing()` vraagt eerst om namen van personen, totdat je een lege naam invoert. Deze personen worden aangemaakt \(met een lege lijst contacten\) en bijgehouden in een lijst. Daarna vraagt deze methode per persoon de contacten in te geven, gescheiden door komma's. Deze informatie wordt gebruikt om de juiste `Person`-objecten aan iedereens `Contacts` toe te voegen. Let op: voeg niet gewoon een nieuwe persoon met een bestaande naam toe, want een nieuwe persoon heeft een eigen set contacten. Voeg alleen personen die in je lijst personen staan toe aan contacten. Ten slotte vraagt de methode van welke persoon we de contacten moeten nagaan. Hier geef je één naam als antwoord en het aantal niveaus dat we teruggaan \(dus of we alleen rechtstreekse contacten opsporen of contacten van contacten of nog verder\).
 
