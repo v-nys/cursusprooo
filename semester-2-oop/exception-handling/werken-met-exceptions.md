@@ -171,7 +171,7 @@ De MSDN bibliotheek is de manier om te weten te komen welke exceptions een metho
 [Kennisclip stack \(trace\)](https://youtu.be/E2RdKJ1BFXg)
 {% endhint %}
 
-Herinner je uit [het hoofdstuk rond geheugenbeheer]() dat elke methode-oproep data op de stack plaatst, het "snelle programmageheugen". Dus als methode A methode B oproept en methode B roept methode C op, krijg je een stack die er als volgt uitziet:
+Herinner je uit [het hoofdstuk rond geheugenbeheer](../../semester-1-programming-principles/h7-arrays/value-types-en-reference-types.md#stack-heap-value-en-reference) dat elke methode-oproep data op de stack plaatst, het "snelle programmageheugen". Dus als methode A methode B oproept en methode B roept methode C op, krijg je een stack die er als volgt uitziet:
 
 |  |
 | :---: |
@@ -215,4 +215,29 @@ catch (Exception e)
 ```
 
 **Opgelet**: vanuit security standpunt is het zelden aangeraden om Exception informatie zomaar naar de gebruiker te sturen. Mogelijk bevat de informatie gevoelige informatie en zou deze door kwaadwillige gebruikers kunnen misbruikt worden!
+
+## Finally
+
+Sommige zaken moeten sowieso gebeuren in je programma, of er nu een fout is opgetreden of niet. Een voorbeeld: je opent een databaseverbinding via C\# om zo bepaalde data uit de database te lezen. Het blijkt dat de uitgevoerde query geen resultaat oplevert. Dit leidt tot een exception, omdat je programma verwacht dat de opgevraagde data aanwezig is in het systeem. **Of deze fout zich nu voordoet of niet**, achteraf moet de databaseconnectie gesloten worden.
+
+Dit kan met het woordje `finally`. `finally` duidt een block aan dat sowieso wordt uitgevoerd. Als er geen exception is opgetreden, wordt dit block uitgevoerd na het `try` block. Als er wel een is opgetreden, na het `catch` block.
+
+Volgend voorbeeld toont dit aan. Probeer het uit op je eigen machine:
+
+```csharp
+try {
+    // probeer met en zonder deze regel in commentaar
+    throw new Exception("Boo!");
+}
+catch (Exception e) {
+    System.Console.WriteLine("Hooray!");
+}
+finally {
+    System.Console.WriteLine("Phew!");
+}
+```
+
+Een `finally` block voert bijna altijd uit. **De enige situatie waarin het niet uitvoert, is als je programma stopt terwijl de try of bijbehorende catch nog niet volledig is afgewerkt.** Dit kan bijvoorbeeld zijn omwille van een oproep van de methode `Environment.Exit` of omdat je catch block zelf een exception oplevert die niet wordt afgehandeld.
+
+
 
