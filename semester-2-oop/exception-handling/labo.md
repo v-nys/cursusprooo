@@ -14,7 +14,7 @@ Maak eerst een klasse ExceptionHandling met een methode ToonSubmenu zodat je je 
 private static void DemonstreerFoutafhandelingWeekdagenZonderException()
 {
     string[] arr = new string[5];
-    arr[0] = "Zondag";
+    arr[0] = "Vrijdag";
     arr[1] = "Maandag";
     arr[2] = "Dinsdag";
     arr[3] = "Woensdag";
@@ -32,7 +32,7 @@ Verbeter zelf de fout.
 ### Voorbeeldinteractie \(na fix\)
 
 ```aspnet
-Zondag
+Vrijdag
 Maandag
 Dinsdag
 Woensdag
