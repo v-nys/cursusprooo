@@ -20,7 +20,7 @@ private static void DemonstreerFoutafhandelingWeekdagenZonderException()
     arr[3] = "Woensdag";
     arr[4] = "Donderdag";
 
-    for (int i = 0; i <= 4; i++)
+    for (int i = 0; i <= 5; i++)
     {
         Console.WriteLine(arr[i].ToString());
     }
