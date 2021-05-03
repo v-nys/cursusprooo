@@ -126,6 +126,7 @@
   * [Zelf uitzonderingen maken](semester-2-oop/exception-handling/zelf-uitzonderingen-maken.md)
   * [Wanneer exceptions en handling gebruiken](semester-2-oop/exception-handling/waar-exceptions-plaatsen.md)
   * [Labo](semester-2-oop/exception-handling/labo.md)
+  * [Labo \(verouderd\)](semester-2-oop/exception-handling/labo-verouderd.md)
 * [H17: polymorfisme en interfaces](semester-2-oop/h17-polymorfisme-en-interfaces/README.md)
   * [Polymorfisme](semester-2-oop/h17-polymorfisme-en-interfaces/polymorfisme.md)
   * [Polymorfisme in de praktijk](semester-2-oop/h17-polymorfisme-en-interfaces/polymorfisme-in-de-praktijk.md)
