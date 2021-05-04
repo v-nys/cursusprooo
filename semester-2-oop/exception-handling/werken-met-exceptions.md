@@ -237,7 +237,11 @@ finally {
 }
 ```
 
-Een `finally` block voert bijna altijd uit. **De enige situatie waarin het niet uitvoert, is als je programma stopt terwijl de try of bijbehorende catch nog niet volledig is afgewerkt.** Dit kan bijvoorbeeld zijn omwille van een oproep van de methode `Environment.Exit` of omdat je catch block zelf een exception oplevert die niet wordt afgehandeld.
+Een `finally` block voert bijna altijd uit. **De enige situatie waarin het niet uitvoert, is als je programma stopt terwijl de try of bijbehorende catch nog niet volledig is afgewerkt.** Dit kan bijvoorbeeld zijn omwille van een oproep van de methode `Environment.Exit` of omdat je catch block zelf een exception oplevert die niet wordt afgehandeld **en** die zo ernstig is dat het controlemechanisme van C\# in de war raakt.
+
+{% hint style="info" %}
+Het is moeilijk op voorhand duidelijk te maken welke exceptions ernstig genoeg zijn om het controlemechanisme van C\# in de war te brengen. Volgens [de officiële documentatie](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try-finally) is het in de meeste situaties ook niet erg belangrijk wat je programma doet nadat het gecrasht is.
+{% endhint %}
 
 {% hint style="warning" %}
 "Maar de code hierboven werkt ook zonder `finally`!" In dit geval wel. Maar `finally` is "krachtiger" dan code die gewoon achter alle `catch` blokken staat. `finally` voert altijd uit, tenzij het programma volledig afsluit. Zelfs na een `return` of na een handler op hoger niveau.
