@@ -205,5 +205,65 @@ File bestaat, maar kon niet gelezen worden. Mogelijk heb je geen toegangsrechten
 
 
 
+## h16-leeftijd-kat-custom
+
+### Functionele analyse
+
+We doen een uitbreiding op h16-leeftijd-kat. We zouden graag makkelijk in detail kunnen uitleggen aan de gebruiker waarom het is misgelopen. We doen dit hier in de eerste plaats door een custom exception type te voorzien.
+
+### Technische analyse
+
+* Maak een kopie van je klasse `Kat`. Noem deze `KatMetCustomException`.
+* Maak een klasse `KatLeeftijdException`. Deze erft van `ArgumentException`.
+  * Ze heeft drie read-only properties, waarvan je zelf het juiste type zou moeten kunnen bepalen:
+    * `MeegegevenWaarde`
+    * `LaagstMogelijkeWaarde`
+    * `HoogstMogelijkeWaarde`
+  * Ze heeft een constructor die \(enkel\) waarden voor deze drie properties als parameters heeft.
+  * Wanneer de leeftijd van een `KatMetCustomException` wordt ingesteld, wordt een exception van dit type in plaats van een `ArgumentException` gegooid. Hierbij vul je de argumenten in op basis van de rest van je code.
+* Maak ook een variatie op je eerdere demonstratiemethode. Noem deze `DemonstreerLeeftijdKatMetCustomException`.
+
+### Voorbeeldinteractie
+
+Als dit in je code staat:
+
+```csharp
+KatMetCustomException kat = new KatMetCustomException(37);
+```
+
+```text
+37 is geen geldige leeftijd. De laagst mogelijke leeftijd is 0 jaar, de hoogst mogelijke leeftijd is 25 jaar.
+```
+
+Dit bericht mag niet "hardgecodeerd zijn". Elk getal moet uit de exception gehaald worden.
+
+## h16-gedeeltelijke-afhandeling
+
+### Functionele analyse
+
+We schrijven flexibele formuliercode, die we ook zullen gebruiken om de duidelijkheid van onze formulieren te verbeteren. Een formulier logt ongeldige antwoorden op vragen vooraleer het de fout signaleert aan een hoger niveau.
+
+### Technische analyse
+
+Schrijf onderstaande klassen: TODO genereer uit modelopln.
+
+## Schooladmin project: geen dubbele data
+
+Maak in je SchoolAdmin project een klasse `DuplicateDataException`. Deze heeft twee properties, `Waarde1` en `Waarde2`, beide van type `System.Object`. Ze heeft ook een constructor die een message en de twee waarden als parameter heeft.
+
+## Schooladmin project: geen dubbele cursusnamen
+
+Wanneer je een nieuwe cursus aanmaakt, wordt deze vanzelf geregistreerd in het systeem. Pas je code aan zodat geen twee cursussen met dezelfde naam kan registreren. Meerbepaald: zorg dat een poging om een cursus aan te maken afgebroken wordt door middel van een `DuplicateDataException` vooraleer de teller van alle cursussen wordt verhoogd. De boodschap die je meegeeft is: "Nieuwe cursus heeft dezelfde naam als een bestaande cursus." Voor de eerste waarde geef je de nieuwe cursus, voor de tweede geef je de bestaande cursus.
+
+Zorg er ook voor dat je keuzemenu niet crasht wanneer deze fout zich voordoet, maar gewoon de boodschap van de exception toont.
+
+## Schooladmin project: geen lege waarden voor VakInschrijving
+
+Het is niet logisch een inschrijving te hebben zonder student of zonder vak. Zorg ervoor dat een VakInschrijving niet kan aangemaakt worden zonder een \(of beide\) van deze elementen. Gebruik hiervoor een ArgumentException. Breid bij wijze van demonstratie je keuzemenu om een student of een vak toe te voegen uit met een optie met nummer 0 om de waarde `null` te gebruiken. Zorg ook dat het niet toegelaten is een student twee keer in te schrijven voor hetzelfde vak. Zorg dat het keuzemenu niet crasht wanneer je deze optie kiest, maar gewoon de boodschap van de exception toont.
+
+## Schooladmin project: beperkt aantal inschrijvingen per vak
+
+Er mogen niet meer dan 20 lopende inschrijvingen per cursus zijn. Zorg ervoor dat er een `CapaciteitOverschredenException` \(met enkel de message als parameter\) optreedt wanneer je iemand probeert in te schrijven voor een cursus waarvoor al 20 inschrijvingen \(zonder toegekend resultaat\) bestaan. Zorg ervoor dat je keuzemenu hierop voorzien is en de message toont, zonder te crashen.
+
 
 
