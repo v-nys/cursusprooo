@@ -237,16 +237,6 @@ KatMetCustomException kat = new KatMetCustomException(37);
 
 Dit bericht mag niet "hardgecodeerd zijn". Elk getal moet uit de exception gehaald worden.
 
-## h16-gedeeltelijke-afhandeling
-
-### Functionele analyse
-
-We schrijven flexibele formuliercode, die we ook zullen gebruiken om de duidelijkheid van onze formulieren te verbeteren. Een formulier logt ongeldige antwoorden op vragen vooraleer het de fout signaleert aan een hoger niveau.
-
-### Technische analyse
-
-Schrijf onderstaande klassen: TODO genereer uit modelopln.
-
 ## Schooladmin project: geen dubbele data
 
 Maak in je SchoolAdmin project een klasse `DuplicateDataException`. Deze heeft twee properties, `Waarde1` en `Waarde2`, beide van type `System.Object`. Ze heeft ook een constructor die een message en de twee waarden als parameter heeft.
@@ -255,15 +245,87 @@ Maak in je SchoolAdmin project een klasse `DuplicateDataException`. Deze heeft t
 
 Wanneer je een nieuwe cursus aanmaakt, wordt deze vanzelf geregistreerd in het systeem. Pas je code aan zodat geen twee cursussen met dezelfde naam kan registreren. Meerbepaald: zorg dat een poging om een cursus aan te maken afgebroken wordt door middel van een `DuplicateDataException` vooraleer de teller van alle cursussen wordt verhoogd. De boodschap die je meegeeft is: "Nieuwe cursus heeft dezelfde naam als een bestaande cursus." Voor de eerste waarde geef je de nieuwe cursus, voor de tweede geef je de bestaande cursus.
 
-Zorg er ook voor dat je keuzemenu niet crasht wanneer deze fout zich voordoet, maar gewoon de boodschap van de exception toont.
+Zorg er ook voor dat je keuzemenu niet crasht wanneer deze fout zich voordoet, maar de boodschap van de exception toont en het ID van de bestaande cursus waarmee de nieuwe cursus zou overlappen. Dit kan je doen door `Waarde2` te casten.
 
 ## Schooladmin project: geen lege waarden voor VakInschrijving
 
-Het is niet logisch een inschrijving te hebben zonder student of zonder vak. Zorg ervoor dat een VakInschrijving niet kan aangemaakt worden zonder een \(of beide\) van deze elementen. Gebruik hiervoor een ArgumentException. Breid bij wijze van demonstratie je keuzemenu om een student of een vak toe te voegen uit met een optie met nummer 0 om de waarde `null` te gebruiken. Zorg ook dat het niet toegelaten is een student twee keer in te schrijven voor hetzelfde vak. Zorg dat het keuzemenu niet crasht wanneer je deze optie kiest, maar gewoon de boodschap van de exception toont.
+Het is niet logisch een inschrijving te hebben zonder student of zonder vak. Zorg ervoor dat een VakInschrijving niet kan aangemaakt worden zonder een \(of beide\) van deze elementen. Gebruik hiervoor een `ArgumentException`. Breid bij wijze van demonstratie je keuzemenu om een student of een vak toe te voegen uit met een optie met nummer 0 om de waarde `null` te gebruiken. \(Dit zou je in het echt niet toevoegen aan je systeem zelf, maar je zou aparte testcode schrijven die dit doet.\) Zorg ook dat het niet toegelaten is een student twee keer in te schrijven voor hetzelfde vak. Ook dat levert een `ArgumentException`. Zorg dat het keuzemenu niet crasht wanneer je deze optie kiest, maar gewoon de boodschap van de exception toont.
 
 ## Schooladmin project: beperkt aantal inschrijvingen per vak
 
 Er mogen niet meer dan 20 lopende inschrijvingen per cursus zijn. Zorg ervoor dat er een `CapaciteitOverschredenException` \(met enkel de message als parameter\) optreedt wanneer je iemand probeert in te schrijven voor een cursus waarvoor al 20 inschrijvingen \(zonder toegekend resultaat\) bestaan. Zorg ervoor dat je keuzemenu hierop voorzien is en de message toont, zonder te crashen.
 
+## h16-gedeeltelijke-afhandeling
 
+### Functionele analyse
+
+We schrijven flexibele formuliercode, die we ook zullen gebruiken om de duidelijkheid van onze formulieren te verbeteren. Een formulier logt ongeldige antwoorden op vragen vooraleer het de fout signaleert aan een hoger niveau.
+
+{% hint style="warning" %}
+Dit is een uitdagende, maar leerrijke en realistische oefening.
+{% endhint %}
+
+### Technische analyse
+
+We vertrekken vanaf dit klassendiagram:
+
+![Klassendiagram formulieren](../../.gitbook/assets/include.png)
+
+Je krijgt ook volgende demonstratiecode om in het submenu van je klasse `ExceptionHandling` te plaatsen:
+
+```csharp
+private static void DemonstreerFormulieren() {
+    var vraag1 = new FormulierGetalVraag("Hoe oud ben je?", 18, 130);
+    var vraag2 = new FormulierVrijeTekstVraag("Hoe ziet jouw ideale dag eruit?");
+    var vraag3 = new FormulierGetalVraag("Hoe veel personen heb je ten laste?", 0, 10);
+    var vraag4 = new FormulierVrijeTekstVraag("Wie is je idool?");
+    Formulier f1 = new Formulier(new List<FormulierVraag>{ vraag1, vraag2 });
+    Formulier f2 = new Formulier(new List<FormulierVraag>{ vraag3, vraag4 });
+    try {
+        f1.VulIn();
+        f1.Toon();
+    }
+    catch (Exception) {
+        System.Console.WriteLine("We zullen dit formulier weggooien.");
+        f1 = null;
+    }
+    try {
+        f2.VulIn();
+        f2.Toon();
+    }
+    catch (Exception) {
+        System.Console.WriteLine("We zullen dit formulier weggooien.");
+        f2 = null;
+    }
+}
+```
+
+De werking van elke klasse is als volgt:
+
+* FormulierVraag:
+  * Dit stelt één vraag op één formulier voor, inclusief het antwoord dat eventueel al is gegeven op deze vraag.
+  * De tekst is de vraag waarop een antwoord verwacht wordt. Deze mag nooit leeg of null zijn.
+  * Het antwoord is het antwoord dat de invuller gegeven heeft op deze vraag, in tekstformaat. Dit moet initieel null zijn maar mag later nooit meer naar null gewijzigd worden.
+  * Het presenteren van een vraag en het inlezen van een antwoord hangt af van het vraagtype, omdat elk vraagtype eigen instructies heeft \(bv. antwoorden in tekst of met een reeks cijfers,...\)
+* FormulierGetalVraag:
+  * Dit stelt een vraag voor waarbij een getal wordt verwacht.
+  * De ondergrens is het kleinste getal dat mag worden ingegeven, de bovengrens is het grootste getal dat mag worden ingegeven.
+  * Als een vraag van dit type wordt aangemaakt met een ondergrens die groter is dan de bovengrens, krijgen we een `ArgumentException`.
+  * Bij het inlezen van een antwoord wordt de ingetypte tekst geconverteerd naar een getal. Als dit getal tussen de ondergrens en bovengrens ligt, wordt het antwoord \(het getal, voorgesteld als string\) opgeslagen. Anders wordt gesignaleerd dat het antwoord tussen deze twee getallen moet liggen en wordt er opnieuw tekst ingelezen, tot er een antwoord verkregen is \(of er een exception optreedt\).
+  * Tonen van een vraag gaat als volgt:
+    * Eerst wordt de vraagtekst geprint.
+    * Daaronder wordt toegevoegd: "Dit is een getal tussen ... en ..." \(met daar de grenzen ingevuld\)
+* FormulierVrijeTekstVraag:
+  * Alle tekst is geldig als antwoord
+  * Tonen van een vraag: de vraagtekst wordt getoond. Daaronder wordt getoond: "Sluit af met ENTER."
+* Formulier:
+  * Bij constructie wordt er een lijst met FormulierVraag-objecten meegegeven.
+  * Deze vragen worden opgeslagen en na aanmaak van het formulier kan de lijst met vragen niet meer gewijzigd worden.
+  * Een formulier invullen betekent dat we één voor één elke vraag in het formulier tonen en het antwoord inlezen.
+    * Dit kan fout lopen. Als er iets fout loopt \(wat dan ook\), tonen we een bericht "Onverwachte fout wordt naar schijf weggeschreven." en staan we vervolgens toe dat de fout naar een hoger niveau van de programmacode gaat.
+  * Een formulier tonen betekent dat we voor elke vraag in het formulier de tekst van de vraag en het opgeslagen antwoord tonen.
+
+### Voorbeeldinteractie
+
+![](../../.gitbook/assets/screenshot-from-2021-05-10-10-07-54.png)
 
