@@ -1,4 +1,4 @@
-# Labo
+# Labo \(verouderd\)
 
 ## Implementatie `ICSVSerializable`
 
