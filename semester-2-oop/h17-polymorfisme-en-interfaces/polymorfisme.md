@@ -18,7 +18,7 @@ We tonen de werking van polymorfisme aan de hand van een voorbeeld:
 Een voorbeeld maakt veel duidelijk. Stel dat we een een aantal Dier-gerelateerde klassen hebben die allemaal op hun eigen manier een geluid voortbrengen. We hanteren de klasse `Dier`:
 
 ```csharp
-abstract class Dier{
+abstract class Dier {
   public abstract string MaakGeluid();
 }
 ```
@@ -30,6 +30,10 @@ class Paard : Dier {
   public override string MaakGeluid() {
     return "Hinnikhinnik";
   }
+  // deze methode is alleen voor paarden
+  public void Galoppeer() {
+    Console.WriteLine("klipklop");
+  }
 }
 ​class Varken : Dier {
   public override string MaakGeluid() {
@@ -40,14 +44,30 @@ class Paard : Dier {
 
 Dankzij polymorfisme kunnen we nu elders objecten van Paard en Varken in een `Dier` bewaren, maar toch hun eigen geluid laten reproduceren:
 
-```text
-Dier someAnimal = new Varken();
-Dier anotherAnimal = new Paard();
-Console.WriteLine(someAnimal.MaakGeluid()); //Oinkoink
-Console.WriteLine(anotherAnimal.MaakGeluid()); //Hinnikhinnik
+```csharp
+Dier eenDier = new Varken();
+Dier anderDier = new Paard();
+Console.WriteLine(eenDier.MaakGeluid()); //Oinkoink
+Console.WriteLine(anderDier.MaakGeluid()); //Hinnikhinnik
 ```
 
-Het is belangrijk te beseffen dat `someAnimal` en `anotherAnimal` van het type `Dier` zijn en dus enkel die dingen kunnen die in `Dier` beschreven staan. Dit is het gevolg van de abstractie van beide soorten dieren tot één algemeen datatype `Dier`. Je kan `someAnimal` en `anotherAnimal` wel declareren als `Varken` en `Paard` respectievelijk, maar dat doe je best alleen als je die specificiteit nodig hebt.
+Het is belangrijk te beseffen dat `eenDier` en `anderDier` van het type `Dier` zijn en dus enkel die dingen kunnen die in `Dier` beschreven staan. Dit is het gevolg van de abstractie van beide soorten dieren tot één algemeen datatype `Dier`. Je kan `eenDier` en `anderDier` wel declareren als `Varken` en `Paard` respectievelijk, maar dat doe je best alleen als je hiermee methodes wil oproepen die enkel in `Varken` of `Paard` aanwezig zijn. Dit gaat bijvoorbeeld niet:
+
+```csharp
+// werkt niet omdat anderDier gedeclareerd is als type Dier
+anderDier.Galoppeer();
+```
+
+De declaratie vertelt de compiler dat hij alleen moet onthouden dat `anderDier` alles kan wat in `Dier` beschreven staat. `Galoppeer` valt daar niet onder. **De waarde is tijdens de uitvoering van type `Paard`, maar de variabele is van type `Dier`.  Tijdens de compilatiefase wordt alleen gebruik gemaakt van de informatie die in de types van de variabelen staat.**
+
+Als je die methode toch wil kunnen gebruiken, moet je de declaratie anders schrijven:
+
+```csharp
+Paard anderDier = new Paard();
+// geen probleem
+// zowel de variabele als de waarde zijn van type Paard
+anderDier.Galoppeer();
+```
 
 ### Datastructuren en polymorfisme <a id="arrays-en-polymorfisme"></a>
 
@@ -63,4 +83,6 @@ foreach(Dier dier in zoo){
   Console.WriteLine(dier.MaakGeluid());
 }
 ```
+
+Deze code is algemener dan wat je zou kunnen doen met twee aparte lijsten. Zo kan je hier paarden en varkens door elkaar voorstellen. Er hangt wel een prijskaartje aan: zonder cast kan je hier geen gebruik maken van `Galoppeer`.
 

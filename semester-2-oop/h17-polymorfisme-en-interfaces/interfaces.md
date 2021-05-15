@@ -45,10 +45,14 @@ Enkele opmerkingen:
 * Er wordt geen code/implementatie gegeven: iedere methode eindigt ogenblikkelijk met een puntkomma.
 * Interfaces kunnen geen `static` members bevatten in C\#.
 
-Als we deze interface nu koppelen aan een klasse, moeten we deze methodes implementeren.
+Als we deze interface nu koppelen aan een klasse, **moeten** we deze methodes implementeren.
 
 {% hint style="info" %}
 Een interface is een beschrijving hoe een component een andere component kan gebruiken, zonder te zeggen hoe dit moet gebeuren. De interface is met andere woorden 100% scheiding tussen de methode/Property-signatuur en de eigenlijke implementatie ervan.
+{% endhint %}
+
+{% hint style="info" %}
+Dit lijkt wel heel erg op een afgewaterde abstracte klasse? Ja, maar er zijn goede redenen om interfaces te gebruiken. De simpelste: je mag maar van één klasse erven, maar je mag zo veel interfaces implementeren als je wil. Als je wil weten waarom, zie [hier](https://www.journaldev.com/1775/multiple-inheritance-in-java). De uitleg gaat over Java maar kan rechtstreeks toegepast worden op C\#.
 {% endhint %}
 
 ### Regels voor interfaces
@@ -68,6 +72,7 @@ class Student : ICSVSerializable
     private string naam;
     private string leeftijd;
     private string separator;
+    
     public Separator {
         get {
             return this.separator

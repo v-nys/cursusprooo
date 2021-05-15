@@ -54,7 +54,8 @@ Je merkt dat de president \(of de programmeur van deze klasse\) aardig wat speci
 
 Dankzij polymorfisme kunnen we dit alles veel mooier oplossen:
 
-1. We verplichten alle adviseurs dat ze overerven van de abstracte klasse `Advisor` die maar 1 abstracte methode heeft `Advise`:
+1. We maken **abstractie** van de taken van alle ministers. We bekijken het dus algemener. We zeggen: "elke minister heeft bepaalde eigen taken en het interesseert ons niet hoe deze worden uitgevoerd."
+2. We verplichten alle adviseurs dat ze overerven van de abstracte klasse `Advisor` die maar 1 abstracte methode heeft `Advise`:
 
 ```csharp
 abstract class Advisor
