@@ -80,15 +80,11 @@ We willen te weten komen wat het "grootste" element in een lijst is. We willen d
 
 ### Technische analyse
 
-Schrijf een statische methode `ZoekGrootste` in de klasse voor dit labo. Deze heeft als parameter een lijst van `IComparable<T>` objecten en geeft een object terug dat minstens even groot is als alle andere objecten. Binnenin deze methode mag je T behandelen alsof het een ingevuld type is, bijvoorbeeld:
-
-```csharp
-T variabeleDieIkNodigHeb = lijst[0];
-```
+Schrijf een statische methode `ZoekGrootste` in de klasse voor dit labo. Deze heeft als parameter een lijst van `IComparable` objecten en geeft een object terug dat minstens even groot is als alle andere objecten. Binnenin deze methode mag je T behandelen alsof het een ingevuld type is, bijvoorbeeld:
 
 Doe dit zonder een sorteermethode te gebruiken.
 
-Implementeer ook `IComparable<Figuur>` in de klasse Figuur \(die je eerder geschreven hebt\) zodat een figuren vergeleken worden op basis van oppervlakte. Implementeer eveneens `IComparable<Pizza>` in de klasse `Pizza`  \(die je eerder geschreven hebt\) zodat pizza's vergeleken worden op basis van hun totaalprijs.
+Implementeer ook `IComparable` in de klasse Figuur \(die je eerder geschreven hebt\) zodat figuren vergeleken worden op basis van oppervlakte. Implementeer eveneens `IComparable` in de klasse `Pizza`  \(die je eerder geschreven hebt\) zodat pizza's vergeleken worden op basis van hun totaalprijs. Als je twee objecten van een verschillende klasse vergelijkt, geef je 0 terug. Je kan, net zoals bij [Equals](../geavanceerde-overerving/4_system_object.md) gebruik maken van GetType om na te gaan of twee objecten van dezelfde klasse zijn.
 
 Maak dan een lijst met `Figuur`-objecten en een lijst met `Pizza`-objecten. Ga na dat je methode inderdaad de "grootste" oplevert.
 
