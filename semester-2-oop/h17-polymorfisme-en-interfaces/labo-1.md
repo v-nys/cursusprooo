@@ -4,6 +4,102 @@
 Onderstaande oefeningen maak je oproepbaar via een klasse `Polymorfisme` met een methode `ToonSubmenu`.
 {% endhint %}
 
+## h17-autoconstructeur
+
+### Functionele analyse
+
+Omdat we aan de vooravond staan van de transitie van klassieke aandrijvingen naar meer milieubewuste aandrijvingen van auto’s heeft een autoconstructeur beslist om zijn assemblage software te herwerken.
+
+In de huidige software wordt gebruik gemaakt van een superklasse motor met twee subklassen bezinemotor en dieselmotor. Dit wordt nu uitgebreid.
+
+Er zijn verschillende nieuwe motoren op de markt: elektrische, CNG, waterstof,..
+
+Niet alleen de motor is verschillend maar ook de periferie \(omgeving\) van de motor is erg verschillend. Denk bv. aan de brandstofvoorziening \(voor benzine, diesel, elektrisch\).
+
+### Technische analyse
+
+Maak een interface IAandrijving die de volgende methoden en properties ondersteunt:
+
+`void EnergieToevoegen(); // Het vroegere tanken`
+
+`void Vertragen(int kmPerUurPerSeconde, int doelsnelheid);`
+
+`void Versnellen(int kmPerUurPerSeconde, int doelsnelheid);`
+
+Maak een klasse voor de volgende types aandrijvingen die de interface IAandrijving implementeren
+
+`AandrijvingElekrisch`
+
+`AandrijvingBezine`
+
+`AandrijvingCNG`
+
+De implementatie van de methodes is steeds
+
+`Console.Writeline(“<Naam van de methode> - <Type aandrijving>”);`
+
+`Console.Writeline(“Versnellen - Benzine”);`
+
+Maak een klasse `Auto` met public property \(van het type `string`\) `AutoType` en een public property `Aandrijving`. Zorg er voor dat elk type van aandrijving kan toegevoegd worden aan een object van type `Auto`.
+
+Instantieer een auto met benzine aandrijving. Doe dat door de aandrijving als parameter in de constructor mee te geven. De constructor van de auto heeft als signatuur dus `public Auto (string autoType, ? aandrijving)`. Het `?` moet je zelf invullen. Laat de auto versnellen. Bouw die auto nu om naar een elektrische aandrijving. Laat de auto opnieuw versnellen. Doe dit allemaal in een methode `DemonstreerAandrijving`.
+
+### Voorbeeldinteractie
+
+![](../../.gitbook/assets/screenshot-from-2021-05-17-17-43-16.png)
+
+## h17-grootkeuken
+
+### Functionele analyse
+
+Je wordt gevraagd om een grootkeuken van een studentenrestaurant te automatiseren.
+
+In de keuken staan een zestal ketels die bepaalde functies wel of niet hebben. De functies zijn:
+
+Verwarmen\(int doelTemperatuur\)
+
+Afkoelen\(int doelTemperatuur\)
+
+StoomVerwarmen\(int doelTemperatuur\)
+
+WaterDoseren\(int hoeveelheid\)
+
+Er bestaan 4 types van ketels
+
+1. Stoomketel \(met functionaliteit StoomVerwarmen, Afkoelen, WaterDoseren\) klasse StoomKetel
+
+2. Gewone ketel zonder doseren \(met functionaliteit Verwarmen\) klasse KetelZonderDoseren
+
+3. Gewone ketel met dosering \(met functionaliteit Verwarmen, WaterDoseren\) klasse KetelMetDoseren
+
+### Technische analyse
+
+Creëer 4 interfaces voor de verschillende functies: IVerwarmen, IAfkoelen, IStoomVerwarmen, IWaterDoseren\). In de interface vinden we steeds de functie als methode terug.
+
+Creëer de 3 types van ketels. Gebruik overerving om gemeenschappelijke properties \(inhoud type `int` en temperatuur type `int`\) te implementeren. De constructors van de drie types ketels krijgen de inhoud als parameter mee.
+
+Demonstreer je code door 6 ketels te instantiëren. Zet de code hiervoor in `DemonstreerGrootkeuken`:
+
+Ketel 1 : Stoomketel met capaciteit 300l
+
+Ketel 2 : Stoomketel met capaciteit 300l
+
+Ketel 3 : Ketel zonder doseren met capaciteit 150l
+
+Ketel 4 : Ketel zonder doseren met capaciteit 300l
+
+Ketel 5 : Ketel met doseren met capaciteit 200l
+
+Ketel 6 : Ketel met doseren met capaciteit 150l
+
+Verwarm ketel 1 tot 100 graden Celcius… zie interactie:
+
+### Voorbeeldinteractie
+
+![](../../.gitbook/assets/screenshot-from-2021-05-17-17-43-16.png)
+
+
+
 ## h17-IComparable-implementatie
 
 ### Functionele analyse
