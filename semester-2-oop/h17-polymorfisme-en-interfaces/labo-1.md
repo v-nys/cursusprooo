@@ -1,5 +1,9 @@
 # Labo
 
+{% hint style="info" %}
+Onderstaande oefeningen maak je oproepbaar via een klasse `Polymorfisme` met een methode `ToonSubmenu`.
+{% endhint %}
+
 ## h17-IComparable-implementatie
 
 ### Functionele analyse
@@ -36,7 +40,7 @@ De interface `IComparable<Product>` vereist dat je `CompareTo(Product p)` implem
 
 Implementeer deze interface. Je moet ook rekening houden met de mogelijkheid dat `p` `null` is. `null` moet voor deze oefening helemaal vooraan komen.
 
-Test met volgende code. Sla deze op in `EigenObjectOefeningen.DemonstreerVergelijkbareProducten()`.
+Test met volgende code. Sla deze op in `Polymorfisme.DemonstreerVergelijkbareProducten()`.
 
 ```csharp
 var p1 = new Product("Fiets", 999);
@@ -121,7 +125,7 @@ Zowel afspraken als taken zijn roosterbaar op een kalender. Dit maak je mogelijk
   * voor een taak kan je gewoon de bestaande property gebruiken
   * voor een afspraak geef je de bestaande omschrijving, gevolgd door de tekst `(inclusief verplaatsing)`
 
-Test uit met volgende code, die je `DemonstreerIRoosterbaar` noemt.
+Test uit met volgende code, die je `DemonstreerIRoosterbaar` noemt \(in de klasse voor dit labo\).
 
 ```csharp
 IRoosterbaar blok1 = new Afspraak(new TimeSpan(0,20,0),new TimeSpan(1,0,0),new TimeSpan(0,20,0), "tandarts");
@@ -148,7 +152,7 @@ We willen onze taken en afspraken nu echt kunnen inplannen op een interactieve k
 
 ### Voorbeelduitvoering
 
-Schrijf zelf een methode DemonstreerKalender1. Deze vraagt maakt een kalender met naam "DemonstratieKalender" en vraagt de gebruiker objecten toe te voegen tot hij niet meer wil doorgaan. Daarna wordt de inhoud van de kalender getoond.
+Schrijf zelf een methode `DemonstreerKalender1`. Deze vraagt maakt een kalender met naam "DemonstratieKalender" en vraagt de gebruiker objecten toe te voegen tot hij niet meer wil doorgaan. Daarna wordt de inhoud van de kalender getoond.
 
 ![](../../.gitbook/assets/screenshot-from-2021-05-15-15-05-53.png)
 
