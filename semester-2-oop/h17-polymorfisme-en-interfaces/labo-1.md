@@ -84,9 +84,13 @@ Schrijf een statische methode `ZoekGrootste` in de klasse voor dit labo. Deze he
 
 Doe dit zonder een sorteermethode te gebruiken.
 
-Implementeer ook `IComparable` in de klasse Figuur \(die je eerder geschreven hebt\) zodat figuren vergeleken worden op basis van oppervlakte. Implementeer eveneens `IComparable` in de klasse `Pizza`  \(die je eerder geschreven hebt\) zodat pizza's vergeleken worden op basis van hun totaalprijs. Als je twee objecten van een verschillende klasse vergelijkt, geef je 0 terug. Je kan, net zoals bij [Equals](../geavanceerde-overerving/4_system_object.md) gebruik maken van GetType om na te gaan of twee objecten van dezelfde klasse zijn.
+Implementeer ook `IComparable` \(ditmaal zonder `<T>`\) in de klasse Figuur \(die je eerder geschreven hebt\) zodat figuren vergeleken worden op basis van oppervlakte. Implementeer eveneens `IComparable` in de klasse `Pizza`  \(die je eerder geschreven hebt\) zodat pizza's vergeleken worden op basis van hun totaalprijs. Als je twee objecten van een verschillende klasse vergelijkt, geef je 0 terug. Je kan hiervoor gebruik maken van: `if (obj is Pizza)` of `if (obj is Figuur)`. Als de booleaanse expressie tot true evalueert, weet je dat het om een soort pizza of een soort figuur gaat en dat de vergelijking zinvol is.
 
 Maak dan een lijst met `Figuur`-objecten en een lijst met `Pizza`-objecten. Ga na dat je methode inderdaad de "grootste" oplevert.
+
+{% hint style="info" %}
+Waarom zonder `<T>`? Omdat het gebruik van die `<T>` bepaalde concepten vergt die we niet behandeld hebben.
+{% endhint %}
 
 ## h17-Rooster-stap1
 

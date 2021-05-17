@@ -133,7 +133,6 @@
   * [Interfaces](semester-2-oop/h17-polymorfisme-en-interfaces/interfaces.md)
   * [Losse koppeling](semester-2-oop/h17-polymorfisme-en-interfaces/losse-koppeling.md)
   * [Labo](semester-2-oop/h17-polymorfisme-en-interfaces/labo-1.md)
-  * [Labo \(verouderd\)](semester-2-oop/h17-polymorfisme-en-interfaces/labo.md)
 * [H18: Recursie](semester-2-oop/recursie/README.md)
   * [Wat is recursie?](semester-2-oop/recursie/wat-is-recursie.md)
   * [Uitgewerkte voorbeelden](semester-2-oop/recursie/uitgewerkte-voorbeelden.md)
