@@ -172,26 +172,6 @@ Fiets, 999
 Probeer eens zonder de code die aangeeft dat `Product` de gevraagde interface implementeert. Wat gebeurt er?
 {% endhint %}
 
-## h17-zoek-grootste
-
-### Functionele analyse
-
-We willen te weten komen wat het "grootste" element in een lijst is. We willen deze code gebruiken voor allerlei zaken. De hoogste prijs, de oudste persoon, de cirkel met de grootste straal,...
-
-### Technische analyse
-
-Schrijf een statische methode `ZoekGrootste` in de klasse voor dit labo. Deze heeft als parameter een lijst van `IComparable` objecten en geeft een object terug dat minstens even groot is als alle andere objecten. Binnenin deze methode mag je T behandelen alsof het een ingevuld type is, bijvoorbeeld:
-
-Doe dit zonder een sorteermethode te gebruiken.
-
-Implementeer ook `IComparable` \(ditmaal zonder `<T>`\) in de klasse Figuur \(die je eerder geschreven hebt\) zodat figuren vergeleken worden op basis van oppervlakte. Implementeer eveneens `IComparable` in de klasse `Pizza`  \(die je eerder geschreven hebt\) zodat pizza's vergeleken worden op basis van hun totaalprijs. Als je twee objecten van een verschillende klasse vergelijkt, geef je 0 terug. Je kan hiervoor gebruik maken van: `if (obj is Pizza)` of `if (obj is Figuur)`. Als de booleaanse expressie tot true evalueert, weet je dat het om een soort pizza of een soort figuur gaat en dat de vergelijking zinvol is.
-
-Maak dan een lijst met `Figuur`-objecten en een lijst met `Pizza`-objecten. Ga na dat je methode inderdaad de "grootste" oplevert.
-
-{% hint style="info" %}
-Waarom zonder `<T>`? Omdat het gebruik van die `<T>` bepaalde concepten vergt die we niet behandeld hebben.
-{% endhint %}
-
 ## h17-Rooster-stap1
 
 ### Functionele analyse
@@ -292,4 +272,24 @@ public void VoegToeLosgekoppeld() {
 ```
 
 Merk op dat je maar een heel kleine aanpassing zou moeten doen om `Kalender` uit te breiden met bijvoorbeeld `QualityTime`. Die klasse zou door iemand anders geschreven mogen worden.
+
+## h17-zoek-grootste
+
+### Functionele analyse
+
+We willen te weten komen wat het "grootste" element in een lijst is. We willen deze code gebruiken voor allerlei zaken. De hoogste prijs, de oudste persoon, de cirkel met de grootste straal,...
+
+### Technische analyse
+
+Schrijf een statische methode `ZoekGrootste` in de klasse voor dit labo. Deze heeft als parameter een lijst van `IComparable` objecten en geeft een object terug dat minstens even groot is als alle andere objecten. Binnenin deze methode mag je T behandelen alsof het een ingevuld type is, bijvoorbeeld:
+
+Doe dit zonder een sorteermethode te gebruiken.
+
+Implementeer ook `IComparable` \(ditmaal zonder `<T>`\) in de klasse Figuur \(die je eerder geschreven hebt\) zodat figuren vergeleken worden op basis van oppervlakte. Implementeer eveneens `IComparable` in de klasse `Pizza`  \(die je eerder geschreven hebt\) zodat pizza's vergeleken worden op basis van hun totaalprijs. Als je twee objecten van een verschillende klasse vergelijkt, geef je 0 terug. Je kan hiervoor gebruik maken van: `if (obj is Pizza)` of `if (obj is Figuur)`. Als de booleaanse expressie tot true evalueert, weet je dat het om een soort pizza of een soort figuur gaat en dat de vergelijking zinvol is.
+
+Maak dan een lijst met `Figuur`-objecten en een lijst met `Pizza`-objecten. Ga na dat je methode inderdaad de "grootste" oplevert.
+
+{% hint style="info" %}
+Waarom zonder `<T>`? Omdat het gebruik van die `<T>` bepaalde concepten vergt die we niet behandeld hebben.
+{% endhint %}
 
