@@ -61,6 +61,7 @@ Dit lijkt wel heel erg op een afgewaterde abstracte klasse? Ja, maar er zijn goe
 * Je kan geen constructor declareren
 * Je kan geen access specificeren \(`public`, `protected`, etc\): alles is public
 * Een interface kan niet overerven van een klasse, wel van een andere interface. In dat geval moet een implementatie de velden en properties van de ouderinterface en de kindinterface voorzien.
+* Je hoeft geen `override` te schrijven wanneer je een methode of property implementeert.
 
 ### Toepassing interfaces
 
@@ -70,12 +71,12 @@ Volgende code toont hoe we kunnen aangeven dat een klasse `Student` serialisatie
 class Student : ICSVSerializable
 {
     private string naam;
-    private string leeftijd;
+    private byte leeftijd;
     private string separator;
     
     public Separator {
         get {
-            return this.separator
+            return this.separator;
         }
         set {
             this.separator = value;
@@ -109,11 +110,11 @@ interface IXmlSerializable
 class Student : ICSVSerializable, IXMLSerializable
 {
     private string naam;
-    private string leeftijd;
+    private byte leeftijd;
     private string separator;
     public Separator {
         get {
-            return this.separator
+            return this.separator;
         }
         set {
             this.separator = value;
@@ -125,11 +126,11 @@ class Student : ICSVSerializable, IXMLSerializable
         this.leeftijd = leeftijd;
     }
     
-    public override string ToCsv() {
+    public string ToCsv() {
         return $"Student;{this.naam};{this.leeftijd}";
     }
     
-    public override string ToXml() {
+    public string ToXml() {
         return $@"<Student>
                     <naam>{this.naam}</naam>
                     <leeftijd>{this.leeftijd}</leeftijd>
