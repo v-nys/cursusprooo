@@ -182,7 +182,7 @@ We schrijven een kalender. Hierop kunnen we verschillende zaken plaatsen: afspra
 
 ### Technische analyse
 
-* Schrijf twee klassen, `Afspraak`
+* Schrijf twee klassen, `Afspraak` en `Taak`
 * Voor een afspraak moet je volgende zaken bijhouden:
   * de tijd om je naar de afspraak te verplaatsen \(een `TimeSpan`\)
   * de tijd om terug te komen \(een `TimeSpan`\)
