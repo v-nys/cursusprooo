@@ -68,11 +68,10 @@ WaterDoseren\(int hoeveelheid\)
 
 Er bestaan 4 types van ketels
 
-1. Stoomketel \(met functionaliteit StoomVerwarmen, Afkoelen, WaterDoseren\) klasse StoomKetel
-
-2. Gewone ketel zonder doseren \(met functionaliteit Verwarmen\) klasse KetelZonderDoseren
-
-3. Gewone ketel met dosering \(met functionaliteit Verwarmen, WaterDoseren\) klasse KetelMetDoseren
+1. Ketel \(dit is een abstracte klasse zonder enige functionaliteit\)
+2. Stoomketel \(met functionaliteit StoomVerwarmen, Afkoelen, WaterDoseren\) klasse StoomKetel
+3. Gewone ketel zonder doseren \(met functionaliteit Verwarmen\) klasse KetelZonderDoseren
+4. Gewone ketel met dosering \(met functionaliteit Verwarmen, WaterDoseren\) klasse KetelMetDoseren
 
 ### Technische analyse
 
