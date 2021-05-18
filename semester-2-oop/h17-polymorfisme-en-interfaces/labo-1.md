@@ -76,9 +76,9 @@ Er bestaan 4 types van ketels
 
 ### Technische analyse
 
-Creëer 4 interfaces voor de verschillende functies: IVerwarmen, IAfkoelen, IStoomVerwarmen, IWaterDoseren\). In de interface vinden we steeds de functie als methode terug.
+Creëer 4 interfaces voor de verschillende functies: IVerwarmen, IAfkoelen, IStoomVerwarmen, IWaterDoseren\). In de interface vinden we steeds de functie als methode terug \(met return type `void`\).
 
-Creëer de 3 types van ketels. Gebruik overerving om gemeenschappelijke properties \(inhoud type `int` en temperatuur type `int`\) te implementeren. De constructors van de drie types ketels krijgen de inhoud als parameter mee.
+Creëer de 3 types van ketels. Gebruik overerving om gemeenschappelijke properties \(inhoud type `int` en temperatuur type `int`\) te implementeren. De constructors van de drie types ketels krijgen de inhoud als parameter mee. De temperatuur blijft op de defaultwaarde staan.
 
 Demonstreer je code door 6 ketels te instantiëren. Zet de code hiervoor in `DemonstreerGrootkeuken`:
 
