@@ -58,24 +58,21 @@ Je wordt gevraagd om een grootkeuken van een studentenrestaurant te automatisere
 
 In de keuken staan een zestal ketels die bepaalde functies wel of niet hebben. De functies zijn:
 
-Verwarmen\(int doelTemperatuur\)
-
-Afkoelen\(int doelTemperatuur\)
-
-StoomVerwarmen\(int doelTemperatuur\)
-
-WaterDoseren\(int hoeveelheid\)
+* `Verwarmen(int doelTemperatuur)`
+* `Afkoelen(int doelTemperatuur)`
+* `StoomVerwarmen(int doelTemperatuur)`
+* `WaterDoseren(int hoeveelheid)`
 
 Er bestaan 4 types van ketels
 
-1. Ketel \(dit is een abstracte klasse zonder enige functionaliteit\)
-2. Stoomketel \(met functionaliteit StoomVerwarmen, Afkoelen, WaterDoseren\) klasse StoomKetel
-3. Gewone ketel zonder doseren \(met functionaliteit Verwarmen\) klasse KetelZonderDoseren
-4. Gewone ketel met dosering \(met functionaliteit Verwarmen, WaterDoseren\) klasse KetelMetDoseren
+1. `Ketel` \(dit is een abstracte klasse zonder enige functionaliteit\)
+2. Stoomketel \(met functionaliteit `StoomVerwarmen`, `Afkoelen`, `WaterDoseren`\) klasse `StoomKetel`
+3. Gewone ketel zonder doseren \(met functionaliteit `Verwarmen`\) klasse `KetelZonderDoseren`
+4. Gewone ketel met dosering \(met functionaliteit `Verwarmen`, `WaterDoseren`\) klasse `KetelMetDoseren`
 
 ### Technische analyse
 
-Creëer 4 interfaces voor de verschillende functies: IVerwarmen, IAfkoelen, IStoomVerwarmen, IWaterDoseren\). In de interface vinden we steeds de functie als methode terug \(met return type `void`\).
+Creëer 4 interfaces voor de verschillende functies: `IVerwarmen`, `IAfkoelen`, `IStoomVerwarmen`, `IWaterDoseren`\). In de interface vinden we steeds de functie als methode terug \(met return type `void`\).
 
 Creëer de 3 types van ketels. Gebruik overerving om gemeenschappelijke properties \(inhoud type `int` en temperatuur type `int`\) te implementeren. De constructors van de drie types ketels krijgen de inhoud als parameter mee. De temperatuur blijft op de defaultwaarde staan.
 
@@ -97,9 +94,7 @@ Verwarm ketel 1 tot 100 graden Celcius… zie interactie:
 
 ### Voorbeeldinteractie
 
-![](../../.gitbook/assets/screenshot-from-2021-05-17-17-43-16.png)
-
-
+![](../../.gitbook/assets/screenshot-from-2021-05-17-17-45-23.png)
 
 ## h17-IComparable-implementatie
 
