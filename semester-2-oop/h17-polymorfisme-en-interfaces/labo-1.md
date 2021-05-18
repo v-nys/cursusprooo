@@ -38,6 +38,8 @@ De implementatie van de methodes is steeds
 
 `Console.Writeline(“<Naam van de methode> - <Type aandrijving>”);`
 
+Bijvoorbeeld:
+
 `Console.Writeline(“Versnellen - Benzine”);`
 
 Maak een klasse `Auto` met public property \(van het type `string`\) `AutoType` en een public property `Aandrijving`. Zorg er voor dat elk type van aandrijving kan toegevoegd worden aan een object van type `Auto`.
