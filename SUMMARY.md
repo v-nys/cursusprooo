@@ -173,6 +173,7 @@
   * [War Simulator](semester-2-appendix/all-in-projecten/war-simulator.md)
   * [Map Maker](semester-2-appendix/all-in-projecten/map-maker.md)
   * [Magic The Gathering API](semester-2-appendix/all-in-projecten/magic-the-gathering-api.md)
+  * [SchoolAdmin](semester-2-appendix/all-in-projecten/schooladmin.md)
 
 ## Pro \(geen leerstof en/of in opbouw\)
 
