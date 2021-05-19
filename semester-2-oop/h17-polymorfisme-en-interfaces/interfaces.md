@@ -43,7 +43,6 @@ Enkele opmerkingen:
 * Het is een vrij algemene afspraak om interfaces met een `I` te laten starten in hun naamgeving
 * Methoden en properties gaan niet vooraf van `public`: interfaces zijn van nature net publiek, dus alle methoden en properties van de interface zijn dat bijgevolg ook.
 * Er wordt geen code/implementatie gegeven: iedere methode eindigt ogenblikkelijk met een puntkomma.
-* Interfaces kunnen geen `static` members bevatten in C\#.
 
 Als we deze interface nu koppelen aan een klasse, **moeten** we deze methodes implementeren.
 
@@ -57,7 +56,6 @@ Dit lijkt wel heel erg op een afgewaterde abstracte klasse? Ja, maar er zijn goe
 
 ### Regels voor interfaces
 
-* Je kan geen velden declareren in een interface
 * Je kan geen constructor declareren
 * Je kan geen access specificeren \(`public`, `protected`, etc\): alles is public
 * Een interface kan niet overerven van een klasse, wel van een andere interface. In dat geval moet een implementatie de velden en properties van de ouderinterface en de kindinterface voorzien.
