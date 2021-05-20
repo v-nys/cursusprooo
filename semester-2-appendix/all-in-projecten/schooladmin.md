@@ -569,6 +569,8 @@ Onderstaande screenshot toont een voorbeeldinteractie \(enkel de nieuwe opties z
 
 ![](../../.gitbook/assets/screenshot-from-2021-04-26-21-15-49.png)
 
+{% file src="../../.gitbook/assets/schooladmin-inc-geavanceerdeovererving.zip" caption="Modeloplossing tot hier" %}
+
 ## Schooladmin project: geen dubbele data
 
 Maak in je SchoolAdmin project een klasse `DuplicateDataException`. Deze heeft twee properties, `Waarde1` en `Waarde2`, beide van type `System.Object`. Ze heeft ook een constructor die een message en de twee waarden als parameter heeft.
