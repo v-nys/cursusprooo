@@ -71,7 +71,6 @@
   * [Geavanceerde methoden](semester-1-programming-principles/h6-methoden/3_advancedmethod.md)
   * [Documentatie](semester-1-programming-principles/h6-methoden/1_bibliotheken.md)
   * [Oefeningen](semester-1-programming-principles/h6-methoden/b_practica.md)
-  * [Uitbreidingsoefeningen](semester-1-programming-principles/h6-methoden/c_practica.md)
 * [H8: Arrays](semester-1-programming-principles/h7-arrays/README.md)
   * [Array principes](semester-1-programming-principles/h7-arrays/1_arraysbasics.md)
   * [Alternatieve syntax](semester-1-programming-principles/h7-arrays/alternatieve-syntax.md)
