@@ -383,6 +383,7 @@ Je kan dit vergelijken met een mailinglijst. Je schrijft je in op een website om
 * Laat `Lector` ook `IEigenObserver<Cursus>` implementeren
 * Voorzie `Lector` verder van een `List<string>` attribuut met naam `mailbox`
 * Wanneer een cursus gewijzigd wordt, plaats je voor een lector de stringweergave van de cursus zoals die op dat moment is in `mailbox`
+  * Je print ook een bericht dat er een nieuwe notification is
 * Maak ook `Student` een observer van cursussen
   * Als er een melding over een cursus binnenkomt, print een student: `<naam-van-de-student> zegt: "Ugh, weer extra werk"`
 * Voorzie ook `VakInschrijving` van deze interface en van een booleaanse property `TeControleren`. Deze staat initieel op `false`, maar kan op true gezet worden als de bijgehouden informatie out-of-date kan zijn.
