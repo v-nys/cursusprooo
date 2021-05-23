@@ -236,7 +236,7 @@ Onze code is te sterk gekoppeld. Om Kalender te schrijven, hebben we code moeten
 
 ### Technische analyse
 
-Voorzie `Taak` en `Afspraak` van een constructor zonder parameters. Voorzie de interface IRoosterbaar van een methode `Initialiseer` en van een methode `RoosterOm(TimeSpan referentiepunt)`. De methode `Initialiseer` vraagt alle gegevens voor een object van dat type en stelt ze in. De methode `RoosterOm` bepaalt uit het referentiepunt wanneer de kalender moet worden ingeblokt.
+Voorzie `Taak` en `Afspraak` van een constructor zonder parameters. Voorzie de interface IRoosterbaar van een methode `Initialiseer` en van een methode `RoosterOm(DateTime referentiepunt)`. De methode `Initialiseer` vraagt alle gegevens voor een object van dat type en stelt ze in. De methode `RoosterOm` bepaalt uit het referentiepunt wanneer de kalender moet worden ingeblokt.
 
 {% hint style="info" %}
 We werken met een constructor zonder parameters, gevolgd door initialisatie, omdat we geen statische methoden kunnen toevoegen aan een interface. Er zijn elegantere oplossingen, maar we willen niet te ver afwijken van de koers.
@@ -288,4 +288,108 @@ Maak dan een lijst met `Figuur`-objecten en een lijst met `Pizza`-objecten. Ga n
 {% hint style="info" %}
 Waarom zonder `<T>`? Omdat het gebruik van die `<T>` bepaalde concepten vergt die we niet behandeld hebben.
 {% endhint %}
+
+## SchoolAdmin project: sorteren volgens criteria
+
+### Functionele analyse
+
+We willen graag de data in ons systeem gesorteerd weergeven. We willen dit niet doen met één vaste sorteerprocedure \(zoals in het geval van CompareTo\), maar we willen de gebruiker de keuze geven om te sorteren op verschillende manieren. Dit ben je ongetwijfeld gewoon van op webwinkels waar je kan sorteren volgens prijs, productnaam,...
+
+### Technische analyse
+
+* Om dit klaar te spelen, heb je een klasse nodig die de `IComparer<T>` interface implementeert. Deze interface bestaat al. Je hoeft hem niet te schrijven. Je moet hem alleen implementeren.
+* Bijvoorbeeld, om studenten op naam te sorteren, kan je een `StudentenVolgensNaamComparer` schrijven die `IComparer<Student>` implementeert.
+* Deze interface bevat één methode `Compare(T,T)`. Deze werkt gelijkaardig aan de methode `CompareTo`, maar ze bevat twee parameters.
+  * Als het eerste argument voor het tweede gesorteerd moet worden, geeft de methode een negatief getal terug.
+  * Als het eerste argument na het tweede gesorteerd moet worden, geeft de methode een positief getal terug.
+  * Als het niet uitmaakt, geeft ze 0 terug.
+* Voeg hiermee volgende functionaliteit toe aan je systeem:
+  * Een methode `Student.ToonStudenten` die je kan oproepen vanaf het keuzemenu
+    * Bij het tonen van studenten, moet de gebruiker kunnen kiezen om ze te tonen in stijgende of dalende alfabetische volgorde.
+    * `null` zou niet mogen voorkomen, maar je mag dit altijd vooraan zetten in om het even welke lijst objecten
+  * Een methode `Cursus.ToonCursussen` die je kan oproepen vanaf het keuzemenu
+    * Bij het tonen van cursussen, moet de gebruiker kunnen kiezen om ze te tonen volgens cursusnaam van A naar Z of volgens oplopend aantal studiepunten.
+    * Voorzie een `ToString` die de titel van de cursus toont, gevolgd door het aantal studiepunten tussen haakjes om te controleren of alles werkt
+    * `null` zou niet mogen voorkomen, maar je mag dit altijd vooraan zetten in om het even welke lijst objecten
+
+### Voorbeeldinteractie
+
+![](../../.gitbook/assets/screenshot-from-2021-05-23-16-02-31.png)
+
+## SchoolAdmin project: data export naar CSV
+
+### Functionele analyse
+
+We zouden graag alle entiteiten in ons systeem in één beweging kunnen exporteren naar CSV-formaat. Zo kunnen we makkelijk heel ons systeem voorzien van een backup zonder al te veel code. We zullen dit hier doen voor enkele entiteittypes, maar niet allemaal, om ons niet te verliezen in de details.
+
+### Technische analyse
+
+Schrijf een interface `ICSVSerializable`. Deze bevat één objectmethode zonder parameters, namelijk `ToCSV`. Het return type is `string`.
+
+Deze interface wordt geïmplementeerd door `Persoon` en door `Cursus`. Voor elk object tonen we steeds eerst de naam van de klasse waartoe het object behoort, gevolgd door puntkomma, gevolgd door het Id van het object.
+
+Voor een persoon tonen we daarna \(met telkens puntkomma's tussen\):
+
+* de naam tussen dubbele aanhalingstekens
+* de geboortedatum
+
+Voor personeel tonen we verder voor elke taak:
+
+* de omschrijving van die taak tussen dubbele aanhalingstekens
+* de hoeveelheid werk die in die taak kruipt
+
+Voor lectoren tonen we ook per cursus:
+
+* het Id van de cursus
+* het aantal uren voor die cursus
+
+Voor studenten tonen we ook per entry in het dossier:
+
+* de datum
+* de tekst tussen dubbele aanhalingstekens
+
+Voor cursussen tonen we ten slotte ook de titel tussen aanhalingstekens en het aantal studiepunten.
+
+Om zeker te zijn dat een datum op elke machine op dezelfde manier wordt voorgesteld, mag je hem zo omzetten naar een `string`: `Geboortedatum.ToString(new CultureInfo("nl-BE"))`
+
+Dit garandeert dat de Vlaamse voorstellingswijze voor een datum wordt gebruikt.
+
+{% hint style="info" %}
+Tip: gebruik overerving om de gemeenschappelijke aspecten niet telkens opnieuw te schrijven. Je kan dit ofwel doen via `base.ToCSV` ofwel met een hulpmethode die de serialisatie van het gedeelte van de ouderklasse afhandelt. De eerste aanpak levert je minder methodes, de tweede kan voorkomen dat je vergeet de methode af te werken in de kindklassen.
+{% endhint %}
+
+### Voorbeeldinteractie
+
+![](../../.gitbook/assets/screenshot-from-2021-05-23-16-55-28.png)
+
+## SchoolAdmin project: IEigenObserver&lt;T&gt;
+
+### Functionele analyse
+
+We zouden graag een algemeen systeem hebben om objecten van één klasse te laten reageren op gebeurtenissen in objecten van een andere klasse. Het "observer" pattern is hier ideaal voor. We voorzien hier een eenvoudige implementatie.
+
+{% hint style="warning" %}
+C\# voorziet al `IObserver<T>` en `IObservable<T>` interfaces die dit patroon op een meer algemene manier structureren. In een echt project raden we aan die te gebruiken, maar om het principe te leren, werken we met een vereenvoudiging.
+{% endhint %}
+
+De essentie van dit patroon is als volgt: we willen onze klassen niet "hard coden" om specifieke andere klassen op de hoogte te stellen van interessante gebeurtenissen. Dat zou bijvoorbeeld kunnen door specifieke methodes van die andere klassen op te roepen. In plaats daarvan zullen we een algemeen mechanisme voorzien waarmee elk object zich kan "inschrijven" voor updates over een ander object.
+
+Je kan dit vergelijken met een mailinglijst. Je schrijft je in op een website om updates te ontvangen. De eigenaar van die website zal je af en toe laten weten dat er iets aangepast is, maar zal je niet zeggen wat je verder moet doen. Dat bepaal je zelf. Wij zullen dit simuleren door per geïnteresseerd object een notification feed te voorzien, zoals je die kent van tal van websites.
+
+### Technische analyse
+
+* Voorzie een interface `IEigenObserver<T>`
+  * Deze beschikt over een methode `Observe(T observable)`
+* Laat `Lector` ook `IEigenObserver<Cursus>` implementeren
+* Voorzie `Lector` verder van een `List<string>` attribuut met naam `mailbox`
+* Wanneer een cursus gewijzigd wordt, plaats je voor een lector de stringweergave van de cursus zoals die op dat moment is in `mailbox`
+* Maak ook `Student` een observer van cursussen
+  * Als er een melding over een cursus binnenkomt, print een student: `<naam-van-de-student> zegt: "Ugh, weer extra werk"`
+* Voorzie ook `VakInschrijving` van deze interface en van een booleaanse property `TeControleren`. Deze staat initieel op `false`, maar kan op true gezet worden als de bijgehouden informatie out-of-date kan zijn.
+  * Print hierbij ook een waarschuwing: `Registratie is mogelijk out-of-date!`
+* Voorzie vervolgens `Cursus` van een private lijst met observeerders en een methode `VoegObserverToe`.
+* Pas de methode `DemonstreerLectoren` \(die je al hebt\) aan zodat de aangemaakte lector haar eigen cursussen observeert.
+* Zorg ook dat een student die wordt ingeschreven voor een vak automatisch notifications krijgt. Dit kan via de setter van `Student` in `VakInschrijving`.
+* Voeg een methode `UpdateOmschrijving` toe aan `Cursus`. Deze verwittigt gewoon alle observers. In de praktijk zou je dit doen bijvoorbeeld wanneer een property wordt aangepast.
+* Voeg een call van `UpdateOmschrijving` toe aan het einde van `DemonstreerLectoren` en controleer dat je het effect ziet. Voeg ook een call toe voor de cursus communicatie `DemonstreerStudenten` en controleer opnieuw dat je het effect ziet.
 
