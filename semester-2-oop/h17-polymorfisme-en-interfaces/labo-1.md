@@ -277,7 +277,7 @@ We willen te weten komen wat het "grootste" element in een lijst is. We willen d
 
 ### Technische analyse
 
-Schrijf een statische methode `ZoekGrootste` in de klasse voor dit labo. Deze heeft als parameter een lijst van `IComparable` objecten en geeft een object terug dat minstens even groot is als alle andere objecten. Binnenin deze methode mag je T behandelen alsof het een ingevuld type is, bijvoorbeeld:
+Schrijf een statische methode `ZoekGrootste` in de klasse voor dit labo. Deze heeft als parameter een lijst van `IComparable` objecten en geeft een object terug dat minstens even groot is als alle andere objecten.
 
 Doe dit zonder een sorteermethode te gebruiken.
 
@@ -361,38 +361,6 @@ Tip: gebruik overerving om de gemeenschappelijke aspecten niet telkens opnieuw t
 ### Voorbeeldinteractie
 
 ![](../../.gitbook/assets/screenshot-from-2021-05-23-16-55-28.png)
-
-## SchoolAdmin project: IEigenObserver&lt;T&gt;
-
-### Functionele analyse
-
-We zouden graag een algemeen systeem hebben om objecten van één klasse te laten reageren op gebeurtenissen in objecten van een andere klasse. Het "observer" pattern is hier ideaal voor. We voorzien hier een eenvoudige implementatie.
-
-{% hint style="warning" %}
-C\# voorziet al `IObserver<T>` en `IObservable<T>` interfaces die dit patroon op een meer algemene manier structureren. In een echt project raden we aan die te gebruiken, maar om het principe te leren, werken we met een vereenvoudiging.
-{% endhint %}
-
-De essentie van dit patroon is als volgt: we willen onze klassen niet "hard coden" om specifieke andere klassen op de hoogte te stellen van interessante gebeurtenissen. Dat zou bijvoorbeeld kunnen door specifieke methodes van die andere klassen op te roepen. In plaats daarvan zullen we een algemeen mechanisme voorzien waarmee elk object zich kan "inschrijven" voor updates over een ander object.
-
-Je kan dit vergelijken met een mailinglijst. Je schrijft je in op een website om updates te ontvangen. De eigenaar van die website zal je af en toe laten weten dat er iets aangepast is, maar zal je niet zeggen wat je verder moet doen. Dat bepaal je zelf. Wij zullen dit simuleren door per geïnteresseerd object een notification feed te voorzien, zoals je die kent van tal van websites.
-
-### Technische analyse
-
-* Voorzie een interface `IEigenObserver<T>`
-  * Deze beschikt over een methode `Observe(T observable)`
-* Laat `Lector` ook `IEigenObserver<Cursus>` implementeren
-* Voorzie `Lector` verder van een `List<string>` attribuut met naam `mailbox`
-* Wanneer een cursus gewijzigd wordt, plaats je voor een lector de stringweergave van de cursus zoals die op dat moment is in `mailbox`
-  * Je print ook een bericht dat er een nieuwe notification is
-* Maak ook `Student` een observer van cursussen
-  * Als er een melding over een cursus binnenkomt, print een student: `<naam-van-de-student> zegt: "Ugh, weer extra werk"`
-* Voorzie ook `VakInschrijving` van deze interface en van een booleaanse property `TeControleren`. Deze staat initieel op `false`, maar kan op true gezet worden als de bijgehouden informatie out-of-date kan zijn.
-  * Print hierbij ook een waarschuwing: `Registratie is mogelijk out-of-date!`
-* Voorzie vervolgens `Cursus` van een private lijst met observeerders en een methode `VoegObserverToe`.
-* Pas de methode `DemonstreerLectoren` \(die je al hebt\) aan zodat de aangemaakte lector haar eigen cursussen observeert.
-* Zorg ook dat een student die wordt ingeschreven voor een vak automatisch notifications krijgt. Dit kan via de setter van `Student` in `VakInschrijving`.
-* Voeg een methode `UpdateOmschrijving` toe aan `Cursus`. Deze verwittigt gewoon alle observers. In de praktijk zou je dit doen bijvoorbeeld wanneer een property wordt aangepast.
-* Voeg een call van `UpdateOmschrijving` toe aan het einde van `DemonstreerLectoren` en controleer dat je het effect ziet. Voeg ook een call toe voor de cursus communicatie `DemonstreerStudenten` en controleer opnieuw dat je het effect ziet.
 
 ## h17-grootkeuken-deel2
 

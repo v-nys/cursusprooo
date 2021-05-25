@@ -589,3 +589,32 @@ Het is niet logisch een inschrijving te hebben zonder student of zonder vak. Zor
 
 Er mogen niet meer dan 20 lopende inschrijvingen per cursus zijn. Zorg ervoor dat er een `CapaciteitOverschredenException` \(met enkel de message als parameter\) optreedt wanneer je iemand probeert in te schrijven voor een cursus waarvoor al 20 inschrijvingen \(zonder toegekend resultaat\) bestaan. Zorg ervoor dat je keuzemenu hierop voorzien is en de message toont, zonder te crashen.
 
+## SchoolAdmin project: sorteren volgens criteria
+
+### Functionele analyse
+
+We willen graag de data in ons systeem gesorteerd weergeven. We willen dit niet doen met één vaste sorteerprocedure \(zoals in het geval van CompareTo\), maar we willen de gebruiker de keuze geven om te sorteren op verschillende manieren. Dit ben je ongetwijfeld gewoon van op webwinkels waar je kan sorteren volgens prijs, productnaam,...
+
+### Technische analyse
+
+* Om dit klaar te spelen, heb je een klasse nodig die de `IComparer<T>` interface implementeert. Deze interface bestaat al. Je hoeft hem niet te schrijven. Je moet hem alleen implementeren.
+* Bijvoorbeeld, om studenten op naam te sorteren, kan je een `StudentenVolgensNaamComparer` schrijven die `IComparer<Student>` implementeert.
+* Deze interface bevat één methode `Compare(T,T)`. Deze werkt gelijkaardig aan de methode `CompareTo`, maar ze bevat twee parameters.
+  * Als het eerste argument voor het tweede gesorteerd moet worden, geeft de methode een negatief getal terug.
+  * Als het eerste argument na het tweede gesorteerd moet worden, geeft de methode een positief getal terug.
+  * Als het niet uitmaakt, geeft ze 0 terug.
+* Voeg hiermee volgende functionaliteit toe aan je systeem:
+  * Een methode `Student.ToonStudenten` die je kan oproepen vanaf het keuzemenu
+    * Bij het tonen van studenten, moet de gebruiker kunnen kiezen om ze te tonen in stijgende of dalende alfabetische volgorde.
+    * `null` zou niet mogen voorkomen, maar je mag dit altijd vooraan zetten in om het even welke lijst objecten
+  * Een methode `Cursus.ToonCursussen` die je kan oproepen vanaf het keuzemenu
+    * Bij het tonen van cursussen, moet de gebruiker kunnen kiezen om ze te tonen volgens cursusnaam van A naar Z of volgens oplopend aantal studiepunten.
+    * Voorzie een `ToString` die de titel van de cursus toont, gevolgd door het aantal studiepunten tussen haakjes om te controleren of alles werkt
+    * `null` zou niet mogen voorkomen, maar je mag dit altijd vooraan zetten in om het even welke lijst objecten
+
+### Voorbeeldinteractie
+
+![](../../.gitbook/assets/screenshot-from-2021-05-23-16-02-31.png)
+
+
+
