@@ -616,5 +616,51 @@ We willen graag de data in ons systeem gesorteerd weergeven. We willen dit niet 
 
 ![](../../.gitbook/assets/screenshot-from-2021-05-23-16-02-31.png)
 
+## SchoolAdmin project: data export naar CSV
 
+### Functionele analyse
+
+We zouden graag alle entiteiten in ons systeem in één beweging kunnen exporteren naar CSV-formaat. Zo kunnen we makkelijk heel ons systeem voorzien van een backup zonder al te veel code. We zullen dit hier doen voor enkele entiteittypes, maar niet allemaal, om ons niet te verliezen in de details.
+
+### Technische analyse
+
+Schrijf een interface `ICSVSerializable`. Deze bevat één objectmethode zonder parameters, namelijk `ToCSV`. Het return type is `string`.
+
+Deze interface wordt geïmplementeerd door `Persoon` en door `Cursus`. Voor elk object tonen we steeds eerst de naam van de klasse waartoe het object behoort, gevolgd door puntkomma, gevolgd door het Id van het object.
+
+Voor een persoon tonen we daarna \(met telkens puntkomma's tussen\):
+
+* de naam tussen dubbele aanhalingstekens
+* de geboortedatum
+
+Voor personeel tonen we verder voor elke taak:
+
+* de omschrijving van die taak tussen dubbele aanhalingstekens
+* de hoeveelheid werk die in die taak kruipt
+
+Voor lectoren tonen we ook per cursus:
+
+* het Id van de cursus
+* het aantal uren voor die cursus
+
+Voor studenten tonen we ook per entry in het dossier:
+
+* de datum
+* de tekst tussen dubbele aanhalingstekens
+
+Voor cursussen tonen we ten slotte ook de titel tussen aanhalingstekens en het aantal studiepunten.
+
+Om zeker te zijn dat een datum op elke machine op dezelfde manier wordt voorgesteld, mag je hem zo omzetten naar een `string`: `Geboortedatum.ToString(new CultureInfo("nl-BE"))`
+
+Dit garandeert dat de Vlaamse voorstellingswijze voor een datum wordt gebruikt.
+
+{% hint style="info" %}
+Tip: gebruik overerving om de gemeenschappelijke aspecten niet telkens opnieuw te schrijven. Je kan dit ofwel doen via `base.ToCSV` ofwel met een hulpmethode die de serialisatie van het gedeelte van de ouderklasse afhandelt. De eerste aanpak levert je minder methodes, de tweede kan voorkomen dat je vergeet de methode af te werken in de kindklassen.
+{% endhint %}
+
+### Voorbeeldinteractie
+
+![](../../.gitbook/assets/screenshot-from-2021-05-23-16-55-28.png)
+
+## 
 
