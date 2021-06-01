@@ -72,7 +72,7 @@ class Student : ICSVSerializable
     private byte leeftijd;
     private string separator;
     
-    public Separator {
+    public string Separator {
         get {
             return this.separator;
         }
@@ -88,7 +88,7 @@ class Student : ICSVSerializable
     }
     
     public string ToCsv() {
-        return $"Student{Separator}{this.naam}{Separator}{this.leeftijd}"
+        return $"Student{Separator}{this.naam}{Separator}{this.leeftijd}";
     }
 }
 ```
@@ -100,7 +100,7 @@ Een nuttige toepassing van deze interface zou een data dump kunnen zijn. Als we 
 Het is toegelaten meerdere interfaces te implementeren. Volgende code staat toe een `Student` op te slaan op schijf door hem te serialiseren als CSV of XML, naargelang je voorkeur.
 
 ```csharp
-interface IXmlSerializable
+interface IXMLSerializable
 {
     string ToXml();
 }
@@ -110,7 +110,7 @@ class Student : ICSVSerializable, IXMLSerializable
     private string naam;
     private byte leeftijd;
     private string separator;
-    public Separator {
+    public string Separator {
         get {
             return this.separator;
         }
@@ -125,7 +125,7 @@ class Student : ICSVSerializable, IXMLSerializable
     }
     
     public string ToCsv() {
-        return $"Student;{this.naam};{this.leeftijd}";
+        return $"Student{this.Separator}{this.naam}{this.Separator}{this.leeftijd}";
     }
     
     public string ToXml() {
