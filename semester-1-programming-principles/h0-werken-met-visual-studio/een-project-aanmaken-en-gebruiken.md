@@ -59,12 +59,7 @@ Om gegevens in te voeren beschikt de Console klasse over o.a. de volgende method
 
 #### **`Console.ReadLine`**
 
-De `ReadLine`-methode leest een regel in uit het standaardinvoerapparaat. In de oefeningen in deze cursus is dat het toetsenbord.  
-Als het standaardinvoerapparaat het toetsenbord is, wacht de `ReadLine`-methode totdat de gebruiker op de Enter-toets drukt.  
-Een van de meest voorkomende toepassingen van de `ReadLine`-methode is om het consolescherm open de laten staan nadat het programma is uitgevoerd. De gebruiker wordt dan expliciet gevraagd om op Enter te drukken om de toepassing beëindigen.  
-Het volgende statement zal de invoer van de gebruiker uitlezen tot de gebruiker op enter drukt. Het resultaat van de ingevoerde tekst wordt bewaard in de variabele `invoer` van het gegevenstype `string`:
-
-`string invoer = Console.ReadLine();`
+De `ReadLine`-methode leest een regel in uit het standaardinvoerapparaat. In de oefeningen in deze cursus is dat het toetsenbord. Als het standaardinvoerapparaat het toetsenbord is, wacht de `ReadLine`-methode totdat de gebruiker op de Enter-toets drukt. Een van de meest voorkomende toepassingen van de `ReadLine`-methode is om het consolescherm open de laten staan nadat het programma is uitgevoerd. De gebruiker wordt dan expliciet gevraagd om op Enter te drukken om de toepassing beëindigen. Het volgende statement zal de invoer van de gebruiker uitlezen tot de gebruiker op enter drukt. Het resultaat van de ingevoerde tekst wordt bewaard in de variabele `invoer` van het gegevenstype `string`:`string invoer = Console.ReadLine();`
 
 ### Output
 

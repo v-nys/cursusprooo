@@ -11,11 +11,11 @@
 
 ## Semester 1: Programming Principles
 
-* [H1: Werken met Visual Studio](semester-1-programming-principles/h0-werken-met-visual-studio/README.md)
+* [H1: Werken met Visual Studio Code](semester-1-programming-principles/h0-werken-met-visual-studio/README.md)
   * [Introductie tot C\#](semester-1-programming-principles/h0-werken-met-visual-studio/1-introductie-tot-c.md)
-  * [Visual Studio installeren](semester-1-programming-principles/h0-werken-met-visual-studio/2-visual-studio-installeren.md)
-  * [Een C\# project maken in Visual Studio](semester-1-programming-principles/h0-werken-met-visual-studio/3-een-c-project-maken-in-visual-studio.md)
-  * [Beginnen met C\# in Visual Studio](semester-1-programming-principles/h0-werken-met-visual-studio/4-beginnen-met-c-in-visual-studio.md)
+  * [Visual Studio Code en .NET Core installeren](semester-1-programming-principles/h0-werken-met-visual-studio/2-visual-studio-installeren.md)
+  * [Een C\# project maken in Visual Studio Code](semester-1-programming-principles/h0-werken-met-visual-studio/3-een-c-project-maken-in-visual-studio.md)
+  * [Beginnen met C\# in Visual Studio Code](semester-1-programming-principles/h0-werken-met-visual-studio/4-beginnen-met-c-in-visual-studio.md)
   * [Fouten in je code](semester-1-programming-principles/h0-werken-met-visual-studio/fouten-in-je-code.md)
   * [Debug & release](semester-1-programming-principles/h0-werken-met-visual-studio/debug-and-release.md)
   * [Je eerste stappen in C\#](semester-1-programming-principles/h0-werken-met-visual-studio/je-eerste-stappen-in-c.md)

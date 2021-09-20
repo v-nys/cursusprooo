@@ -5,7 +5,7 @@ description: >-
   in Visual Studio.
 ---
 
-# Een C\# project maken in Visual Studio
+# Een C\# project maken in Visual Studio Code
 
 {% hint style="success" %}
 [Kennisclip voor deze inhoud](https://youtu.be/PiA0Xs2-sEU)

@@ -27,12 +27,12 @@ description: >-
 
 ### **Detail**
 
-![Basisstructuur van een CSharp programma](../../.gitbook/assets/image%20%2832%29.png)
+![](../../.gitbook/assets/image%20%2866%29.png)
 
 ### Beschrijving van bovenstaande basisstructuur
 
 1. **sleutelwoorden** \(keywords\) In de editor zie je dat sommige woorden in blauw worden weergegeven. Visual Studio geeft alle sleutelwoorden in het blauw weergeven. Sleutelwoorden zijn vooraf gedefinieerde, gereserveerde woorden die een speciale betekenis hebben voor de C\# compiler. Je kan ze niet als namen \(identifiers\) in je programma gebruiken. Een lijst van alle gereserveerde sleutelwoorden vind je op [C\# Keywords](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/). 
-2. **bibliotheek** een bibliotheek \(Engels: **library**\) is een verzameling code \(namespaces, klassen en methoden\) die je kan gebruiken zonder dat je zelf die code moet schrijven voor bepaalde algemene bewerkingen. Je kan simpelweg de methode aanroepen die zich in de bibliotheek bevindt. In het voorbeeld hierboven gebruiken. 
+2. **bibliotheek** een bibliotheek \(Engels: **library**\) is een verzameling code \(namespaces, klassen en methoden\) die je kan gebruiken zonder dat je zelf die code moet schrijven voor bepaalde algemene bewerkingen. Je kan simpelweg de methode aanroepen die zich in de bibliotheek bevindt. 
 3. **namespace** Letterlijk vertaald is dat een naamruimte. Deze structuur biedt de mogelijkheid om namen van o.a. klassen en methode - in programmeerjargon spreekt men van identifiers - in een naamspace te groeperen. Je moet er dan enkel voor zorgen dat deze namen uniek zijn binnen de namespace. De regels en afspraken voor het geven van namen aan namespaces vind je op [Names of Namespaces](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/names-of-namespaces).  Je kan een namespace vergelijken met een familienaam. Binnen de 'naamruimte' van een familienaam moeten de voornamen uniek zijn. Maar dezelfde voornaamen kunnen in verschillende familienamen gebruikt worden: De namespace in het voorbeeld hierboven is `BeginnenMetCSharp`. Visual Studio gebruikt de naam van het project voor het benoemen van deze namespace.  
 4. **klasse** Gegevens \(data\) en algoritmes \(programma's\) worden ondergebracht in klassen. Dit maakt een programma overzichtelijker. In het tweede semester gaan we dieper in op klassen en objecten \('exemplaren' van een klasse\). In het eerste semester gebruiken we klassen alleen om code te ordenen.  De klassenaam in het voorbeeld hierboven is `Program`. Deze klassenaam wordt door Visual Studio standaard gebruikt wanneer je een nieuw project aanmaakt.  De regels en afspraken voor het geven van namen aan klassen vind je op [Names of Classes, Structs, and Interfaces](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/names-of-classes-structs-and-interfaces). 
 5. **methode** In C\# staat code altijd in een methode. Je kan geen statement schrijven zonder eerst een methode te hebben gemaakt. Hier moeten enkele zaken worden opgemerkt: 
@@ -55,12 +55,6 @@ description: >-
 
 {% hint style="danger" %}
 **Let erop dat je iedere 'zin' eindigt met een puntkomma.**
-{% endhint %}
-
-{% hint style="danger" %}
-### Moet ik niets bewaren?
-
-Neen. Telkens je op de groene "build en run" knop duwt worden al je aanpassingen bewaard. Trouwens: **Kies nooit voor "save as..."**!!!! \(Als je dit toch doet, zal het zal aardig wat problemen in je project veroorzaken!\)
 {% endhint %}
 
 

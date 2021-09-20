@@ -4,7 +4,7 @@ description: >-
   nieuw project gemaakt met de naam BeginnenMetCharp.
 ---
 
-# Beginnen met C\# in Visual Studio
+# Beginnen met C\# in Visual Studio Code
 
 {% hint style="success" %}
 [Kennisclip voor deze inhoud](https://youtu.be/7fH3UPXSHIg)

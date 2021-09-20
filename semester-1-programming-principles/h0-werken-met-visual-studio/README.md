@@ -1,2 +1,2 @@
-# H1: Werken met Visual Studio
+# H1: Werken met Visual Studio Code
 

@@ -46,19 +46,11 @@ Compileer deze code en voer ze uit: \*\*druk hiervoor op het groene driehoekje. 
 **Let erop dat je iedere 'zin' eindigt met een puntkomma.**
 {% endhint %}
 
-{% hint style="danger" %}
-### Moet ik niets bewaren?
-
-Neen. Telkens je op de groene "build en run" knop duwt worden al je aanpassingen bewaard. Trouwens: **Kies nooit voor "save as..."**!!!!
-
-Dit zal aardig wat problemen in je project veroorzaken, geloof me maar.
-{% endhint %}
-
 ### Analyse van de code
 
 We gaan nu iedere lijn code kort bespreken. Sommige lijnen code zullen lange tijd niet belangrijk zijn. Onthoud nu alvast dat: **alle belangrijke code staat tussen de accolades onder de lijn `static void Main(string[] args)`**!
 
-* `using System;` :  Alle `Console`-commando's die we verderop gebruiken zitten in de `System` bibliotheek. Als we deze lijn \(een zogenaamde **directive**\) niet zouden schrijven dan moesten we `System.Console.WriteLine` i.p.v. `Console.WriteLine` schrijven verderop in de code. 
+* `using System;` :  Alle `Console`-commando's die we verderop gebruiken zitten in de `System` namespace. Als we deze lijn \(een zogenaamde **directive**\) niet zouden schrijven dan moesten we `System.Console.WriteLine` i.p.v. `Console.WriteLine` schrijven verderop in de code. 
 * `namespace Demo1`: Dit is de unieke naam waarbinnen we ons programma zullen steken, en het is niet toevallig de naam van je project. Verander dit nooit tenzij je weet wat je aan het doen bent.
 * `class Program{}`: Hier start je echte programma. Alle code binnen deze Program accolades zullen gecompileerd worden naar een uitvoerbaar bestand.
 * `static void Main(string[] args)`: Het startpunt van iedere console-applicatie. Wat hier gemaakt wordt is een **methode** genaamd `Main`. Je programma kan meerdere methoden \(of functies\) bevatten, maar enkel degene genaamd `Main` zal door de compiler als het startpunt van het programma gemaakt worden.

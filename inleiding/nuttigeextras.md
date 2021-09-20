@@ -42,7 +42,7 @@ Ideale manier om programmeren meer in de vingers te krijgen op een speelse manie
 #### Websites
 
 * [Exercism](https://exercism.io/tracks/csharp)
-* [Coding game](https://www.codingame.com/start) zeer vet
+* [Coding game](https://www.codingame.com/start)
 * [Code Combat](https://codecombat.com/)
 * [Pex For Fun](https://pexforfun.com/) \(specifiek voor C\#!\)
 * [Code Academy](https://www.codecademy.com/)
