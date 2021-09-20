@@ -40,7 +40,7 @@ namespace Demo1
 }
 ```
 
-Compileer deze code en voer ze uit: \*\*druk hiervoor op het groene driehoekje. Of via het menu Debug en dan Start Debugging.
+Compileer deze code en voer ze uit via F5.
 
 {% hint style="danger" %}
 **Let erop dat je iedere 'zin' eindigt met een puntkomma.**
@@ -58,7 +58,7 @@ We gaan nu iedere lijn code kort bespreken. Sommige lijnen code zullen lange tij
 * `Console.WriteLine("Hoi ik ben het");`: en ook deze lijn komt op het scherm.
 * Sluitende accolades: vervolgens moet voor iedere openende accolade eerder in de code nu ook een bijhorende sluitende volgen.
 
-Laat deze info rustig inzinken en onthoudt alvast volgende belangrijke zaken:
+Laat deze info rustig inzinken en onthoud alvast volgende belangrijke zaken:
 
 * Al je code komt binnen de `Main` accolades.
 * Eindig iedere lijn code daar met een puntkomma \( ; \).
