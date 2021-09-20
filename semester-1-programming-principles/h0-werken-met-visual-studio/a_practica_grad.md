@@ -6,9 +6,15 @@ Om je oefeningen ordelijk bij te houden, gaan we al een aantal zaken gebruiken d
 
 ### Stap 1: een project LaboOefeningen maken
 
-Volg hiervoor 
+Volg hiervoor de instructies op [Een C\# project maken in Visual Studio Code](3-een-c-project-maken-in-visual-studio.md).
 
 ### Stap 2: een klasse maken `EenProgrammaSchrijvenInCSharp`
+
+Dit is nieuw. Klassen zijn een extra organisatie-eenheid van code. Ze spelen een grote rol in objectgeoriënteerd programmeren, maar kunnen ook gebruikt worden om stukken code verder te groeperen. Dit is voorlopig het enige dat wij er mee zullen doen.
+
+{% hint style="warning" %}
+Dit zal alleen werken als je de extensies juist hebt geïnstalleerd!
+{% endhint %}
 
 ### Stap 3: een eigen methode maken
 
