@@ -13,16 +13,42 @@ Volg hiervoor de instructies op [Een C\# project maken in Visual Studio Code](3-
 Dit is nieuw. Klassen zijn een extra organisatie-eenheid van code. Ze spelen een grote rol in objectgeoriënteerd programmeren, maar kunnen ook gebruikt worden om stukken code verder te groeperen. Dit is voorlopig het enige dat wij er mee zullen doen.
 
 {% hint style="warning" %}
-Dit zal alleen werken als je de extensies juist hebt geïnstalleerd!
+Dit zal alleen werken als je de extensies juist hebt geïnstalleerd! Zie [Beginnen met C\# in Visual Studio Code](4-beginnen-met-c-in-visual-studio.md).
 {% endhint %}
+
+In de verkenner kies je via rechterklik voor "New C\# class". Je noemt deze `EenProgrammaSchrijvenInCSharp.cs`. De extensie `.cs` geeft aan dat het om een bestand gaat met daarin C\#-code.
 
 ### Stap 3: een eigen methode maken
 
+Een definitie van een methode bevat één taak die kan worden uitgevoerd. Onze eerste oefenprogramma's zullen telkens één methode zijn. De werking van methodes wordt verder in de cursus in detail omschreven. **Soms moet je eerst iets overnemen voor je de functie van elk onderdeeltje kan begrijpen!**
+
+Neem aandachtig volgende code over, zodat jouw bestand **exact** dit bevat:
+
+![](../../.gitbook/assets/screenshot-from-2021-09-20-10-38-15.png)
+
+Belangrijke onderdelen:
+
+* `using System;` maakt onderdelen uit de `System` namespace toegankelijk. Zonder dit kan je geen gebruik maken van `Console`.
+* `namespace LaboOefeningen` geeft aan dat alles wat binnen de buitenste accolades \(de symbolen op regels 4 en 11\) staat behoort tot die namespace. Het is de "achternaam" van jouw code. Als er bijvoorbeeld twee stukken code `EenProgrammaSchrijvenInCSharp` zijn, kan je ze uit elkaar houden door te zeggen over welke namespace het gaat. Dit is hetzelfde als twee personen die dezelfde voornaam hebben, maar een andere achternaam.
+* `public`: hier komen we pas een stuk later op terug. Voorlopig zetten we het standaard bij klassen en methoden.
+* `class`: zie dit voorlopig als een verdere onderverdeling van je code. Eigenlijk zijn klassen veel meer dan dat, maar dat is voor later.
+* `static`: dit is nodig wanneer we klassen enkel zien als een verdere onderverdeling van je code. We zetten het bij onze methoden.
+* `void`: voorlopig zetten we dit altijd bij onze methoden. Het betekent ongeveer: "deze methode voert een commando uit, eerder dan een antwoord te geven op een vraag".
+* `MijnEersteMethode`: dit is de naam van onze methode. We kiezen deze zelf.
+* `()`: dit betekent dat de methode geen extra informatie nodig heeft om uit te voeren. Soms zetten we ook zaken tussen deze haakjes, de zogenaamde "parameters". Dit komt later aan bod.
+* Alles tussen de accolades op regel 7 en 9: de "body" van de methode. Dit is eigenlijk wat er gebeurt als we de methode gebruiken.
+
 ### Stap 4: je eigen methode oproepen
 
-### Stap 5: je eigen methode voorwaardelijk oproepen
+Standaard voert de code in de klasse `Program`, in de methode `Main` uit. Dat is het beginpunt van ons programma. We kunnen de body van `Main` aanpassen. We zullen hierin aangeven dat onze eigen methode moet worden opgeroepen als volgt:
 
-### Stap 6: je eigen methode verwijderen
+![](../../.gitbook/assets/screenshot-from-2021-09-20-10-51-31.png)
+
+We noemen de code in de body een "oproep" van de methode `MijnEersteMethode`. Hierin staat niet hoe die methode werkt. Er staat alleen dat we ze willen gebruiken.
+
+### Stap 5: opkuisen
+
+Je mag nu zowel de definitie als de oproep van `MijnEersteMethode` wissen. In de oefeningen die volgen, maak je telkens nieuwe methodes. Test ze telkens uit door de **oproep** te vervangen. **Laat de definitie staan** wanneer je overgaat naar de volgende oefening. Later zullen we een keuzemenu maken dat ons toestaat makkelijk een oefening naar keuze te demonstreren.
 
 ## Oefening: H1-MijnEersteProgramma
 
