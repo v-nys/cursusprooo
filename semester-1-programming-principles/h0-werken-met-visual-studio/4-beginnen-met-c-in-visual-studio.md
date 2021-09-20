@@ -1,60 +1,34 @@
 ---
 description: >-
-  In het vorige onderdeel Een C# project maken in Visual Studio, hebben we een
-  nieuw project gemaakt met de naam BeginnenMetCharp.
+  In het vorige onderdeel hebben we een nieuw project gemaakt met de naam
+  BeginnenMetCharp.
 ---
 
 # Beginnen met C\# in Visual Studio Code
 
-{% hint style="success" %}
-[Kennisclip voor deze inhoud](https://youtu.be/7fH3UPXSHIg)
-{% endhint %}
-
 In dit onderdeel:
 
-1. analyseren we wat Visual Studio voor ons gemaakt heeft;
-2. gebruiken we Visual Studio een C\# programma te uit te proberen;
-
-## Doelstellingen
-
-1. de basisonderdelen van de IDE leren kennen;
-2. je leert hoe je de layout en het kleurenschema van IDE aanpast;
-3. je schrijft de broncode in de editor;
-4. je roept de compiler aan om de broncode om te zetten in programmabestand met de extensie .exe;
-5. het programma wordt uitgevoerd en je kan het testen \(debuggen\);
-6. als alles goed gaat, ben je klaar, Zo niet, dan terug naar de editor, de fout zoeken en verbeteren, opnieuw compileren en testen …
+1. analyseren we wat Visual Studio Code voor ons gemaakt heeft;
+2. gebruiken we Visual Studio Code om een C\# programma te uit te proberen;
 
 ## **IDE**
 
-Het hele programmeerproces wordt een stuk aantrekkelijker met een handig gereedschap. En dat is het idee achter de geïntegreerde ontwikkelingsomgeving oftewel IDE \(Integrated Development Environment\). We gebruiken in deze lessen Visual Studio. Als Visual Studio het project BeginnenMetCSharp gemaakt heeft, wordt de editor van IDE geopend. We maken kennis met de essentiële onderdelen ervan:
+Het hele programmeerproces wordt een stuk aantrekkelijker met een handig gereedschap. En dat is het idee achter de geïntegreerde ontwikkelingsomgeving oftewel IDE \(Integrated Development Environment\). We gebruiken in deze lessen Visual Studio Code. We maken kennis met de essentiële onderdelen ervan:
 
-![IDE basis onderdelen](../../.gitbook/assets/image%20%2837%29.png)
+![Onderdelen van de IDE](../../.gitbook/assets/screenshot-from-2021-09-20-09-27-12.png)
 
-{% hint style="info" %}
-* Je kan meerdere bestanden tegelijkertijd openen in VS. Ieder bestand zal z'n eigen **tab** krijgen. De actieve tab is het bestand wiens inhoud je in het hoofdgedeelte eronder te zien krijgt. Merk op dat enkel open bestanden een tab krijgen.
-* De "**solution explorer**" toont alle bestanden en elementen die tot het huidige project behoren. Als we dus later nieuwe bestanden toevoegen dan kan je die hier zien \(en openen\).
-* Het **properties** venster \(eigenschappen\) is een belangrijk venster. Hier komen alle eigenschappen van het huidige geselecteerde element. Selecteer bijvoorbeeld maar eens Program.cs in de solution explorer en merk op dat er allerlei eigenschappen getoond worden. Onderaan het Properties venster wordt steeds meer informatie getoond over de huidig geselecteerde eigenschap.
-{% endhint %}
+* "Explorer": hier vind je een overzicht van je bestanden. De bestanden met de extensie .cs bevatten je C\#-code. Het bestand met extensie .csproj bevat "metadata", extra informatie die nodig is om je C\#-code juist te interpreteren.
+* "Run": via dit menu kan je je code starten.
+* Het centrale venster is je "editor". Hier staat de code waar je momenteel aan werkt.
+* "Problems": als je code geen geldige C\# is, wordt dat hier gemeld. Ook waarschuwingen over zaken die wel geldig zijn, maar misschien niet doen wat je wil, komen hier. Let op: de IDE is niet slim genoeg om te raden wat je programma eigenlijk hoort te doen. Hij kan alleen aangeven dat iets de regels van C\# niet volgt, niet of het een **nuttig** programma is.
+* "Output": hier komt informatie over wat Visual Studio Code zelf aan het doen is.
+* "Terminal": hier kan je commando's invoeren. Als je programma aan het uitvoeren is \(zie volgend onderdeel\), verschijnt hier ook de uitvoer van je programma.
 
-## **Layout**
+## Je programma uitvoeren
 
-De layout van VS kan je volledig naar je hand zetten. Je kan ieder \(deel-\)venster en tab verzetten, verankeren en zelfs verplaatsen naar een ander bureaublad. Experimenteer hier gerust mee en besef dat je steeds alles kan herstellen:
+Je programma uitvoeren doe je via het "Run" menu, of via de sneltoets F5. De eerste keer wordt gevraagd om wat extra instructies. Eerst kies je voor ".NET Core". Dat wordt, samen met wat extra info, opgeslagen in het bestand launch.json. In dit bestand pas je de tekst `internalConsole` aan naar `integratedTerminal`. Anders kunnen er problemen ontstaan met de `Console.ReadLine` methode, die we later nog vaak zullen gebruiken. Na deze aanpassingen kan je je programma uitvoeren en vind je onder "Terminal" de tekst "Hello World!" terug, die geproduceerd is door je programma.
 
-![Reset Visual Studio Window Layout](../../.gitbook/assets/image%20%2834%29.png)
-
-### Je kan ook het kleurenschema aanpassen
-
-Open het Options dialoogvenster:
-
-![Visual Studio Tools-Options](../../.gitbook/assets/image%20%2845%29.png)
-
-En kies een ander kleurschema:
-
-![Visual Studio Options dialoogvenster](../../.gitbook/assets/image%20%2846%29.png)
-
-Met dit als resultaat:
-
-![Visual Studio Dark kleurenschema](../../.gitbook/assets/image%20%2831%29.png)
+![De eerste maal een programma uitvoeren.](../../.gitbook/assets/run-project.gif)
 
 
 

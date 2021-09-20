@@ -29,7 +29,6 @@
   * [Datatypes](semester-1-programming-principles/h1-variabelen-en-datatypes/1_datatypes.md)
   * [Variabelen](semester-1-programming-principles/h1-variabelen-en-datatypes/1b_variabelen.md)
   * [Expressies en operators](semester-1-programming-principles/h1-variabelen-en-datatypes/2_expressies.md)
-  * [Bitbucket](semester-1-programming-principles/h1-variabelen-en-datatypes/bitbucket.md)
   * [Oefeningen](semester-1-programming-principles/h1-variabelen-en-datatypes/a_practica.md)
 * [H3: Tekst in code](semester-1-programming-principles/h2-tekst-in-code/README.md)
   * [Strings en chars](semester-1-programming-principles/h2-tekst-in-code/5_chars_strings.md)

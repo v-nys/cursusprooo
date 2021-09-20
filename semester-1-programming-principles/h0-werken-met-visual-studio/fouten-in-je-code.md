@@ -4,18 +4,10 @@
 [Kennisclip voor deze inhoud](https://youtu.be/seZ8MfWdRf4)
 {% endhint %}
 
-## Doelstellingen
-
-1. om wat hardnekkige fouten te zoeken kun je wel wat hulp gebruiken om de fouten te lokaliseren, zoals een debugger;
-
 ![](../../.gitbook/assets/image%20%2840%29.png)
 
 {% hint style="danger" %}
 Je code kan niet gecompileerd en uitgevoerd worden zolang er fouten in je code staan.
-
-Indien je op de groene start knop duwt en volgende waarschuwing krijgt **KLIK DAN NOOIT OP YES EN DUID NOOIT DE CHECKBOX AAN**:
-
-> Lees de boodschap eens: wat denk je dat er gebeurt als je op 'yes' duwt? Inderdaad, VS zal de laatste goed gelukte code uitvoeren en dus niet de code die je nu hebt staan waarin nog fouten staan.
 {% endhint %}
 
 ### Opzettelijk een fout maken
@@ -36,19 +28,11 @@ Het enige dat we hebben gewijzigd is de puntkomma op het einde.
 
 ### Opzettelijke fout testen
 
-Klik op het groene pijltje bovenaan, vlak voor de naam van het project BeginnenMetCSharp om het programma opnieuw uit te proberen. De fout wordt in de editor onderlijnd met een rode golvende lijn. Je ziet het volgende:
+Probeer het programma opnieuw uit te voeren. Je krijgt een melding dat er iets mis is. Vink eerst aan dat er onthouden moet worden wat je nu doet en geef dan aan dat je de fouten wil tonen via "Show Errors". Dit geeft je een overzicht, waarin je opmerkt dat er iets niet klopt op de regel en in de kolom waar de puntkomma ontbreekt. In de screenshot staat \[9,46\] en dat wijst op regel 9 van de code, positie 46. Waar de puntkomma moet staan, dus.
 
-![ Visual Studio Dialoogvenster met foutmelding](../../.gitbook/assets/image%20%2833%29.png)
+![](../../.gitbook/assets/intentional-error.gif)
 
-### Fout detecteren 
-
-We willen de laatste versie zonder fouten niet uitproberen en klikken dus op **No**. Dan wordt het **Error List** venster actief gemaakt:
-
-1. we zien daarin uitleg over de fout;
-2. dubbel klikken op de foutmelding en
-3. de cursor verspringt in de editor naar de plaats waar de fout gevonden is en die wordt in de editor aangegeven met een rode golvende lijn onder de fout in de code:
-
-![Visual Studio Zoeken waar de fout zit](../../.gitbook/assets/image%20%2839%29.png)
+Je ziet ook dat het haakje net na "World!" rood onderlijnd is. Dat wijst op de positie van de fout. Let op: ook hier weet de ontwikkelomgeving niet precies wat je uiteindelijk wil, dus zie dit eerder als een hint.
 
 ### Fout corrigeren
 
@@ -56,7 +40,7 @@ Plaats de puntkomma opnieuw op het einde van het statement op regel 9.
 
 ### Opnieuw testen
 
-Voer het programma opnieuw uit door op het groene pijltje bovenaan te klikken, vlak voor de naam van het project BeginnenMetCSharp.
+Voer het programma opnieuw uit door op F5 te duwen.
 
 ## Meest voorkomende fouten
 
