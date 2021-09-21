@@ -26,6 +26,10 @@ Het hele programmeerproces wordt een stuk aantrekkelijker met een handig gereeds
 
 ## Je programma uitvoeren
 
+{% hint style="warning" %}
+Krijg je op een gegeven moment een bericht "Required assets to build and debug are missing ... Add them?" **Klik dan op "yes".** 
+{% endhint %}
+
 Je programma uitvoeren doe je via het "Run" menu, of via de sneltoets F5. De eerste keer wordt gevraagd om wat extra instructies. Eerst kies je voor ".NET Core". Dat wordt, samen met wat extra info, opgeslagen in het bestand launch.json. In dit bestand pas je de tekst `internalConsole` aan naar `integratedTerminal`. Anders kunnen er problemen ontstaan met de `Console.ReadLine` methode, die we later nog vaak zullen gebruiken. Na deze aanpassingen kan je je programma uitvoeren en vind je onder "Terminal" de tekst "Hello World!" terug, die geproduceerd is door je programma.
 
 ![De eerste maal een programma uitvoeren.](../../.gitbook/assets/run-project.gif)
