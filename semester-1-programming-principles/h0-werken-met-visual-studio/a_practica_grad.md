@@ -32,7 +32,7 @@ Belangrijke onderdelen:
 * `namespace LaboOefeningen` geeft aan dat alles wat binnen de buitenste accolades \(de symbolen op regels 4 en 11\) staat behoort tot die namespace. Het is de "achternaam" van jouw code. Als er bijvoorbeeld twee stukken code `EenProgrammaSchrijvenInCSharp` zijn, kan je ze uit elkaar houden door te zeggen over welke namespace het gaat. Dit is hetzelfde als twee personen die dezelfde voornaam hebben, maar een andere achternaam.
 * `public`: hier komen we pas een stuk later op terug. Voorlopig zetten we het standaard bij klassen en methoden.
 * `class`: zie dit voorlopig als een verdere onderverdeling van je code. Eigenlijk zijn klassen veel meer dan dat, maar dat is voor later.
-* `static`: dit is nodig wanneer we klassen enkel zien als een verdere onderverdeling van je code. We zetten het bij onze methoden.
+* `static`: dit is sowieso nodig wanneer we klassen enkel zien als een verdere onderverdeling van je code. We zetten het bij onze methoden.
 * `void`: voorlopig zetten we dit altijd bij onze methoden. Het betekent ongeveer: "deze methode voert een commando uit, eerder dan een antwoord te geven op een vraag".
 * `MijnEersteMethode`: dit is de naam van onze methode. We kiezen deze zelf.
 * `()`: dit betekent dat de methode geen extra informatie nodig heeft om uit te voeren. Soms zetten we ook zaken tussen deze haakjes, de zogenaamde "parameters". Dit komt later aan bod.
