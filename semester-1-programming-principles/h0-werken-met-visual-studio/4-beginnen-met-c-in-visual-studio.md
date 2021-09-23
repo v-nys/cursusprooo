@@ -44,5 +44,7 @@ Je programma uitvoeren doe je via het "Run" menu, of via de sneltoets F5. De eer
 
 ![De eerste maal een programma uitvoeren.](../../.gitbook/assets/run-project.gif)
 
-## 
+{% hint style="info" %}
+Loopt het ergens mis? Verwijder dan de mappen bin, obj en .vscode \(als je die al hebt\). Druk dan op F1 en typ "Generate assets for build..." en klik de suggestie aan. Normaal verschijnen de mappen dan terug, met onder andere launch.json in de map .vscode.
+{% endhint %}
 
