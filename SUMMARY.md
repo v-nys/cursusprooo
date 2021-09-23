@@ -23,7 +23,7 @@
   * [Kleuren in Console](semester-1-programming-principles/h0-werken-met-visual-studio/5_kleuren.md)
   * [Oefeningen](semester-1-programming-principles/h0-werken-met-visual-studio/a_practica_grad.md)
 * [H2: Variabelen en datatypes](semester-1-programming-principles/h1-variabelen-en-datatypes/README.md)
-  * [De essentie van C\#](semester-1-programming-principles/h1-variabelen-en-datatypes/0_csharpessentials.md)
+  * [De syntaxis van C\#](semester-1-programming-principles/h1-variabelen-en-datatypes/0_csharpessentials.md)
   * [Datatypes](semester-1-programming-principles/h1-variabelen-en-datatypes/1_datatypes.md)
   * [Variabelen](semester-1-programming-principles/h1-variabelen-en-datatypes/1b_variabelen.md)
   * [Expressies en operators](semester-1-programming-principles/h1-variabelen-en-datatypes/2_expressies.md)

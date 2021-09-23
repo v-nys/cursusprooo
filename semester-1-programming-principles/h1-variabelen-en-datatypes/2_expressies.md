@@ -6,13 +6,7 @@
 
 ## Expressies en operators
 
-Zonder expressies is programmeren saai: je kan dan enkel variabelen aan elkaar toewijzen. Expressies zijn als het ware eenvoudige tot complexe sequenties van bewerkingen die op 1 resultaat uitkomen. De volgende code is bijvoorbeeld een expressie: `3+2`.
-
-Het resultaat van deze expressie is 5.
-
-{% hint style="info" %}
-Over expressies in C\# is véél te vertellen, maar niet aan de orde in deze cursus. Bekijk [zeker volgende tekst](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/expressions) indien je meer interesse hebt.
-{% endhint %}
+Alles wat je aan een variabele kan toekennen, is een **expressie**. Bijvoorbeeld `3+2`, `Console.ReadLine()`, of `7`. Als je kan zeggen dat een bewerking een duidelijk resultaat heeft, is het waarschijnlijk een expressie.
 
 ### Expressie-resultaat toewijzen
 
@@ -51,7 +45,7 @@ int hoogte = 20 * breedte;
 Operators in C\# zijn de welgekende 'wiskundige bewerkingen' zoals optellen \(`+`\), aftrekken \(`-`\), vermenigvuldigen \(`*`\) en delen \(`/`\). Deze volgen de wiskundige regels van **volgorde van berekeningen**:
 
 1. **Haakjes**
-2. **Vermenigvuldigen, delen en modulo**: `*` \(vermenigvuldigen\), `/` \(delen\) en `%` \(rest na deling, ook module genoemd\)
+2. **Vermenigvuldigen, delen en modulo**: `*` \(vermenigvuldigen\), `/` \(delen\) en `%` \(rest na deling, ook modulo genoemd\)
 3. **Optellen en aftrekken**: `+` en `-`
 
    \(etc.\)
@@ -76,14 +70,14 @@ Console.WriteLine("Je weegt op Mars" + gewichtOpMars + " kg");
 
 ### Modulo operator `%`
 
-De modulo operator die we in C\# aanduiden met `%` verdient wat meer uitleg. Deze operator zal als resultaat de gehele rest teruggeven wanneer we het linkse getal door het rechtse getal delen:
+De modulo operator, die we in C\# aanduiden met `%`, verdient wat meer uitleg. Deze operator zal als resultaat de gehele rest teruggeven wanneer we het linkse getal door het rechtse getal delen:
 
 ```text
 7%2 => zal 1 geven, daar 7 gedeeld door 2,  3 met rest 1 geeft 
 10%5 => zal 0 geven, daar 10 gedeeld door 5, 2 met rest 0 geeft
 ```
 
-De modulo-operator zal je geregeld gebruiken om bijvoorbeeld te weten of een getal een veelvoud van iets is. Als de rest dan 0 is weet je dat het getal een veelvoud is van het getal waar je het door deelde.
+De modulo-operator zal je geregeld gebruiken om bijvoorbeeld te weten of een getal een veelvoud van iets is. Als de rest dan 0 is, dan weet je dat het getal een veelvoud is van het getal waar je het door deelde.
 
 Bijvoorbeeld om te testen of getal even is gebruiken we `%2`:
 
@@ -164,7 +158,7 @@ En nu krijgen we wel `4.5`.
 
 ### En complexer?
 
-Het kan subtiel en ambetant worden in grotere berekeningen.
+Het kan subtiel worden in grotere berekeningen.
 
 Stel dat ik afspreek dat je van mij de helft van m'n salaris krijgt. Ik verdien \(fictief\) 10000 euro per maand. Ik gebruik volgende formule:
 
@@ -172,7 +166,7 @@ Stel dat ik afspreek dat je van mij de helft van m'n salaris krijgt. Ik verdien 
 double helft = 10000.0 * (1/2);
 ```
 
-Hoeveel krijg je van me? **0.0 euro, MUHAHAHAHA!!!**
+Hoeveel krijg je van me? **0.0 euro!**
 
 De volgorde van berekeningen zal eerst het gedeelte tussen de haakjes doen: 1 delen door 2 geeft 0, daar we een `int` door een `int` delen en dus terug een `int` als resultaat krijgen. Vervolgens zullen we deze `0` vermenigvuldigen met `10000.0` waarvan ik zo slim was om deze in `double` te zetten. Niet dus. We vermenigvuldigen weliswaar een `double` \(het salaris\) met een `int` maar die `int` is reeds `0` en we krijgen dus `0.0` als resultaat.
 

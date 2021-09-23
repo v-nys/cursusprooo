@@ -16,7 +16,7 @@ Er zijn tal basistypes in C\# gedeclareerd \(zogenaamde **built-in datatypes**\)
 {% hint style="info" %}
 Het datatype `string` heb je al gezien in het vorig hoofdstuk. Je hebt toen al een variabele aangemaakt van het type string door de zin `string result;`.
 
-Verderop plaatsten we dan iets waar de gebruiker iets kan intypen in die variabele \(toekenning in C\# gaat van rechts naar links\):
+Verderop koppelden we de naam `result` dan aan het resultaat van een actie, namelijk inlezen van tekst via `Console.ReadLine` \(eerst wordt dat resultaat uitgerekend, dan pas wordt het aan de naam gekoppeld\):
 
 ```csharp
 result = Console.ReadLine();
@@ -25,22 +25,12 @@ result = Console.ReadLine();
 
 ## Basistypen voor getallen
 
-Alhoewel een computer digitaal werkt en enkel 0'n en 1'n bewaard zou dat voor ons niet erg handig werken. C\# heeft daarom een hoop datatypes gedefinieerd om te werken met getallen zoals wij ze kennen, gehele en kommagetallen. Intern zullen deze getallen nog steeds binair bewaard worden, maar dat is tijdens het programmeren zelden een probleem.
-
-{% hint style="info" %}
-Onthoud echter dat onderaan je programma steeds hardware zal draaien die binair werkt.
-{% endhint %}
+Alhoewel een computer digitaal werkt en enkel binaire cijfers bewaart, zou dat voor ons niet erg handig werken. C\# heeft daarom een hoop datatypes gedefinieerd om te werken met getallen zoals wij ze kennen, gehele en kommagetallen. Intern zullen deze getallen nog steeds binair bewaard worden, maar dat is tijdens het programmeren zelden een probleem.
 
 De basistypen van C\# om getallen in op te slaan zijn:
 
 * Voor gehele getallen: `sbyte, byte, short, ushort, int, uint, long`
 * Voor kommagetallen: `double, float, decimal`
-
-&gt;
-
-{% hint style="warning" %}
-Ieder type hierboven heeft een bepaald bereik en hoeveelheid geheugen nodig. Je zal dus steeds moeten afwegen wat je wenst. Op een high-end pc met ettelijke gigabytes aan werkgeheugen \(RAM\) is geheugen zelden een probleem waar je rekening mee moet houden...Of toch: zoals met real-time shooters die miljoenen berekeningen \(3D\) per seconde moeten uitvoeren. Daar zal iedere byte tellen. Op andere apparaten \(smartphone, arduino, smart fridges, etc.\) is iedere byte geheugen nog kostbaarder. **Kortom: kies steeds bewust het datatype dat het beste 'past' voor je probleem qua bereik, precisie en geheugengebruik.**
-{% endhint %}
 
 Deze datatypes hebben allemaal een bepaald bereik, wat een rechtstreeks gevolg is van de hoeveelheid geheugen die ze innemen.
 
@@ -68,10 +58,8 @@ Enkele opmerkingen bij deze tabel:
 
 * De `s` vooraan `sbyte` types staat voor `signed`: m.a.w. 1 bit wordt gebruikt om het + of - teken te bewaren. 
 * De `u` vooraan `ushort`, `uint` en `ulong` staat voor `unsigned`. Het omgekeerde van signed dus. Kwestie van het ingewikkeld te maken. Deze twee datatypes hebben dus geen teken en zijn **altijd positief**.
-* `char` bewaard karakters. We zullen verderop dit datatype uitspitten en ontdekken dat karakters \(alle tekens op het toetsenbord, inclusief getallen, leesteken, etc.\) als gehele, binaire getallen worden bewaard. Daarom staat `char` in deze lijst.
-* Het grootste getal bij `long` is 2 tot de 63ste \(
-
-  negen triljoen tweehonderddrieëntwintig biljard driehonderd tweeënzeventig biljoen zesendertig miljard achthonderdvierenvijftig miljoen zevenhonderdvijfenzeventigduizend achthonderd en zeven\). Dit zijn maar 63 bits?! Inderaad, de laatste bit wordt gebruikt om het teken te bewaren.
+* `char` bewaart karakters. We zullen verderop dit datatype uitspitten en ontdekken dat karakters \(alle tekens op het toetsenbord, inclusief getallen, leesteken, etc.\) als gehele, binaire getallen worden bewaard. Daarom staat `char` in deze lijst.
+* Het grootste getal bij `long` is 2 tot de 63ste \(negen triljoen tweehonderddrieëntwintig biljard driehonderd tweeënzeventig biljoen zesendertig miljard achthonderdvierenvijftig miljoen zevenhonderdvijfenzeventigduizend achthonderd en zeven\). Dit zijn maar 63 bits?! Inderdaad, de laatste bit wordt gebruikt om het teken te bewaren.
 
 ### Kommagetallen
 
@@ -83,7 +71,7 @@ Voor de kommagetallen zijn er maar 3 mogelijkeden. Ieder datatype heeft een 'voo
 | `double` | 64 bits | $$\bold{±5.0 \cdot 10^{-324} \space to\space ±1.7 \cdot 10^{308}}$$ | 15 digits | [info](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/double) |
 | `decimal` | 128 bits | $$±1.0 \cdot 10^{-28}\space to\space ±7.9228 \cdot 10^{28}$$  | **28-29 digits** | [info](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/decimal) |
 
-Zoals je ziet moet je bij kommagetallen een afweging maken tussen 3 even belangrijke criteria. Heb je ongelooflijk grote precisie nodig dan ga je voor een `decimal`. Wil je vooral erg grote of erg kleine getallen kies je voor `double`. De precisie van een getal is het aantal beduidende of significante cijfers. Het getal 12,45 heeft een precisie van 4. Zoals je merkt zal je dus zelden `decimal` nodig hebben, deze zal vooral nuttig zijn in wetenschappelijke programma's waar met erg exacte cijfers moet gewerkt worden.
+Zoals je ziet moet je bij kommagetallen een afweging maken tussen 3 even belangrijke criteria. Heb je zeer grote precisie nodig, dan ga je voor een `decimal`. Wil je vooral erg grote of erg kleine getallen kies je voor `double`. De precisie van een getal is het aantal beduidende of significante cijfers. Het getal 12,45 heeft een precisie van 4. Zoals je merkt zal je dus zelden `decimal` nodig hebben, deze zal vooral nuttig zijn in wetenschappelijke programma's waar met erg exacte cijfers moet gewerkt worden.
 
 {% hint style="info" %}
 Bij twijfel opteren we meestal voor kommagetallen om het **`double`** datatype te gebruiken. Bij gehele getallen kiezen we meestal voor **`int`**.
@@ -99,10 +87,10 @@ We zullen het `bool` datatype erg veel nodig hebben wanneer we met [beslissingen
 
 ## Tekst/String datatype
 
-We besteden verderop een heel apart hoofdstuk aan tonen hoe je tekst en enkele karakters kan bewaren in variabelen. Sneak preview:
+We besteden verderop een heel apart hoofdstuk aan tonen hoe je tekst en enkele karakters kan bewaren in variabelen. De basis:
 
 * Tekst kan bewaard worden in het `string` datatype
-* Een enkel karakter wordt bewaard in het `char` datatype dat we ook hierboven al even hebben zien passeren.
+* Een enkel karakter wordt bewaard in het `char` datatype, dat we ook hierboven al even hebben zien passeren.
 
 Meer info vind je later in [dit hoofdstuk](../h2-tekst-in-code/5_chars_strings.md).
 
