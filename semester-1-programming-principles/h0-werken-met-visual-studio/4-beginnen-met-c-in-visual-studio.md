@@ -24,6 +24,16 @@ Het hele programmeerproces wordt een stuk aantrekkelijker met een handig gereeds
 * "Output": hier komt informatie over wat Visual Studio Code zelf aan het doen is.
 * "Terminal": hier kan je commando's invoeren. Als je programma aan het uitvoeren is \(zie volgend onderdeel\), verschijnt hier ook de uitvoer van je programma.
 
+## De C\# extensies installeren
+
+Visual Studio Code is taalonafhankelijk. Om het werken met C\# te vergemakkelijken, gebruiken we een extensie. Om deze te installeren, ga je naar het extensions venster en zoek je C\#. Dan klik je op de knop "install".
+
+![](../../.gitbook/assets/installatie-extensie.gif)
+
+Voor het gemak gebruiken we ook de extensie "C\# Extensions". Typ in de zoekbalk voor de extensies gewoon "C\#" en kies dan de extensie "C\# Extensions", als volgt:
+
+![](../../.gitbook/assets/screenshot-from-2021-09-20-10-32-39.png)
+
 ## Je programma uitvoeren
 
 {% hint style="warning" %}
@@ -34,13 +44,5 @@ Je programma uitvoeren doe je via het "Run" menu, of via de sneltoets F5. De eer
 
 ![De eerste maal een programma uitvoeren.](../../.gitbook/assets/run-project.gif)
 
-## De C\# extensies installeren
-
-Visual Studio Code is taalonafhankelijk. Om het werken met C\# te vergemakkelijken, gebruiken we een extensie. Om deze te installeren, ga je naar het extensions venster en zoek je C\#. Dan klik je op de knop "install".
-
-![](../../.gitbook/assets/installatie-extensie.gif)
-
-Voor het gemak gebruiken we ook de extensie "C\# Extensions". Typ in de zoekbalk voor de extensies gewoon "C\#" en kies dan de extensie "C\# Extensions", als volgt:
-
-![](../../.gitbook/assets/screenshot-from-2021-09-20-10-32-39.png)
+## 
 
