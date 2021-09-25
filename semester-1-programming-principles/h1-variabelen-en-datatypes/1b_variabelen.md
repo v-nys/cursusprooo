@@ -6,17 +6,18 @@
 
 ## Variabelen
 
-In het vorige hoofdstuk zagen we dat er verschillende soorten datatypes bestaan. Deze types hebben we nodig om **variabelen** aan te maken. De data die we in een programma gebruiken bewaren we namelijk in een **variabele van een bepaald type**. Een variabele is een plekje in het geheugen dat in je programma zal gereserveerd worden om daarin data te bewaren van het type dat je aan de variabele hebt toegekend. Een variabele zal intern een geheugenadres hebben \(waar de data in het geheugen staat\) maar dat zou lastig programmeren zijn indien je steeds dit adres moet gebruiken. Daarom moeten we ook steeds een naam oftewel **identifier** aan de variabele geven zodat we makkelijk de geheugenplek kunnen aanduiden.
+In het vorige hoofdstuk zagen we dat er verschillende datatypes bestaan. Deze types hebben we nodig om **variabelen** aan te maken. Een variabele is een koppeling van een naam aan gegevens. In C\# heeft elke variabele ook een type.
+
+Een variabele wordt bijgehouden in het geheugen van je machine, maar in een programmeertaal als C\# vragen we ons niet af waar in het geheugen. In plaats daarvan gebruiken we de naam van de variabele, de zogenaamde **identifier**, om de gekoppelde gegevens op te vragen.
 
 > De naam \(identifier\) van de variabele moet voldoen aan de identifier regels onder "Inleiding -&gt; Afspraken code".
 
 ## Variabelen aanmaken en gebruiken
 
-Om een variabele te maken moeten we deze **declareren**, door een type en naam te geven. Vanaf dan zal de computer een hoeveelheid geheugen voor je reserveren waar de inhoud van deze variabele in kan bewaard worden. Hiervoor dien je minstens op te geven:
+Om een variabele te maken moeten we deze **declareren**, door een type en naam te geven. Vanaf dan zal de computer een hoeveelheid geheugen voor je reserveren. Hiervoor dien je op te geven:
 
 1. Het **datatype** \(bv `int`,  `double`\).
 2. Een **identifier** zodat de variabele uniek kan geïdentificeerd worden \([volgens de naamgevingsregel van C\#](0_csharpessentials.md)\).
-3. \(optioneel\) Een **beginwaarde** die de variabele krijgt bij het aanmaken ervan.
 
 Een variabele declaratie heeft als syntax:
 
@@ -34,22 +35,21 @@ datatype identifier1, identifier2, identifier3;
 
 Bijvoorbeeld `string voornaam, achternaam, adres;`
 
-Indien je reeds weet wat de beginwaarde moet zijn van de variabele dan mag je de variabele ook reeds deze waarde toekennen bij het aanmaken:
+Indien je reeds weet wat de beginwaarde moet zijn van de variabele dan mag je de variabele ook reeds deze waarde toekennen bij het aanmaken. Dit noemen we de **initialisatie** van de variabele.
 
 ```csharp
 int mijnLeeftijd = 37;
 ```
 
+Eens een variabele is geïnitaliseerd, kunnen we deze \(op de meeste plaatsen\) gebruiken alsof we de gekoppelde waarde rechtstreeks gebruikten.
+
 ### Waarden toekennen aan variabelen
 
-Vanaf dit punt kunnen we dus ten allen tijde deze variabele gebruiken om een waarde aan toe te kennen, de bestaande waarde te overschrijven, of de waarde te gebruiken, zoals:
+Een initialisatie is een speciaal geval van een **toekenning**. Een toekenning houdt in dat je de waarde die bij een bepaalde naam hoort instelt. In C\# mag dit ook indien de variabele al een waarde heeft.
 
-* Waarde toekennen: `mijnGetal= 15;`. **Toekenning gebeurt steeds van rechts naar links: het deel rechts van het gelijkheidsteken wordt toegewezen aan het deel links er van.**
-* Waarde tonen op scherm: `Console.WriteLine(mijnGetal);`
+Met de **toekennings-operator \(=\)** kan je een waarde toekennen aan een variabele. Hierbij kan je zowel een letterlijke waarde toekennen oftewel het resultaat van een berekening \(een "expressie"\).
 
-Met de **toekennings-operator \(=\)** kan je een waarde toekennen aan een variabele. Hierbij kan je zowel een literal toekennen oftewel het resultaat van een expressie.
-
-Je kan natuurlijk ook een waarde uit een variabele uitlezen en toewijzen aan een andere variabele:
+Je kan ook een waarde uit een variabele uitlezen en toewijzen aan een andere variabele:
 
 ```csharp
 int eenAndereLeeftijd = mijnLeeftijd;
@@ -57,7 +57,7 @@ int eenAndereLeeftijd = mijnLeeftijd;
 
 ### Literal toewijzen
 
-Literals zijn expliciet ingevoerde waarden in je code. Als je in je code expliciet de waarde 4 wilt toekennen aan een variabele dan is het getal 4 in je code een zogenaamde literal. Wanneer we echter data bijvoorbeeld eerst uitlezen of berekenen \(via bijvoorbeeld invoer van de gebruiker of als resultaat van een berekening\) en het resultaat hiervan toekennen aan een variabele dan is dit geen literal.
+Literals \(of "letterlijke waarden"\) zijn expliciet uitgeschreven waarden in je code. Als je in je code expliciet de waarde 4 wilt toekennen aan een variabele dan is het getal 4 in je code een zogenaamde literal. Wanneer we echter data bijvoorbeeld eerst uitlezen of berekenen \(via bijvoorbeeld invoer van de gebruiker of als resultaat van een berekening\) en het resultaat hiervan toekennen aan een variabele dan is dit geen literal.
 
 Voorbeelden van een literal toekennen:
 
@@ -66,7 +66,7 @@ int temperatuurGisteren = 20;
 int temperatuurVandaag = 25;
 ```
 
-Het is belangrijk dat het type van de literal overeenstemt met dat van de variabele waaraan je deze zal toewijzen. Een string-literal \(zie verder\) stel je voor door aanhalingstekens. Volgende code zal dan ook een compiler-fout generen, daar je een string-literal aan een int-variabele wil toewijzen, en vice versa.
+Het is belangrijk dat het type van de literal overeenstemt met dat van de variabele waaraan je deze zal toewijzen. Een `string` literal stel je voor met aanhalingstekens. Volgende code zal dan ook een compiler-fout generen, daar je een `string` literal aan een int-variabele wil toewijzen, en vice versa.
 
 ```csharp
 string eenTekst;

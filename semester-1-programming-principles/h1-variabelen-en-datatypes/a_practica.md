@@ -1,6 +1,6 @@
 # Oefeningen
 
-Al deze oefeningen maak je in een klasse `HoofdstukTwee`. In de oefeningen van hoofdstuk 1 heb je gezien hoe je een nieuwe klasse maakt.
+Al deze oefeningen maak je in een klasse `VariabelenEnDatatypes`. In de oefeningen van hoofdstuk 1 heb je gezien hoe je een nieuwe klasse maakt.
 
 ## Oefening: H2-optellen
 
