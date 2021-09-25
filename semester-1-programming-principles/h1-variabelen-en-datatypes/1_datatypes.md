@@ -58,15 +58,15 @@ Enkele opmerkingen bij deze tabel:
 
 ### Kommagetallen
 
-Voor de kommagetallen zijn er maar 3 mogelijkeden. Ieder datatype heeft een 'voordeel' tegenover de 2 andere, dit voordeel staat vet in de tabel:
+Voor de kommagetallen zijn er maar 3 mogelijkeden. Ieder datatype heeft een voordeel tegenover de 2 andere, dit voordeel staat vet in de tabel:
 
 | **Type** | **Geheugen** | **Bereik** | **Precisie** |  |
 | :--- | :--- | :--- | :--- | :--- |
-| `float` | **32 bits** | $$±1.5 \cdot 10^{-45} \space to\space ±3.4 \cdot 10^{38}$$  | 7 digits | [info](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/float) |
-| `double` | 64 bits | $$\bold{±5.0 \cdot 10^{-324} \space to\space ±1.7 \cdot 10^{308}}$$ | 15 digits | [info](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/double) |
-| `decimal` | 128 bits | $$±1.0 \cdot 10^{-28}\space to\space ±7.9228 \cdot 10^{28}$$  | **28-29 digits** | [info](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/decimal) |
+| `float` | **32 bits** | $$±1.5 \cdot 10^{-45} \space to\space ±3.4 \cdot 10^{38}$$  | 6 to 9 digits | [info](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/float) |
+| `double` | 64 bits | $$\bold{±5.0 \cdot 10^{-324} \space to\space ±1.7 \cdot 10^{308}}$$ | 15 to 17 digits | [info](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/double) |
+| `decimal` | 128 bits | $$±1.0 \cdot 10^{-28}\space to\space ±7.9228 \cdot 10^{28}$$  | **28 to 29 digits** | [info](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/decimal) |
 
-Zoals je ziet moet je bij kommagetallen een afweging maken tussen 3 even belangrijke criteria. Heb je zeer grote precisie nodig, dan ga je voor een `decimal`. Wil je vooral erg grote of erg kleine getallen kies je voor `double`. De precisie van een getal is het aantal beduidende of significante cijfers. Het getal 12,45 heeft een precisie van 4. Zoals je merkt zal je dus zelden `decimal` nodig hebben, deze zal vooral nuttig zijn in wetenschappelijke programma's waar met erg exacte cijfers moet gewerkt worden.
+Zoals je ziet moet je bij kommagetallen een afweging maken tussen 3 even belangrijke criteria. Heb je zeer grote precisie \(veel cijfers na de komma\) nodig, dan ga je voor een `decimal`. Wil je vooral erg grote of erg kleine getallen \(met meer kans op afrondingen\), dan kies je voor `double`.
 
 {% hint style="info" %}
 Bij twijfel opteren we meestal voor kommagetallen om het **`double`** datatype te gebruiken. Bij gehele getallen kiezen we meestal voor **`int`**.
