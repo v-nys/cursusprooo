@@ -6,7 +6,7 @@
 
 ## Statements en de C\# syntax
 
-Om een werkend C\#-programma te maken moeten we de C\#-taal beheersen. Net zoals iedere taal, bestaat ook C\# uit enerzijds grammatica en anderzijds woordenschat in de vorm van de te gebruiken **keywords**. Het geheel noemen we de **syntaxis** of _syntax_ van de taal.
+Om een uitvoerbaar C\#-programma te maken moeten we bepaalde regels respecteren. We noemen deze regels de **syntaxis** of _syntax_ van de taal.
 
 Een C\#-programma bestaat uit een opeenvolging van instructies ook wel **statements** genoemd. Met de uitzondering van **blokken** \(ook _blocks_, afgebakend door ****`{` **en** `}`\) eindigen deze steeds met een **puntkomma** \(**`;`**\)
 
@@ -20,9 +20,9 @@ Enkele belangrijke regels van C\#:
 * **Witruimtes**: Spaties, tabs en newlines worden door de C\# compiler genegeerd. Je kan ze dus gebruiken om de layout van je code te verbeteren. De enige plek waar witruimtes wél een verschil geven is tussen aanhalingstekens `"      "` die we later \(bij string\) zullen leren gebruiken.
 * **Commentaar toevoegen kan**: met behulp van `//` voor een enkele lijn en `/*         */` voor meerdere lijnen commentaar. Commentaar zal door de compiler genegeerd worden.
 
-## Keywords: de woordenschat
+## Keywords
 
-C\# bestaat zoals gezegd niet enkel uit grammaticale regels. Grammatica zonder woordenschat is nutteloos. Er zijn binnen C\# dan ook 80 woorden, zogenaamde **reserved keywords** die de woordenschat voorstellen. In deze cursus zullen we stelselmatig deze keywords leren kennen en gebruiken op een correcte manier om zo werkende code te maken.
+Er zijn binnen C\# dan ook 80 woorden, zogenaamde **reserved keywords** die deel van de taal zelf uitmaken. In deze cursus zullen we stelselmatig deze keywords leren kennen en gebruiken op een correcte manier om zo werkende code te maken.
 
 Deze keywords zijn:
 
