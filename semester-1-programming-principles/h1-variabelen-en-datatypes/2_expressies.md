@@ -45,7 +45,7 @@ int hoogte = 20 * breedte;
 Operators in C\# zijn de welgekende 'wiskundige bewerkingen' zoals optellen \(`+`\), aftrekken \(`-`\), vermenigvuldigen \(`*`\) en delen \(`/`\). Deze volgen de wiskundige regels van **volgorde van berekeningen**:
 
 1. **Haakjes**
-2. **Vermenigvuldigen, delen**: `*` \(vermenigvuldigen\), `/` \(delen\) en `%` \(rest na deling, ook modulo genoemd\)
+2. **Vermenigvuldigen, delen**: `*` \(vermenigvuldigen\), `/` \(delen\) 
 3. **Optellen en aftrekken**: `+` en `-`
 
    \(etc.\)
@@ -67,42 +67,6 @@ double zwaartekrachtMars = 3.711;    //m/s²
 double  gewichtOpMars = (gewichtOpAarde/zwaartekrachtAarde) * zwaartekrachtMars; //kg
 Console.WriteLine("Op Mars voelt het alsof je " + gewichtOpMars + " kg weegt.");
 ```
-
-### Modulo operator `%`
-
-De modulo operator, die we in C\# aanduiden met `%`, verdient wat meer uitleg. Deze operator zal als resultaat de rest teruggeven wanneer we het linkse getal door het rechtse getal delen. Met andere woorden, wat overblijft als we zo vaak mogelijk proberen het rechtste getal in het linkergetal te doen passen.
-
-```text
-7 % 2 => zal 1 geven, daar 7 gedeeld door 2,  3 met rest 1 geeft 
-10 % 5 => zal 0 geven, daar 10 gedeeld door 5, 2 met rest 0 geeft
-```
-
-De modulo-operator zal je geregeld gebruiken om bijvoorbeeld te weten of een getal een veelvoud van iets is. Als de rest dan 0 is, dan weet je dat het getal een veelvoud is van het getal waar je het door deelde.
-
-Bijvoorbeeld om te testen of getal even is gebruiken we `% 2`:
-
-```csharp
-int getal = 1234234;
-int rest = getal % 2;
-Console.WriteLine("Indien het getal als rest 0 geeft weten we dat het even is. De rest is: " + rest);
-```
-
-{% hint style="warning" %}
-De uitkomst van modulo is wat lastiger uit te leggen wanneer er negatieve getallen bij betrokken zijn. We spenderen hier geen aandacht aan.
-{% endhint %}
-
-### Verkorte operator notaties
-
-Er bestaan enkele verkorte notaties voor veelgebruikte operaties. We geven hier een overzicht, maar **we raden af dat je ze als beginner gebruikt**. Voor beginners is de lange notatie duidelijker.
-
-| **Verkorte notatie** | **Lange notatie** |
-| :--- | :--- |
-| `getal++;` | `getal = getal+1;` |
-| `getal--;` | `getal = getal-1;` |
-| `getal += 3;` | `getal = getal+3;` |
-| `getal -= 6;` | `getal = getal-6;` |
-| `getal *= 7;` | `getal = getal*7;` |
-| `getal /= 2;` | `getal = getal/2;` |
 
 ## Automatische berekening van datatypes
 

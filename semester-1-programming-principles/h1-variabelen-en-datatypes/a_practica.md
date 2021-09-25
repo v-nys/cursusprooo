@@ -111,9 +111,9 @@ Uiteindelijk geef je dan het resultaat weer in de console.
 Je schrijft een programma dat de rol vervult van een rekenmachine. Het voert volgende berekeningen uit:
 
 * -1 + 4 \* 6
-* \( 35+ 5 \) % 7
+* \( 35+ 5 \) \* 7
 * 14 + -4 \* 6 / 11
-* 2 + 15 / 6 \* 1 - 7 % 2
+* 2 + 15 / 6 \* 1 - 7 \* 2
 
 ### Technische analyse
 
@@ -123,9 +123,9 @@ Noem de methode voor deze oefening `BeetjeWiskunde`.
 
 ```text
 23
-5
+280
 12
-3
+-10
 ```
 
 ### Technische hulp
@@ -190,7 +190,7 @@ Je schrijft een programma dat de tafel van vermenigvuldiging voor 411 geeft. Dit
 
 ### Technische analyse
 
-Noem de methode voor deze oefening `Maaltafels`. Je kent nog geen lusstructuren, dus probeer deze niet te gebruiken. Schrijf gewoon tien instructies.
+Noem de methode voor deze oefening `Maaltafels`. Je kent nog geen lusstructuren, dus probeer deze niet te gebruiken, zelfs als je ze al ergens anders bent tegengekomen. Schrijf gewoon tien instructies.
 
 #### voorbeeldinteractie\(s\)
 
