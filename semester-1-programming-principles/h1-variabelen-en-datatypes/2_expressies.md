@@ -1,7 +1,7 @@
 # Expressies en operators
 
 {% hint style="success" %}
-[Kennisclip voor deze inhoud](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=3a0370ef-b3da-4642-aeaa-a9660083e329)
+[Kennisclip voor deze inhoud](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6e2e7e80-9be2-490f-95e8-adb1009c6316)
 {% endhint %}
 
 ## Expressies en operators

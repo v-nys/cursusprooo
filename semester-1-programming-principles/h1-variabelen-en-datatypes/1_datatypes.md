@@ -1,7 +1,7 @@
 # Datatypes
 
 {% hint style="success" %}
-[Kennisclip voor deze inhoud](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=d04cb0f0-0fdf-48ab-8dac-acdd00a45b16)
+[Kennisclip voor deze inhoud](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c1597c7c-ef46-4129-b08f-adb10081ee25)
 {% endhint %}
 
 Een essentieel onderdeel van C\# is kennis van datatypes. Een **datatype** is, zoals de naam het zegt, een soort waartoe bepaalde gegevens kunnen behoren. Wanneer je data wenst te bewaren in je applicatie dan zal je je moeten afvragen wat voor soort data het is. Gaat het om een getal, een geheel getal, een kommagetal, een stuk tekst of misschien een binaire reeks? Een variabele met een bepaald datatype kan een bepaald soort data bewaren en dit zal afhankelijk hiervan een bepaalde hoeveelheid computergeheugen vereisen.

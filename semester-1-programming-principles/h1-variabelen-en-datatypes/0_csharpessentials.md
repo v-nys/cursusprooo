@@ -1,7 +1,7 @@
 # De syntaxis van C\#
 
 {% hint style="success" %}
-[Kennisclip voor deze inhoud](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b318b7fa-fa9e-427c-81c8-acdd00a45b3d)
+[Kennisclip voor deze inhoud](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=36e743a8-09c2-421a-98ed-adb1008099fa)
 {% endhint %}
 
 ## Statements en de C\# syntax

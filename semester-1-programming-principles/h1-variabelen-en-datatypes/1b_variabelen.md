@@ -1,7 +1,7 @@
 # Variabelen
 
 {% hint style="success" %}
-[Kennisclip voor deze inhoud](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=22d326cf-b619-4cf0-80fc-a966007ffef5)
+[Kennisclip voor deze inhoud](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9ee07d38-af69-45e3-a45f-adb1008ebbf2)
 {% endhint %}
 
 ## Variabelen
