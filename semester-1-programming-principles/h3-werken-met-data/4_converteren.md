@@ -130,27 +130,5 @@ Nu zal temperatuurGemiddeld wel de waarde 22.5 bevatten.
 Dit kon ook met een expliciete cast, bijvoorbeeld door te schrijven `(double)temperatuurGisteren`. Maar casts ondermijnen de hulp die we kunnen krijgen van de compiler en zijn daarom spaarzaam te gebruiken. In deze cursus zal je waarschijnlijk enkel expliciete casts nodig hebben als je de cijfers na de komma moet wegwerpen.
 {% endhint %}
 
-## Conversie
-
-{% hint style="success" %}
-[Kennisclip Convert klasse](https://youtu.be/5Yj2k2fPI68)
-{% endhint %}
-
-Casting is een in de taal ingebakken manier van data omzetten, die vooral zeer nuttig is daar deze ook werkt in andere C\#-related programmeertalen zoals C, C++ en Java. Om te weten hoe deze omzettingen gebeuren, kan je kijken in de handleiding van de taal C\# zelf.
-
-Echter, .NET heeft ook methoden die je kunnen helpen om data van het ene type naar het andere te brengen. Deze methoden zitten binnen de **`Convert`**-klasse.
-
-Het gebruik hiervan is zeer eenvoudig. Enkele voorbeelden:
-
-```csharp
-int getal= Convert.ToInt32(3.2); //double to int
-double anderGetal= Convert.ToDouble(5); //int to double
-bool isWaar= Convert.ToBoolean(1); //int to bool
-int userAge= Convert.ToInt32("19"); //string to int
-int ageOther= Convert.ToInt32(anderGetal); //double to int
-```
-
-Je plaatst tussen de ronde haakjes de variabele of literal die je wenst te converteren naar een ander type. Merk op dat naar een `int` converteren met `.ToInt32()` moet gebeuren. Om naar een `short` te converteren is dit met behulp van `.ToInt16()`. Het voordeel van deze werkwijze is dat ze vastgelegd kan worden door de programmeur en dat ze vaak meer "intuïtieve" omzettingen doet dan een cast. En, als de omzettingen je niet bevallen, kan je een eigen klasse `MyConvert` schrijven die de omzettingen doet zoals je zelf wil.
-
-Je kan [alle conversie-mogelijkheden hier bekijken](https://msdn.microsoft.com/en-us/library/system.convert.aspx).
+## 
 

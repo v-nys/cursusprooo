@@ -1,20 +1,14 @@
 # Functionaliteit van strings
 
-{% hint style="success" %}
-[Kennisclip voor deze inhoud](https://youtu.be/db7Pz4fv3M0)
-{% endhint %}
-
 Strings bevatten veel ingebouwde functionaliteit. Als je deze leert gebruiken, kan je al snel nuttige programmaatjes voor tekstverwerking schrijven.
 
 ## `Length`
 
-De lengte van een string is het aantal symbolen in de weergegeven versie. Dat wil zeggen: zonder de aanhalingstekens, zonder een eventuele `$` of `@` vooraan, in de veronderstelling dat een escapesequentie één karakter voorstelt en dat accolades in geïnterpoleerde strings al zijn uitgewerkt. Je plaatst `.Length` achter de string om de lengte te weten te komen. Enkele voorbeelden: 
+De lengte van een string is het aantal symbolen in de weergegeven versie. Je plaatst `.Length` achter de string om de lengte te weten te komen. Enkele voorbeelden: 
 
 ```csharp
-Console.WriteLine("hallo".Length); // levert 5 want: 5 letters
-Console.WriteLine("hallo\\Wereld".Length); // 12 = 5 letters + 1 escape + 6 letters
-Console.WriteLine($"hallo\\Wereld".Length); // 12, zie boven, $ bestaat achter de schermen niet meer
-Console.WriteLine(@"hallo\Wereld".Length); // 12, want de backslash wordt achter de schermen \\ en dat stelt dan weer één symbool voor
+Console.WriteLine("hallo".Length); // levert 5 want: 5 symbolen in de uiteindelijke weergave
+Console.WriteLine("hallo ".Length); // levert 6 want: 6 symbolen in de uiteindelijke weergave
 ```
 
 ## `Substring`
@@ -31,6 +25,25 @@ Je mag de lengte achterwege laten om vanaf de gegeven index tot het einde van de
 
 ```csharp
 Console.WriteLine("Hallo, wereld".Substring(4)); // toont o, wereld
+```
+
+Deze methode **verandert een string niet**. Er is geen enkele methode die dat doet, want **je kan een string niet veranderen in C\#. Je kan er alleen een nieuwe mee bouwen.** De methode berekent wel een nieuwe string met de gewenste eigenschappen. Dit is een belangrijk onderscheid. Volgende drie voorbeelden tonen het verschil. Voer uit en verklaar.
+
+```csharp
+string hallo1 = "hallo";
+hallo1.substring(0,2);
+Console.WriteLine(hallo1);
+```
+
+```csharp
+string hallo1 = "hallo";
+Console.WriteLine(hallo1.substring(0,2));
+```
+
+```csharp
+string hallo1 = "hallo";
+string hallo2 = hallo1.substring(0,2);
+Console.WriteLine(hallo2);
 ```
 
 ## `IndexOf`
@@ -77,18 +90,7 @@ Met deze methodes verwijder je witruimte \(spaties, tabs, newlines,...\) aan het
 
 ```csharp
 Console.WriteLine("     C# is cool".TrimStart()); // C# is cool, eerste teken is C en geen spatie
-Console.WriteLine(@"
-
-
-
-BOE!
-
-
-
-".TrimStart().TrimEnd()); // BOE! (op één regel) (kan ook als gewoon Trim())
+Console.WriteLine("C# is cool     ".TrimEnd()); // zelfde resultaat
+Console.WriteLine("    C# is cool     ".Trim()); // zelfde resultaat
 ```
-
-{% hint style="info" %}
-Dus geen van bovenstaande zaken past de oorspronkelijke tekst aan. Wat past de oorspronkelijke tekst dan wel aan? **Niets!** In C\# is er geen manier om tekst aan te passen, maar je kan wel andere tekst berekenen. Je kan ook de inhoud van een variabele aanpassen van de oorspronkelijke tekst naar de berekende tekst, dus dit vormt geen probleem.
-{% endhint %}
 

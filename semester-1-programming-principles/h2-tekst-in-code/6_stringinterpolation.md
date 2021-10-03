@@ -57,39 +57,3 @@ string result = $"Ik ben {name} en ik ben {age} jaar oud.";
 
 In dit geval zal dus de inhoud van de variabele `name` tussen de string op de plek waar nu `{name}` staat geplaatst worden. Idem voor `age`. Dit mag, zelfs al is `age` geen string: hetgeen tussen de accolades staat, wordt altijd intern omgezet naar een string voor het in het resultaat wordt geplaatst.
 
-### Berekeningen doen bij string interpolatie
-
-Je mag eender welke _expressie_ tussen de accolades zetten bij string interpolation. Een expressie is iets dat je kan uitrekenen en dat je een resultaat oplevert. Bijvoorbeeld:
-
-```csharp
-string result = $"Ik ben {name} en ik ben {age+4} jaar oud.";
-```
-
-Alle expressies tussen de accolades zullen eerst uitgevoerd worden voor ze tussen de string worden geplaatst. De uitvoer wordt nu dus: `Ik ben Finkelstein en ik ben 17 jaar oud.`
-
-Eender welke expressie is toegelaten, dus je kan ook complexe berekeningen of zelfs andere methoden aanroepen:
-
-```csharp
-string result = $"Ik ben {age*age+(3%2)} jaar oud.";
-```
-
-### Mooier formatteren
-
-Bij stringinterpolatie kan je ook bepalen hoe de te tonen variabelen en expressies juist weergegeven moeten worden. Je geeft dit aan door na de expressie, binnen de accolades, een dubbelpunt te plaatsen gevolgd door de manier waarop moet geformatteerd worden:
-
-Wil je bijvoorbeeld een kommagetal tonen met maar 2 cijfers na de komma dan schrijf je:
-
-```csharp
-double number = 12.345;
-Console.WriteLine($"{number:F2}");
-```
-
-Hier stelt `2` het aantal cijfers na de komma voor. Je kan zelf kiezen om meer of minder cijfers te tonen door het getal aan te passen.
-
-Nog enkele nuttige vormen:
-
-* D5: geheel getal bestaande uit 5 cijfers \(`123` wordt `00123`\) \(werkt enkel op gehele getallen en je kan het getal 5 vervangen door een positieve waarde naar keuze\)
-* C: geldbedrag \(`12,34` wordt € 12,34: teken van valuta afhankelijk van instellingen pc\)
-
-Alle format specifiers staan [hier opgelijst](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings). Voorlopig volstaat het dat je bovenstaande formaten kent.
-

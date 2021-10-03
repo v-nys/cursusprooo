@@ -1,2 +1,2 @@
-# H3: Tekst in code
+# H3: Strings en hun methoden
 
