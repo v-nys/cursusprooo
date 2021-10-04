@@ -31,7 +31,7 @@
 * [H3: Strings en hun methoden](semester-1-programming-principles/h2-tekst-in-code/README.md)
   * [Strings](semester-1-programming-principles/h2-tekst-in-code/5_chars_strings.md)
   * [Strings samenvoegen](semester-1-programming-principles/h2-tekst-in-code/6_stringinterpolation.md)
-  * [Omzetten \(van en naar strings](semester-1-programming-principles/h2-tekst-in-code/omzetten-van-en-naar-strings.md)
+  * [Omzetten van en naar strings](semester-1-programming-principles/h2-tekst-in-code/omzetten-van-en-naar-strings.md)
   * [Input verwerken en omzetten](semester-1-programming-principles/h2-tekst-in-code/4b_inputconverten.md)
   * [Functionaliteit van strings](semester-1-programming-principles/h2-tekst-in-code/functionaliteit-van-strings.md)
   * [Oefeningen](semester-1-programming-principles/h2-tekst-in-code/a_practica.md)
