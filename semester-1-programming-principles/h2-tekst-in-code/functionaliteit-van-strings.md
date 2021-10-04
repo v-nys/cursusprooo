@@ -46,6 +46,10 @@ string hallo2 = hallo1.substring(0,2);
 Console.WriteLine(hallo2);
 ```
 
+{% hint style="warning" %}
+**Onthoud het goed: je kan een string niet aanpassen in C\#. We kunnen alle gevolgen hiervan nog niet uitleggen, maar het is wel zo.**
+{% endhint %}
+
 ## `IndexOf`
 
 Een index is, zoals hierboven aangegeven, de positie van een teken in de string. Als we willen weten waar een bepaalde substring in een string voorkomt, gebruiken we `IndexOf`:
