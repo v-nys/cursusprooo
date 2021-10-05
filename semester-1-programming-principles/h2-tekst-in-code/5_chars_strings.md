@@ -34,6 +34,6 @@ string eenString = 1; //fout
 int eenGetal = "1"; //fout
 ```
 
-1. In de tweede toekenning proberen we een literal van het type **int** toe te kennen een variabele van het type **string**.
+1. In de tweede toekenning proberen we een literal van het type **int** toe te kennen aan een variabele van het type **string**.
 2. In de laatste toekenning proberen we een literal van het type **string** toe te kennen aan een variabele van het type **int**.
 
