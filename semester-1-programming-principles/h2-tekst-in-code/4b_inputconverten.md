@@ -10,7 +10,7 @@
 Dit hoofdstuk is niet lang, maar het is wel een zeer belangrijk aspect van console-applicaties!
 {% endhint %}
 
-En applicatie die geen input van de gebruiker vergt kan even goed een screensaver zijn. We hebben reeds gezien hoe we met `Console.ReadLine()` de gebruiker tekst kunnen laten invoeren en die we dan vervolgens kunnen verwerken om bijvoorbeeld z'n naam op het scherm te tonen.
+Een applicatie die geen input van de gebruiker vergt kan even goed een screensaver zijn. We hebben reeds gezien hoe we met `Console.ReadLine()` de gebruiker tekst kunnen laten invoeren en die we dan vervolgens kunnen verwerken om bijvoorbeeld z'n naam op het scherm te tonen.
 
 **De uitdaging met `ReadLine` is dat deze altijd een string teruggeeft:**
 
