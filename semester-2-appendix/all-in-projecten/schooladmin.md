@@ -4,8 +4,8 @@ Onderstaande kennisclips moet je bekijken voor wat de onderdelen betreft die han
 
 {% hint style="success" %}
 * [Kennisclip 1](https://youtu.be/eT5uhSw9nFo)
-* [Kennisclip 2](https://youtu.be/Wuk9G1_JMWc)
-* [Kennisclip 3](https://youtu.be/q__6UaGtNGs)
+* [Kennisclip 2](https://youtu.be/Wuk9G1\_JMWc)
+* [Kennisclip 3](https://youtu.be/q\_\_6UaGtNGs)
 {% endhint %}
 
 ## Oefening: H10-StudentKlasse
@@ -31,11 +31,11 @@ Voeg aan de klasse een methode `Gemiddelde()` toe. Deze berekent het gemiddelde 
 
 Voeg ook een methode `ToonOverzicht` toe, die de persoonsgegevens en behaalde cijfers voor elke student toont. Kijk naar de voorbeeldinteractie voor de juist voorstellingswijze.
 
-Test je programma door een statische methode \(in de klasse `Student`\), `DemonstreerStudenten` te voorzien, die twee studenten aanmaakt via variabelen `student1`, `student2`. Elke student is ingeschreven voor minstens drie vakken die je zelf kiest en krijgt een geldig cijfer \(naar keuze\) voor elk vak, een naam en een geldige leeftijd. Vervolgens wordt van elke student de `ToonOverzicht`-methode opgeroepen. In je `Main`-methode voorzie je een \(niet-genest\) keuzemenu dat vraagt wat je wil doen en op dit moment is de enige optie `DemonstreerStudenten` uitvoeren.
+Test je programma door een statische methode (in de klasse `Student`), `DemonstreerStudenten` te voorzien, die twee studenten aanmaakt via variabelen `student1`, `student2`. Elke student is ingeschreven voor minstens drie vakken die je zelf kiest en krijgt een geldig cijfer (naar keuze) voor elk vak, een naam en een geldige leeftijd. Vervolgens wordt van elke student de `ToonOverzicht`-methode opgeroepen. In je `Main`-methode voorzie je een (niet-genest) keuzemenu dat vraagt wat je wil doen en op dit moment is de enige optie `DemonstreerStudenten` uitvoeren.
 
 Een overzicht van de klasse na al deze wijzigingen:
 
-![UML-klassendiagram Student](../../.gitbook/assets/studentles2c%20%282%29.png)
+![UML-klassendiagram Student](<../../.gitbook/assets/studentles2c (2).png>)
 
 Voorbeeldcode om de eerste student aan te maken:
 
@@ -52,9 +52,9 @@ student1.CursusResultaten[2] = 13;
 student1.ToonOverzicht();
 ```
 
-#### Voorbeeldinteractie\(s\)
+#### Voorbeeldinteractie(s)
 
-```text
+```
 Wat wil je doen?
 1. DemonstreerStudenten uitvoeren
 > 1
@@ -101,15 +101,15 @@ We zullen studenten groeperen in cursussen. Bij elke cursus horen op dit moment 
 
 Werk verder in het SchoolAdmin project. Maak in dit nieuw project een nieuwe klasse `Cursus` in een file `Cursus.cs`. Deze klasse heeft twee attributen: `Studenten` en `Titel`. `Studenten` is een array van `Student`-objecten. De initiële waarde voor dit attribuut is een array met een capaciteit van 2 studenten. `Titel` is gewoonweg een `string`. `Cursus` heeft ook een methode `ToonOverzicht` die de titel van de cursus toont, gevolgd door de namen van alle studenten die de cursus volgen.
 
-Test je programma door een statische methode \(in de klasse `Cursus`\), `DemonstreerCursussen` te voorzien, die vier cursussen \("Communicatie", "Databanken", "Programmeren" en "Webtechnologie"\) aanmaakt via variabelen `communicatie`, `programmeren`, `webtechnologie` en `databanken`. Maak ook twee studenten aan \(dezelfde als in `DemonstreerStudenten`\) en maak hen lid van de cursussen waarvoor ze een cijfer hebben \(zie voorbeeldinteractie van de vorige oefening\). Toon tenslotte voor elke cursus het overzicht via `ToonOverzicht`. De methode `DemonstreerCursussen` kan ook opgeroepen worden via het keuzemenu in `Main`.
+Test je programma door een statische methode (in de klasse `Cursus`), `DemonstreerCursussen` te voorzien, die vier cursussen ("Communicatie", "Databanken", "Programmeren" en "Webtechnologie") aanmaakt via variabelen `communicatie`, `programmeren`, `webtechnologie` en `databanken`. Maak ook twee studenten aan (dezelfde als in `DemonstreerStudenten`) en maak hen lid van de cursussen waarvoor ze een cijfer hebben (zie voorbeeldinteractie van de vorige oefening). Toon tenslotte voor elke cursus het overzicht via `ToonOverzicht`. De methode `DemonstreerCursussen` kan ook opgeroepen worden via het keuzemenu in `Main`.
 
 Je klasse `Cursus` ziet er uiteindelijk zo uit:
 
 ![UML-klassendiagram voor Cursus](../../.gitbook/assets/cursusles2.png)
 
-#### Voorbeeldinteractie\(s\)
+#### Voorbeeldinteractie(s)
 
-```text
+```
 Wat wil je doen?
 1. DemonstreerStudenten uitvoeren
 2. DemonstreerCursussen uitvoeren
@@ -149,7 +149,7 @@ De eerdere oefening H10-StudentKlasse gebruikte gesynchroniseerde arrays. We wil
 
 Voorzie een klasse CursusResultaat met twee velden: `Naam` en `Resultaat`. Het eerste stelt de naam van de cursus voor, het tweede het behaalde resultaat.
 
-Vervang vervolgens de arrays `cursussen` en `CursusResultaten` door één `private` array van objecten van deze nieuwe klasse met naam `cursusResultaten`. Vervang `RegistreerVoorCursus` door `RegistreerCursusResultaat` om dit mogelijk te maken \(met een parameter voor de naam en een parameter voor het cijfer\). `DemonstreerStudenten` moet identiek dezelfde uitvoer blijven produceren als tevoren.
+Vervang vervolgens de arrays `cursussen` en `CursusResultaten` door één `private` array van objecten van deze nieuwe klasse met naam `cursusResultaten`. Vervang `RegistreerVoorCursus` door `RegistreerCursusResultaat` om dit mogelijk te maken (met een parameter voor de naam en een parameter voor het cijfer). `DemonstreerStudenten` moet identiek dezelfde uitvoer blijven produceren als tevoren.
 
 {% hint style="info" %}
 Deze oefening vraagt om veel aanpassingen, maar ze zijn niet zo groot. Hou vooral je hoofd erbij en denk goed na over hoe je elk fout gemarkeerd stukje code kan herschrijven wanneer je de oude arrays hebt verwijderd.
@@ -161,7 +161,7 @@ Deze oefening vraagt om veel aanpassingen, maar ze zijn niet zo groot. Hou voora
 Deze [filmpje](https://youtu.be/f4HwuIax5IM) dien je ook te bekijken voor wat het onderdeel rond SchoolAdmin betreft.
 {% endhint %}
 
-## Uitbreiding CursusResultaat \(SchoolAdmin project\)
+## Uitbreiding CursusResultaat (SchoolAdmin project)
 
 ### Leerdoelen
 
@@ -174,13 +174,13 @@ Functioneel zal je niet veel verschil zien met eerder. Dit is zuiver een aanpass
 
 ### Technische analyse
 
-Pas `CursusResultaat` aan zodat het huidige attribuut `Naam` privaat wordt \(hernoem het dan ook naar `naam`\) en voeg een **read-only** property `Naam` toe om deze informatie toch toegankelijk te houden.
+Pas `CursusResultaat` aan zodat het huidige attribuut `Naam` privaat wordt (hernoem het dan ook naar `naam`) en voeg een **read-only** property `Naam` toe om deze informatie toch toegankelijk te houden.
 
 Voor `Resultaat` doe je een gelijkaardige aanpassing, maar de property is niet read-only. Hij kan ingesteld worden, maar enkel op een waarde tussen 0 en 20. Aanpassingen naar een andere waarde worden genegeerd.
 
 Voeg ook een constructor toe met twee parameters. De eerste is voor de naam, de tweede voor het resultaat. Doe ten slotte nodige wijzigingen in andere onderdelen van je code om met deze nieuwe code te werken, zonder iets te veranderen aan het gedrag van je systeem.
 
-## Uitbreiding Cursus \(SchoolAdmin project\)
+## Uitbreiding Cursus (SchoolAdmin project)
 
 ### Leerdoelen
 
@@ -189,7 +189,7 @@ Voeg ook een constructor toe met twee parameters. De eerste is voor de naam, de 
 
 ### Functionele analyse
 
-We wensen cursussen automatisch te nummeren \(zoals in DigitAP ook elke cursus een nummer heeft\).
+We wensen cursussen automatisch te nummeren (zoals in DigitAP ook elke cursus een nummer heeft).
 
 ### Technische analyse
 
@@ -197,7 +197,7 @@ Voorzie eerst de klasse `Cursus` van een read-only property `Id` van type `int`.
 
 Neem dit nummer ook op in de methode `ToonOverzicht` van cursus, zodanig dat het cursusnummer tussen haakjes verschijnt, naast de titel van de cursus.
 
-## Verdere uitbreiding Cursus \(SchoolAdmin project\)
+## Verdere uitbreiding Cursus (SchoolAdmin project)
 
 ### Leerdoelen
 
@@ -212,7 +212,7 @@ We willen het aantal studiepunten per cursus bijhouden. We willen niet dat het v
 
 Voorzie eerst de klasse `Cursus` van een property `Studiepunten` van type `byte`. Je hoeft hierbij geen speciale controles te doen en mag gewoon het algemene patroon volgen, maar maak de setter `private`.
 
-Pas de constructor aan, zodat hij ook het aantal studiepunten aanvaardt als \(derde\) parameter. Zorg er met behulp van chaining ook voor dat ook calls met een of twee argumenten geldig blijven, waarbij het aantal studiepunten van vanzelf wordt ingesteld op 3.
+Pas de constructor aan, zodat hij ook het aantal studiepunten aanvaardt als (derde) parameter. Zorg er met behulp van chaining ook voor dat ook calls met een of twee argumenten geldig blijven, waarbij het aantal studiepunten van vanzelf wordt ingesteld op 3.
 
 Zet ook het aantal studiepunten mee in het overzicht dat je krijgt via `ToonOverzicht`. Zet tussen haakjes naast het nummer voor de cursus, gevolgd door `"stp"`.
 
@@ -245,7 +245,7 @@ De student hoeft niet opgenomen te worden in de array `Studenten` van een `Cursu
 
 ### Voorbeeldinteractie
 
-```text
+```
 Geef de tekstvoorstelling van 1 student in CSV-formaat:
 >Bart Van Steen;04;03;1998;Boekhouden;14;Macro-economie;8;Frans, deel 2;18
 
@@ -318,7 +318,7 @@ Controleer ook dat al je testmethodes nog dezelfde resultaten leveren als eerder
 
 Momenteel krijgen studenten nog niet vanzelf een studentennummer. Pas je code aan zodat student 1 automatisch het nummer 1 krijgt, enzovoort.
 
-## SchoolAdmin project: Studieprogramma \(stap 1\)
+## SchoolAdmin project: Studieprogramma (stap 1)
 
 We wensen cursussen te groeperen in studieprogramma's.
 
@@ -330,7 +330,7 @@ Schrijf een klasse `StudieProgramma`. Deze heeft een naam, bevat een aantal curs
 
 Implementeer als volgt:
 
-![](../../.gitbook/assets/studieprogramma%20%281%29.png)
+![](<../../.gitbook/assets/studieprogramma (1).png>)
 
 Gebruik volgende code voor de demonstratiemethode:
 
@@ -351,7 +351,7 @@ snbProgramma.ToonOverzicht();
 
 Hier loopt iets mis. Benoem zelf de oorzaak en corrigeer de fout.
 
-## Schooladmin project: Studieprogramma \(stap 2\)
+## Schooladmin project: Studieprogramma (stap 2)
 
 Zoals boven, maar gebruik nu volgende code voor de demonstratiemethode:
 
@@ -408,7 +408,7 @@ Om naast studenten ook andere personen, zoals lectoren en administratief persone
   * AdministratiefPersoneel en Lector
 * Student, een klasse die al bestond.
 
-![UML-klassediagram Persoon](../../.gitbook/assets/image%20%2848%29.png)
+![UML-klassediagram Persoon](<../../.gitbook/assets/image (48).png>)
 
 ### Persoon
 
@@ -420,7 +420,7 @@ Elke nieuwe persoon die gemaakt wordt, wordt bewaard in een lijst met alle perso
 
 ### Student
 
-Deze klasse wordt een kind van `Persoon`. Zorg er dus voor dat deze klasse de verplichte zaken uit Persoon implementeert, maar dat duplicate functionaliteit \(bv. Studentnummer, Naam, Geboortedatum, StudentenTeller\) vanaf nu aan `Persoon` worden overgelaten: haal deze dus weg uit Student.
+Deze klasse wordt een kind van `Persoon`. Zorg er dus voor dat deze klasse de verplichte zaken uit Persoon implementeert, maar dat duplicate functionaliteit (bv. Studentnummer, Naam, Geboortedatum, StudentenTeller) vanaf nu aan `Persoon` worden overgelaten: haal deze dus weg uit Student.
 
 Voeg op Student ook een attribuut `dossier` toe. Dit is een collectie waarin opmerkingen genoteerd kunnen worden. De opmerkingen worden geïndexeerd met de datum en het tijdstip waarop ze worden ingegeven. Zorg er voor dat dit dossier niet aangepast kan worden buiten de Student klasse door de getter een immutable dictionary te laten teruggeven.
 
@@ -442,7 +442,7 @@ Voorzie ook de mogelijkheid om een immutable list van alle personeel op te vrage
 
 Deze klasse is een kind van `Personeel` en moet daarom aan alle voorwaarden van `Personeel` én `Persoon` voldoen: er zullen dus enkele methoden verplicht moeten worden geïmplementeerd in deze klasse. Er wordt ook een lijst bijgehouden van alle administratieve personeelsleden die worden aangemaakt.
 
-Het salaris van een administratief personeelslid wordt als volgt berekend: _per 3 jaar, krijgt het personeelslid 75 euro extra bovenop een basisloon van 2000  euro. Dit basisloon wordt vervolgens verrekend met de tewerkstellingsbreuk. De tewerkstellingsbreuk is de werkbelasting van het personeelslid gedeeld door 40 uur \(voltijdse tewerkstelling\)._
+Het salaris van een administratief personeelslid wordt als volgt berekend: _per 3 jaar, krijgt het personeelslid 75 euro extra bovenop een basisloon van 2000  euro. Dit basisloon wordt vervolgens verrekend met de tewerkstellingsbreuk. De tewerkstellingsbreuk is de werkbelasting van het personeelslid gedeeld door 40 uur (voltijdse tewerkstelling)._
 
 Bijvoorbeeld: Ahmed is 4 jaar in dienst. Hij krijgt dus 2000 EUR basisloon, plus 1 keer 75 EUR ancienniteitstoeslag. Hij werkt echter 30 uur per week in plaats van 40, dus krijgt hij 1556,25 EUR. Cijfers na de komma vallen weg omwille van het datatype.
 
@@ -450,7 +450,7 @@ De werkbelasting van een administratief personeelslid wordt bepaald aan de hand 
 
 Het naamkaartje van een administratief personeelslid bevat de naam van het personeelslid, met daarachter de vermelding `(ADMINISTRATIE)`. Bv. 
 
-```text
+```
 Ahmed Azzaoui (ADMINISTRATIE)
 ```
 
@@ -466,15 +466,15 @@ Doorloop vervolgens met een `foreach` de lijst met alle personeel en toon zo all
 
 Deze klasse is een kind van `Personeel` en moet daarom aan alle voorwaarden van `Personeel` én `Persoon` voldoen: er zullen dus enkele methoden verplicht moeten worden geïmplementeerd in deze klasse. Er wordt ook een lijst bijgehouden van alle lectoren die worden aangemaakt. Een`Lector` object bevat dan weer een opsomming van alle Cursussen die deze lector geeft, met voor elke cursus de werkbelasting van deze cursus voor de lector.
 
-Het salaris van een administratief personeelslid wordt als volgt berekend: _per 4 jaar, krijgt het personeelslid 120 euro extra bovenop een basisloon van 2200 euro. Dit basisloon wordt vervolgens verrekend met de tewerkstellingsbreuk. De tewerkstellingsbreuk is de werkbelasting van het personeelslid gedeeld door 40 uur \(voltijdse tewerkstelling\)._
+Het salaris van een administratief personeelslid wordt als volgt berekend: _per 4 jaar, krijgt het personeelslid 120 euro extra bovenop een basisloon van 2200 euro. Dit basisloon wordt vervolgens verrekend met de tewerkstellingsbreuk. De tewerkstellingsbreuk is de werkbelasting van het personeelslid gedeeld door 40 uur (voltijdse tewerkstelling)._
 
 Bijvoorbeeld: Anna is 9 jaar in dienst. Ze krijgt dus 2200 EUR basisloon, plus 2 keer 120 EUR ancienniteitstoeslag. Ze werkt 10 uur per week in plaats van 40, dus krijgt ze 610,00 EUR.
 
 De werkbelasting van een lector wordt bepaald aan de hand van de cursussen die hij of zij geeft. De werkbelasting van elke cursus in de collectie wordt hiertoe opgeteld.
 
-Het naamkaartje van een lector bevat de naam van de lector, met op een nieuwe lijn `Lector voor:` . Vervolgens worden de titels van alle cursussen die deze lector geeft op telkens een nieuwe lijn toegevoegd. Bv. 
+Het naamkaartje van een lector bevat de naam van de lector, met op een nieuwe lijn `Lector voor: `. Vervolgens worden de titels van alle cursussen die deze lector geeft op telkens een nieuwe lijn toegevoegd. Bv. 
 
-```text
+```
 Anna Bolzano
 Lector voor:
 Economie
@@ -510,7 +510,7 @@ Voorzie ook overal een hash code volgens de vuistregel in de cursus.
 
 Voorzie `Persoon` van een `ToString` methode die een resultaat van volgende vorm toont:
 
-```text
+```
 Persoon
 -------
 Naam: Wouter Roelants
@@ -523,7 +523,7 @@ Voorzie in één keer een property `Leeftijd` die berekend wordt aan de hand van
 
 Zorg dat de concrete klassen hier ook het statuut van de persoon aan koppelen, bijvoorbeeld:
 
-```text
+```
 Persoon
 -------
 Naam: Geertrui Willems
@@ -535,7 +535,7 @@ Doe dit niet met `GetType`, want dan is de schrijfwijze anders. Doe het met de h
 
 ### Eenmaking statische lijsten personen
 
-Je hebt momenteel volgende statische properties voor \(immutable\) lijsten met personen:
+Je hebt momenteel volgende statische properties voor (immutable) lijsten met personen:
 
 * AllePersonen
 * AlleLectoren
@@ -551,25 +551,27 @@ Vervang daarom de lijsten voor de subklassen van `Persoon` zodat er geen achterl
 
 In je huidige code heeft de klasse `Student` een lijst `vakInschrijvingen`. Zo wordt een student gelinkt aan de cursussen die hij of zij volgt. Dit is niet ideaal, want in werkelijkheid willen we ook vaak te weten komen welke studenten in een bepaalde cursus zijn ingeschreven. We moeten dus in twee richtingen kunnen gaan.
 
-Een mogelijke oplossing: voorzie de klasse `VakInschrijving` van een \(immutable\) lijst `AlleVakInschrijvingen`. Zo hoef je geen data dubbel bij te houden en kan je toch de functionaliteit verder uitbreiden. Schrap de huidige lijst met vakinschrijvingen in de klasse `Student`. Voorzie ter vervanging daarvan een property student in de klasse `VakInschrijving` die bijhoudt welke student bij de inschrijving hoort. Voorzie ook, in de klasse `Student`, een property `VakInschrijvingen` die "on-the-fly" berekent welke inschrijvingen bij de student in kwestie horen. Voorzie ook een property `Cursussen`. Voorzie bovendien in de klasse Cursus een property `VakInschrijvingen` en een property `Studenten`. Al deze properties zijn onveranderlijke lijsten.
+Een mogelijke oplossing: voorzie de klasse `VakInschrijving` van een (immutable) lijst `AlleVakInschrijvingen`. Zo hoef je geen data dubbel bij te houden en kan je toch de functionaliteit verder uitbreiden. Schrap de huidige lijst met vakinschrijvingen in de klasse `Student`. Voorzie ter vervanging daarvan een property student in de klasse `VakInschrijving` die bijhoudt welke student bij de inschrijving hoort. Voorzie ook, in de klasse `Student`, een property `VakInschrijvingen` die "on-the-fly" berekent welke inschrijvingen bij de student in kwestie horen. Voorzie ook een property `Cursussen`. Voorzie bovendien in de klasse Cursus een property `VakInschrijvingen` en een property `Studenten`. Al deze properties zijn onveranderlijke lijsten.
 
 Je zal ten slotte de lijst met studenten uit de klasse `Cursus` moeten verwijderen. Dit vraagt een aantal logische aanpassingen. In de methode `DemonstreerCursussen` mag je code om studenten te associëren met een cursus verwijderen.
 
 ### Cursussen in semesters
 
-Momenteel bestaat een studieprogramma gewoon uit een vlakke lijst cursussen. Dat stemt niet goed overeen met de werkelijkheid. In werkelijkheid wordt een cursus in een bepaald semester ingepland. Eén manier om dit voor te stellen: vervang de vlakke lijst met cursussen door een `Dictionary` met cursussen als keys en getalwaarden \(semesters\) als values. Doe deze aanpassing in je code. Je zal hiervoor je demonstratiecode moeten aanpassen. Zorg dat communicatie bij de opleiding programmeren in het eerste semester staat, maar bij de opleiding systeem- en netwerkbeheer in het tweede semester. Alle andere vakken staan overal in het eerste semester.
+Momenteel bestaat een studieprogramma gewoon uit een vlakke lijst cursussen. Dat stemt niet goed overeen met de werkelijkheid. In werkelijkheid wordt een cursus in een bepaald semester ingepland. Eén manier om dit voor te stellen: vervang de vlakke lijst met cursussen door een `Dictionary` met cursussen als keys en getalwaarden (semesters) als values. Doe deze aanpassing in je code. Je zal hiervoor je demonstratiecode moeten aanpassen. Zorg dat communicatie bij de opleiding programmeren in het eerste semester staat, maar bij de opleiding systeem- en netwerkbeheer in het tweede semester. Alle andere vakken staan overal in het eerste semester.
 
 ### Manueel data invoeren
 
-De demonstratiemethodes hebben bijna overal objecten aangemaakt door ze te "hard coden". Dat wil zeggen dat de instructies C\# code zijn en niet gewijzigd kunnen worden eens je programma gecompileerd is. In een echte systeem voor schoolbeheer zou het administratief personeel voortdurend nieuwe entiteiten kunnen toevoegen aan het systeem.
+De demonstratiemethodes hebben bijna overal objecten aangemaakt door ze te "hard coden". Dat wil zeggen dat de instructies C# code zijn en niet gewijzigd kunnen worden eens je programma gecompileerd is. In een echte systeem voor schoolbeheer zou het administratief personeel voortdurend nieuwe entiteiten kunnen toevoegen aan het systeem.
 
 Voorzie daarom vier nieuwe mogelijkheden in je keuzemenu: "student toevoegen", "cursus toevoegen", "vakinschrijving toevoegen" en "inschrijvingsgegevens tonen". De eerste drie vragen om de nodige gegevens om een object van een van deze klassen aan te maken. De laatste toont eerst alle studenten in het systeem, dan alle cursussen, dan alle inschrijvingen. Zorg ook dat je menu opties presenteert in een oneindige lus, zodat je je methodes samen kan testen.
 
-Onderstaande screenshot toont een voorbeeldinteractie \(enkel de nieuwe opties zijn getoond om plaats te sparen\):
+Onderstaande screenshot toont een voorbeeldinteractie (enkel de nieuwe opties zijn getoond om plaats te sparen):
 
 ![](../../.gitbook/assets/screenshot-from-2021-04-26-21-15-49.png)
 
-{% file src="../../.gitbook/assets/schooladmin-inc-geavanceerdeovererving.zip" caption="Modeloplossing tot hier" %}
+{% file src="../../.gitbook/assets/schooladmin-inc-geavanceerdeovererving.zip" %}
+Modeloplossing tot hier
+{% endfile %}
 
 ## Schooladmin project: geen dubbele data
 
@@ -583,17 +585,17 @@ Zorg er ook voor dat je keuzemenu niet crasht wanneer deze fout zich voordoet, m
 
 ## Schooladmin project: geen lege waarden voor VakInschrijving
 
-Het is niet logisch een inschrijving te hebben zonder student of zonder vak. Zorg ervoor dat een VakInschrijving niet kan aangemaakt worden zonder een \(of beide\) van deze elementen. Gebruik hiervoor een `ArgumentException`. Breid bij wijze van demonstratie je keuzemenu om een student of een vak toe te voegen uit met een optie met nummer 0 om de waarde `null` te gebruiken. \(Dit zou je in het echt niet toevoegen aan je systeem zelf, maar je zou aparte testcode schrijven die dit doet.\) Zorg ook dat het niet toegelaten is een student twee keer in te schrijven voor hetzelfde vak. Ook dat levert een `ArgumentException`. Zorg dat het keuzemenu niet crasht wanneer je deze optie kiest, maar gewoon de boodschap van de exception toont.
+Het is niet logisch een inschrijving te hebben zonder student of zonder vak. Zorg ervoor dat een VakInschrijving niet kan aangemaakt worden zonder een (of beide) van deze elementen. Gebruik hiervoor een `ArgumentException`. Breid bij wijze van demonstratie je keuzemenu om een student of een vak toe te voegen uit met een optie met nummer 0 om de waarde `null` te gebruiken. (Dit zou je in het echt niet toevoegen aan je systeem zelf, maar je zou aparte testcode schrijven die dit doet.) Zorg ook dat het niet toegelaten is een student twee keer in te schrijven voor hetzelfde vak. Ook dat levert een `ArgumentException`. Zorg dat het keuzemenu niet crasht wanneer je deze optie kiest, maar gewoon de boodschap van de exception toont.
 
 ## Schooladmin project: beperkt aantal inschrijvingen per vak
 
-Er mogen niet meer dan 20 lopende inschrijvingen per cursus zijn. Zorg ervoor dat er een `CapaciteitOverschredenException` \(met enkel de message als parameter\) optreedt wanneer je iemand probeert in te schrijven voor een cursus waarvoor al 20 inschrijvingen \(zonder toegekend resultaat\) bestaan. Zorg ervoor dat je keuzemenu hierop voorzien is en de message toont, zonder te crashen.
+Er mogen niet meer dan 20 lopende inschrijvingen per cursus zijn. Zorg ervoor dat er een `CapaciteitOverschredenException` (met enkel de message als parameter) optreedt wanneer je iemand probeert in te schrijven voor een cursus waarvoor al 20 inschrijvingen (zonder toegekend resultaat) bestaan. Zorg ervoor dat je keuzemenu hierop voorzien is en de message toont, zonder te crashen.
 
 ## SchoolAdmin project: sorteren volgens criteria
 
 ### Functionele analyse
 
-We willen graag de data in ons systeem gesorteerd weergeven. We willen dit niet doen met één vaste sorteerprocedure \(zoals in het geval van CompareTo\), maar we willen de gebruiker de keuze geven om te sorteren op verschillende manieren. Dit ben je ongetwijfeld gewoon van op webwinkels waar je kan sorteren volgens prijs, productnaam,...
+We willen graag de data in ons systeem gesorteerd weergeven. We willen dit niet doen met één vaste sorteerprocedure (zoals in het geval van CompareTo), maar we willen de gebruiker de keuze geven om te sorteren op verschillende manieren. Dit ben je ongetwijfeld gewoon van op webwinkels waar je kan sorteren volgens prijs, productnaam,...
 
 ### Technische analyse
 
@@ -628,7 +630,7 @@ Schrijf een interface `ICSVSerializable`. Deze bevat één objectmethode zonder 
 
 Deze interface wordt geïmplementeerd door `Persoon` en door `Cursus`. Voor elk object tonen we steeds eerst de naam van de klasse waartoe het object behoort, gevolgd door puntkomma, gevolgd door het Id van het object.
 
-Voor een persoon tonen we daarna \(met telkens puntkomma's tussen\):
+Voor een persoon tonen we daarna (met telkens puntkomma's tussen):
 
 * de naam tussen dubbele aanhalingstekens
 * de geboortedatum
@@ -662,5 +664,4 @@ Tip: gebruik overerving om de gemeenschappelijke aspecten niet telkens opnieuw t
 
 ![](../../.gitbook/assets/screenshot-from-2021-05-23-16-55-28.png)
 
-## 
-
+##

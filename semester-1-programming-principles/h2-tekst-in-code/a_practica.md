@@ -16,9 +16,9 @@ Een applicatie vraagt je tekst in te voeren die dan daarna zal worden getoond me
 
 Noem de methode voor deze oefening `VariabelenHoofdletters`.
 
-#### voorbeeldinteractie\(s\)
+#### voorbeeldinteractie(s)
 
-```text
+```
 Welke tekst moet ik omzetten?
 > Hello World
 HELLO WORLD
@@ -55,7 +55,7 @@ Oefening H2-maaltafels en H2-ruimte dienen we te herschrijven volgens de princip
 
 Noem de methode voor deze oefening `StringInterpolation`.
 
-#### voorbeeldinteractie\(s\)
+#### voorbeeldinteractie(s)
 
 Zie oefening H2-maaltafels en H2-ruimte.
 
@@ -63,7 +63,7 @@ Zie oefening H2-maaltafels en H2-ruimte.
 
 #### Programmaverloop
 
-Pas string interpolatie mbv `$` \(manier 2\) toe.
+Pas string interpolatie mbv `$` (manier 2) toe.
 
 #### Testscenario's
 
@@ -87,9 +87,9 @@ Een programma vraagt een bedrag en vervolgens btw percentage in te geven waarna 
 
 Noem de methode voor deze oefening `BerekenBtw`.
 
-#### voorbeeldinteractie\(s\)
+#### voorbeeldinteractie(s)
 
-![](../../.gitbook/assets/image%20%2863%29.png)
+![](<../../.gitbook/assets/image (63).png>)
 
 ### Technische hulp
 
@@ -99,7 +99,7 @@ Het bedrag dat wordt ingevoerd moet geconverteerd worden naar een int met `Conve
 
 Rond tevens af tot 2 cijfers na de komma.
 
-Pas string interpolatie mbv `$` \(manier 2\) toe.
+Pas string interpolatie mbv `$` (manier 2) toe.
 
 #### Testscenario's
 
@@ -122,7 +122,7 @@ Gebruik Console.ReadLine om tekst in te lezen en hou bij in een variabele. Berek
 
 #### Programmaverloop
 
-```text
+```
 Geef je tekst in
 > Oefening baart kunst!
 Oefeningb@@rtkunst!
@@ -146,16 +146,16 @@ Oefeningb@@rtkunst!
 We willen met behulp van een programma instructies genereren voor de gebruiker. Meerbepaald wordt automatisch aangegeven in welke map de gebruiker bepaalde bestanden op een Windows systeem moet bijhouden.
 
 {% hint style="warning" %}
-Voor deze oefening is het verplicht gebruik te maken van een \(geïnterpoleerde\) verbatim string.
+Voor deze oefening is het verplicht gebruik te maken van een (geïnterpoleerde) verbatim string.
 {% endhint %}
 
 ### Technische analyse
 
-Op basis van de voornaam van de cursist en de naam van de cursus wordt de map gegeven die de cursist moet aanmaken \(eerste 3 letters voornaam, in hoofdletters met submap de naam van de cursus. Noem je methode `Instructies`.
+Op basis van de voornaam van de cursist en de naam van de cursus wordt de map gegeven die de cursist moet aanmaken (eerste 3 letters voornaam, in hoofdletters met submap de naam van de cursus. Noem je methode `Instructies`.
 
 #### Programmaverloop
 
-```text
+```
 Wat is je naam?
 > Vincent
 Wat is de naam van de cursus?
@@ -181,11 +181,11 @@ De gebruiker voert zijn lottocijfers in. We willen deze op een overzichtelijke m
 
 ### Technische analyse
 
-Laat de lottocijfers allemaal achter elkaar ingeven, gescheiden door komma's, zonder spaties. De gebruiker wordt verondersteld cijfers onder de 10 in te geven voorafgegaan door een nul. Gebruik de juiste methode om de cijfers uit te string te "knippen" en gebruik **tabs \(geen spaties!\)** om de uitvoer te scheiden. Noem je methode `Lotto`.
+Laat de lottocijfers allemaal achter elkaar ingeven, gescheiden door komma's, zonder spaties. De gebruiker wordt verondersteld cijfers onder de 10 in te geven voorafgegaan door een nul. Gebruik de juiste methode om de cijfers uit te string te "knippen" en gebruik **tabs (geen spaties!) **om de uitvoer te scheiden. Noem je methode `Lotto`.
 
 #### Voorbeeldinteractie
 
-```text
+```
 Wat zijn je cijfers (tussen 01 en 45)?
 > 05,08,13,18,27,44
 Je cijfers zijn:
@@ -201,7 +201,7 @@ Dit is een moeilijke oefening, zeker met de middelen die we nu hebben. Maar ze k
 
 Dit is een variatie op de vorige oefening. Schrijf nu een methode `SuperLotto`. Het enige verschil is dat de gebruiker getallen ook met één cijfer mag noteren.
 
-```text
+```
 Wat zijn je cijfers (tussen 01 en 45)?
 > 5,8,13,18,27,44
 Je cijfers zijn:
@@ -221,6 +221,5 @@ Je cijfers zijn:
 * pas ten slotte formattering toe in een geïnterpoleerde string om de output te tonen zodat er **wel** nullen voor de cijfers 1-9 verschijnen. Zoek in de cursus naar iets om getallen met een vast aantal cijfers te tonen.
 
 {% hint style="success" %}
-Klaar? Vergeet niet je oefeningen in Bitbucket \(m.b.v. git-commando's\) te zetten.
+Klaar? Vergeet niet je oefeningen in Bitbucket (m.b.v. git-commando's) te zetten.
 {% endhint %}
-

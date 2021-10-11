@@ -15,16 +15,22 @@ Van meetkundige figuren kunnen we steeds hun oppervlakte bepalen. Indien deze fi
 
 Het programma onderscheidt volgende regelmatige figuren:
 
-* Parallellogram: vierhoekige figuur, waarvan de zijden 2-aan-2 evenwijdig zijn.  De formule om de oppervlakte te berekenen is: basis x hoogte.
-  * Rechthoek: parallellogram, waarvan de hoeken 90° meten. Oppervlakte rechthoek: lengte x breedte.
-    * Vierkant: rechthoek, waarvan alle zijden even lang zijn. Oppervlakte vierkant: zijde²
-  * Ruit: parallellogram, waarvan de diagonalen elkaar loodrecht in het midden snijden. Oppervlakte ruit: lange diagonaal x korte diagonaal / 2
-* Driehoek: driehoekige figuur Oppervlakte driehoek: basis x hoogte. \(hoogte: de afstand tussen het overstaande hoekpunt en de basis\)
-* Cirkel: figuur zonder hoeken, waarvan alle punten op de omtrek zich even ver van een middelpunt bevinden. Oppervlakte cirkel: straal² x π
+* Parallellogram: vierhoekige figuur, waarvan de zijden 2-aan-2 evenwijdig zijn. \
+  De formule om de oppervlakte te berekenen is: basis x hoogte.
+  * Rechthoek: parallellogram, waarvan de hoeken 90° meten.\
+    Oppervlakte rechthoek: lengte x breedte.
+    * Vierkant: rechthoek, waarvan alle zijden even lang zijn.\
+      Oppervlakte vierkant: zijde²
+  * Ruit: parallellogram, waarvan de diagonalen elkaar loodrecht in het midden snijden.\
+    Oppervlakte ruit: lange diagonaal x korte diagonaal / 2
+* Driehoek: driehoekige figuur\
+  Oppervlakte driehoek: basis x hoogte. (hoogte: de afstand tussen het overstaande hoekpunt en de basis)
+* Cirkel: figuur zonder hoeken, waarvan alle punten op de omtrek zich even ver van een middelpunt bevinden.\
+  Oppervlakte cirkel: straal² x π
 
 Het programma maakt elk van deze figuren aan, geeft ze de nodige afmetingen en toont vervolgens hun oppervlakten.
 
-```text
+```
 De oppervlakte van het parallellogram met basis 6 en hoogte 2 is 12.
 De oppervlakte van de rechthoek met lengte 5 en breedte 6 is 30.
 De oppervlakte van het vierkant met zijde 3 is 9.
@@ -68,7 +74,7 @@ Zorg er voor dat je deze methode kan opstarten via de methode `ToonSubmenu` in d
 
 Bouw vervolgens de klassen, volgens volgend klassediagram. Merk op dat `Oppervlakte` cursief gedrukt staat, omdat het een abstracte methode is:
 
-![Onderverdeling in soorten figuren. Technisch gezien is een vierkant een rechthoek &#xE9;n een ruit, maar dat kunnen we voorlopig niet voorstellen omdat je maar &#xE9;&#xE9;n ouderklasse kan hebben. Later zien we wel een alternatief.](../../.gitbook/assets/figuren%20%283%29.png)
+![Onderverdeling in soorten figuren. Technisch gezien is een vierkant een rechthoek én een ruit, maar dat kunnen we voorlopig niet voorstellen omdat je maar één ouderklasse kan hebben. Later zien we wel een alternatief.](<../../.gitbook/assets/figuren (3).png>)
 
 Begin bij `Figuur` en werk het diagram tak per tak af.
 
@@ -109,7 +115,7 @@ Om naast studenten ook andere personen, zoals lectoren en administratief persone
   * AdministratiefPersoneel en Lector
 * Student, een klasse die al bestond.
 
-![UML-klassediagram Persoon](../../.gitbook/assets/image%20%2848%29.png)
+![UML-klassediagram Persoon](<../../.gitbook/assets/image (48).png>)
 
 ### Persoon
 
@@ -121,7 +127,7 @@ Elke nieuwe persoon die gemaakt wordt, wordt bewaard in een lijst met alle perso
 
 ### Student
 
-Deze klasse wordt een kind van `Persoon`. Zorg er dus voor dat deze klasse de verplichte zaken uit Persoon implementeert, maar dat duplicate functionaliteit \(bv. Studentnummer, Naam, Geboortedatum, StudentenTeller\) vanaf nu aan `Persoon` worden overgelaten: haal deze dus weg uit Student.
+Deze klasse wordt een kind van `Persoon`. Zorg er dus voor dat deze klasse de verplichte zaken uit Persoon implementeert, maar dat duplicate functionaliteit (bv. Studentnummer, Naam, Geboortedatum, StudentenTeller) vanaf nu aan `Persoon` worden overgelaten: haal deze dus weg uit Student.
 
 Voeg op Student ook een attribuut `dossier` toe. Dit is een collectie waarin opmerkingen genoteerd kunnen worden. De opmerkingen worden geïndexeerd met de datum en het tijdstip waarop ze worden ingegeven. Zorg er voor dat dit dossier niet aangepast kan worden buiten de Student klasse door de getter een immutable dictionary te laten teruggeven.
 
@@ -143,7 +149,7 @@ Voorzie ook de mogelijkheid om een immutable list van alle personeel op te vrage
 
 Deze klasse is een kind van `Personeel` en moet daarom aan alle voorwaarden van `Personeel` én `Persoon` voldoen: er zullen dus enkele methoden verplicht moeten worden geïmplementeerd in deze klasse. Er wordt ook een lijst bijgehouden van alle administratieve personeelsleden die worden aangemaakt.
 
-Het salaris van een administratief personeelslid wordt als volgt berekend: _per 3 jaar, krijgt het personeelslid 75 euro extra bovenop een basisloon van 2000  euro. Dit basisloon wordt vervolgens verrekend met de tewerkstellingsbreuk. De tewerkstellingsbreuk is de werkbelasting van het personeelslid gedeeld door 40 uur \(voltijdse tewerkstelling\)._
+Het salaris van een administratief personeelslid wordt als volgt berekend: _per 3 jaar, krijgt het personeelslid 75 euro extra bovenop een basisloon van 2000  euro. Dit basisloon wordt vervolgens verrekend met de tewerkstellingsbreuk. De tewerkstellingsbreuk is de werkbelasting van het personeelslid gedeeld door 40 uur (voltijdse tewerkstelling)._
 
 Bijvoorbeeld: Ahmed is 4 jaar in dienst. Hij krijgt dus 2000 EUR basisloon, plus 1 keer 75 EUR ancienniteitstoeslag. Hij werkt echter 30 uur per week in plaats van 40, dus krijgt hij 1556,25 EUR. Cijfers na de komma vallen weg omwille van het datatype.
 
@@ -151,7 +157,7 @@ De werkbelasting van een administratief personeelslid wordt bepaald aan de hand 
 
 Het naamkaartje van een administratief personeelslid bevat de naam van het personeelslid, met daarachter de vermelding `(ADMINISTRATIE)`. Bv. 
 
-```text
+```
 Ahmed Azzaoui (ADMINISTRATIE)
 ```
 
@@ -167,15 +173,15 @@ Doorloop vervolgens met een `foreach` de lijst met alle personeel en toon zo all
 
 Deze klasse is een kind van `Personeel` en moet daarom aan alle voorwaarden van `Personeel` én `Persoon` voldoen: er zullen dus enkele methoden verplicht moeten worden geïmplementeerd in deze klasse. Er wordt ook een lijst bijgehouden van alle lectoren die worden aangemaakt. Een`Lector` object bevat dan weer een opsomming van alle Cursussen die deze lector geeft, met voor elke cursus de werkbelasting van deze cursus voor de lector.
 
-Het salaris van een administratief personeelslid wordt als volgt berekend: _per 4 jaar, krijgt het personeelslid 120 euro extra bovenop een basisloon van 2200 euro. Dit basisloon wordt vervolgens verrekend met de tewerkstellingsbreuk. De tewerkstellingsbreuk is de werkbelasting van het personeelslid gedeeld door 40 uur \(voltijdse tewerkstelling\)._
+Het salaris van een administratief personeelslid wordt als volgt berekend: _per 4 jaar, krijgt het personeelslid 120 euro extra bovenop een basisloon van 2200 euro. Dit basisloon wordt vervolgens verrekend met de tewerkstellingsbreuk. De tewerkstellingsbreuk is de werkbelasting van het personeelslid gedeeld door 40 uur (voltijdse tewerkstelling)._
 
 Bijvoorbeeld: Anna is 9 jaar in dienst. Ze krijgt dus 2200 EUR basisloon, plus 2 keer 120 EUR ancienniteitstoeslag. Ze werkt 10 uur per week in plaats van 40, dus krijgt ze 610,00 EUR.
 
 De werkbelasting van een lector wordt bepaald aan de hand van de cursussen die hij of zij geeft. De werkbelasting van elke cursus in de collectie wordt hiertoe opgeteld.
 
-Het naamkaartje van een lector bevat de naam van de lector, met op een nieuwe lijn `Lector voor:` . Vervolgens worden de titels van alle cursussen die deze lector geeft op telkens een nieuwe lijn toegevoegd. Bv. 
+Het naamkaartje van een lector bevat de naam van de lector, met op een nieuwe lijn `Lector voor: `. Vervolgens worden de titels van alle cursussen die deze lector geeft op telkens een nieuwe lijn toegevoegd. Bv. 
 
-```text
+```
 Anna Bolzano
 Lector voor:
 Economie
@@ -194,4 +200,3 @@ Doorloop vervolgens met een `foreach` de lijst met alle personeel en toon zo all
 Om je hierbij te helpen, kan je dit klassediagram bekijken:
 
 ![](../../.gitbook/assets/schooladmin.png)
-

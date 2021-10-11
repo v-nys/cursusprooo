@@ -45,7 +45,7 @@ of ook:
 
 ### Volgorde van named parameters belangrijk
 
-Je mag ook een combinatie doen van named en gewone parameters, maar **dan is de volgorde belangrijk**: je moet je dan houden aan de volgorde van de methode-volgorde. Je verbetert hiermee de leesbaarheid van je code dus \(maar krijgt niet het voordeel van een eigen volgorde te hanteren\). Enkele voorbeelden:
+Je mag ook een combinatie doen van named en gewone parameters, maar **dan is de volgorde belangrijk**: je moet je dan houden aan de volgorde van de methode-volgorde. Je verbetert hiermee de leesbaarheid van je code dus (maar krijgt niet het voordeel van een eigen volgorde te hanteren). Enkele voorbeelden:
 
 ```csharp
 PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");
@@ -69,7 +69,7 @@ Je geef aan dat een parameter optioneel is door deze een default waarde te geven
 
 **Optionele parameters worden steeds achteraan de parameterlijst van de methode geplaatst** .
 
-In het volgende voorbeeld maken we een nieuwe methode aan en geven aan dat de laatste parameters optioneel zijn. `discountPercentage` past een "gewone" korting toe op de aankoop van het aantal items. `doubleDiscount` is een speciale extra korting die het percentage verdubbelt. We veronderstellen dat items meestal verkocht worden zonder korting:
+In het volgende voorbeeld maken we een nieuwe methode aan en geven aan dat de laatste parameters optioneel zijn. `discountPercentage `past een "gewone" korting toe op de aankoop van het aantal items. `doubleDiscount` is een speciale extra korting die het percentage verdubbelt. We veronderstellen dat items meestal verkocht worden zonder korting:
 
 ```csharp
 static double ComputePrice(int numberOfItems, double itemPrice, double discountPercentage = 0, bool doubleDiscount = false) {
@@ -129,4 +129,3 @@ Afhankelijk van de aanroep zal dus de ene of andere uitgevoerd worden. Volgende 
 Console.WriteLine($"Rechthoek: {ComputeArea(5, 6)}");
 Console.WriteLine($"Circle: {ComputeArea(7)}");
 ```
-

@@ -6,17 +6,17 @@ Om je oefeningen ordelijk bij te houden, gaan we al een aantal zaken gebruiken d
 
 ### Stap 1: een project LaboOefeningen maken
 
-Volg hiervoor de instructies op [Een C\# project maken in Visual Studio Code](3-een-c-project-maken-in-visual-studio.md).
+Volg hiervoor de instructies op [Een C# project maken in Visual Studio Code](3-een-c-project-maken-in-visual-studio.md).
 
 ### Stap 2: een klasse maken `EenProgrammaSchrijvenInCSharp`
 
 Dit is nieuw. Klassen zijn een extra organisatie-eenheid van code. Ze spelen een grote rol in objectgeoriënteerd programmeren, maar kunnen ook gebruikt worden om stukken code verder te groeperen. Dit is voorlopig het enige dat wij er mee zullen doen.
 
 {% hint style="warning" %}
-Dit zal alleen werken als je de extensies juist hebt geïnstalleerd! Zie [Beginnen met C\# in Visual Studio Code](4-beginnen-met-c-in-visual-studio.md).
+Dit zal alleen werken als je de extensies juist hebt geïnstalleerd! Zie [Beginnen met C# in Visual Studio Code](4-beginnen-met-c-in-visual-studio.md).
 {% endhint %}
 
-In de verkenner kies je via rechterklik voor "New C\# class". Je noemt deze `EenProgrammaSchrijvenInCSharp.cs`. De extensie `.cs` geeft aan dat het om een bestand gaat met daarin C\#-code.
+In de verkenner kies je via rechterklik voor "New C# class". Je noemt deze `EenProgrammaSchrijvenInCSharp.cs`. De extensie `.cs` geeft aan dat het om een bestand gaat met daarin C#-code.
 
 ### Stap 3: een eigen methode maken
 
@@ -29,7 +29,7 @@ Neem aandachtig volgende code over, zodat jouw bestand **exact** dit bevat:
 Belangrijke onderdelen:
 
 * `using System;` maakt onderdelen uit de `System` namespace toegankelijk. Zonder dit kan je geen gebruik maken van `Console`.
-* `namespace LaboOefeningen` geeft aan dat alles wat binnen de buitenste accolades \(de symbolen op regels 4 en 11\) staat behoort tot die namespace. Het is de "achternaam" van jouw code. Als er bijvoorbeeld twee stukken code `EenProgrammaSchrijvenInCSharp` zijn, kan je ze uit elkaar houden door te zeggen over welke namespace het gaat. Dit is hetzelfde als twee personen die dezelfde voornaam hebben, maar een andere achternaam.
+* `namespace LaboOefeningen` geeft aan dat alles wat binnen de buitenste accolades (de symbolen op regels 4 en 11) staat behoort tot die namespace. Het is de "achternaam" van jouw code. Als er bijvoorbeeld twee stukken code `EenProgrammaSchrijvenInCSharp` zijn, kan je ze uit elkaar houden door te zeggen over welke namespace het gaat. Dit is hetzelfde als twee personen die dezelfde voornaam hebben, maar een andere achternaam.
 * `public`: hier komen we pas een stuk later op terug. Voorlopig zetten we het standaard bij klassen en methoden.
 * `class`: zie dit voorlopig als een verdere onderverdeling van je code. Eigenlijk zijn klassen veel meer dan dat, maar dat is voor later.
 * `static`: dit is sowieso nodig wanneer we klassen enkel zien als een verdere onderverdeling van je code. We zetten het bij onze methoden.
@@ -48,7 +48,7 @@ We noemen de code in de body een "oproep" van de methode `MijnEersteMethode`. Hi
 
 ### Stap 5: opkuisen
 
-Je mag nu zowel de definitie als de oproep van `MijnEersteMethode` wissen. In de oefeningen die volgen, maak je telkens nieuwe methodes. Test ze telkens uit door de **oproep** te vervangen. **Laat de definitie staan** wanneer je overgaat naar de volgende oefening. Later zullen we een keuzemenu maken dat ons toestaat makkelijk een oefening naar keuze te demonstreren.
+Je mag nu zowel de definitie als de oproep van `MijnEersteMethode` wissen. In de oefeningen die volgen, maak je telkens nieuwe methodes. Test ze telkens uit door de **oproep** te vervangen.** Laat de definitie staan** wanneer je overgaat naar de volgende oefening. Later zullen we een keuzemenu maken dat ons toestaat makkelijk een oefening naar keuze te demonstreren.
 
 ## Oefening: H1-MijnEersteProgramma
 
@@ -59,15 +59,15 @@ Je mag nu zowel de definitie als de oproep van `MijnEersteMethode` wissen. In de
 
 ### **Functionele analyse**
 
-Binnen een zgn. dos-box wordt een titel weergegeven, nl. dit is mijn eerste c\# programma.  
-Vervolgens wordt gevraagd je naam te noteren.  
-Wanneer je je naam hebt genoteerd en op enter hebt gedrukt, verschijnt de tekst “hallo \[en je ingegeven naam\]”.
+Binnen een zgn. dos-box wordt een titel weergegeven, nl. dit is mijn eerste c# programma.\
+Vervolgens wordt gevraagd je naam te noteren.\
+Wanneer je je naam hebt genoteerd en op enter hebt gedrukt, verschijnt de tekst “hallo \[en je ingegeven naam]”.
 
 ### **Technische analyse**
 
-#### voorbeeldinteractie\(s\)
+#### voorbeeldinteractie(s)
 
-![MijnEersteProgramma runt in de console](../../.gitbook/assets/image%20%2856%29.png)
+![MijnEersteProgramma runt in de console](<../../.gitbook/assets/image (56).png>)
 
 ### Technische hulp
 
@@ -100,9 +100,9 @@ Dit programma verwerkt tekst die door de gebruiker wordt ingetypt. Het print nie
 
 Schrijf dit programma als een methode met de naam `Rommelzin` binnen de klasse `EenProgrammaSchrijvenInCSharp`. Test uit door deze methode op te roepen binnen de `Main` methode.
 
-#### voorbeeldinteractie\(s\)
+#### voorbeeldinteractie(s)
 
-```text
+```
 Wat is je favoriete kleur?
 > blauw
 Wat is je favoriete eten?
@@ -124,7 +124,7 @@ Per regel die getoond wordt op het scherm, maak je gebruik van `Console.WriteLin
 
 #### Testscenario's
 
-* Test uit met een héél lang stuk tekst \(meer dan 200 tekens\) voor je favoriete kleur.
+* Test uit met een héél lang stuk tekst (meer dan 200 tekens) voor je favoriete kleur.
 * Test uit met tekst met internationale karakters, bijvoorbeeld de ç.
 * Ga na wat er gebeurt als je een lege regel invoert, dus als je meteen op ENTER duwt wanneer gevraagd wordt om invoer.
 
@@ -137,7 +137,7 @@ Per regel die getoond wordt op het scherm, maak je gebruik van `Console.WriteLin
 
 ### Functionele analyse
 
-Dit programma werkt net als H1-rommelzin, maar elke regel die aan de gebruiker wordt getoond, krijgt een andere kleur. De namen van de kleuren die je gebruikt \(in deze volgorde\) zijn:
+Dit programma werkt net als H1-rommelzin, maar elke regel die aan de gebruiker wordt getoond, krijgt een andere kleur. De namen van de kleuren die je gebruikt (in deze volgorde) zijn:
 
 1. `DarkGreen`
 2. `DarkRed`
@@ -152,7 +152,7 @@ Dit programma werkt net als H1-rommelzin, maar elke regel die aan de gebruiker w
 
 Schrijf deze oefening als een nieuwe methode met de naam `GekleurdeRommelzin` in de klasse `EenProgrammaSchrijvenInCSharp`. Test uit door deze methode op te roepen binnen de `Main` methode.
 
-#### voorbeeldinteractie\(s\)
+#### voorbeeldinteractie(s)
 
 ![De eerste regel behoort niet tot het programma. De rest moet er bij jou hetzelfde uitzien.](../../.gitbook/assets/gekleurde-rommelzin.png)
 
@@ -165,4 +165,3 @@ Voor elke regel die in kleur getoond wordt, wissel je de voorgrondkleur. Op de j
 #### Testscenario's
 
 * Test opnieuw uit met een kleur, maaltijd, auto, film en boek naar keuze.
-

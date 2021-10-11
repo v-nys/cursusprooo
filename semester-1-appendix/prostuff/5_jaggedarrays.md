@@ -1,8 +1,8 @@
 # Jagged arrays
 
-Jagged arrays \(letterlijk _gekartelde arrays_\) zijn arrays van arrays maar van verschillende lengte. In tegenstelling tot de eerdere meer-dimensionale arrays moeten de interne arrays steeds dezelfde lengte hebben, bijvoorbeld 3 bij 2 bij 4. Bij jagged arrays hoeft dat dus niet:
+Jagged arrays (letterlijk _gekartelde arrays_) zijn arrays van arrays maar van verschillende lengte. In tegenstelling tot de eerdere meer-dimensionale arrays moeten de interne arrays steeds dezelfde lengte hebben, bijvoorbeld 3 bij 2 bij 4. Bij jagged arrays hoeft dat dus niet:
 
-![jagged array](../../.gitbook/assets/jagged%20%282%29.png)
+![jagged array](<../../.gitbook/assets/jagged (2).png>)
 
 ## Jagged arrays aanmaken
 
@@ -12,9 +12,9 @@ Het grote verschil bij het aanmaken van bijvoorbeeld een 2D jagged arrays is het
 double[][]tickets;
 ```
 
-\(en dus niet `tickets[,]`\)
+(en dus niet `tickets[,]`)
 
-Vanaf nu kan je dan individuele arrays toewijzen aan ieder element van ```tickets``:
+Vanaf nu kan je dan individuele arrays toewijzen aan ieder element van `` `tickets ``:
 
 ```csharp
 tickets={
@@ -29,5 +29,4 @@ Zoals je kan zien moeten de interne arrays dus niet de zelfde grootte hebben.
 
 ## Indexering
 
-De indexering blijft dezelfde, uiteraard moet je er wel rekening mee houden dat niet eender welke index binnen een bepaalde sub-array zal werken. ![indexering bij jagged arrays](../../.gitbook/assets/jagged2%20%282%29%20%282%29.png)
-
+De indexering blijft dezelfde, uiteraard moet je er wel rekening mee houden dat niet eender welke index binnen een bepaalde sub-array zal werken. ![indexering bij jagged arrays](<../../.gitbook/assets/jagged2 (2) (2).png>)

@@ -4,21 +4,21 @@ Op deze pagina vind je alle briljante en minder briljante oefeningen terug die n
 
 ### Alledaags
 
-Zoek een foto naar keuze \(nieuws, privé, etc\) waarop meer dan één element opstaat \(dus geen pasfoto of foto van blauwe lucht zonder wolken\). Tracht de nodige klassen te verzinnen en verzin minstens 1 auto-property en 1 methode per klasse. Maak in een console-applicatie vervolgens objecten van deze klassen aan en test ze. Voeg de foto aan je solution-folder toe.
+Zoek een foto naar keuze (nieuws, privé, etc) waarop meer dan één element opstaat (dus geen pasfoto of foto van blauwe lucht zonder wolken). Tracht de nodige klassen te verzinnen en verzin minstens 1 auto-property en 1 methode per klasse. Maak in een console-applicatie vervolgens objecten van deze klassen aan en test ze. Voeg de foto aan je solution-folder toe.
 
-Bijvoorbeeld: een foto van een betoging. Je zou minstens 3 klassen kunnen verzinnen \(gebouw, politie, betoger\). Van ieder van deze klassen maak je dan objecten aan zoals je ze op de foto ziet \(uiteraard gaan we geen 30 betoger-instanties maken, enkele zijn genoeg, als voorbeeld\).
+Bijvoorbeeld: een foto van een betoging. Je zou minstens 3 klassen kunnen verzinnen (gebouw, politie, betoger). Van ieder van deze klassen maak je dan objecten aan zoals je ze op de foto ziet (uiteraard gaan we geen 30 betoger-instanties maken, enkele zijn genoeg, als voorbeeld).
 
 ## Binaire god
 
 > Deze leerstof werd niet in het hoorcollege gezien. NEem zelf het hoofdstuk "Bitwise operators" door.
 
-Vraag een getal aan de gebruiker \(als int\). Gebruik enkel bitwise operators om:
+Vraag een getal aan de gebruiker (als int). Gebruik enkel bitwise operators om:
 
-* het getal te verdubelen: onderzoek zelf hoe je binair verdubbelt \(wat is de binaire voorstelling van 1,2,4, 8 bijvoorbeeld? Zie je het?\)
+* het getal te verdubelen: onderzoek zelf hoe je binair verdubbelt (wat is de binaire voorstelling van 1,2,4, 8 bijvoorbeeld? Zie je het?)
 * het getal te halveren: merk op dat dit enkel werkt voor even getallen
 * het getal van teken te veranderen
 
-Doe hetzelfde maar vraag nu aan de gebruiker een string met de binaire voorstelling van een getal \(bv `"0011"`\) en zit dit eerst om naar een int. Toon telkens het resultaat zowel als int en als een binaire string voorstelling.
+Doe hetzelfde maar vraag nu aan de gebruiker een string met de binaire voorstelling van een getal (bv `"0011"`) en zit dit eerst om naar een int. Toon telkens het resultaat zowel als int en als een binaire string voorstelling.
 
 ## APCenture-Job Agency
 
@@ -26,19 +26,19 @@ Doe hetzelfde maar vraag nu aan de gebruiker een string met de binaire voorstell
 >
 > Maak een klasse `Job`. Deze klasse heeft vier private fields
 
-* Description \(`string`\) bijvoorbeeld "ruiten wassen"
-* Duration \(`int`\) , stelt tijd voor die nodig is om job uit te voeren
-* RatePerHour \(`int`\), stelt kostprijs per uur voor van deze job
-* TotalFee \(`int`\), stelt totale prijs voor zijnde  `Duration * RatePerHour`
+* Description (`string`) bijvoorbeeld "ruiten wassen"
+* Duration (`int`) , stelt tijd voor die nodig is om job uit te voeren
+* RatePerHour (`int`), stelt kostprijs per uur voor van deze job
+* TotalFee (`int`), stelt totale prijs voor zijnde  `Duration * RatePerHour`
 
 Voorzie properties voor deze 4 velden, echter de TotalFee heeft geen ‘set’ daar deze een berekening van andere properties is en dus een read-only property is.
 
-Telkens de Duration of RatePerHour wordt aangepast \(set\) wordt de TotalFee herberekend \(je zal dus een private totalFee nodig hebben waar de public property TotalFee z’n waarde van krijgt\).
+Telkens de Duration of RatePerHour wordt aangepast (set) wordt de TotalFee herberekend (je zal dus een private totalFee nodig hebben waar de public property TotalFee z’n waarde van krijgt).
 
 Voorzie 2 constructors:
 
 * Default constructor: stelt de description in op "onbekend" en zet duration en rateperhour op 0.
-* Overloaded constructor: waarbij je de 3 velden \(behalve TotalFee\) kan aanpassen tijdens de constructie van een Job-object.
+* Overloaded constructor: waarbij je de 3 velden (behalve TotalFee) kan aanpassen tijdens de constructie van een Job-object.
 
 Toon de werking van je klasse aan door enkele objecten aan te maken met zowel de default als de overloaded constructor. Toon vervolgens dat TotalFee correct werkt.
 
@@ -56,13 +56,13 @@ De som van 2 job-objecten gaat als volgt te werk:
 * Duration: som van beide durations
 * RatePerHour: gemiddelde de `rateperhour`van beide objecten
 
-Toon in je main aan dat je nieuwe klasse werkt en dat je 2 jobs kan samenvoegen. Toon ook aan dat je vervolgens deze nieuwe samenvoeging op zijn beurt kan samenvoegen met een andere job \(of zelfs met een andere samengevoegde job!\).
+Toon in je main aan dat je nieuwe klasse werkt en dat je 2 jobs kan samenvoegen. Toon ook aan dat je vervolgens deze nieuwe samenvoeging op zijn beurt kan samenvoegen met een andere job (of zelfs met een andere samengevoegde job!).
 
 ## Breuk
 
 Maak een klasse `Breuk` dat dus een breuk zal voorstellen met een noemer en teller.
 
-Voorzie properties voor noemer en teller, waarbij de noemer niet 0 mag zijn \(zet deze op 1 indien de gebruiker dit toch probeert\).
+Voorzie properties voor noemer en teller, waarbij de noemer niet 0 mag zijn (zet deze op 1 indien de gebruiker dit toch probeert).
 
 Voeg 2 constructors toe:
 
@@ -71,8 +71,8 @@ Voeg 2 constructors toe:
 
 Voorts:
 
-1. Voeg een `+ operator` toe die het mogelijk maakt om 2 breuken bij elkaar op te tellen. Wanneer de + operatie is toegepast wordt ook automatisch de Vereenvoudig-methode aangeroepen \(zie verder\) voor het resultaat wordt teruggegeven. Belangrijk: je dient aan operator overloading te doen. We willen dus dat je bijvoorbeeld kan schrijven `Breuk breuksom= breuk1 + breuk2;`
-2. Voeg voorts een `* operator` toe die breuken vermenigvuldigen mogelijk maakt \(ook hier wordt het resultaat vereenvoudigd teruggegeven\).
+1. Voeg een `+ operator` toe die het mogelijk maakt om 2 breuken bij elkaar op te tellen. Wanneer de + operatie is toegepast wordt ook automatisch de Vereenvoudig-methode aangeroepen (zie verder) voor het resultaat wordt teruggegeven. Belangrijk: je dient aan operator overloading te doen. We willen dus dat je bijvoorbeeld kan schrijven `Breuk breuksom= breuk1 + breuk2;`
+2. Voeg voorts een `* operator` toe die breuken vermenigvuldigen mogelijk maakt (ook hier wordt het resultaat vereenvoudigd teruggegeven).
 3. Voeg een methode `AlsString` toe die de breuk als string teruggeeft, waarbij de breuklijn als slash wordt voorgesteld.
 
 Maak een array van 4 breuken in je main en laat de gebruiker deze alle 4 invullen. Toon vervolgens de som en vermenigvuldiging van deze 4 breuken als strings op het scherm.
@@ -83,18 +83,18 @@ Pro: Voeg een methode `Vereenvoudig` toe. Deze zal de breuk vereenvoudigen indie
 
 _Volgende opgave komt uit een examen van augustus 2018 van deze cursus_
 
- **Opgelet: deze opgave is erg brak en niet conform mijn gewoonlijke standaard.Waarvoor excuses**
+** Opgelet: deze opgave is erg brak en niet conform mijn gewoonlijke standaard.Waarvoor excuses**
 
 ### Inleiding
 
 Heroes of AP is een single-player kaartspel dat we als consolespel spelenwaarbij de speler in zo weinig mogelijk beurten maximaal punten wil scoren. Het spel is een combinatie van geluk en strategie. Spelregels Heroes of AP bestaat uit een deck van tien kaarten met drie soorten kaarten:
 
 * Landen: deze genereren mana 
-  * Per beurt dat een kaart gedekt ligt verhoogt z’n mana-waarde \(=COST\)
+  * Per beurt dat een kaart gedekt ligt verhoogt z’n mana-waarde (=COST)
 * Centrales:
   * Per beurt genereert een centrale 1 punt indien deze zichtbaar is 
 * Helden: deze gebruiken mana om punten te genereren
-  * Per beurt dat een kaart gedekt ligt verlaagt z’n mana-waarde \(=COST\), maar nooit onder 1
+  * Per beurt dat een kaart gedekt ligt verlaagt z’n mana-waarde (=COST), maar nooit onder 1
   * Een held genereert een willekeurig aantal punten indien hij zichtbaar is afhankelijk van wat de gebruiker aan Mana betaald:
     * Om 1 punten te genereren moet de speler de Cost van de held in mana betalen
     * Het overschot aan mana dat de speler betaald zal ervoor zorgen dat de held mogelijk meer punten maakt, namelijk tussen 1 en het extra aan mana.
@@ -110,53 +110,53 @@ Heroes of AP is een single-player kaartspel dat we als consolespel spelenwaarbij
 Zolang de speler geen 10 punten heeft zal de speler steeds een beurt spelen bestaande uit 4 fasen:
 
 * **Fase 0 - Upkeep**: 
-  * alle landen die gedekt liggen zullen hun Cost met 1 verhogen \(deze landen kunnen dus meer mana genereren van zodra de speler ze omdraait\)
-  * alle helden die nog gedekt zijn hun Cost verlaagt met 1 \(maar nooit lager dan 1\)
-  * alle centrale die zichtbaar zijn genereren 1 punt \(hun Cost wordt niet gebruikt\)
+  * alle landen die gedekt liggen zullen hun Cost met 1 verhogen (deze landen kunnen dus meer mana genereren van zodra de speler ze omdraait)
+  * alle helden die nog gedekt zijn hun Cost verlaagt met 1 (maar nooit lager dan 1)
+  * alle centrale die zichtbaar zijn genereren 1 punt (hun Cost wordt niet gebruikt)
 * **Fase 1 - FlipCard**: de speler kiest een kaart die moet omgekeerd worden.
   * Enkel kaarten die nog niet omgekeerd werden kunnen uiteraard omgekeerd worden.
-* **Fase 2 - GenerateMana**: De speler kiest welke land mana genereert \(enkel mogelijk indien er zichtbare landen zijn\)
+* **Fase 2 - GenerateMana**: De speler kiest welke land mana genereert (enkel mogelijk indien er zichtbare landen zijn)
   * Een land genereert evenveel mana als de Cost van de kaart
-* **Fase 3 - GeneratePoint**: De speler kiest welke held punten genereert \(enkel mogelijk indien er zichtbare helden zijn\)
+* **Fase 3 - GeneratePoint**: De speler kiest welke held punten genereert (enkel mogelijk indien er zichtbare helden zijn)
   * De speler betaald hiervoor de cost van de held in mana. De held genereert vervolgens een willekeurig aantal punten tussen 1 en de cost van de held.
 
 ## Basisspel maken
 
-### Deel 1 \(8 punten\)
+### Deel 1 (8 punten)
 
-**Gebruik de gegeven klassen \(onderaan de opgave\) in je project en pas ze aan waar nodig**
+**Gebruik de gegeven klassen (onderaan de opgave) in je project en pas ze aan waar nodig**
 
-![](../.gitbook/assets/heroap0%20%282%29.png)
+![](<../.gitbook/assets/heroap0 (2).png>)
 
 Vul de 3 klassen aan klassen om aan bovenstaand schema te voldoen:
 
 * **`Land`:** 
   * Land is een `Card`
-  * Heeft een methode `GenerateMana` die mana zal returnen gelijk aan de `Cost` van het land, maar enkel indien het land zichtbaar is \(`IsHidden==false`\)
+  * Heeft een methode `GenerateMana` die mana zal returnen gelijk aan de `Cost` van het land, maar enkel indien het land zichtbaar is (`IsHidden==false`)
   * Heeft als `Name` altijd "Land"
-  * Zal bij de `DrawCard` methode zichzelf in groene tekst op het scherm zetten, namelijk z’n `Name`, gevolgd door z’n Cost \(bv `"Land 5"`\)
+  * Zal bij de `DrawCard` methode zichzelf in groene tekst op het scherm zetten, namelijk z’n `Name`, gevolgd door z’n Cost (bv `"Land 5"`)
   * Verhoogt z’n `Cost` met 1 wanneer `UpdateCost` wordt aangeroepen
 * **`Centrale`:**
   * Centrale is een `Card`
   * Heeft als Name altijd "Centrale"
-  * Zal bij de `DrawCard` methode zichzelf in geel tekst op het scherm zetten, namelijk z’n Name \(bv `"Centrale"`\)
+  * Zal bij de `DrawCard` methode zichzelf in geel tekst op het scherm zetten, namelijk z’n Name (bv `"Centrale"`)
   * Heeft de interface `IPointGenerator`
-  * Zal steeds 1 punt genereren bij `GeneratePoints` \(de parameter die wordt meegegeven wordt niet gebruikt\).
+  * Zal steeds 1 punt genereren bij `GeneratePoints` (de parameter die wordt meegegeven wordt niet gebruikt).
 * **`Hero`:**
   * Hero is een `Card`
   * Heeft als `Name` altijd "Hero"
   * Heeft de interface `IPointGenerator`
-  * Zal bij de `DrawCard` methode zichzelf in gele tekst op het scherm zetten, namelijk z’n Name, gevolgd door z’n Cost \(bv `"Hero 6"`\)
+  * Zal bij de `DrawCard` methode zichzelf in gele tekst op het scherm zetten, namelijk z’n Name, gevolgd door z’n Cost (bv `"Hero 6"`)
   * Heeft een methode `GeneratePoints` die 1 parameter aanvaardt van het type int. Indien de parameter gelijk is aan Cost zal de methode een willekeurig getal tussen 1 en Cost teruggeven als punten. 
 * **`Deck`:**
   * Deck heeft een lijst van kaarten genaamd Kaarten, van het type `List<Card>` 
-  * Deck heeft een default constructor: wanneer deze aangeroepen wordt zullen er 10 willekeurige kaarten \(3 Centrale, 2 Hero, 5 Land\) in de Kaarten-list geplaatst worden
+  * Deck heeft een default constructor: wanneer deze aangeroepen wordt zullen er 10 willekeurige kaarten (3 Centrale, 2 Hero, 5 Land) in de Kaarten-list geplaatst worden
   * Deck heeft een methode `DrawCards`: deze zal de `DrawCard` van alle Kaarten aanroepen
   * Deck heeft een methode `UpdateCosts`: deze zal de `UpdateCost` van alle Kaarten aanroepen die dat kunnen.
   * Deck heeft een methode `GeneratePoints`: deze zal de `GeneratePoints` van alle Kaarten aanroepen die dat kunnen.
   * Kaarten-list is beschikbaar vanuit een readonly-property
 
-### Deel 2: Basis game loop \(8 punten\)
+### Deel 2: Basis game loop (8 punten)
 
 Maak een basis-versie van het spel.
 
@@ -168,9 +168,9 @@ Maak een basis-versie van het spel.
      * **Fase 1**: vraag aan gebruiker welke kaart moet omgekeerd worden
      * **Fase 2**: vraag aan gebruiker welk land mana moet genereren
      * **Fase 3**: vraag aan gebruiker welke held punten moet genereren
-   * Na iedere fase ververs je het beeld \(`Console.Clear()`\) en herteken je de kaarten en toon je de volgende extra info aan de gebruiker, namelijk Mana, Punten en Beurt
+   *   Na iedere fase ververs je het beeld (`Console.Clear()`) en herteken je de kaarten en toon je de volgende extra info aan de gebruiker, namelijk Mana, Punten en Beurt
 
-     ![](../.gitbook/assets/heroap1%20%282%29%20%282%29.png) 
+       ![](<../.gitbook/assets/heroap1 (2) (2).png>) 
 3. Na de loop wordt getoond hoeveel beurten de gebruiker heeft nodig gehad
 
 ### Deel 3 Extras
@@ -180,7 +180,7 @@ Maak een basis-versie van het spel.
 
 ## Voorbeeld spelverloop:
 
-![](../.gitbook/assets/heroap%20%282%29.png)
+![](<../.gitbook/assets/heroap (2).png>)
 
 ## Start klasen
 
@@ -459,4 +459,3 @@ static void Main(string[] args)
     }
 }
 ```
-

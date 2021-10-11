@@ -8,13 +8,13 @@ We schrijven een bestelsysteem. We kunnen gewone bestellingen en internationale 
 
 ### Technische analyse
 
-Schrijf een klasse Bestelling met een `uint` property `Aantal` en een `double` privé-attribuut `basisPrijs`. Voorzie ook een overschrijfbare property `TotaalPrijs`, namelijk het aantal maal de basisprijs. Schrijf een subklasse `InternationaleBestelling` die de totaalprijs bepaalt door de basisprijs met 10% te verhogen, maar vanaf 100 stuks een vlakke korting van 1000 euro toepast. **Dit zal niet meteen werken!** Doe een zo klein mogelijke aanpassing om het toch te doen werken.
+Schrijf een klasse Bestelling met een `uint` property `Aantal` en een `double` privé-attribuut `basisPrijs`. Voorzie ook een overschrijfbare property `TotaalPrijs`, namelijk het aantal maal de basisprijs. Schrijf een subklasse `InternationaleBestelling` die de totaalprijs bepaalt door de basisprijs met 10% te verhogen, maar vanaf 100 stuks een vlakke korting van 1000 euro toepast. **Dit zal niet meteen werken! **Doe een zo klein mogelijke aanpassing om het toch te doen werken.
 
 Schrijf een methode `DemonstreerBestellingen` in de klasse `EigenObjectOefeningen`. Hierin vraag je of de gebruiker een gewone of internationale bestelling wil plaatsen, vraag je om het aantal en de basisprijs en toon je dan de totaalprijs.
 
 ### Voorbeeldinteractie
 
-```text
+```
 Aantal stuks?
 > 4
 Basisprijs?
@@ -69,7 +69,7 @@ Schrijf nu twee klassen `Margarita` en `Veggie` die overerven van `Pizza`, met b
 
 ### Voorbeeldinteractie
 
-```text
+```
 Een margarita zonder extra's kost: (hier het resultaat)
 De ingredienten zijn: 
 (hieronder het effect van ToonIngredienten)
@@ -86,16 +86,16 @@ We willen een digitale menukaart tonen in een online restaurant. Op deze kaart v
 
 ### Technische analyse
 
-* Schrijf een klasse `Gerecht` met properties `Naam` en `Prijs` \(deze laatste van type `double`\)
+* Schrijf een klasse `Gerecht` met properties `Naam` en `Prijs` (deze laatste van type `double`)
   * De methode `ToonOpMenu` print de naam, gevolgd door 3 tabs, gevolgd door de prijs
 * Schrijf een kindklasse `KinderGerecht`
   * Dit werkt hetzelfde als een gewoon gerecht, maar de weergave op het menu gebruikt een willekeurige kleur. Als we bijvoorbeeld het aantal tabs aanpassen naar 5, moet KinderGerecht zonder aanpassingen mee volgen.
     * Je kan een willekeurige kleur krijgen door een willekeurig getal tussen 1 en 15 te bepalen en dat dan te casten naar een waarde van de enum `ConsoleColor`.
-* Maak een methode `DemonstreerGerechten`. Hierin maak je een lijst met minstens 4 gerechten \(waarvan minstens 2 kindergerechten\) naar keuze en doorloop je de lijst zodat elk gerecht getoond wordt op het menu.
+* Maak een methode `DemonstreerGerechten`. Hierin maak je een lijst met minstens 4 gerechten (waarvan minstens 2 kindergerechten) naar keuze en doorloop je de lijst zodat elk gerecht getoond wordt op het menu.
 
 ### Voorbeeldinteractie
 
-```text
+```
 Paling in 't groen            22.00
 Vol-au-vent             11.00(deze regel verschijnt in een willekeurige kleur)
 Waterzooi            22.00
@@ -118,9 +118,9 @@ We willen wat basisfunctionaliteit toevoegen aan onze figuren.
 
 ### Technische analyse
 
-Voorzie de niet-abstracte subklassen van `VergelijkbareFiguur` van een `Equals` methode. Twee figuren zijn gelijk als ze van hetzelfde type zijn \(bijvoorbeeld beide cirkels, beide rechthoeken,...\) en dezelfde afmetingen hebben.
+Voorzie de niet-abstracte subklassen van `VergelijkbareFiguur` van een `Equals` methode. Twee figuren zijn gelijk als ze van hetzelfde type zijn (bijvoorbeeld beide cirkels, beide rechthoeken,...) en dezelfde afmetingen hebben.
 
-Hierna moet je ook de hash code aanpassen. Dit zie je als waarschuwing bovenaan de klasse in Visual Studio. Maak de setters voor de afmetingen `private` \(of `protected` waar je ze in de kindklassen gebruikt\) en zorg dat de afmetingen alleen bij constructie worden vastgelegd. Gebruik daarna de som van de hash codes van alle afmetingen als hash code voor de figuur.
+Hierna moet je ook de hash code aanpassen. Dit zie je als waarschuwing bovenaan de klasse in Visual Studio. Maak de setters voor de afmetingen `private` (of `protected` waar je ze in de kindklassen gebruikt) en zorg dat de afmetingen alleen bij constructie worden vastgelegd. Gebruik daarna de som van de hash codes van alle afmetingen als hash code voor de figuur.
 
 {% hint style="warning" %}
 De reden dat je de setters afschermt is dat een object niet van hash code mag veranderen wanneer het al in gebruik is.
@@ -128,14 +128,14 @@ De reden dat je de setters afschermt is dat een object niet van hash code mag ve
 
 Voorzie ten slotte een aantal implementaties van `ToString`:
 
-* voor cirkels toon je: `"Dit is een object van klasse VergelijkbareCirkel met straal <straal>"`  \(je vult &lt;straal&gt; correct in en de code moet juist blijven ook als je de klasse van naam verandert\)
-* voor driehoeken toon je: `"Dit is een object van klasse VergelijkbareDriehoek met basis <basis> en hoogte <hoogte>"`  \(je vult de afmetingen correct in en de code moet juist blijven ook als je de klasse van naam verandert\)
+* voor cirkels toon je: `"Dit is een object van klasse VergelijkbareCirkel met straal <straal>" ` (je vult \<straal> correct in en de code moet juist blijven ook als je de klasse van naam verandert)
+* voor driehoeken toon je: `"Dit is een object van klasse VergelijkbareDriehoek met basis <basis> en hoogte <hoogte>" ` (je vult de afmetingen correct in en de code moet juist blijven ook als je de klasse van naam verandert)
 * voor parallellogram zoals bij de vorige twee
-* voor een rechthoek \(en dus vanzelf ook voor een vierkant\) genereer je een tekening bestaande uit puntjes. Je doet dit door de breedte en lengte naar boven af te ronden en daaruit het aantal rijen en kolommen in je tekening af te leiden.
+* voor een rechthoek (en dus vanzelf ook voor een vierkant) genereer je een tekening bestaande uit puntjes. Je doet dit door de breedte en lengte naar boven af te ronden en daaruit het aantal rijen en kolommen in je tekening af te leiden.
 
 Bijvoorbeeld, voor een rechthoek met breedte exact 31 en hoogte 4.5:
 
-```text
+```
 ...............................
 ...............................
 ...............................
@@ -163,7 +163,7 @@ Voorzie ook overal een hash code volgens de vuistregel in de cursus.
 
 Voorzie `Persoon` van een `ToString` methode die een resultaat van volgende vorm toont:
 
-```text
+```
 Persoon
 -------
 Naam: Wouter Roelants
@@ -176,7 +176,7 @@ Voorzie in één keer een property `Leeftijd` die berekend wordt aan de hand van
 
 Zorg dat de concrete klassen hier ook het statuut van de persoon aan koppelen, bijvoorbeeld:
 
-```text
+```
 Persoon
 -------
 Naam: Geertrui Willems
@@ -188,7 +188,7 @@ Doe dit niet met `GetType`, want dan is de schrijfwijze anders. Doe het met de h
 
 ### Eenmaking statische lijsten personen
 
-Je hebt momenteel volgende statische properties voor \(immutable\) lijsten met personen:
+Je hebt momenteel volgende statische properties voor (immutable) lijsten met personen:
 
 * AllePersonen
 * AlleLectoren
@@ -204,23 +204,21 @@ Vervang daarom de lijsten voor de subklassen van `Persoon` zodat er geen achterl
 
 In je huidige code heeft de klasse `Student` een lijst `vakInschrijvingen`. Zo wordt een student gelinkt aan de cursussen die hij of zij volgt. Dit is niet ideaal, want in werkelijkheid willen we ook vaak te weten komen welke studenten in een bepaalde cursus zijn ingeschreven. We moeten dus in twee richtingen kunnen gaan.
 
-Een mogelijke oplossing: voorzie de klasse `VakInschrijving` van een \(immutable\) lijst `AlleVakInschrijvingen`. Zo hoef je geen data dubbel bij te houden en kan je toch de functionaliteit verder uitbreiden. Schrap de huidige lijst met vakinschrijvingen in de klasse `Student`. Voorzie ter vervanging daarvan een property student in de klasse `VakInschrijving` die bijhoudt welke student bij de inschrijving hoort. Voorzie ook, in de klasse `Student`, een property `VakInschrijvingen` die "on-the-fly" berekent welke inschrijvingen bij de student in kwestie horen. Voorzie ook een property `Cursussen`. Voorzie bovendien in de klasse Cursus een property `VakInschrijvingen` en een property `Studenten`. Al deze properties zijn onveranderlijke lijsten.
+Een mogelijke oplossing: voorzie de klasse `VakInschrijving` van een (immutable) lijst `AlleVakInschrijvingen`. Zo hoef je geen data dubbel bij te houden en kan je toch de functionaliteit verder uitbreiden. Schrap de huidige lijst met vakinschrijvingen in de klasse `Student`. Voorzie ter vervanging daarvan een property student in de klasse `VakInschrijving` die bijhoudt welke student bij de inschrijving hoort. Voorzie ook, in de klasse `Student`, een property `VakInschrijvingen` die "on-the-fly" berekent welke inschrijvingen bij de student in kwestie horen. Voorzie ook een property `Cursussen`. Voorzie bovendien in de klasse Cursus een property `VakInschrijvingen` en een property `Studenten`. Al deze properties zijn onveranderlijke lijsten.
 
 Je zal ten slotte de lijst met studenten uit de klasse `Cursus` moeten verwijderen. Dit vraagt een aantal logische aanpassingen. In de methode `DemonstreerCursussen` mag je code om studenten te associëren met een cursus verwijderen.
 
 ### Cursussen in semesters
 
-Momenteel bestaat een studieprogramma gewoon uit een vlakke lijst cursussen. Dat stemt niet goed overeen met de werkelijkheid. In werkelijkheid wordt een cursus in een bepaald semester ingepland. Eén manier om dit voor te stellen: vervang de vlakke lijst met cursussen door een `Dictionary` met cursussen als keys en getalwaarden \(semesters\) als values. Doe deze aanpassing in je code. Je zal hiervoor je demonstratiecode moeten aanpassen. Zorg dat communicatie bij de opleiding programmeren in het eerste semester staat, maar bij de opleiding systeem- en netwerkbeheer in het tweede semester. Alle andere vakken staan overal in het eerste semester.
+Momenteel bestaat een studieprogramma gewoon uit een vlakke lijst cursussen. Dat stemt niet goed overeen met de werkelijkheid. In werkelijkheid wordt een cursus in een bepaald semester ingepland. Eén manier om dit voor te stellen: vervang de vlakke lijst met cursussen door een `Dictionary` met cursussen als keys en getalwaarden (semesters) als values. Doe deze aanpassing in je code. Je zal hiervoor je demonstratiecode moeten aanpassen. Zorg dat communicatie bij de opleiding programmeren in het eerste semester staat, maar bij de opleiding systeem- en netwerkbeheer in het tweede semester. Alle andere vakken staan overal in het eerste semester.
 
 ### Manueel data invoeren
 
-De demonstratiemethodes hebben bijna overal objecten aangemaakt door ze te "hard coden". Dat wil zeggen dat de instructies C\# code zijn en niet gewijzigd kunnen worden eens je programma gecompileerd is. In een echte systeem voor schoolbeheer zou het administratief personeel voortdurend nieuwe entiteiten kunnen toevoegen aan het systeem.
+De demonstratiemethodes hebben bijna overal objecten aangemaakt door ze te "hard coden". Dat wil zeggen dat de instructies C# code zijn en niet gewijzigd kunnen worden eens je programma gecompileerd is. In een echte systeem voor schoolbeheer zou het administratief personeel voortdurend nieuwe entiteiten kunnen toevoegen aan het systeem.
 
 Voorzie daarom vier nieuwe mogelijkheden in je keuzemenu: "student toevoegen", "cursus toevoegen", "vakinschrijving toevoegen" en "inschrijvingsgegevens tonen". De eerste drie vragen om de nodige gegevens om een object van een van deze klassen aan te maken. De laatste toont eerst alle studenten in het systeem, dan alle cursussen, dan alle inschrijvingen. Zorg ook dat je menu opties presenteert in een oneindige lus, zodat je je methodes samen kan testen.
 
-Onderstaande screenshot toont een voorbeeldinteractie \(enkel de nieuwe opties zijn getoond om plaats te sparen\):
+Onderstaande screenshot toont een voorbeeldinteractie (enkel de nieuwe opties zijn getoond om plaats te sparen):
 
 ![](../../.gitbook/assets/screenshot-from-2021-04-26-21-15-49.png)
-
-
 

@@ -6,7 +6,7 @@
 
 ## OOP
 
-Object Oriented Programming of korter OOP is een techniek afkomstig van higher level programmeertalen zoals Java, C\#, VB.NET, ... en vindt zijn oorsprong bij de programmeertaal Smalltalk, die het eerst de term Object Oriented Programming introduceerde.
+Object Oriented Programming of korter OOP is een techniek afkomstig van higher level programmeertalen zoals Java, C#, VB.NET, ... en vindt zijn oorsprong bij de programmeertaal Smalltalk, die het eerst de term Object Oriented Programming introduceerde.
 
 In recentere jaren heeft deze techniek echter ook zijn weg gevonden naar scripting talen zoals Python, Ruby, Perl en zelfs PHP.
 
@@ -27,13 +27,13 @@ Maar met een lening kunnen we ook bepaalde zaken doen die we wel in een computer
 * de uiteindelijk af te betalen som berekenen
 * het afbetaald kapitaal en de afbetaalde interest na een bepaald aantal maanden berekenen
 
-Dus voor zaken die \(minstens\) zo uiteenlopend zijn als een auto en een lening hebben we een combinatie van data en functionaliteit. Zo zit een object in een programmeertaal er ook uit.
+Dus voor zaken die (minstens) zo uiteenlopend zijn als een auto en een lening hebben we een combinatie van data en functionaliteit. Zo zit een object in een programmeertaal er ook uit.
 
 ### Black-box principe
 
-Een belangrijk concept bij OOP is het **black-box** principe waarbij we de afzonderlijke objecten en hun werking als "zwarte dozen" gaan beschouwen. Dat wil zeggen dat we \(meestal\) niet gaan kijken hoe ze in elkaar zitten. Neem het voorbeeld van de auto: deze is in de echte wereld ontwikkeld volgens het blackbox-principe. De werking van de auto kennen tot in het kleinste detail is niet nodig om met een auto te kunnen rijden. De auto biedt een aantal zaken aan de buitenwereld aan \(het stuur, pedalen, het dashboard\), wat we de **publieke interface** of gewoonweg **interface** noemen. Deze zaken kan je gebruiken om de interne staat van de auto uit te lezen of te manipuleren. Stel je voor dat je moest weten hoe een auto volledig werkte voor je ermee op de baan kon.
+Een belangrijk concept bij OOP is het **black-box** principe waarbij we de afzonderlijke objecten en hun werking als "zwarte dozen" gaan beschouwen. Dat wil zeggen dat we (meestal) niet gaan kijken hoe ze in elkaar zitten. Neem het voorbeeld van de auto: deze is in de echte wereld ontwikkeld volgens het blackbox-principe. De werking van de auto kennen tot in het kleinste detail is niet nodig om met een auto te kunnen rijden. De auto biedt een aantal zaken aan de buitenwereld aan (het stuur, pedalen, het dashboard), wat we de **publieke interface** of gewoonweg **interface** noemen. Deze zaken kan je gebruiken om de interne staat van de auto uit te lezen of te manipuleren. Stel je voor dat je moest weten hoe een auto volledig werkte voor je ermee op de baan kon.
 
-Binnen OOP wordt dit blackbox-concept **encapsulatie** genoemd. Het doel van OOP is andere programmeurs \(en jezelf\) zoveel mogelijk af te schermen van de interne werking van je code. Net als bij een auto, moet je alleen weten wat elk stukje van de interface klaarspeelt, maar hoef je niet te weten hoe dit allemaal is geprogrammeerd.
+Binnen OOP wordt dit blackbox-concept **encapsulatie** genoemd. Het doel van OOP is andere programmeurs (en jezelf) zoveel mogelijk af te schermen van de interne werking van je code. Net als bij een auto, moet je alleen weten wat elk stukje van de interface klaarspeelt, maar hoef je niet te weten hoe dit allemaal is geprogrammeerd.
 
 {% hint style="info" %}
 Encapsulatie wordt vaak een van de vier pijlers van objectgeoriënteerd programmeren genoemd. De andere zijn abstractie, overerving en polymorfisme. Deze komen allemaal later in de cursus aan bod.
@@ -49,10 +49,9 @@ Wanneer we meerdere objecten gebruiken van dezelfde soort dan kunnen we zeggen d
 Als je vertrouwd bent met relationele databanken: een klasse is vergelijkbaar met een tabel of entiteittype, terwijl een object vergelijkbaar is met een record of een entiteit.
 {% endhint %}
 
-Objecten van dezelfde soort volgen wel dezelfde regels en hebben in dat opzicht dezelfde functionaliteit. Maar de eigenschappen van object bepalen ook het resultaat van de instantiemethodes. Eerder zagen we dat de uiteindelijk af te betalen som berekend kan worden door een lening. Deze som zal per definitie hoger zijn van een lening met een hoge rentevoet dan voor een lening met een lage rentevoet \(als de andere eigenschappen gelijk zijn\).
+Objecten van dezelfde soort volgen wel dezelfde regels en hebben in dat opzicht dezelfde functionaliteit. Maar de eigenschappen van object bepalen ook het resultaat van de instantiemethodes. Eerder zagen we dat de uiteindelijk af te betalen som berekend kan worden door een lening. Deze som zal per definitie hoger zijn van een lening met een hoge rentevoet dan voor een lening met een lage rentevoet (als de andere eigenschappen gelijk zijn).
 
 Samengevat:
 
-* **Een klasse** is een beschrijving en verzameling van dingen \(objecten\) met soortgelijke eigenschappen en gedrag.
-* Een individueel **object** is een **instantie** \(_exemplaar, voorbeeld, verschijningsvorm\)_ van een klasse
-
+* **Een klasse** is een beschrijving en verzameling van dingen (objecten) met soortgelijke eigenschappen en gedrag.
+* Een individueel **object** is een **instantie** (_exemplaar, voorbeeld, verschijningsvorm) _van een klasse

@@ -1,54 +1,29 @@
-# If
+# If, else, else if
 
-In dit deel zullen we bekijken hoe we ons programma dynamischer kunnen maken met behulp van het if-statement.
-
-{% hint style="success" %}
-[Kennisclip voor deze pagina](https://youtu.be/w0kPFKXHR1I)
-{% endhint %}
+In dit deel zullen we bekijken hoe we ons programma dynamischer kunnen maken met behulp van het `if`-statement, al dan niet uitgebreid met `else` en `else if`.
 
 ## If
 
-De `if` is een van de elementairste constructies in een programmeertaal. De syntax is als volgt:
+De `if` is een van de elementairste constructies in een programmeertaal. Vrijwel elke programmeertaal bezit deze constructie. We zullen de werking ervan eerst wat algemener bekijken, zodat je het concept goed begrijpt. Daarna zullen we inzoomen op de syntax in C#.
 
-```csharp
-if (boolean expression) 
-{
-     // code hier moet uitgevoerd worden indien de booleaanse expressie waar is
-}
-```
+Het basisidee is als volgt: een `if`-constructie bevat code die **enkel** uitvoert als een booleaanse expressie `true` oplevert. Met andere woorden: als een voorwaarde naar keuze **waar** is. We noemen dergelijke code **conditionele code**, want een conditie is een voorwaarde.
 
-Enkel indien de booleaanse expressie waar is, en dus `true` als resultaat heeft, zal de code binnen de accolades van het if-blok uitgevoerd worden. Indien de expressie niet waar is \(`false`\) dan wordt het blok overgeslagen en gaat het programma verder met de code eronder.
+We zullen dit tonen met een Flowgorithm programma. Dit is een beperkte, maar heel visuele programmeertaal. In een Flowgorithm programma start je bij `Main` en volg je steeds de pijlen.
 
-Een voorbeeld:
+![](<../../.gitbook/assets/Screenshot from 2021-10-11 13-41-12.png>)
 
-```csharp
-int number = 3;
+De gele box stelt een declaratie voor. Ook in Flowgorithm moet je variabelen declareren. Het blauw parallellogram: de gebruiker geeft iets in (de waarde van `wachtwoord`). De rode ruit bevat een booleaanse expressie. Dan is er een vertakking, met daarop de waarden `True` en `False`. **We volgen de pijl met daarop de uitkomst van de booleaanse expressie.** Als we dus het juiste wachtwoord intypen, krijgen we de geheime info, anders gebeurt er niets.
 
-if ( number < 5 ) {
-    Console.WriteLine ("A");
-}
-Console.WriteLine("B");
-```
+Het `if`-statement stemt overeen met alles tussen de rode ruit en het rode bolletje. Dus **als aan een bepaalde voorwaarde voldaan is, voeren we afgebakende code uit**.
 
-De uitvoer van dit programma zal zijn:
+Uit dit programma kan je dan ook volgende C#-code afleiden:
 
-```text
-A
-B
-```
+![](<../../.gitbook/assets/Screenshot from 2021-10-11 13-41-57.png>)
 
-Indien `number` groter of gelijk aan 5 was dan zou er enkel `B` op het scherm zijn verschenen. De lijn `Console.WriteLine("B")` zal sowieso uitgevoerd worden zoals je ook kan zien aan de volgende flowchart:
+In de gegenereerde code stemt de rode ruit dus overeen met de haakjes meteen na `if` en stemt de tak `True` overeen met de accolades.
 
-![](../../.gitbook/assets/ifflow%20%282%29%20%282%29.png)
-
-Hierboven had `nummer` een vaste waarde, maar dat hoeft niet. Deze variabele kan ook willekeurig geïnitialiseerd worden of kan een waarde krijgen die door de gebruiker wordt ingegeven. In dat geval zal het programma zich tijdens verschillende uitvoeringen anders gedragen.
-
-## if zonder block	
-
-Het is aangeraden om steeds na de if-expressie met accolades te werken. Dit zorgt ervoor dat alle code in het block \(de accolades\) zal uitgevoerd worden indien de booleanse expressie waar was. **Gebruik je geen accolades dan zal enkel het eerste statement \(i.e. berekening\) na de** `if` **uitgevoerd worden bij** `true`**.**
-
-{% hint style="warning" %}
-We verwachten dat je `if` altijd met een block gebruikt, omdat dat leesbaarder is. De versie zonder block zien we als een stijlfout!
+{% hint style="info" %}
+Flowgorithm is vrij te downloaden, dus als je moeite hebt met deze concepten, wordt aangeraden hier wat mee te experimenteren.
 {% endhint %}
 
 ## Veelgemaakte if-fouten
@@ -61,142 +36,79 @@ De types in je booleanse expressie moeten steeds vergelijkbaar zijn. Volgende co
 
 ### Accolades vergeten
 
-Accolades vergeten plaatsen om een codeblock aan te duiden, maar je code toch zodanig outlinen \(met tabs\) dat het lijkt of je een heel codeblock hebt. Het gevolg zal zijn dat enkel het eerste statement na de `if` zal uitgevoerd worden indien `true`. Gebruiken we de `if` met block van daarnet maar zonder accolades dan zal het tweede statement altijd uitgevoerd worden ongeacht de `if`:
+Als je geen accolades schrijft, verandert de werking van `if`. Het gevolg zal zijn dat enkel het eerste statement na de `if` zal uitgevoerd worden indien `true`. Gebruiken we de `if` van daarnet maar zonder accolades dan zal het tweede statement altijd uitgevoerd worden ongeacht de `if`:
 
 ```csharp
-if ( number < 5 )
-    Console.WriteLine ("C");
-    Console.WriteLine ("D");
+if (wachtwoord == "gEhEiM")
+    Console.WriteLine ("Geheime informatie: ...");
+    Console.WriteLine ("Fijne dag nog!");
 ```
 
-![](../../.gitbook/assets/ifflownobrace%20%282%29%20%281%29.png)
-
-Merk ook op dat je code anders uitlijnen géén invloed heeft op de uitvoer \(wat bijvoorbeeld wel zo is bij de programmeertaal Python\).
-
-### Een puntkomma plaatsen na de booleanse expressie.
-
-Dit zal ervoor zorgen dat er eigenlijk geen codeblock bij de `if` hoort en je dus een nietszeggende `if` hebt geschreven. De code na het puntkomma zal uitgevoerd worden ongeacht de `if`:
-
-```csharp
-if ( number < 5 );
-    Console.WriteLine ("C");
-    Console.WriteLine ("D");
-```
-
-![](../../.gitbook/assets/ifflowsemicolon%20%282%29.png)
-
-## Booleaanse expressies algemeen
-
-Je bent niet beperkt tot het gebruik van expressies met één relationele operator in de voorwaarde van een `if`. Je mag om het even welk type booleaanse expressie gebruiken. Anders gezegd: als het gedeelte tussen haakjes **uiteindelijk** maar `true` of `false` oplevert, is het goed.
-
-We kunnen dus ook gebruik maken van `true` of `false` zelf, alsook van de logische operatoren `&&`, `||`, `!`.
-
-Een voorbeeld:
-
-```csharp
-Random ranGen = new Random();
-
-int a = ranGen.Next(1,11);
-int b = ranGen.Next(1,11);
-int c = ranGen.Next(1,11);
-Console.WriteLine($"a is {a}");
-Console.WriteLine($"b is {b}");
-Console.WriteLine($"c is {c}");
-
-if (true) {
-    Console.WriteLine("Dit verschijnt sowieso.");
-}
-
-if (false) {
-    Console.WriteLine("Dit verschijnt nooit.");
-}
-
-if (a == b)
-{
-        Console.WriteLine(a);
-}
-
-if ((a > c) || (a == b))
-{  
-    Console.WriteLine(b);
-}
-
-if ((a >= c) && (b <= c))
-{
-    Console.WriteLine(c);
-}
-```
-
-Voer uit en verklaar wat je ziet.
+{% hint style="info" %}
+Voor ons is het simpel: we schrijven `if` **altijd** met accolades.
+{% endhint %}
 
 ## If/else
 
-Met `if`/`else` kunnen we niet enkel zeggen welke code moet uitgevoerd worden als de conditie waar is maar ook welke specifieke code indien de conditie niet waar \(`false`\) is. Volgend voorbeeld geeft een typisch gebruik van een `if`/`else` structuur om 2 waarden met elkaar te vergelijken:
+Het eerdere voorbeeld toont dat we soms actie willen ondernemen als aan een voorwaarde voldaan is, maar heel vaak willen we een **andere** actie ondernemen als aan diezelfde voorwaarde **niet** voldaan is. In dat geval maken we gebruik van de `if ... else ...`.
 
-```csharp
-Random ranGen = new Random();
-int x = ranGen.Next(1,21);
-Console.WriteLine($"x is {x}");
+We gaan terug naar onze login. Een fout wachtwoord ingeven heeft bepaalde gevolgen. Dit kan bijvoorbeeld een alarm doen afgaan, omdat indringers soms foute wachtwoorden ingeven tot ze toevallig het juiste vinden. We stellen dit hier voor door een actie toe te voegen als het wachtwoord **niet** klopt.
 
-if ( x > 9 )
-{
-         Console.WriteLine ("x is groter dan 9!");
-}
-else
-{
-         Console.WriteLine ("x is kleiner dan of gelijk aan 9!");
-}
-```
+![](<../../.gitbook/assets/Screenshot from 2021-10-11 13-43-49.png>)
 
-## If/else if
+De overeenkomstige C# code:
 
-Met een `if`/`else if` constructie kunnen we meerdere criteria opgeven die waar/niet waar moeten zijn voor een bepaald stukje code kan uitgevoerd worden. Sowieso begint men steeds met een `if`. Als men vervolgens een `else if` plaats dan zal de code van deze `else if` uitgevoerd worden enkel en alleen als de eerste expressie \(van de `if`\) niet waar was en de expressie van deze `else if` wel waar is.
+![](<../../.gitbook/assets/Screenshot from 2021-10-11 13-44-53.png>)
 
-Een voorbeeld:
+In bovenstaande code stemt de rode ruit dus nog steeds overeen met de haakjes meteen na `if`, stemt de tak `True` overeen met de accolades vlak na de ronde haakjes en stemt `else { ... }` overeen met de tak `False`. Anders gezegd: **als aan een bepaalde voorwaarde voldaan is, voeren we het eerste blok afgebakende code uit, anders voeren we het tweede blok afgebakende code uit**.
 
-```csharp
-Random ranGen = new Random();
-int x = ranGen.Next(1,21);
-Console.WriteLine($"x is {x}");
+## Code voor beide gevallen
 
-if ( x <=6 )
-{
-         Console.WriteLine ("x is klein");
-}
-else if (x <= 14) {
-         Console.WriteLine("x is medium");
-}
-else
-{
-         Console.WriteLine ("x is groot");
-}
-```
+Als we iets altijd willen doen, hoort dat niet in een vertakking. Dan zetten we het in de flowchart na het rode bolletje. In ons programma zetten we het dan na de volledige `if ... else ...`:
+
+![Code die in beide gevallen moet uitvoeren, zetten we achter het rode bolletje.](<../../.gitbook/assets/Screenshot from 2021-10-11 13-46-22.png>)
+
+De gegenereerde code is dan:
+
+![](<../../.gitbook/assets/Screenshot from 2021-10-11 13-47-33 (1).png>)
 
 ## Nesting
 
-We kunnen met behulp van nesting ook complexere programma flows maken. Hierbij gebruiken we de accolades om het blok code aan te duiden dat bij een `if`/`else if`/`else` hoort. Binnen dit blok kunnen nu echter opnieuw `if`/`else if`/`else` structuren worden aangemaakt.
+Het is perfect mogelijk om bepaalde controles enkel te doen als eerdere controles wel of niet gelukt zijn. Dit kan er zo uitzien:
 
-Volgend voorbeeld toont aan dat je `else if` niet echt nodig hebt, maar dat het wel leesbaardere code oplevert:
+![](<../../.gitbook/assets/Screenshot from 2021-10-11 13-50-00.png>)
+
+In de gegenereerde code leidt dit tot **geneste conditionele code**: een `if` binnenin een grotere `if` of `else`. In digt geval gaat het om een `if` in een `else`. Je mag zo diep nesten als je maar wil. Er is geen technische limiet, maar je code zal wel onleesbaar worden als je overdrijft.
+
+![](<../../.gitbook/assets/Screenshot from 2021-10-11 13-50-31.png>)
+
+## else if
+
+Nesten van conditionele code levert soms code op die moeilijk te ontrafelen is. Het gebeurt vaak dat we een `else` nodig hebben met meteen daarin terug een `if`, om zo verschillende gevallen af te handelen.
+
+We kunnen een programma maken dat dit demonstreert: Er is niet aan de hoofdvoorwaarde voldaan, maar er is wel aan een andere voorwaarde voldaan:
+
+![](<../../.gitbook/assets/Screenshot from 2021-10-11 13-52-55.png>)
+
+De gegenereerde code voor dit frament is technisch juist:
+
+![](<../../.gitbook/assets/Screenshot from 2021-10-11 13-54-52.png>)
+
+Maar Flowgorithm is geen menselijke programmeur. Een menselijke programmeur zou volgende voorstelling gebruiken, die hetzelfde doet, maar makkelijker leesbaar is:
 
 ```csharp
-Random ranGen = new Random();
-int x = ranGen.Next(1,21);
-Console.WriteLine($"x is {x}");
-
-if ( x <=6 )
-{
-         Console.WriteLine ("x is klein");
-}
-else {
-    if (x <= 14) {
-         Console.WriteLine("x is medium");
-    }
-    else
-    {
-         Console.WriteLine ("x is groot");
-    }
+public static void Main(string[] args) {
+  string wachtwoord;
+  wachtwoord = Console.ReadLine();
+  if (wachtwoord == "gEhEiM") {
+    Console.WriteLine("Geheime informatie: ...");
+  }
+  else if (wachtwoord == "geheim") {
+    Console.WriteLine("Warm!");
+  }
+  else {
+    Console.WriteLine("Koud!");
+  }
+  Console.WriteLine("Fijne dag nog!");
 }
 ```
-
-Andere vormen van nesting zijn mogelijk. Je mag ook een `if` in een `if` block zetten en je mag zo diep nesten als je maar wil.
-

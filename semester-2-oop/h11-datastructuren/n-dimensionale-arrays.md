@@ -8,13 +8,13 @@ Als we een array tekenen, doen we dat vaak als een lijn met vakjes op. En als we
 
 Een array met de getallen 4, 9, 2, 7, 3, 6, 1, 12 en 9 zouden we ons kunnen inbeelden als volgt:
 
-![lineaire voorstelling van links naar rechts](../../.gitbook/assets/eendimensionaal%20%281%29.png)
+![lineaire voorstelling van links naar rechts](<../../.gitbook/assets/eendimensionaal (1).png>)
 
 Het maakt niet echt uit of je dit ziet van links naar rechts, van boven naar onder,... Wat wel belangrijk is, is dat je dit ziet als een reeks waar je in een richting door loopt. Onderstaande voorstelling kan dus ook:
 
 ![lineaire voorstelling van boven naar onder](../../.gitbook/assets/eendimensionaal.png)
 
-Vaak is het handig om niet met een ééndimensionale voorstelling te werken, maar met een tweedimensionale of driedimensionale voorstelling. Dit kan bijvoorbeeld zijn omdat we data hebben zoals een Excel sheet, een rooster voor het spelletje OXO of vier-op-een-rij, een Sudokupuzzel, een afbeelding \(die bestaat uit pixels\),...
+Vaak is het handig om niet met een ééndimensionale voorstelling te werken, maar met een tweedimensionale of driedimensionale voorstelling. Dit kan bijvoorbeeld zijn omdat we data hebben zoals een Excel sheet, een rooster voor het spelletje OXO of vier-op-een-rij, een Sudokupuzzel, een afbeelding (die bestaat uit pixels),...
 
 Een voorbeeld. Kan jij van onderstaande afbeelding in één oogopslag zeggen of er OXO op staat, als de eerste waarde staat voor het vakje linksboven en de laatste voor het vakje rechtsonder?
 
@@ -22,11 +22,11 @@ Een voorbeeld. Kan jij van onderstaande afbeelding in één oogopslag zeggen of 
 
 Waarschijnlijk niet. Je moet alles eerst "vertalen" in je hoofd naar dit:
 
-![Tweedimensionale voorstelling van een spelletje OXO](../../.gitbook/assets/tweedimensionaal%20%281%29.png)
+![Tweedimensionale voorstelling van een spelletje OXO](<../../.gitbook/assets/tweedimensionaal (1).png>)
 
 Nu kan je veel makkelijker aflezen dat er in de eerste kolom inderdaad OXO staat. Dus de organisatie van je data kan het makkelijker of moeilijker maken bepaalde taken uit te voeren, omdat we visueler kunnen werken.
 
-Meerdimensionale arrays leveren hetzelfde voordeel op wanneer je programmeert. Ze staan toe data op te delen in roosters, zodat het makkelijker wordt cellen in een bepaalde richting te doorlopen \(rij per rij, kolom per kolom, in de diepte,...\). Dit is vaak nuttig om zaken die we "op het zicht" doen te kunnen toepassen op arrays.
+Meerdimensionale arrays leveren hetzelfde voordeel op wanneer je programmeert. Ze staan toe data op te delen in roosters, zodat het makkelijker wordt cellen in een bepaalde richting te doorlopen (rij per rij, kolom per kolom, in de diepte,...). Dit is vaak nuttig om zaken die we "op het zicht" doen te kunnen toepassen op arrays.
 
 {% hint style="warning" %}
 Met meerdimensionale arrays kan je technisch niet meer of minder dan met ééndimensionale arrays. Maar afhankelijk van het probleem maken ze het programmeerwerk wel een pak eenvoudiger.
@@ -73,7 +73,7 @@ Console.WriteLine(oxoRooster[2,1]);
 
 ## Lengte van iedere dimensie in een n-dimensionale matrix
 
-Indien je de lengte opvraagt van een meer-dimensionale array dan krijg je de som van iedere lengte van iedere dimensie. Onze OXO-array zal bijvoorbeeld dus lengte 9 hebben. Je kan echter de lengte van iedere aparte dimensie te weten komen met de `GetLength()` methode die iedere array heeft. Als parameter geef je de dimensie mee waarvan je de lengte wenst.
+Indien je de lengte opvraagt van een meer-dimensionale array dan krijg je de som van iedere lengte van iedere dimensie. Onze OXO-array zal bijvoorbeeld dus lengte 9 hebben. Je kan echter de lengte van iedere aparte dimensie te weten komen met de `GetLength() `methode die iedere array heeft. Als parameter geef je de dimensie mee waarvan je de lengte wenst.
 
 ```csharp
 int arrayRijen = oxoRooster.GetLength(0);
@@ -90,7 +90,7 @@ int arrayDimensions = oxoRooster.Rank;
 
 Met meerdimensionale arrays in het makkelijker in een bepaalde richting te werken dan met eendimensionale arrays.
 
-Om ons OXO-rooster af te printen \(eerste rij op één regel, tweede rij op een volgende regel, derde rij op een derde regel\), kunnen we dit doen:
+Om ons OXO-rooster af te printen (eerste rij op één regel, tweede rij op een volgende regel, derde rij op een derde regel), kunnen we dit doen:
 
 ```csharp
 // per rij doorlopen we de kolommen en printen we een newline
@@ -118,5 +118,4 @@ for(int i = 0; i < oxoArray.Length; i++) {
 }
 ```
 
-Als je met meerdimensionale arrays werkt, is de truuk dus vaak om eerst code te schrijven voor één richting \(een rij of een kolom\) en deze code daarna te herhalen in de overblijvende richting.
-
+Als je met meerdimensionale arrays werkt, is de truuk dus vaak om eerst code te schrijven voor één richting (een rij of een kolom) en deze code daarna te herhalen in de overblijvende richting.

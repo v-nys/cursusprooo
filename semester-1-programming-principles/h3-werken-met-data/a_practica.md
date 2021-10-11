@@ -1,6 +1,6 @@
 # Oefeningen
 
-\*\*\*\*
+****
 
 **Sla de oefeningen van dit hoofdstuk op in een klasse `HoofdstukVier`, behalve de oefeningen rond apdotcom.**
 
@@ -18,17 +18,17 @@ Krijg je tijdens deze oefeningen onverwachte of vreemde resultaten? Gebruik de d
 
 ### Functionele analyse
 
-Maak een programma dat aan de gebruiker z'n lengte en gewicht vraagt en vervolgens z'n berekende BMI \(Body Mass Index\) toont.
+Maak een programma dat aan de gebruiker z'n lengte en gewicht vraagt en vervolgens z'n berekende BMI (Body Mass Index) toont.
 
 ### Technische analyse
 
-De formule voor de BMI is BMI = kg / m², waarbij kg het de massa van een persoon \(in kilogram\) voorstelt en m zijn lengte in meter \(dus typisch als kommagetal tussen 1 en 2\). Gebruik stringinterpolatie om alle uitvoer met twee cijfers na de komma te tonen.
+De formule voor de BMI is BMI = kg / m², waarbij kg het de massa van een persoon (in kilogram) voorstelt en m zijn lengte in meter (dus typisch als kommagetal tussen 1 en 2). Gebruik stringinterpolatie om alle uitvoer met twee cijfers na de komma te tonen.
 
 Noem je methode voor deze oefening `BMIBerekenaar`.
 
-#### voorbeeldinteractie\(s\)
+#### voorbeeldinteractie(s)
 
-```text
+```
 Hoeveel weeg je in kg?
 > 69,0
 Hoe groot ben je in m?
@@ -60,9 +60,9 @@ De vierkantswortel, in het Engels, is de "square root". Een voorbeeld: de vierka
 
 Noem je methode voor deze oefening `Pythagoras`.
 
-#### voorbeeldinteractie\(s\)
+#### voorbeeldinteractie(s)
 
-```text
+```
 Geef de lengte van de eerste rechthoekszijde: 
 > 4
 Geef de lengte van de tweede rechthoekszijde:
@@ -88,9 +88,9 @@ Je moet de gebruiker eerst om de straal van de cirkel vragen. De omtrek van een 
 
 Noem je methode voor deze oefening `Cirkels`.
 
-#### voorbeeldinteractie\(s\)
+#### voorbeeldinteractie(s)
 
-```text
+```
 Geef de straal:
 > 5
 De omtrek van een cirkel met straal 5 is 31,42.
@@ -115,21 +115,21 @@ Je moet hier een willekeurig getal bepalen en dat dan in een mooie vorm presente
 
 Noem je methode voor deze oefening `Orakeltje`.
 
-#### voorbeeldinteractie\(s\)
+#### voorbeeldinteractie(s)
 
-```text
+```
 Hoe oud ben je nu?
 > 24
 Je zal nog 20 jaar leven. Je zal dus 44 worden.
 ```
 
-```text
+```
 Hoe oud ben je nu?
 > 50
 Je zal nog 64 jaar leven. Je zal dus 114 worden.
 ```
 
-## Oefening: apdotcom \(deel 1\)
+## Oefening: apdotcom (deel 1)
 
 ### Leerdoelen
 
@@ -152,11 +152,11 @@ Zorg ervoor dat je code maar één keer de totaalprijs voor korting berekent en 
 
 Toon alle geldbedragen met twee cijfers na de komma, zelfs als de laatste cijfers `00` zijn.
 
-Als je ergens 10% korting op krijgt, betekent dat dat je de prijs met 0.9 mag vermenigvuldigen want 1 - \(10/100\) = 0.9.
+Als je ergens 10% korting op krijgt, betekent dat dat je de prijs met 0.9 mag vermenigvuldigen want 1 - (10/100) = 0.9.
 
-#### voorbeeldinteractie\(s\)
+#### voorbeeldinteractie(s)
 
-```text
+```
 Prijs van een boek?
 > 12.00
 Prijs van een CD?
@@ -186,7 +186,7 @@ TOTAAL VOOR KORTING: 292.90
 TOTAAL: 175.74
 ```
 
-## Oefening: apdotcom \(deel 2\)
+## Oefening: apdotcom (deel 2)
 
 ### Leerdoelen
 
@@ -200,9 +200,9 @@ De markt wordt gestuurd door vraag en aanbod. Alle items hebben dan wel een vast
 
 Maak in de klasse `APDotCom` een methode `BestelMetVraagEnAanbod`. Deze methode werkt zoals eerder, maar verhoogt of verlaagt de basisprijs van elk item met willekeurig met maximum 50%.
 
-#### voorbeeldinteractie\(s\)
+#### voorbeeldinteractie(s)
 
-```text
+```
 Basisprijs van een boek?
 > 12.00
 Basisprijs van een CD?
@@ -236,5 +236,4 @@ TOTAAL VOOR KORTING: 378.42
 TOTAAL: 227.05
 ```
 
-## 
-
+##

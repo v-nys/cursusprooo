@@ -1,6 +1,6 @@
 # Immutable datastructuren
 
-De standaard datastructuren van C\# zijn [reference types](../../semester-1-programming-principles/h7-arrays/value-types-en-reference-types.md). Dit betekent dat iedereen die zo'n datastructuur te pakken krijgt \(bijvoorbeeld omdat je hem als argument meegeeft aan een methode\), de inhoud van deze datastructuur ook kan wijzigen. Dit kan met opzet of gewoonweg per vergissing gebeuren.
+De standaard datastructuren van C# zijn [reference types](../../semester-1-programming-principles/h7-arrays/value-types-en-reference-types.md). Dit betekent dat iedereen die zo'n datastructuur te pakken krijgt (bijvoorbeeld omdat je hem als argument meegeeft aan een methode), de inhoud van deze datastructuur ook kan wijzigen. Dit kan met opzet of gewoonweg per vergissing gebeuren.
 
 {% hint style="info" %}
 Hoezo, "met opzet"? Denk eraan dat je typisch niet de enige programmeur bent die met bepaalde code in contact komt.
@@ -51,7 +51,7 @@ public static void DemonstreerImmutableListBuilder() {
 
 Beginnende programmeurs denken soms dat ze hetzelfde effect kunnen verkrijgen door een property voor een datastructuur "read only" te maken. Dit doen ze dan door alleen een getter te voorzien en geen setter of, als ze buiten deze cursus gaan zoeken, met het sleutelwoordje `readonly`.
 
-**Dit maakt je datastructuur niet immutable!** Het zorgt er **wel** voor dat je het object op de heap waarin je data staat niet kan vervangen. Het zorgt er **niet** voor dat je de inhoud van dat object niet kan vervangen.
+**Dit maakt je datastructuur niet immutable! **Het zorgt er **wel** voor dat je het object op de heap waarin je data staat niet kan vervangen. Het zorgt er **niet** voor dat je de inhoud van dat object niet kan vervangen.
 
 Bijvoorbeeld, als we personen voorzien van een array met lievelingsgerechten:
 
@@ -91,4 +91,3 @@ class Program {
 Onderstaande figuur toont een vereenvoudigde weergave van wat er aan de hand is:
 
 ![Het is niet mogelijk de pijl van de persoon naar het lijstobject te vervangen. Het is wel mogelijk data in het lijstobject te veranderen.](../../.gitbook/assets/screenshot-from-2021-03-22-08-33-59.png)
-

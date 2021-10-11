@@ -1,7 +1,7 @@
 # List
 
 {% hint style="danger" %}
-In onderstaande kennisclip wordt er een andere syntax gebruikt om objecten aan te maken dan wat wij gewoon zijn \(namelijk constructors met parameters\). Dat maakt geen verschil voor de werking van de datastructuur. Je zou net zo goed een constructor kunnen definiëren die hetzelfde doet.
+In onderstaande kennisclip wordt er een andere syntax gebruikt om objecten aan te maken dan wat wij gewoon zijn (namelijk constructors met parameters). Dat maakt geen verschil voor de werking van de datastructuur. Je zou net zo goed een constructor kunnen definiëren die hetzelfde doet.
 {% endhint %}
 
 {% hint style="success" %}
@@ -23,7 +23,7 @@ De klasse `List<T>` is een zogenaamde generieke klasse. Tussen de `< >`tekens pl
 * `List<Pokemon> pokeDex = new List<Pokemon>();`
 * `List<string[]> listOfStringarrays = new List<string[]>();`
 
-Zoals je ziet hoeven we bij het aanmaken van een `List` geen begingrootte mee te geven, wat we wel bij arrays moeten doen. Dit is een van de voordelen van `List`: ze groeien mee. Als we toch een begingrootte meegeven \(zoals in de kennisclip even getoond wordt\) is dat enkel om de performantie van de code wat te verhogen in bepaalde scenario's. Wij gaan dit nooit doen.
+Zoals je ziet hoeven we bij het aanmaken van een `List` geen begingrootte mee te geven, wat we wel bij arrays moeten doen. Dit is een van de voordelen van `List`: ze groeien mee. Als we toch een begingrootte meegeven (zoals in de kennisclip even getoond wordt) is dat enkel om de performantie van de code wat te verhogen in bepaalde scenario's. Wij gaan dit nooit doen.
 
 ### Elementen toevoegen
 
@@ -60,21 +60,20 @@ for(int i = 0 ; i < myStringList.Count; i++)
 Interessante methoden en properties voorts zijn:
 
 * `Clear()` :methode die de volledige lijst leegmaakt
-* `Insert()`: methode om element op specifieke plaats in lijst toe te voegen, bijvoorbeeld:
+*   `Insert()`: methode om element op specifieke plaats in lijst toe te voegen, bijvoorbeeld:
 
-  ```csharp
-  myStringList.Insert(1,"A fourth sentence");
-  ```
+    ```csharp
+    myStringList.Insert(1,"A fourth sentence");
+    ```
 
-  voegt de string toe op de tweede plek en schuift de rest naar achter
-
-* `Contains()`: geef als parameter een specifiek object mee \(van het type `T` dat de `List<T>` bevat\) om te weten te komen of dat specifieke object in de `List<>` terug te vinden is. Indien ja dan zal true worden teruggeven.
+    voegt de string toe op de tweede plek en schuift de rest naar achter
+* `Contains()`: geef als parameter een specifiek object mee (van het type `T` dat de `List<T>` bevat) om te weten te komen of dat specifieke object in de `List<> `terug te vinden is. Indien ja dan zal true worden teruggeven.
 * `IndexOf()`: geeft de index terug van het element item in de rij. Indien deze niet in de lijst aanwezig is dan wordt -1 teruggegeven.
 * `RemoveAt()`: verwijder een element op de index die je als parameter meegeeft.
 * `Remove():` verwijder het gegeven element
 
 {% hint style="danger" %}
-`Contains, Remove` en `IndexOf` zullen zich met jouw eigen klassen niet noodzakelijk gedragen zoals je verwacht. De verklaring hierachter komt later aan bod, wanneer we [Equals en GetHashCode](../geavanceerde-overerving/4_system_object.md) bekijken. Ze zullen wel werken zoals verwacht voor voorgedefinieerde types, inclusief `DateTime`.
+`Contains, Remove` en `IndexOf` zullen zich met jouw eigen klassen niet noodzakelijk gedragen zoals je verwacht. De verklaring hierachter komt later aan bod, wanneer we [Equals en GetHashCode](../geavanceerde-overerving/4\_system_object.md) bekijken. Ze zullen wel werken zoals verwacht voor voorgedefinieerde types, inclusief `DateTime`.
 {% endhint %}
 
 ### Foreach loops
@@ -94,4 +93,3 @@ foreach(int prime in integerList)
    Console.WriteLine(prime);
 }
 ```
-

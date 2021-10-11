@@ -23,9 +23,9 @@ Voor de eerste drie zaken kom je toe met een variabele. Voor de laatste is dit l
 
 console applicatie
 
-#### voorbeeldinteractie\(s\)
+#### voorbeeldinteractie(s)
 
-```text
+```
 Geef een getal
 > 7
 De balans is 7
@@ -46,7 +46,7 @@ De som van de negatieve getallen is -3
 Het gemiddelde is 5
 ```
 
-\(Dit programma kan blijven verder lopen zo lang je wil.\)
+(Dit programma kan blijven verder lopen zo lang je wil.)
 
 ## Oefening: H6-schaar-steen-papier
 
@@ -65,25 +65,26 @@ Vervolgens krijgt de winnaar 1 punt:
 * Schaar wint van papier, verliest van steen
 * Indien beide hetzelfde hebben wint niemand een punt.
 
-De eerste \(pc of gebruiker\) die 10 punten haalt wint.
+De eerste (pc of gebruiker) die 10 punten haalt wint.
 
 ### Technische analyse
 
-* Maak een [enum](../h4-beslissingen/enum.md) met elementen `Schaar`, `Steen` en `Papier`
+* Maak gebruik van strings `"Schaar"`, `"Steen"` en `"Papier"`
 * Teken een flowchart!
-* Gebruik [de instructies over hoe je een enum waarde kan inlezen](../h4-beslissingen/enum.md#waarden-van-een-enum-type-inlezen)
 * Noem je methode `SchaarSteenPapier`.
 * Je krijgt een flowchart om te helpen.
 
-{% file src="../../.gitbook/assets/flowchartbladsteenschaar.pdf" caption="flowchart schaar steen papier" %}
+{% file src="../../.gitbook/assets/flowchartbladsteenschaar.pdf" %}
+flowchart schaar steen papier
+{% endfile %}
 
 #### UI
 
 console applicatie
 
-#### voorbeeldinteractie\(s\)
+#### voorbeeldinteractie(s)
 
-```text
+```
 Maak een keuze:
 1. Schaar
 2. Steen
@@ -110,16 +111,16 @@ De computer wint deze ronde!
 Jij hebt 1 punt, de computer heeft 1 punt.
 ```
 
-\(Helemaal op het einde\)
+(Helemaal op het einde)
 
-```text
+```
 Jij hebt 10 punten, de computer heeft 8 punten.
 Jij bent gewonnen!
 ```
 
 of
 
-```text
+```
 Jij hebt 8 punten, de computer heeft 10 punten.
 De computer is gewonnen!
 ```
@@ -145,7 +146,7 @@ TIP: de code van de bestelling moet minstens 1x uitgevoerd worden, vermijd dubbe
 
 ### Voorbeeldinteractie
 
-```text
+```
 Basisprijs van een boek?
 > 12.00
 Basisprijs van een CD?
@@ -222,4 +223,3 @@ TOTAAL: 175.74
 Wil je nog een bestelling plaatsen? (J/N)
 > N
 ```
-

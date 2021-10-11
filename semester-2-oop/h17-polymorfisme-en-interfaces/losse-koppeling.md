@@ -2,24 +2,24 @@
 
 ## "Losse koppeling"
 
-In een objectgeoriënteerd programma zijn objecten de onderdelen waaruit je programma bestaat. Eén kenmerk van een goed ontworpen programma is dat deze onderdelen vlot inwisselbaar zijn voor andere onderdelen die dezelfde taak vervullen, maar op een andere manier. Anders gezegd: ze hebben dezelfde **interface** \(nu in de "algemene" betekenis\), maar een andere **implementatie**. Als dit vlot gaat, spreken we over een "losse koppeling" \("loose coupling"\) van de onderdelen van het programma. Interfaces \(in de "language construct"-betekenis\) spelen hier een belangrijke rol in in C\#.
+In een objectgeoriënteerd programma zijn objecten de onderdelen waaruit je programma bestaat. Eén kenmerk van een goed ontworpen programma is dat deze onderdelen vlot inwisselbaar zijn voor andere onderdelen die dezelfde taak vervullen, maar op een andere manier. Anders gezegd: ze hebben dezelfde **interface** (nu in de "algemene" betekenis), maar een andere **implementatie**. Als dit vlot gaat, spreken we over een "losse koppeling" ("loose coupling") van de onderdelen van het programma. Interfaces (in de "language construct"-betekenis) spelen hier een belangrijke rol in in C#.
 
 ### Voorbeeld uit het echte leven: stopcontacten
 
 Je gebruikt elke dag dezelfde het principe van losse koppeling. Je kan je elektrische tandenborstel, de lader van je GSM, de lader van je laptop, je desktop,... allemaal aansluiten op elk stopcontact in je huis. Dat komt omdat ze allemaal afgestemd zijn op West-Europese stopcontacten.
 
-Dit is niet vanzelfsprekend: een laptop trekt bijvoorbeeld veel meer stroom dan een elektrische tandenborstel. Daarom wordt je laptop geleverd met een transformator \("stroomblok"\). In principe zouden we gebouwen kunnen maken met aparte stopcontacten voor laptops zonder stroomblok, voor elektrische tandenborstels, enzovoort. Dan hadden we geen stroomblokken meer nodig, **maar dan kon je elk toestel maar op sommige stopcontacten aansluiten**. De toestellen zouden iets makkelijker te maken zijn, maar ze zouden niet meer inwisselbaar zijn, omdat ze allemaal een andere aansluiting zouden hebben.
+Dit is niet vanzelfsprekend: een laptop trekt bijvoorbeeld veel meer stroom dan een elektrische tandenborstel. Daarom wordt je laptop geleverd met een transformator ("stroomblok"). In principe zouden we gebouwen kunnen maken met aparte stopcontacten voor laptops zonder stroomblok, voor elektrische tandenborstels, enzovoort. Dan hadden we geen stroomblokken meer nodig, **maar dan kon je elk toestel maar op sommige stopcontacten aansluiten**. De toestellen zouden iets makkelijker te maken zijn, maar ze zouden niet meer inwisselbaar zijn, omdat ze allemaal een andere aansluiting zouden hebben.
 
 Door een stroomblok toe te voegen, zorgen we dat elk toestel dezelfde "interface" heeft, zelfs wanneer de implementatie verschillend is.
 
-### Voorbeeld in code: IEnumerable&lt;T&gt;
+### Voorbeeld in code: IEnumerable\<T>
 
 Als je een klasse schrijft waaraan je een reeks elementen, bijvoorbeeld van de klasse `Student`, wil linken, dan heb je een heleboel keuzes. Enkele opties zijn:
 
 * `List<Student>`
 * `ImmutableList<Student>`
 * `HashSet<Student>`
-* `LinkedList<Student>` \(deze ken je waarschijnlijk nog niet\)
+* `LinkedList<Student> `(deze ken je waarschijnlijk nog niet)
 
 Elke optie heeft haar voor- en nadelen. `List` is vrij algemeen bruikbaar. `ImmutableList` kan veiligere code opleveren. `HashSet` zorgt er automatisch voor dat je geen dubbels in je verzameling plaatst. `LinkedList` kan snellere code opleveren als je vooral elementen vooraan of achteraan in de lijst toevoegt.
 
@@ -80,4 +80,3 @@ public class KlasGroep {
 ```
 
 Om deze reden zal je soms gevraagd worden ergens een interface te gebruiken, terwijl een gewone klasse op het eerste zicht net zo goed zou volstaan. Sommige softwareprojecten gaan hier heel ver in en gebruiken voor zowat alle velden interfaces in plaats van klassen. Dat maakt het bijvoorbeeld heel makkelijk productiecode om te wisselen voor testcode.
-

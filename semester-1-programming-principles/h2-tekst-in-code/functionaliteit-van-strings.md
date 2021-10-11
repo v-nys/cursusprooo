@@ -15,7 +15,7 @@ Console.WriteLine("hallo ".Length); // levert 6 want: 6 symbolen in de uiteindel
 
 Een string is een reeks van 0 of meer symbolen in een bepaalde volgorde. Dat wil zeggen dat we elk symbool een nummer kunnen toekennen. Misschien wat vreemd, maar het eerste symbool krijgt nummer 0, het tweede krijgt nummer 1, het derde nummer 2,... en het laatste krijgt een nummer gelijk aan de `Length` van de string min één. Dit nummer heet de **index** van het symbool.
 
-We kunnen een **substring** \(= deel van een string\) opvragen door de index van het eerste symbool en de lengte mee te geven als volgt:
+We kunnen een **substring** (= deel van een string) opvragen door de index van het eerste symbool en de lengte mee te geven als volgt:
 
 ```csharp
 Console.WriteLine("Hallo, wereld".Substring(4,5)); // toont o, we
@@ -27,7 +27,7 @@ Je mag de lengte achterwege laten om vanaf de gegeven index tot het einde van de
 Console.WriteLine("Hallo, wereld".Substring(4)); // toont o, wereld
 ```
 
-Deze methode **verandert een string niet**. Er is geen enkele methode die dat doet, want **je kan een string niet veranderen in C\#. Je kan er alleen een nieuwe mee bouwen.** De methode berekent wel een nieuwe string met de gewenste eigenschappen. Dit is een belangrijk onderscheid. Volgende drie voorbeelden tonen het verschil. Voer uit en verklaar.
+Deze methode **verandert een string niet**. Er is geen enkele methode die dat doet, want **je kan een string niet veranderen in C#. Je kan er alleen een nieuwe mee bouwen. **De methode berekent wel een nieuwe string met de gewenste eigenschappen. Dit is een belangrijk onderscheid. Volgende drie voorbeelden tonen het verschil. Voer uit en verklaar.
 
 ```csharp
 string hallo1 = "hallo";
@@ -47,7 +47,7 @@ Console.WriteLine(hallo2);
 ```
 
 {% hint style="warning" %}
-**Onthoud het goed: je kan een string niet aanpassen in C\#. We kunnen alle gevolgen hiervan nog niet uitleggen, maar het is wel zo.**
+**Onthoud het goed: je kan een string niet aanpassen in C#. We kunnen alle gevolgen hiervan nog niet uitleggen, maar het is wel zo.**
 {% endhint %}
 
 ## `IndexOf`
@@ -90,11 +90,10 @@ Console.WriteLine(tekst); // C# is cool -> uit tekst is iets anders berekend, te
 
 ## `TrimStart` / `TrimEnd / Trim`
 
-Met deze methodes verwijder je witruimte \(spaties, tabs, newlines,...\) aan het begin of aan het einde van een string:
+Met deze methodes verwijder je witruimte (spaties, tabs, newlines,...) aan het begin of aan het einde van een string:
 
 ```csharp
 Console.WriteLine("     C# is cool".TrimStart()); // C# is cool, eerste teken is C en geen spatie
 Console.WriteLine("C# is cool     ".TrimEnd()); // zelfde resultaat
 Console.WriteLine("    C# is cool     ".Trim()); // zelfde resultaat
 ```
-

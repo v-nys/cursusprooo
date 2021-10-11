@@ -19,7 +19,7 @@ Denk aan een ouderwetse bakker. Het stappenplan dat deze bakker volgt is er een 
 We vertalen nu deze interactie naar code en verklaren daarna de vertaling:
 
 {% hint style="info" %}
-Dit is maar een voorbeeld om de flow te verduidelijken. Er is geen "juiste" manier om een methode te schrijven om brood te bakken \(tenzij je een broodmachine programmeert\).
+Dit is maar een voorbeeld om de flow te verduidelijken. Er is geen "juiste" manier om een methode te schrijven om brood te bakken (tenzij je een broodmachine programmeert).
 {% endhint %}
 
 ```csharp
@@ -36,7 +36,7 @@ public static string Molenaar() {
 }
 ```
 
-Hier vallen twee zaken op: in de signatuur \(d.w.z. alles van het begin van de regel tot en met het gesloten ronde haakje\) van de methode Molenaar staat niet `void`, maar `string`. Dit komt omdat deze methode een resultaat **teruggeeft** aan de opdrachtgever en dat resultaat van het type `string` is. Daarnaast heb je het sleutelwoord `return`, gevolgd door de tekst `"bloem"`. Het woordje `return` betekent: "bezorg dit aan de code die deze methode heeft opgeroepen". Anders gezegd: dit is hoe de molenaar de geproduceerde bloem overhandigt aan zijn opdrachtgever, de bakker. Waar je de call `Molenaar()` schrijft komt tijdens de uitvoering het geproduceerde resultaat dankzij die `return`.
+Hier vallen twee zaken op: in de signatuur (d.w.z. alles van het begin van de regel tot en met het gesloten ronde haakje) van de methode Molenaar staat niet `void`, maar `string`. Dit komt omdat deze methode een resultaat **teruggeeft** aan de opdrachtgever en dat resultaat van het type `string` is. Daarnaast heb je het sleutelwoord `return`, gevolgd door de tekst `"bloem"`. Het woordje `return` betekent: "bezorg dit aan de code die deze methode heeft opgeroepen". Anders gezegd: dit is hoe de molenaar de geproduceerde bloem overhandigt aan zijn opdrachtgever, de bakker. Waar je de call `Molenaar()` schrijft komt tijdens de uitvoering het geproduceerde resultaat dankzij die `return`.
 
 ### Het `return` type
 
@@ -50,7 +50,7 @@ Maar niet alle methodes bezorgen iets terug aan hun opdrachtgever. Sommige hebbe
 Er is dus een groot verschil tussen `return "tekst";` en `Console.WriteLine("tekst");` Bij de eerste code is er geen garantie dat de geproduceerde tekst ooit op het scherm verschijnt, maar je kan er wel mee verder werken. Bij de tweede verschijnt hij per definitie wel op het scherm, maar kan je hem niet toekennen aan een variabele om later mee verder te werken.
 {% endhint %}
 
-We kunnen dus wel doen: `string ingredient3 = Molenaar();` \(want het return type van `Molenaar()` is `string`\) maar we kunnen niet schrijven: `string product = Bakker();` \(want `Bakker()` heeft return type `void` en produceert dus geen resultaat\). Deze code compileert dan ook niet.
+We kunnen dus wel doen: `string ingredient3 = Molenaar(); `(want het return type van `Molenaar()` is `string`) maar we kunnen niet schrijven: `string product = Bakker(); `(want `Bakker() `heeft return type `void` en produceert dus geen resultaat). Deze code compileert dan ook niet.
 
 ### Gekend voorbeeld van een vaak gemaakte fout
 
@@ -98,7 +98,7 @@ public static void Main() {
 }
 ```
 
-Bovendien maken we gebruik van het feit dat de methode `Sqrt` \(_square root_ is vierkantswortel\) ook een parameter heeft en een resultaat teruggeeft. Eigenlijk verloopt een uitvoering dus zo:
+Bovendien maken we gebruik van het feit dat de methode `Sqrt` (_square root_ is vierkantswortel) ook een parameter heeft en een resultaat teruggeeft. Eigenlijk verloopt een uitvoering dus zo:
 
 1. de methode `Main` start op
 2. we willen bepaalde tekst uitprinten, maar we moeten die eerst nog bepalen met de methode `Pythagoras`
@@ -110,4 +110,3 @@ Bovendien maken we gebruik van het feit dat de methode `Sqrt` \(_square root_ is
 8. de zin wordt correct afgeprint
 
 Meestal is het dus een goed idee zo weinig mogelijk informatie te communiceren met `WriteLine` en zo veel mogelijk met `return` te werken. Meerbepaald: gebruik WriteLine wanneer je de uiteindelijke informatie in haar uiteindelijke vorm hebt en deze echt aan de gebruiker moet tonen. Gebruik `return` wanneer je het resultaat van een deeltaak aan een opdrachtgever wil bezorgen.
-

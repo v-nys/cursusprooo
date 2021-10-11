@@ -14,13 +14,13 @@ Bron: [https://github.com/GitbookIO/plugin-codetabs](https://github.com/GitbookI
 
 msg = "Hello World" print msg
 
-var msg = "Hello World"; console.log\(msg\);
+var msg = "Hello World"; console.log(msg);
 
 **Hello World**
 
 [https://github.com/GitbookIO/plugin-codetabs](https://github.com/GitbookIO/plugin-codetabs)
 
-> Dit hoofdstuk werd origineel geschreven door Tom Peeters. [Bron.](https://github.com/tomptrs/solid) maar moet nog langs editor Tim ;\)
+> Dit hoofdstuk werd origineel geschreven door Tom Peeters. [Bron.](https://github.com/tomptrs/solid) maar moet nog langs editor Tim ;)
 
 ### Inleiding
 
@@ -48,11 +48,11 @@ Gestructureerd programmeren volgde in de jaren ‘70. Een gestructureerde code b
 
 #### PROGRAMMEREN: OBJECT-GEORIENTEERD DESIGN
 
-Object-georiënteerd programmeren gebeurt intuïtief en identificeert natuurlijke objecten \( Hero, vijand, ...\) die voorkomen in je probleem. Daarnaast worden relaties zoals composities, referenties, overerving bepaald. Dit resulteert in herbruikbaarheid van code, en overzichtelijkere en makkelijk te onderhouden code.
+Object-georiënteerd programmeren gebeurt intuïtief en identificeert natuurlijke objecten ( Hero, vijand, ...) die voorkomen in je probleem. Daarnaast worden relaties zoals composities, referenties, overerving bepaald. Dit resulteert in herbruikbaarheid van code, en overzichtelijkere en makkelijk te onderhouden code.
 
 #### VANDAAG
 
-Door de toenemende concurrentie moet je als programmeur tegenwoordig zeer dynamisch \(Agile Principe\) zijn. Ook is de gemiddelde levensduur van een product drastisch verlaagd. Organisaties moeten snel op marktveranderingen kunnen antwoorden. Ook worden business strategieën snel aangepast wat wil zeggen dat bijvoorbeeld een goed software design zeer belangrijk is om snel op deze veranderingen in te kunnen inspelen. Software moet snel ontwikkeld kunnen worden en staat dicht bij de klant \( deze kan al vaak worden betrokken bij de ontwikkeling van gepersonaliseerde software\).
+Door de toenemende concurrentie moet je als programmeur tegenwoordig zeer dynamisch (Agile Principe) zijn. Ook is de gemiddelde levensduur van een product drastisch verlaagd. Organisaties moeten snel op marktveranderingen kunnen antwoorden. Ook worden business strategieën snel aangepast wat wil zeggen dat bijvoorbeeld een goed software design zeer belangrijk is om snel op deze veranderingen in te kunnen inspelen. Software moet snel ontwikkeld kunnen worden en staat dicht bij de klant ( deze kan al vaak worden betrokken bij de ontwikkeling van gepersonaliseerde software).
 
 ## Object georienteerd programmeren Intro
 
@@ -64,7 +64,7 @@ Bijvoorbeeld een auto kan starten, maar je weet niet wat er allemaal moet gebeur
 
 ## Klassen en objecten
 
-> Klasse: een beschrijving en verzameling van dingen \(objecten\) met soortgelijke eigenschappen
+> Klasse: een beschrijving en verzameling van dingen (objecten) met soortgelijke eigenschappen
 >
 > Object: een instantie van een klasse
 
@@ -86,13 +86,13 @@ Een klasse kan bestaan uit:
 
 ## SOLID
 
-S.O.L.I.D. zijn 5 principes die ons helpen om een goede software architectuur te schrijven \(door Robert C. Martin\)
+S.O.L.I.D. zijn 5 principes die ons helpen om een goede software architectuur te schrijven (door Robert C. Martin)
 
-* S : SRP \(Single responsibility principle\)
-* O : OCP \(Open closed principle\)
-* L : LSP \(Liskov substitution principle\)
-* I : ISP \(Interface segregation principle\)
-* D : DIP \(Dependency inversion principle\)
+* S : SRP (Single responsibility principle)
+* O : OCP (Open closed principle)
+* L : LSP (Liskov substitution principle)
+* I : ISP (Interface segregation principle)
+* D : DIP (Dependency inversion principle)
 
 ### Single Responsibility Principle
 
@@ -105,7 +105,7 @@ Eigenschappen van SRP zijn:
 
 > Cohesion: wat een klasse zou moeten doen. Lage cohesie betekent dat een klasse verschillende zaken doet, en niet gefocust is op de taak die hij zou moeten doen. Terwijl hoge cohesie betekent dat een klasse doet wat hij moet doen, en maar 1 taak uitvoert. Probeer er voor te zorgen dat alle methoden in een klasse betrekking hebben tot 1 doel, maw er een hoge cohesie heerst.
 >
-> Coupling: Hangt een klasse van nog andere klassen af. Of hoeveel weet een klasse over de werking \(inner working\) van een andere klasse af.
+> Coupling: Hangt een klasse van nog andere klassen af. Of hoeveel weet een klasse over de werking (inner working) van een andere klasse af.
 
 **Men streeft naar "low coupling" en "high cohesion"**
 
@@ -179,7 +179,7 @@ De Login methode and username klasse variabele heeft niets te maken met de Email
 
 ### Een voorbeeld van high coupling
 
-Bijvoorbeeld iPods. Eens de batterij kapot is moet je een nieuwe iPod kopen, want de batterij is gesoldeerd in het apparaat, en kan dus niet loskomen. Bij lage koppeling \(of loosly coupled\) zou je de batterij moeten kunnen vervangen. Deze zelfde 1:1 relatie gaat op in software engineering.
+Bijvoorbeeld iPods. Eens de batterij kapot is moet je een nieuwe iPod kopen, want de batterij is gesoldeerd in het apparaat, en kan dus niet loskomen. Bij lage koppeling (of loosly coupled) zou je de batterij moeten kunnen vervangen. Deze zelfde 1:1 relatie gaat op in software engineering.
 
 Een voorbeeld van high coupling:
 
@@ -209,7 +209,7 @@ class B
 }
 ```
 
-Waarom high coupling? Klasse A instantiëert objecten van klasse B, en heeft toegang tot variabelen \(elementB\). Op deze manier is klasse A erg afhankelijk van klasse B. Waarom afhankelijk? Als we beslissen om een extra parameter toe te voegen in de constructor van B en de default constructor private te maken. Dan moeten we elk gebruik van klasse B aanpassen \(dus aanpassingen in klasse A!\).
+Waarom high coupling? Klasse A instantiëert objecten van klasse B, en heeft toegang tot variabelen (elementB). Op deze manier is klasse A erg afhankelijk van klasse B. Waarom afhankelijk? Als we beslissen om een extra parameter toe te voegen in de constructor van B en de default constructor private te maken. Dan moeten we elk gebruik van klasse B aanpassen (dus aanpassingen in klasse A!).
 
 ### Wat is de oplossing?
 
@@ -358,13 +358,13 @@ Single responsibility is niet enkel op klasse maar ook op method niveau.
 
 **Probleemstelling**
 
-Er is je gevraagd om software te schrijven voor een online video shop. Het programma berekent en print de rekening van een klant bij onze online shop. Onderstaande paragraaf geeft ons de voorbeeldcode van het programma. We zullen deze oplossing grondig analyseren en bekijken hoe we de code kunnen verbeteren. Aan het programma wordt meegegeven welke film de klant heeft gehuurd, en voor hoe lang. Daarna wordt de rekening gemaakt – afhankelijk van hoe lang de film gehuurd geweest is, en welk type film \(nieuwe release, kinder, gewone\). UML notatie:
+Er is je gevraagd om software te schrijven voor een online video shop. Het programma berekent en print de rekening van een klant bij onze online shop. Onderstaande paragraaf geeft ons de voorbeeldcode van het programma. We zullen deze oplossing grondig analyseren en bekijken hoe we de code kunnen verbeteren. Aan het programma wordt meegegeven welke film de klant heeft gehuurd, en voor hoe lang. Daarna wordt de rekening gemaakt – afhankelijk van hoe lang de film gehuurd geweest is, en welk type film (nieuwe release, kinder, gewone). UML notatie:
 
 ![movie architectuur](../../.gitbook/assets/moviearchitectuur.PNG)
 
 #### Voorbeeld van de MAIN functie
 
-\(altijd goed om je architectuur uit te testen door in je main een voorbeeld applicatie te laten draaien\)
+(altijd goed om je architectuur uit te testen door in je main een voorbeeld applicatie te laten draaien)
 
 ```csharp
 static void Main(string[] args) 
@@ -512,17 +512,17 @@ public class Customer
 
 ### Analyse van onze architectuur
 
-Voor een dergelijke \(_simpele_\) applicatie is design/architectuur niet zo belangrijk. We zien echter dat dit niet echt object georiënteerde code is, wat een invloed heeft op het gemak waarmee de toepassing kan uitgebreid en veranderd worden.
+Voor een dergelijke (_simpele_) applicatie is design/architectuur niet zo belangrijk. We zien echter dat dit niet echt object georiënteerde code is, wat een invloed heeft op het gemak waarmee de toepassing kan uitgebreid en veranderd worden.
 
 Enkele bemerkingen: de statement functie in onze Customer klasse is te lang en doet te veel. Veel zaken die we hier in doen, zouden naar andere klasses overgedragen moeten worden.
 
-Ook al werkt ons programma \(mooi geschreven code of lelijke code speelt echt geen rol voor een compiler\), we moeten ons steeds het volgende afvragen: als in onze applicatie toevoegingen of veranderingen moeten aangebracht worden, moet er _iemand_ zijn die dit kan klaar spelen, en een zwak gedesigned systeem is moeilijk te veranderen. Het vergt dan heel wat analysetijd van de programmeur om je programma te doorgronden.
+Ook al werkt ons programma (mooi geschreven code of lelijke code speelt echt geen rol voor een compiler), we moeten ons steeds het volgende afvragen: als in onze applicatie toevoegingen of veranderingen moeten aangebracht worden, moet er _iemand_ zijn die dit kan klaar spelen, en een zwak gedesigned systeem is moeilijk te veranderen. Het vergt dan heel wat analysetijd van de programmeur om je programma te doorgronden.
 
-Een voorbeeld van verandering: stel dat je klant vraagt om je rekening ook op een webpagina in HTML af te drukken. Welke impact heeft dit op je programma? Als we naar onze code kijken, merken we dat voor dergelijke vraagstelling het niet mogelijk is code te hergebruiken. Dus moeten we een nieuwe functie maken, die veel gedrag van de reeds bestaande statement functie kopieert. Op zich nog niet echt een probleem, want met wat copy-paste werk kan je de statement functie dupliceren en hernoemen naar htmlstatement\(\) en de result string aanpassen met bijvoorbeeld: `result+=”<b>”blabla</b>”`.
+Een voorbeeld van verandering: stel dat je klant vraagt om je rekening ook op een webpagina in HTML af te drukken. Welke impact heeft dit op je programma? Als we naar onze code kijken, merken we dat voor dergelijke vraagstelling het niet mogelijk is code te hergebruiken. Dus moeten we een nieuwe functie maken, die veel gedrag van de reeds bestaande statement functie kopieert. Op zich nog niet echt een probleem, want met wat copy-paste werk kan je de statement functie dupliceren en hernoemen naar htmlstatement() en de result string aanpassen met bijvoorbeeld: `result+=”<b>”blabla</b>”`.
 
-Maar bedenk eens wat je allemaal moet doen als één regel in het rekening maken verandert? Je moet zowel aanpassingen maken in de statement als de htmlstatement functie, wat gegarandeerd fouten \(bugs\) zal introduceren!
+Maar bedenk eens wat je allemaal moet doen als één regel in het rekening maken verandert? Je moet zowel aanpassingen maken in de statement als de htmlstatement functie, wat gegarandeerd fouten (bugs) zal introduceren!
 
-Nog een andere opmerking. Als de winkel beslist om de classificatie \(gewone film, kinder, nieuwe release\) te veranderen, maar nog niet zeker is hoe, kan het zijn dat ze je vragen de mogelijke ideeën uit te testen. Dat heeft dan ook een invloed op hoe kosten voor films en huurpunten worden berekend. Als professionele software ontwikkelaar in spe ga ik je reeds verwittigen dat dergelijke veranderingen heel regelmatig voorkomen!
+Nog een andere opmerking. Als de winkel beslist om de classificatie (gewone film, kinder, nieuwe release) te veranderen, maar nog niet zeker is hoe, kan het zijn dat ze je vragen de mogelijke ideeën uit te testen. Dat heeft dan ook een invloed op hoe kosten voor films en huurpunten worden berekend. Als professionele software ontwikkelaar in spe ga ik je reeds verwittigen dat dergelijke veranderingen heel regelmatig voorkomen!
 
 De `statement()` functie is de plaats waar de veranderingen in classificatie en berekeningen gebeuren. Dus ook niet te vergeten consistente veranderingen te maken in de `htmlstatement()` functie. Als de berekeningsmethodes steeds complexer worden, zal het met ons design ook steeds moeilijker worden om deze veranderingen door te voeren.
 
@@ -532,7 +532,7 @@ Wat nu volgt zijn voorstellen om onze software architectuur stap voor stap te ve
 
 Tracht steeds korte functies/methodes te schrijven. Tracht lange functies onder te verdelen in kleinere delen. Kleinere stukken code zijn veel eenvoudiger te onderhouden! Om een functie te verdelen tracht je bij elkaar horende blokken te vinden. Een goede manier is om naar lokale scope variabelen te zoeken. Bijvoorbeeld thisAmount en Rental r, waarbij r niet wordt veranderd, terwijl thisAmount wel. Elke variabele die niet wordt veranderd, kunnen we als argument doorgeven. Indien er variabelen zijn die wel worden veranderd kunnen we, indien er maar 1 is, deze terug retourneren.
 
-We zoeken in onze statement\(\) functie naar deze lijnen code:
+We zoeken in onze statement() functie naar deze lijnen code:
 
 ```csharp
 switch( r.GetMovie().PriceCode ) 
@@ -601,11 +601,11 @@ foreach (Rental r in _rentals)
     //...
 ```
 
-\(zie volledige C\# code - project SoftwareArchitectuur2\) \[TODO\]
+(zie volledige C# code - project SoftwareArchitectuur2) \[TODO]
 
 **Analyse van AmountFor functie**
 
-Als we naar onze nieuwe AmountFor\(Rental r\) functie kijken, valt het op dat we hier met Rental data werken, en eigenlijk geen data van de customer klasse gebruiken. In de meeste gevallen moeten functies/methodes in die klasse staan vanwaar ze data gebruiken, dus in dit geval van de Rental klasse.
+Als we naar onze nieuwe AmountFor(Rental r) functie kijken, valt het op dat we hier met Rental data werken, en eigenlijk geen data van de customer klasse gebruiken. In de meeste gevallen moeten functies/methodes in die klasse staan vanwaar ze data gebruiken, dus in dit geval van de Rental klasse.
 
 ```csharp
 public double GetCharge() 
@@ -637,7 +637,7 @@ public double GetCharge()
 }
 ```
 
-Bij deze heb ik ook de naam van de functie veranderd in GetCharge\(\), omwille van de duidelijkheid. Tracht altijd naamgevingen te gebruiken die direct duidelijk maken wat je programmeert. Dus in de Customer klasse staat nu
+Bij deze heb ik ook de naam van de functie veranderd in GetCharge(), omwille van de duidelijkheid. Tracht altijd naamgevingen te gebruiken die direct duidelijk maken wat je programmeert. Dus in de Customer klasse staat nu
 
 ```csharp
 public string Statement() 
@@ -659,7 +659,7 @@ Het klasse diagramma is nu veranderd naar:
 
 ![movie architectuur](../../.gitbook/assets/moviearchitectuur2.PNG)
 
-Als we terug naar de statement\(\) functie kijken dan is de variabele thisAmount redundant, en veranderen we naar:
+Als we terug naar de statement() functie kijken dan is de variabele thisAmount redundant, en veranderen we naar:
 
 ```csharp
 public string Statement() 
@@ -685,7 +685,7 @@ public string Statement()
 }
 ```
 
-Best is om tijdelijke variabelen te verwijderen, omdat je makkelijk vergeet waarvoor ze dienen. Je zou in bovenstaand geval toch kunnen kiezen voor een temporary variabele thisAmount, omdat de getCharge\(\) tweemaal wordt opgeroepen dus tweemaal een berekening maakt, als we dan naar performantie kijken.
+Best is om tijdelijke variabelen te verwijderen, omdat je makkelijk vergeet waarvoor ze dienen. Je zou in bovenstaand geval toch kunnen kiezen voor een temporary variabele thisAmount, omdat de getCharge() tweemaal wordt opgeroepen dus tweemaal een berekening maakt, als we dan naar performantie kijken.
 
 In de Customer klasse:
 
@@ -725,7 +725,7 @@ public string Statement()
 }
 ```
 
-**HTMLStatement\(\) functie**
+**HTMLStatement() functie**
 
 In plaats van tekst te loggen wil ik mijn prijsberekening naar een HTML pagina schrijven. Dit is nu vrij simpel, en bij veranderingen in de prijsberekening moet ik de customer klasse niet meer aanpassen!
 
@@ -782,7 +782,7 @@ public double GetCharge()
 
 Het valt hier op dat we in de Rental klasse met een Movie object werken. Logischerwijze zou deze functie beter in de movie klasse staan. Het is een slecht idee om een switch te doen op een attribuut van een ander object!
 
-We moeten dan wel het aantal huurdagen meegeven als parameter van deze nieuwe functie. Dus eigenlijk gebruikt deze functie 2 stukken data – type film, en aantal huurdagen. Waarom dan toch naar Movie klasse brengen, en daysRented meegeven als argument? Wel , de voorgestelde veranderingen gingen om type film \(wat te doen als nieuw type wordt geïntroduceerd \), daarom is het logisch om de type informatie zo compact mogelijk te bundelen \(in 1 functie ipv 2 functies \(als je het type zou doorgeven als parameter\)\).
+We moeten dan wel het aantal huurdagen meegeven als parameter van deze nieuwe functie. Dus eigenlijk gebruikt deze functie 2 stukken data – type film, en aantal huurdagen. Waarom dan toch naar Movie klasse brengen, en daysRented meegeven als argument? Wel , de voorgestelde veranderingen gingen om type film (wat te doen als nieuw type wordt geïntroduceerd ), daarom is het logisch om de type informatie zo compact mogelijk te bundelen (in 1 functie ipv 2 functies (als je het type zou doorgeven als parameter)).
 
 De Rental klasse:
 
@@ -834,7 +834,7 @@ Dit is het principe van "least knowledge", is een object-oriented software desig
 * elk object dat in de methode gecreerd is
 * alle properties, variabelen van het object zelf
 
-## Open-Closed Principe \(OCP\)
+## Open-Closed Principe (OCP)
 
 Het open/closed principe stelt dat klasses of functies open moeten zijn voor uitbreiding, maar gesloten voor wijziging!
 
@@ -927,15 +927,15 @@ In .NET betekent abstractie : gebruik maken van interfaces, of abstracte klassen
 
 Wat is een interface?
 
-**Je hebt geleerd dat een klasse slechts van één klasse kan erven. Een klasse kan echter ook nog interfaces implementeren. Wanneer een klasse een interface implementeert sluit de klasse een** contract **met de compiler dat de klasse zich zal gedragen volgens de interface. Concreet betekent dit dat in de klasse alle eigenschappen \(properties\) en methoden van de interface moet implementeren. Een interface bevat dus eigenlijk enkel een lijst van eigenschappen en methoden die nog geen concrete invulling hebben.**
+**Je hebt geleerd dat een klasse slechts van één klasse kan erven. Een klasse kan echter ook nog interfaces implementeren. Wanneer een klasse een interface implementeert sluit de klasse een **contract** met de compiler dat de klasse zich zal gedragen volgens de interface. Concreet betekent dit dat in de klasse alle eigenschappen (properties) en methoden van de interface moet implementeren. Een interface bevat dus eigenlijk enkel een lijst van eigenschappen en methoden die nog geen concrete invulling hebben.**
 
-Volgens WIKIPEDIA: Een interface in de programmeertaal als Java of C\# is een soort abstracte klasse die een interface aanduidt die klassen kunnen implementeren. Een interface wordt aangeduid met het sleutelwoord interface en bevat alleen ongedefinieerde methoden.
+Volgens WIKIPEDIA: Een interface in de programmeertaal als Java of C# is een soort abstracte klasse die een interface aanduidt die klassen kunnen implementeren. Een interface wordt aangeduid met het sleutelwoord interface en bevat alleen ongedefinieerde methoden.
 
 Wat is een abstracte klasse?
 
 **In de informatica is een abstracte klasse een klasse die ongedefinieerde methoden kan bevatten. Deze methoden worden geïmplementeerd in een subklasse van de abstracte klasse. Het is niet mogelijk om een object te maken van abstracte klassen maar wel van niet-abstracte subklassen. Door middel van overerving is het wel mogelijk om de methoden die wel gedefinieerd zijn in de abstracte klasse te erven en in de subklassen te gebruiken.**
 
-> Een klasse kan meerdere interfaces implementeren maar alleen van één klasse \(rechtstreeks\) overerven. Een verschil met abstracte klassen is dat een abstracte klasse wel gedefinieerde methoden kan bevatten maar een interface bevat alleen ongedefinieerde methoden.
+> Een klasse kan meerdere interfaces implementeren maar alleen van één klasse (rechtstreeks) overerven. Een verschil met abstracte klassen is dat een abstracte klasse wel gedefinieerde methoden kan bevatten maar een interface bevat alleen ongedefinieerde methoden.
 
 Om aan het OPC principe te voldoen moeten we als volgt te werk gaan:
 
@@ -1009,7 +1009,7 @@ TOPROCESS:
 * [bron](https://lassala.net/2010/11/04/a-good-example-of-liskov-substitution-principle/)
 * !!!!! [bron](http://www.tomdalling.com/blog/software-design/solid-class-design-the-liskov-substitution-principle/)
 
-> Subtypes moeten vervangbaar zijn door hun super types \(parent class\).
+> Subtypes moeten vervangbaar zijn door hun super types (parent class).
 >
 > de IS-A relatie zou vervangen moeten worden door IS-VERVANGBAAR DOOR
 
@@ -1028,7 +1028,7 @@ public class Rechthoek
 }
 ```
 
-De klasse Vierkant erft over van Rechthoek \(maar is in programmeren een vierkant wel een rechthoek?\) Een vierkant is een rechthoek met gelijke breedte en hoogte, en we kunnen de properties virtual maken in de klasse Rechthoek om dit te realiseren. Rare implementatie, niet? Maar kijk nu naar de client code..
+De klasse Vierkant erft over van Rechthoek (maar is in programmeren een vierkant wel een rechthoek?) Een vierkant is een rechthoek met gelijke breedte en hoogte, en we kunnen de properties virtual maken in de klasse Rechthoek om dit te realiseren. Rare implementatie, niet? Maar kijk nu naar de client code..
 
 ```csharp
 public class Vierkant:Rechthoek
@@ -1082,7 +1082,7 @@ De gebruiker weet dat r een Rechthoek is dus is hij in de veronderstelling dat h
 ### Oplossen van het LSP probleem
 
 * Code dat niet **vervangbaar** is zorgt ervoor dat polymorfisme niet werkt
-* Client code \(en dit geval de Main\) veronderstelt dat basis klassen kunnen vervangen worden door hun afgeleide klassen \(Rechthoek r = new Vierkant\(\)\)
+* Client code (en dit geval de Main) veronderstelt dat basis klassen kunnen vervangen worden door hun afgeleide klassen (Rechthoek r = new Vierkant())
 * Het oplossen van LSP door switch cases zorgt voor een onderhoudsnachtmerrie!
 
 ```csharp
@@ -1169,7 +1169,7 @@ Dit is de essentie van het Liskov Substitution Principle.
 
 #### Waarom is het schenden van LSP niet goed?
 
-Gebruik van abstracte klassen betekent dat je in de toekomst makkelijk een subklasse kan toevoegen in de werkende, geteste code. Dit is de essentie van het open closed principe. Maar wanneer je subklassen gebruikt die niet volledig de interface \(abstracte klasse\) supporteren moet je in de bestaande code speciale gevallen gaan definiëren.
+Gebruik van abstracte klassen betekent dat je in de toekomst makkelijk een subklasse kan toevoegen in de werkende, geteste code. Dit is de essentie van het open closed principe. Maar wanneer je subklassen gebruikt die niet volledig de interface (abstracte klasse) supporteren moet je in de bestaande code speciale gevallen gaan definiëren.
 
 Bijvoorbeeld:
 
@@ -1185,7 +1185,7 @@ public void DoeIets(Bird b)
 }
 ```
 
-## Interface Segregation Principle \(ISP\)
+## Interface Segregation Principle (ISP)
 
 > Clients mogen niet afhankelijk zijn over interfaces die ze niet gebruiken
 
@@ -1305,7 +1305,7 @@ Er zijn verschillende redenen waarom interface moeten gesegregeerd zijn. Om func
 1. Implementeer je sommige methodes van een interface niet, dan voldoe je niet aan ISP.
 2. Als je klasse refereert naar een andere klasse, maar gebruikt in beperkte mate deze gerefereerde klasse, dan voldoe je niet aan ISP.
 
-> Kom je code tegen zoals bovenstaande: if\( b is Pinguin\) ... else , is dit een teken dat je niet aan ISP voldoet, en bijgevolg je code flexibeler moet schrijven.
+> Kom je code tegen zoals bovenstaande: if( b is Pinguin) ... else , is dit een teken dat je niet aan ISP voldoet, en bijgevolg je code flexibeler moet schrijven.
 >
 > Kom je code tegen waarbij methoden afgeleid van een basis klasse niet geïmplementeerd worden: vb.
 
@@ -1326,7 +1326,7 @@ public void addLuggage()
 
 Stel je voor dat je muis, keyboard, monitor door de fabrikant aan je moederbord zijn gesoldeerd zijn. Met andere woorden, wanneer je een moederbord koopt heb je ook een muis, keyboard en monitor. Stel je voor je met één van de devices vervangen. Je beschadigt misschien het moederboard.
 
-In programmeren is het net hetzelfde. Het dependency Inversion principe is een manier om plugs aan je code toe te voegen zodat de high level modules \(moederbord\) onafhankelijk is van de low level modules \(muis\). De low level modules kunnen later ontwikkeld worden en zouden makkelijk vervangbaar moeten zijn.
+In programmeren is het net hetzelfde. Het dependency Inversion principe is een manier om plugs aan je code toe te voegen zodat de high level modules (moederbord) onafhankelijk is van de low level modules (muis). De low level modules kunnen later ontwikkeld worden en zouden makkelijk vervangbaar moeten zijn.
 
 Een indicatie die veranderingen te weeg brengen is het "new" keywoord.
 
@@ -1340,7 +1340,7 @@ Een praktische oplijsting van veel voorkomende dependencies:
 
 Je zou er voor moeten zorgen dat constructors alle dependencies bevat die een klasse nodig heeft. Dit noemen we EXPLICIT DEPENDENCIES. In het andere geval noemen we het hidden dependencies.
 
-Dependency injection is een techniek om een dependency \(afhankelijkheid\) te injecteren in een klasse wanneer deze klasse ze nodig heeft.
+Dependency injection is een techniek om een dependency (afhankelijkheid) te injecteren in een klasse wanneer deze klasse ze nodig heeft.
 
 Een voorbeeld:
 
@@ -1425,7 +1425,7 @@ class Printer
 }
 ```
 
-Dus onze printer klasse moet een instantie van al onze loggers bijhouden. Volgens het dependency inversion principe moeten we ons systeem ontkoppelen zodat de higher level modules, dus de Printer module afhankelijk is van een abstracte klasse of interface. Deze abstractie zal gemapt worden \(polymorf gedrag\) naar een concrete klasse die de juiste actie zal ondernemen.
+Dus onze printer klasse moet een instantie van al onze loggers bijhouden. Volgens het dependency inversion principe moeten we ons systeem ontkoppelen zodat de higher level modules, dus de Printer module afhankelijk is van een abstracte klasse of interface. Deze abstractie zal gemapt worden (polymorf gedrag) naar een concrete klasse die de juiste actie zal ondernemen.
 
 ```csharp
 interface INotification
@@ -1464,9 +1464,9 @@ class Printer
 }
 ```
 
-Op deze manier maken we de Printer klasse \(High level module\) onafhankelijk van de concrete log klassen.
+Op deze manier maken we de Printer klasse (High level module) onafhankelijk van de concrete log klassen.
 
-Hoe kunnen we deze verder ontkoppelen zodat we bij het toevoegen van andere log klassen \(vb. SMS logger\), de printer klasse niet meer aangepast hoeft te worden?
+Hoe kunnen we deze verder ontkoppelen zodat we bij het toevoegen van andere log klassen (vb. SMS logger), de printer klasse niet meer aangepast hoeft te worden?
 
 Dit kan je implementeren door Dependency injectie
 
@@ -1662,7 +1662,7 @@ Hoe moeten we dit refactoren?
 2. Injecteer de implementatie van deze interface in de order klasse
 3. Zorg voor Single Responsible principle
 
-Het toepassen van dependency injection zorgt typisch voor heel wat interfaces die ergens moeten geinstantierd worden. Dit doen we meestal in de default constructor of in de Main \(de startup routine van je applicatie\)
+Het toepassen van dependency injection zorgt typisch voor heel wat interfaces die ergens moeten geinstantierd worden. Dit doen we meestal in de default constructor of in de Main (de startup routine van je applicatie)
 
 De MailMessage en SmtpClient zorgt voor een eventuele verandering. Stel je wil later de klant niet via email een notificatie sturen, maar via facebook messenger, dan zal je deze code moeten aanpassen. Door dit in interface te duwen, zal je veel flexibelere code schrijven:
 
@@ -1738,13 +1738,13 @@ We gaan verder met het voorbeeld van Single Responsibility op method niveau.
 
 **Overerving**
 
-Omdat we verschillende types films hebben, die elk een verschillende GetCharge\(\) implementatie hebben, kan je beter gebruik maken van subclasses. Op die manier is het zeer onderhoudbaar om nieuwe types toe te voegen \(OPC Principe\). Indien je niet met subclasses werkt, zal je in verschillende functies aanpassingen moeten doen: dit leidt tot bugs en inefficiëntie..
+Omdat we verschillende types films hebben, die elk een verschillende GetCharge() implementatie hebben, kan je beter gebruik maken van subclasses. Op die manier is het zeer onderhoudbaar om nieuwe types toe te voegen (OPC Principe). Indien je niet met subclasses werkt, zal je in verschillende functies aanpassingen moeten doen: dit leidt tot bugs en inefficiëntie..
 
 Klassediagramma:
 
 ![klassediagram](../../.gitbook/assets/klassediagram.PNG)
 
-Op deze manier heb je het switch statement \(getCharge\(\) functie\) in de klasse Movie niet meer nodig!
+Op deze manier heb je het switch statement (getCharge() functie) in de klasse Movie niet meer nodig!
 
 ```csharp
 switch (GetPriceCode()) 
@@ -1771,7 +1771,7 @@ switch (GetPriceCode())
 }
 ```
 
-Maar elke subklasse zal een implementatie maken van getCharge\(\). Voorbeeldcode:
+Maar elke subklasse zal een implementatie maken van getCharge(). Voorbeeldcode:
 
 ```csharp
 public abstract class Movie 
@@ -1818,9 +1818,9 @@ Met andere woorden, onze objecten kunnen niet van klasse veranderen gedurende hu
 
 ![strategy](../../.gitbook/assets/strategy.PNG)
 
-In plaats van te subklassen met Movie \(RegularMovie, NewReleaseMovie, ChildrensMovie,\) gaan we dit op een indirecte manier doen en van price subklassen maken. \(zie klassediagramma hierboven\). Op die manier kunnen we van een movie object steeds de prijs veranderen, zonder dat we het ganse movie object opnieuw moeten instantiëren.
+In plaats van te subklassen met Movie (RegularMovie, NewReleaseMovie, ChildrensMovie,) gaan we dit op een indirecte manier doen en van price subklassen maken. (zie klassediagramma hierboven). Op die manier kunnen we van een movie object steeds de prijs veranderen, zonder dat we het ganse movie object opnieuw moeten instantiëren.
 
-Het strategy pattern is dus in staat om een status/ of om in realtime algoritme te veranderen \( bijvoorbeeld prijs van een film veranderen na een week van New Release naar Regular\) bij te houden. Door vele programmeurs wordt dit initieel via enum en switch/case structuur opgezet. Het state patroon wordt aangemaakt door de type code naar state klassen over te brengen. Daarna gaan we de conditionele logica \(switch/case\) naar de price klassen zetten, om tenslotte deze switch case te verwijderen.  
+Het strategy pattern is dus in staat om een status/ of om in realtime algoritme te veranderen ( bijvoorbeeld prijs van een film veranderen na een week van New Release naar Regular) bij te houden. Door vele programmeurs wordt dit initieel via enum en switch/case structuur opgezet. Het state patroon wordt aangemaakt door de type code naar state klassen over te brengen. Daarna gaan we de conditionele logica (switch/case) naar de price klassen zetten, om tenslotte deze switch case te verwijderen.\
 De strategy klassen
 
 ```csharp
@@ -1871,7 +1871,7 @@ public class NewReleasePrice:Price
 }
 ```
 
-We maken nu een abstracte klasse price met zijn subklassen. De getCharge\(\) functie in de superklasse is abstract, zodat de afgeleide klassen verplicht zijn een eigen implementatie te geven aan deze functie. In de Movie klasse zal je in plaats van de int \_priceCode een member van het type Price moeten definiëren. In runtime beslis je dan of deze member de constructor van NewReleasePrice, ChildrensPrice of RegularPrice oproept.
+We maken nu een abstracte klasse price met zijn subklassen. De getCharge() functie in de superklasse is abstract, zodat de afgeleide klassen verplicht zijn een eigen implementatie te geven aan deze functie. In de Movie klasse zal je in plaats van de int \_priceCode een member van het type Price moeten definiëren. In runtime beslis je dan of deze member de constructor van NewReleasePrice, ChildrensPrice of RegularPrice oproept.
 
 ```csharp
 private Price _priceCode; 
@@ -1894,7 +1894,7 @@ public void SetPriceCode(Price arg)
 }
 ```
 
-De volgende stap is om de getCharge\(\) functie in de klasse Movie over te dragen naar de juiste Price klasse. \(de implementatie van getCharge\(\) in de desbetreffende klassen kan je reeds zien op de vorige pagina\). De getCharge\(\) functie van de Movie klasse wordt dan:
+De volgende stap is om de getCharge() functie in de klasse Movie over te dragen naar de juiste Price klasse. (de implementatie van getCharge() in de desbetreffende klassen kan je reeds zien op de vorige pagina). De getCharge() functie van de Movie klasse wordt dan:
 
 ```csharp
 public double GetCharge(int daysRented) 
@@ -1903,9 +1903,9 @@ public double GetCharge(int daysRented)
 }
 ```
 
-Hierbij is ook de conditionele logica in de functie verdwenen \(want deze is overgedragen naar de Price klassen\).
+Hierbij is ook de conditionele logica in de functie verdwenen (want deze is overgedragen naar de Price klassen).
 
-We kunnen dit nu ook doen voor de getFrequentRenterPoints\(int daysRented\). We moeten deze functie in de superclasse ‘Price’ niet abstract maken maar geven er hier reeds een implementatie aan. We maken deze wel virtual zodat de afgeleide kunnen bepalen of ze er een eigen definitie aan geven.
+We kunnen dit nu ook doen voor de getFrequentRenterPoints(int daysRented). We moeten deze functie in de superclasse ‘Price’ niet abstract maken maar geven er hier reeds een implementatie aan. We maken deze wel virtual zodat de afgeleide kunnen bepalen of ze er een eigen definitie aan geven.
 
 ```csharp
 public abstract class Price 
@@ -1918,7 +1918,7 @@ public abstract class Price
 }
 ```
 
-Enkel de NewReleasePrice geeft een eigen implementatie aan de getFrequentRenterPoints\(int daysRented\) functie:
+Enkel de NewReleasePrice geeft een eigen implementatie aan de getFrequentRenterPoints(int daysRented) functie:
 
 ```csharp
 public class NewReleasePrice:Price 
@@ -1940,4 +1940,3 @@ Dit strategy patroon invoegen gaf ons heel wat werk, maar de winst is dat ik pri
 Alle bovenstaande veranderingen moeten leiden tot makkelijker te onderhouden code. Een heel verschil met proceduraal programmeren, maar wanneer je dit onder knie hebt, zal je veel gemakkelijker tests kunnen schrijven en veranderingen implementeren!
 
 > Eigenschap van het strategy patroon: Het strategy patroon laat toe om objecten in real time van status te veranderen.
-

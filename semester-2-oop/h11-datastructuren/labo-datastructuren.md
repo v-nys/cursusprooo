@@ -12,7 +12,7 @@ Schrijf in de klasse `DataStructuren` een methode `SomPerRij`. Deze maakt een tw
 
 ### Voorbeeldinteractie
 
-```text
+```
 Hoe veel rijen telt je array?
 > 3
 Hoe veel kolommen telt je array?
@@ -47,7 +47,7 @@ Schrijf in de klasse `DataStructuren` een methode `SomPerKolom`. Deze werkt zoal
 
 ### Voorbeeldinteractie
 
-```text
+```
 Hoe veel rijen telt je array?
 > 3
 Hoe veel kolommen telt je array?
@@ -77,7 +77,7 @@ We willen een simpel tekenprogramma maken in de terminal. De gebruiker kan pixel
 
 ### Technische analyse
 
-Schrijf in \(nieuwe klasse met `ToonSubmenu`\)  `DataStructuren` een methode `Pixels`.
+Schrijf in (nieuwe klasse met `ToonSubmenu`)  `DataStructuren` een methode `Pixels`.
 
 Vraag hierin eerst aan de gebruiker welke afmetingen hij wil gebruiken voor zijn afbeelding. Dit bepaalt het aantal rijen en kolommen en dus het aantal pixels. Maak vervolgens een array van `ConsoleColor` waarden aan met deze afmetingen. Vraag tenslotte in een lus wat de gebruiker wil doen:
 
@@ -85,7 +85,7 @@ Vraag hierin eerst aan de gebruiker welke afmetingen hij wil gebruiken voor zijn
   * vraag hierbij de rij-index en kolom-index
   * vraag ten slotte in welke kleur deze moet worden ingevuld
     * je kan sneller een array van alle kleuren krijgen met volgende code: `ConsoleColor[] kleuren = (ConsoleColor[]) Enum.GetValues(typeof(ConsoleColor));`
-    * je hoeft deze instructie niet volledig te begrijpen: ze doet hetzelfde als `ConsoleColor[] kleuren = {ConsoleColor.Back, ConsoleColor.DarkBlue, ...}` maar vraagt gewoon minder typwerk
+    * je hoeft deze instructie niet volledig te begrijpen: ze doet hetzelfde als `ConsoleColor[] kleuren = {ConsoleColor.Back, ConsoleColor.DarkBlue, ...} `maar vraagt gewoon minder typwerk
 * de afbeelding zoals ze momenteel is tonen
   * toon hiervoor elke pixel als een spatie met `Console.Write(" ")`
 
@@ -103,7 +103,7 @@ Zorg hierbij dat het programma pas stopt als er een lege regel wordt ingegeven a
 
 ### Voorbeeldinteractie
 
-![](../../.gitbook/assets/screenshot-from-2021-03-22-21-54-50%20%281%29.png)
+![](<../../.gitbook/assets/screenshot-from-2021-03-22-21-54-50 (1).png>)
 
 ## H13-kerstinkopen
 
@@ -113,7 +113,7 @@ Pas je [programma voor kerstinkopen](../../semester-1-programming-principles/h7-
 
 ![](../../.gitbook/assets/screenshot-from-2021-03-22-22-00-56.png)
 
-## H13-telefoonboek \(naam en nummer\)
+## H13-telefoonboek (naam en nummer)
 
 ### Functionele analyse
 
@@ -133,7 +133,7 @@ We wensen een simpel telefoonboek bij te houden, waarin je namen en nummers plaa
 
 ![](../../.gitbook/assets/screenshot-from-2021-03-23-07-25-23.png)
 
-## H13-telefoonboek \(gemeente, naam en nummer\)
+## H13-telefoonboek (gemeente, naam en nummer)
 
 ### Functionele analyse
 
@@ -154,13 +154,13 @@ Zie boven, maar we willen nu telefoonnummers ook groeperen per gemeente
 
 ### Functionele analyse
 
-We willen graag dat ons Dictionary \(zonder gemeente\) veilig doorgegeven kan worden aan methodes enz. Daarom zullen we er een ImmutableDictionary van maken.
+We willen graag dat ons Dictionary (zonder gemeente) veilig doorgegeven kan worden aan methodes enz. Daarom zullen we er een ImmutableDictionary van maken.
 
 ### Technische analyse
 
 * start met aanmaak van een builder voor een ImmutableDictionary
 * vraag de gegevens zoals in de eerdere oefening
-* plaats deze stap voor stap in de builder \(ook hier kan je ContainsKey gebruiken\)
+* plaats deze stap voor stap in de builder (ook hier kan je ContainsKey gebruiken)
 * zet, voor je alle gegevens print, om naar een ImmutableDictionary en pas daar een foreach lus op toe
 
 ### Voorbeeldinteractie
@@ -188,8 +188,6 @@ Maak van `AlleStudenten` een `ImmutableList<T>` in plaats van een gewone `List<T
 Vervang alle properties van `StudieProgramma`, `Cursus` en `Student` van een arraytype naar een `List` type. AlleCursussen maak je immutable.
 
 Vervang hierbij ook `for`-lussen door `foreach`-lussen waar je kan. Je hoeft geen rekening te houden met capaciteiten die eerder zijn vastgelegd voor arrays. Je mag er ook van uitgaan dat er geen `null`waarden in lijsten worden geplaatst als dat niet zinvol is. Dit kan je code wat korter maken.
-
-
 
 
 

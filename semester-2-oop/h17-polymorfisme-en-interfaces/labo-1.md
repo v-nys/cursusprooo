@@ -14,7 +14,7 @@ In de huidige software wordt gebruik gemaakt van een superklasse motor met twee 
 
 Er zijn verschillende nieuwe motoren op de markt: elektrische, CNG, waterstof,..
 
-Niet alleen de motor is verschillend maar ook de periferie \(omgeving\) van de motor is erg verschillend. Denk bv. aan de brandstofvoorziening \(voor benzine, diesel, elektrisch\).
+Niet alleen de motor is verschillend maar ook de periferie (omgeving) van de motor is erg verschillend. Denk bv. aan de brandstofvoorziening (voor benzine, diesel, elektrisch).
 
 ### Technische analyse
 
@@ -42,7 +42,7 @@ Bijvoorbeeld:
 
 `Console.Writeline(“Versnellen - Benzine”);`
 
-Maak een klasse `Auto` met public property \(van het type `string`\) `AutoType` en een public property `Aandrijving`. Zorg er voor dat elk type van aandrijving kan toegevoegd worden aan een object van type `Auto`.
+Maak een klasse `Auto` met public property (van het type `string`) `AutoType` en een public property `Aandrijving`. Zorg er voor dat elk type van aandrijving kan toegevoegd worden aan een object van type `Auto`.
 
 Instantieer een auto met benzine aandrijving. Doe dat door de aandrijving als parameter in de constructor mee te geven. De constructor van de auto heeft als signatuur dus `public Auto (string autoType, ? aandrijving)`. Het `?` moet je zelf invullen. Laat de auto versnellen. Bouw die auto nu om naar een elektrische aandrijving. Laat de auto opnieuw versnellen. Doe dit allemaal in een methode `DemonstreerAandrijving`.
 
@@ -65,16 +65,16 @@ In de keuken staan een zestal ketels die bepaalde functies wel of niet hebben. D
 
 Er bestaan 4 types van ketels
 
-1. `Ketel` \(dit is een abstracte klasse zonder enige functionaliteit\)
-2. Stoomketel \(met functionaliteit `StoomVerwarmen`, `Afkoelen`, `WaterDoseren`\) klasse `StoomKetel`
-3. Gewone ketel zonder doseren \(met functionaliteit `Verwarmen`\) klasse `KetelZonderDoseren`
-4. Gewone ketel met dosering \(met functionaliteit `Verwarmen`, `WaterDoseren`\) klasse `KetelMetDoseren`
+1. `Ketel` (dit is een abstracte klasse zonder enige functionaliteit)
+2. Stoomketel (met functionaliteit `StoomVerwarmen`, `Afkoelen`, `WaterDoseren`) klasse `StoomKetel`
+3. Gewone ketel zonder doseren (met functionaliteit `Verwarmen`) klasse `KetelZonderDoseren`
+4. Gewone ketel met dosering (met functionaliteit `Verwarmen`, `WaterDoseren`) klasse `KetelMetDoseren`
 
 ### Technische analyse
 
-Creëer 4 interfaces voor de verschillende functies: `IVerwarmen`, `IAfkoelen`, `IStoomVerwarmen`, `IWaterDoseren`\). In de interface vinden we steeds de functie als methode terug \(met return type `void`\).
+Creëer 4 interfaces voor de verschillende functies: `IVerwarmen`, `IAfkoelen`, `IStoomVerwarmen`, `IWaterDoseren`). In de interface vinden we steeds de functie als methode terug (met return type `void`).
 
-Creëer de 3 types van ketels. Gebruik overerving om gemeenschappelijke properties \(inhoud type `int` en temperatuur type `int`\) te implementeren. De constructors van de drie types ketels krijgen de inhoud als parameter mee. De temperatuur blijft op de defaultwaarde staan.
+Creëer de 3 types van ketels. Gebruik overerving om gemeenschappelijke properties (inhoud type `int` en temperatuur type `int`) te implementeren. De constructors van de drie types ketels krijgen de inhoud als parameter mee. De temperatuur blijft op de defaultwaarde staan.
 
 Demonstreer je code door 6 ketels te instantiëren. Zet de code hiervoor in `DemonstreerGrootkeuken`:
 
@@ -155,7 +155,7 @@ foreach(var p in producten) {
 
 ### Voorbeelduitvoer
 
-```text
+```
 NULL
 Doos ontbijtgranen, 3
 Playstation 5, 500
@@ -178,13 +178,13 @@ We schrijven een kalender. Hierop kunnen we verschillende zaken plaatsen: afspra
 
 * Schrijf twee klassen, `Afspraak` en `Taak`
 * Voor een afspraak moet je volgende zaken bijhouden:
-  * de tijd om je naar de afspraak te verplaatsen \(een `TimeSpan`\)
-  * de tijd om terug te komen \(een `TimeSpan`\)
-  * de duur van de afspraak \(een `TimeSpan`\)
-  * een omschrijving \(een `string`\)
+  * de tijd om je naar de afspraak te verplaatsen (een `TimeSpan`)
+  * de tijd om terug te komen (een `TimeSpan`)
+  * de duur van de afspraak (een `TimeSpan`)
+  * een omschrijving (een `string`)
 * Voor een taak moet je volgende zaken bijhouden:
-  * de werktijd die je nodig zal hebben \(een `TimeSpan`\)
-  * een omschrijving \(een `string`\)
+  * de werktijd die je nodig zal hebben (een `TimeSpan`)
+  * een omschrijving (een `string`)
 
 Beide hebben constructoren die de hierboven genoemde parameters in volgorde bevatten.
 
@@ -197,7 +197,7 @@ Zowel afspraken als taken zijn roosterbaar op een kalender. Dit maak je mogelijk
   * voor een taak kan je gewoon de bestaande property gebruiken
   * voor een afspraak geef je de bestaande omschrijving, gevolgd door de tekst `(inclusief verplaatsing)`
 
-Test uit met volgende code, die je `DemonstreerIRoosterbaar` noemt \(in de klasse voor dit labo\).
+Test uit met volgende code, die je `DemonstreerIRoosterbaar` noemt (in de klasse voor dit labo).
 
 ```csharp
 IRoosterbaar blok1 = new Afspraak(new TimeSpan(0,20,0),new TimeSpan(1,0,0),new TimeSpan(0,20,0), "tandarts");
@@ -207,7 +207,7 @@ System.Console.WriteLine($"Totale kalendertijd: {(blok1.Tijdsduur + blok2.Tijdsd
 
 ### Voorbeeldinteractie
 
-```text
+```
 Totale kalendertijd: 3u40m
 ```
 
@@ -220,7 +220,7 @@ We willen onze taken en afspraken nu echt kunnen inplannen op een interactieve k
 ### Technische analyse
 
 * Schrijf een klasse `Kalender`. Een kalender heeft een naam en koppelt tijdstippen aan roosterbare gebeurtenissen. Enkel de naam wordt meegegeven bij constructie. Voor de koppeling gebruik je een `Dictionary<DateTime,IRoosterbaar>`.
-* Een `Kalender` heeft een methode `VoegToe`. Deze vraagt eerst om wat voor gebeurtenis het gaat \(`Taak` of `Afspraak`\) en vraagt dan om alle properties van dit type object. Daarna vraagt ze: "Wanneer moet dit geroosterd worden"? Ten slotte wordt het roosterbare object geassocieerd met dit tijdstip. **Let op:** voor een afspraak vraag je wanneer **de afspraak zelf** geroosterd moet worden, maar rooster je vanaf het moment dat je moet vertrekken naar de afspraak.
+* Een `Kalender` heeft een methode `VoegToe`. Deze vraagt eerst om wat voor gebeurtenis het gaat (`Taak` of `Afspraak`) en vraagt dan om alle properties van dit type object. Daarna vraagt ze: "Wanneer moet dit geroosterd worden"? Ten slotte wordt het roosterbare object geassocieerd met dit tijdstip. **Let op:** voor een afspraak vraag je wanneer **de afspraak zelf** geroosterd moet worden, maar rooster je vanaf het moment dat je moet vertrekken naar de afspraak.
 
 ### Voorbeelduitvoering
 
@@ -232,7 +232,7 @@ Schrijf zelf een methode `DemonstreerKalender1`. Deze vraagt maakt een kalender 
 
 ### Functionele analyse
 
-Onze code is te sterk gekoppeld. Om Kalender te schrijven, hebben we code moeten schrijven om beide soorten objecten in te lezen. Als we nog meer tijdsblokken willen inbouwen \(bijvoorbeeld `QualityTime`\), moeten we `Kalender` verder uitbreiden.
+Onze code is te sterk gekoppeld. Om Kalender te schrijven, hebben we code moeten schrijven om beide soorten objecten in te lezen. Als we nog meer tijdsblokken willen inbouwen (bijvoorbeeld `QualityTime`), moeten we `Kalender` verder uitbreiden.
 
 ### Technische analyse
 
@@ -281,7 +281,7 @@ Schrijf een statische methode `ZoekGrootste` in de klasse voor dit labo. Deze he
 
 Doe dit zonder een sorteermethode te gebruiken.
 
-Implementeer ook `IComparable` \(ditmaal zonder `<T>`\) in de klasse Figuur \(die je eerder geschreven hebt\) zodat figuren vergeleken worden op basis van oppervlakte. Implementeer eveneens `IComparable` in de klasse `Pizza`  \(die je eerder geschreven hebt\) zodat pizza's vergeleken worden op basis van hun totaalprijs. Als je twee objecten van een verschillende klasse vergelijkt, geef je 0 terug. Je kan hiervoor gebruik maken van: `if (obj is Pizza)` of `if (obj is Figuur)`. Als de booleaanse expressie tot true evalueert, weet je dat het om een soort pizza of een soort figuur gaat en dat de vergelijking zinvol is.
+Implementeer ook `IComparable` (ditmaal zonder `<T>`) in de klasse Figuur (die je eerder geschreven hebt) zodat figuren vergeleken worden op basis van oppervlakte. Implementeer eveneens `IComparable `in de klasse `Pizza`  (die je eerder geschreven hebt) zodat pizza's vergeleken worden op basis van hun totaalprijs. Als je twee objecten van een verschillende klasse vergelijkt, geef je 0 terug. Je kan hiervoor gebruik maken van: `if (obj is Pizza)` of `if (obj is Figuur)`. Als de booleaanse expressie tot true evalueert, weet je dat het om een soort pizza of een soort figuur gaat en dat de vergelijking zinvol is.
 
 Maak dan een lijst met `Figuur`-objecten en een lijst met `Pizza`-objecten. Ga na dat je methode inderdaad de "grootste" oplevert.
 
@@ -293,7 +293,7 @@ Waarom zonder `<T>`? Omdat het gebruik van die `<T>` bepaalde concepten vergt di
 
 ### Functionele analyse
 
-We willen graag de data in ons systeem gesorteerd weergeven. We willen dit niet doen met één vaste sorteerprocedure \(zoals in het geval van CompareTo\), maar we willen de gebruiker de keuze geven om te sorteren op verschillende manieren. Dit ben je ongetwijfeld gewoon van op webwinkels waar je kan sorteren volgens prijs, productnaam,...
+We willen graag de data in ons systeem gesorteerd weergeven. We willen dit niet doen met één vaste sorteerprocedure (zoals in het geval van CompareTo), maar we willen de gebruiker de keuze geven om te sorteren op verschillende manieren. Dit ben je ongetwijfeld gewoon van op webwinkels waar je kan sorteren volgens prijs, productnaam,...
 
 ### Technische analyse
 
@@ -328,7 +328,7 @@ Schrijf een interface `ICSVSerializable`. Deze bevat één objectmethode zonder 
 
 Deze interface wordt geïmplementeerd door `Persoon` en door `Cursus`. Voor elk object tonen we steeds eerst de naam van de klasse waartoe het object behoort, gevolgd door puntkomma, gevolgd door het Id van het object.
 
-Voor een persoon tonen we daarna \(met telkens puntkomma's tussen\):
+Voor een persoon tonen we daarna (met telkens puntkomma's tussen):
 
 * de naam tussen dubbele aanhalingstekens
 * de geboortedatum
@@ -376,7 +376,7 @@ Creëer eerst een enumeratietype `KetelFuncties` met daarin vier elementen:
 
 Maak dan een lijst met alle geïnstantieerde ketels.
 
-Schrijf een statische methode `SelecteerKetels` die twee parameters heeft: `ketels` \(van het type `List<Ketel>`\) en `ketelfunctie` van het type `KetelFuncties`. Deze methode geeft alle ketels terug die de functie implementeren \(tip: gebruik `is` om te checken of de interface wordt geïmplementeerd!\).
+Schrijf een statische methode `SelecteerKetels` die twee parameters heeft: `ketels` (van het type `List<Ketel>`) en `ketelfunctie` van het type `KetelFuncties`. Deze methode geeft alle ketels terug die de functie implementeren (tip: gebruik `is` om te checken of de interface wordt geïmplementeerd!).
 
 Creëer vervolgens met behulp van deze nieuwe methode de lijsten `onderhoudWaterDoseren` en `onderhoudVerwarmen` en print deze lijsten af. Deze bevatten alle ketels die kunnen verwarmen en alle ketels die water kunnen doseren, respectievelijk.
 
@@ -384,7 +384,7 @@ Creëer vervolgens met behulp van deze nieuwe methode de lijsten `onderhoudWater
 
 ### Functionele analyse
 
-Wanneer je nu een recept krijgt \(een aantal functies die moeten worden uitgevoerd\) moet uitgezocht worden welke ketels er geschikt zijn. Het recept bestaat uit een lijst van `KetelFuncties`.
+Wanneer je nu een recept krijgt (een aantal functies die moeten worden uitgevoerd) moet uitgezocht worden welke ketels er geschikt zijn. Het recept bestaat uit een lijst van `KetelFuncties`.
 
 Voorbeelden:
 
@@ -402,4 +402,3 @@ Schrijf een statische functie `SelecteerKetelsVoorRecept` die gegeven een lijst 
 Vertrekkende van de gegeven lijst van ketels, maak een lijst van ketels die de functie Verwarmen ondersteunen. Genereer hieruit een lijst met ketels die ook de functie WaterDoseren ondersteunen. Dit kan je doen door één recept mee te geven.
 
 Print vervolgens de lijst uit.
-

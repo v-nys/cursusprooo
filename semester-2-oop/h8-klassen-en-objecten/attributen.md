@@ -4,7 +4,7 @@
 [Kennisclip](https://youtu.be/eT5uhSw9nFo). Deze bevat een voorbereiding op het labo die hieronder niet is uitgeschreven. Je moet het SchoolAdmin project mee maken met het filmpje.
 {% endhint %}
 
-**Attributen**, ook **velden** of **instantievariabelen** genoemd, zijn stukjes data die je bijhoudt in objecten. Ze stellen informatie voor die deel uitmaakt van een \(object van een\) klasse. Ze werken zoals de variabelen die je al kent, maar hun scope is een klasse of een object van een klasse, afhankelijk van de vraag of ze `static` zijn of niet. Door gebruik te maken van attributen, kunnen we stukjes data die samen horen ook samen houden op het niveau van de code. Alle data die samen hoort netjes groeperen en op een gestructureerd toegankelijk maken valt onder het begrip **encapsulatie** dat reeds eerder aan bod kwam.
+**Attributen**, ook **velden** of **instantievariabelen** genoemd, zijn stukjes data die je bijhoudt in objecten. Ze stellen informatie voor die deel uitmaakt van een (object van een) klasse. Ze werken zoals de variabelen die je al kent, maar hun scope is een klasse of een object van een klasse, afhankelijk van de vraag of ze `static` zijn of niet. Door gebruik te maken van attributen, kunnen we stukjes data die samen horen ook samen houden op het niveau van de code. Alle data die samen hoort netjes groeperen en op een gestructureerd toegankelijk maken valt onder het begrip **encapsulatie** dat reeds eerder aan bod kwam.
 
 {% hint style="info" %}
 Attributen behoren tot een algemenere categorie onderdelen van objecten genaamd **members**.
@@ -44,7 +44,7 @@ class Program {
 }
 ```
 
-Als we nu een methode willen uitvoeren die iets doet met alle informatie over een auto \(bijvoorbeeld een onderhoudsrapport afprinten\), moeten we drie waarden meegeven. Het is ordelijker deze zaken bij te houden in een object van klasse `Auto` als volgt:
+Als we nu een methode willen uitvoeren die iets doet met alle informatie over een auto (bijvoorbeeld een onderhoudsrapport afprinten), moeten we drie waarden meegeven. Het is ordelijker deze zaken bij te houden in een object van klasse `Auto` als volgt:
 
 ```csharp
 class Auto {
@@ -87,7 +87,7 @@ class Program {
 Je ziet hier al enkele voordelen van encapsulatie:
 
 * je hoeft niet bij te houden hoe de informatie verspreid is over meerdere plaatsen
-* als we meer informatie over auto's \(bv. het oliepeil\) in het onderhoudsrapport steken, hoeven we onze calls van `PrintOnderhoudsrapport` niet aan te passen
+* als we meer informatie over auto's (bv. het oliepeil) in het onderhoudsrapport steken, hoeven we onze calls van `PrintOnderhoudsrapport` niet aan te passen
   * een kenmerk van goede code is dat wijzigingen typisch geen grote wijzigingen vereisen
 
 ## Beginwaarden
@@ -102,7 +102,7 @@ class Auto {
 }
 ```
 
-Nu hebben nieuwe auto's standaard 5 km op de teller staan, enzovoort. Merk op: deze waarde wordt voor elk nieuw object opnieuw berekend. Als je dus twee auto's aanmaakt in je programma, zullen zij beide een **verschillende** datum van het laatste onderhoud bevatten.
+Nu hebben nieuwe auto's standaard 5 km op de teller staan, enzovoort. Merk op: deze waarde wordt voor elk nieuw object opnieuw berekend. Als je dus twee auto's aanmaakt in je programma, zullen zij beide een **verschillende **datum van het laatste onderhoud bevatten.
 
 ## `static` attributen
 
@@ -122,4 +122,3 @@ class Auto {
 {% hint style="warning" %}
 Herhaal: `static` **betekent niet "onveranderlijk" of "vast"**. Het betekent dat iets op niveau van de klasse werkt en niet op niveau van de objecten van die klasse.
 {% endhint %}
-
