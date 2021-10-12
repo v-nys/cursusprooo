@@ -1,5 +1,13 @@
 # Samengestelde booleaanse expressies
 
+{% hint style="success" %}
+[Kennisclip 1](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=1e36fa54-2062-4955-93e8-adbe00e6481c)
+{% endhint %}
+
+{% hint style="success" %}
+[Kennisclip 2](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=bb631bd5-c504-4c3e-9a56-adbe00e64818)
+{% endhint %}
+
 ## Logische operatoren
 
 De logische EN, OF en NIET-operatoren die je misschien kent uit de lessen technologie of elektronica kan je ook gebruiken in C#:

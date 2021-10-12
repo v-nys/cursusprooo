@@ -1,5 +1,9 @@
 # If, else, else if
 
+{% hint style="success" %}
+[Kennisclip](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=e78ccafd-9804-40cc-8744-adbe00e37ac0)
+{% endhint %}
+
 In dit deel zullen we bekijken hoe we ons programma dynamischer kunnen maken met behulp van het `if`-statement, al dan niet uitgebreid met `else` en `else if`.
 
 ## If
