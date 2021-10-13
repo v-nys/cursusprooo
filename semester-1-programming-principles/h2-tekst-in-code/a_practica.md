@@ -83,7 +83,7 @@ Noem de methode voor deze oefening `BerekenBtw`.
 
 ### voorbeeldinteractie(s) <a href="voorbeeldinteracties-3" id="voorbeeldinteracties-3"></a>
 
-![bereken-btw.png](file:///home/vincent/.config/joplin-desktop/resources/64b51443c8a94155bbc0d3b2760991b3.png)
+![](<../../.gitbook/assets/Screenshot from 2021-10-12 12-16-53.png>)
 
 ### Technische hulp <a href="technische-hulp-3" id="technische-hulp-3"></a>
 
