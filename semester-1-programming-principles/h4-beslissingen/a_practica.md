@@ -1,380 +1,290 @@
 # Oefeningen
 
-**Sla de oefeningen van dit hoofdstuk op in een klasse `HoofdstukVijf`, behalve de oefeningen rond apdotcom.**
+Al deze oefeningen maak je in een klasse `Beslissingen`
 
-## H5: Uitbreiding BMIBerekenaar
+## **Oefening: H4-Schoenenverkoper**
 
-### Leerdoelen
+#### Leerdoelen
 
-* conditionele boodschappen
+* flowchart omzetten naar conditionele code
+* Eenvoudige conditie
+* Uitbreiding: samengestelde booleaanse expressie
 
-### Functionele analyse
+**Functionele analyse**
 
-Deze opgave bouwt verder op [BMIBerekenaar](https://apwt.gitbook.io/cursus-pro-oo/semester-1-programming-principles/h3-werken-met-data/a_practica#h-4-bmi-berekenaar). Meerbepaald moet je de gebruiker niet alleen zijn of haar BMI tonen, maar moet je ook een gekleurde boodschap tonen die laat weten of de BMI goed zit of niet.
+**Basis**: Maak een programma dat aan de gebruiker vraagt hoeveel paar schoenen hij/zij wenst te kopen. Ieder paar schoenen kost normaal 50 euro. Indien de gebruiker 2 paar of meer koopt, is er 10% korting. Toon aan de gebruiker de totale prijs.
 
-Voor een BMI strikt lager dan 18,5 toon je de boodschap "ondergewicht" in rode tekst. Voor een BMI vanaf 18,5 maar strikt lager dan 25, toon je de boodschap "normaal gewicht" in groene tekst. Voor een hogere BMI, maar strikt lager dan 30, toon je in gele tekst "overgewicht". Voor een hogere BMI, maar strikt lager dan 40, toon je "zwaarlijvig" in rode tekst. Voor een hogere BMI toon je "ernstige obesitas" in magenta.
+**Uitbreiding**: Breid in een tweede stap je programma uit zodat de korting enkel geldt als de gebruiker een klantenkaart heeft.
 
-### Technische analyse
+**Technische analyse**
 
-Kopieer de methode `HoofdstukVier.BMIBerekenaar()` naar de klasse `HoofdstukVijf` en werk er daar aan verder.
+Maak een methode met de naam `SchoenenVerkoper`. Maak gebruik van een `if. `Zet volgende flowchart om in code. Een `Real` in Flowgorithm stemt overeen met een `double` in C#.
 
-Via `if` en `else` (en dus ook `else if`) kan je gevallen onderscheiden. Om de tekst te kleuren, gebruik je `ConsoleColor.Red`, `ConsoleColor.Green`, `ConsoleColor.Yellow` en `ConsoleColor.Magenta`.
+**Basis**:
 
-#### UI
+![](<../../.gitbook/assets/Schoenen1 - Main (1).png>)
 
-console applicatie
+ **Uitbreiding:**
 
-#### voorbeeldinteractie(s)
+![](<../../.gitbook/assets/Schoenen2 - Main.png>)
 
-```
-Hoeveel weeg je in kg?
-> 69.0
-Hoe groot ben je in m?
-> 1.78
-Je BMI bedraagt 21.78.
-normaal gewicht
-```
+#### **Voorbeeldinteractie(s)**
 
-{% hint style="info" %}
-De tekst _normaal gewicht _zou hierboven in het groen moeten verschijnen maar Gitbook staat dit niet meteen toe.
-{% endhint %}
+**Basis:**
 
-## H5: Schoenverkoper
+![](../../.gitbook/assets/Afbeelding1.png)
 
-### Leerdoelen
+![](../../.gitbook/assets/Afbeelding2.png)
 
-* conditionele berekeningen
+**Uitbreiding:**
 
-### Functionele analyse
+![](../../.gitbook/assets/Afbeelding3.png)
 
-Maak een programma dat aan de gebruiker vraagt hoeveel paar schoenen hij wenst te kopen. Ieder paar schoenen kost normaal 20 euro. Indien de gebruiker 10 paar of meer koopt, kost elk paar maar 10 euro. Toon aan de gebruiker de totale prijs.
+## **Oefening: H4-EvenOneven**
 
-**Uitbreiding:** Breid in een tweede stap je programma uit zodat gevraagd wordt vanaf welk aantal schoenen de prijs daalt naar 10 euro.
+#### **Leerdoelen**
 
-### Technische analyse
+* flowchart omzetten naar conditionele code
+* tweevoudige conditie
+* gebruik modulo
 
-Zet de oplossing van deze oefening in een methode genaamd `Schoenverkoper`.
+#### **Functionele analyse**
 
-Hou variabelen bij voor de prijs, de gereduceerde prijs en het aantal paar dat nodig is om korting te krijgen.
+Maak een programma dat aan de gebruiker een geheel getal vraagt. Het programma geeft terug of het ingegeven getal even of oneven is.
 
-#### UI
+#### **Technische analyse**
 
-console applicatie
+Maak een methode met de naam `EvenOneven`.
 
-#### voorbeeldinteractie(s)
+Een getal is even als de rest van de deling door 2 nul is. Hiervoor kan je de modulo operator gebruiken. Het teken voor de modulo is het `%` -teken.\
+Voorbeelden:\
+7%2 geeft 1 => 7 is oneven\
+8%2 geeft 0 => 8 is even
 
-```
-Hoeveel paar schoenen wil je kopen?
-> 3
-Je moet 60 euro betalen.
-```
+Zet volgende flowchart om in code:
 
-```
-Hoeveel paar schoenen wil je kopen?
-> 12
-Je moet 120 euro betalen.
-```
+![](<../../.gitbook/assets/EvenOneven - Main.png>)
 
-**Uitbreiding**
+#### **Voorbeeldinteractie(s)**
 
-```
-Vanaf welk aantal geldt de korting?
-> 7
-Hoeveel paar schoenen wil je kopen?
-> 8
-Je moet 80 euro betalen.
-```
+![](../../.gitbook/assets/Afbeelding4.png)
 
-## H5: Wet van Ohm
+![](../../.gitbook/assets/Afbeelding5.png)
 
-### Leerdoelen
+## **Oefening: H4-PositiefNegatiefNul**
 
-* conditionele berekeningen
+#### **Leerdoelen**
 
-{% hint style="info" %}
-De Wet van Ohm houdt in dat een elektrische stroom (voorgesteld als `I`) gelijk is aan een spanningsverschil (`U`) gedeeld door een weerstand (`R`), dus I = U / R.
-{% endhint %}
+* flowchart omzetten naar conditionele code
+* meervoudige conditie
 
-### Functionele analyse
+#### **Functionele analyse**
 
-Vraag aan de gebruiker wat hij wenst te berekenen: Spanning, Weerstand of Stroomsterkte. Vraag vervolgens de twee andere waarden.\
-Als dus de gebruiker "Spanning" kiest, vraag je aan de gebruiker de waarden van de stroomsterkte en de weerstand.\
-Bereken m.b.v. de Wet van Ohm de gewenste waarde en toon aan de gebruiker.
+Maak een programma dat aan de gebruiker een geheel getal vraagt. Het programma geeft terug of het ingegeven getal positief, negatief of 0 is.
 
-### Technische analyse
+#### **Technische analyse**
 
-Maak in de klasse `HoofdstukVijf` een nieuwe methode genaamd `WetVanOhm`.
+Maak een methode met de naam `PositiefNegatiefNul`.
 
-Denk eraan dat de gegeven formule wiskundig gedefinieerd is. In C♯ zal je rekening moeten houden met het feit dat deze drie maten uitgedrukt kunnen worden in kommagetallen.
+Maak gebruik van een `if `– `else if` - `else`.
 
-Je mag hier gewoon strings gebruiken om na te gaan welke maat de gebruiker heeft ingetypt. Je mag veronderstellen dat de getallen uitgedrukt zijn in de gewoonlijke eenheden (volt, ampère, ohm) zodat je ze gewoon kan invullen in de formule.
+Zet volgende flowchart om in code:
 
-#### UI
+![](<../../.gitbook/assets/PositiefNegatiefNul - Main.png>)
 
-console applicatie
+**Voorbeeldinteractie(s)**
 
-#### voorbeeldinteractie(s)
+![](../../.gitbook/assets/Afbeelding6.png)
 
-```
-Wat wil je berekenen? spanning, weerstand of stroomsterkte?
-> spanning
-Wat is de weerstand?
-> 30
-Wat is de stroomsterkte?
-> 5
-De spanning bedraagt 150.
-```
+![](../../.gitbook/assets/Afbeelding7.png)
 
-```
-Wat wil je berekenen? spanning, weerstand of stroomsterkte?
-> weerstand
-Wat is de spanning?
-> 220
-Wat is de stroomsterkte?
-> 10
-De weerstand bedraagt 22.
-```
+![](../../.gitbook/assets/Afbeelding8.png)
 
-```
-Wat wil je berekenen? spanning, weerstand of stroomsterkte?
-> stroomsterkte
-Wat is de spanning?
-> 30
-Wat is de weerstand?
-> 20
-De stroomsterkte bedraagt 1.5.
-```
+## **Oefening: H4-BMIBerekenaar**
 
-## H5: Schrikkeljaar
+#### **Leerdoelen**
 
-### Leerdoelen
+* meervoudige conditie
+* gebruik van `else if`
+
+#### **Functionele analyse**
+
+Maak een programma om de BMI van de gebruiker te berekenen. ([Meer info over BMI](https://nl.wikipedia.org/wiki/Queteletindex)) De BMI wordt berekend aan de hand van de lengte en het gewicht van de persoon.
+
+De formule is: BMI = gewicht / lengte².
+
+Je toont niet enkel de BMI maar ook een beoordeling over de BMI:
+
+\-       BMI lager dan 18,5 => ondergewicht
+
+\-       BMI vanaf 18,5 maar lager dan 25 => normaal gewicht
+
+\-       BMI vanaf 25 maar lager dan 30 => overgewicht
+
+\-       BMI vanaf 30 maar lager dan 40 => zwaarlijvig
+
+\-       BMI hoger dan 40 => ernstige obesitas
+
+####  **Technische analyse**
+
+Maak een methode met de naam `BMIBerekenaar`.
+
+Maak gebruik van een `if `– `else if` – `else if` …
+
+#### **Voorbeeldinteractie**
+
+![](../../.gitbook/assets/Afbeelding9.png)
+
+## **Oefening: H4-GrootsteVanDrie**
+
+#### **Leerdoelen**
+
+* meervoudige conditie
+* samengestelde booleaanse expressie
+* gebruik van `else if`
+
+#### **Functionele analyse**
+
+Maak een programma om van 3 ingegeven getallen, het grootste te bepalen.
+
+#### **Technische analyse**
+
+Maak een methode met de naam `GrootsteVanDrie`.
+
+Maak gebruik van een `if `– `else if` - `else`
+
+**Voorbeeldinteractie**
+
+![](../../.gitbook/assets/Afbeelding10.png)
+
+## **Oefening: H4-Examens**
+
+#### **Leerdoelen**
+
+* conditie
+* samengestelde booleaanse expressie
+
+#### **Functionele analyse**
+
+Maak een programma waarmee je aan de gebruiker het resultaat van 3 examens opvraagt. De opgevraagde resultaten zijn de behaalde punten op 100. Om te slagen moet de student een gemiddelde van meer dan 50% hebben én maximaal 1 onvoldoende.
+
+#### **Technische analyse**
+
+Maak een methode met de naam `Examens`.
+
+Maak gebruik van een `if `– `else`.
+
+**Voorbeeldinteractie**
+
+![](../../.gitbook/assets/Afbeelding11.png)
+
+## Oefening: H4-Wet van Ohm
+
+#### Leerdoelen <a href="leerdoelen-2" id="leerdoelen-2"></a>
+
+\-        conditionele berekeningen
+
+#### Functionele analyse
+
+De Wet van Ohm houdt in dat een elektrische stroom (voorgesteld als I) gelijk is aan een spanningsverschil (U) gedeeld door een weerstand (R), dus I = U / R.
+
+Vraag aan de gebruiker wat hij wenst te berekenen: Spanning, Weerstand of Stroomsterkte. Vraag vervolgens de twee andere waarden. Als dus de gebruiker "Spanning" kiest, vraag je aan de gebruiker de waarden van de stroomsterkte en de weerstand. Bereken m.b.v. de Wet van Ohm de gewenste waarde en toon aan de gebruiker.
+
+#### Technische analyse <a href="technische-analyse-2" id="technische-analyse-2"></a>
+
+Maak een nieuwe methode genaamd `WetVanOhm`.
+
+Denk eraan dat de gegeven formule wiskundig gedefinieerd is. Houd rekening met het feit dat deze drie maten uitgedrukt kunnen worden in kommagetallen.
+
+#### **V**oorbeeldinteractie(s)
+
+![](../../.gitbook/assets/Afbeelding12.png)
+
+![](../../.gitbook/assets/Afbeelding13.png)
+
+![](../../.gitbook/assets/Afbeelding14.png)
+
+## Oefening: H4-Schrikkeljaar
+
+#### Leerdoelen <a href="leerdoelen-3" id="leerdoelen-3"></a>
 
 * conditionele berekeningen
 * geneste condities
+* flowchart omzetten naar conditionele code
 
-### Functionele analyse
+#### Functionele analyse <a href="functionele-analyse-3" id="functionele-analyse-3"></a>
 
-De gebruiker voert een jaartal in en jouw programma toont of het wel of geen schrikkeljaar is. Een schrikkeljaar is deelbaar door 4, behalve als het ook deelbaar is door 100, tenzij het wél deelbaar is door 400.
+De gebruiker voert een jaartal in en jouw programma toont of het al dan niet een schrikkeljaar is. Een schrikkeljaar is deelbaar door 4, behalve als het ook deelbaar is door 100, tenzij het wél deelbaar is door 400.
 
-### Technische analyse
+#### Technische analyse <a href="technische-analyse-3" id="technische-analyse-3"></a>
 
-Zet de oplossing in een methode genaamd `Schrikkeljaar`.
+Zet de oplossing in een methode genaamd `Schrikkeljaar`. Zet volgende flowchart om in code:
 
-* gebruik de modulo-operator (`%`) om deelbaarheid door 4 na te gaan
-* gebruik een constructie met geneste `if`s (en `else`s) om alle gevallen af te handelen
+![](<../../.gitbook/assets/Schrikkeljaar - Main.png>)
 
-#### UI
+#### Voorbeeldinteractie(s)
 
-console applicatie
+![](../../.gitbook/assets/Afbeelding16.png)
 
-#### voorbeeldinteractie(s)
+![](../../.gitbook/assets/Afbeelding15.png)
 
-```
-> 1997
-geen schrikkeljaar
-```
+![](../../.gitbook/assets/Afbeelding17.png)
 
-```
-> 1996
-schrikkeljaar
-```
+![](../../.gitbook/assets/Afbeelding18.png)
 
-```
-> 1900
-geen schrikkeljaar
-```
+![](../../.gitbook/assets/Afbeelding19.png)
 
-```
-> 2000
-schrikkeljaar
-```
+## Oefening: H4-SimpeleRekenmachine
 
-## H5: SimpeleRekenmachine
+#### Leerdoelen <a href="leerdoelen-4" id="leerdoelen-4"></a>
 
-### Leerdoelen 
+* Conditionele functionaliteit
+* Geneste `if`
 
-* Conditionele functionaliteit 
+#### Functionele analyse <a href="functionele-analyse-4" id="functionele-analyse-4"></a>
 
-### Functionele analyse 
+In deze oefening bouw je een simpele rekenmachine, die twee getallen kan optellen, aftrekken, vermenigvuldigen of delen. De gebruiker voert de te bewerken getallen in en kiest dan de berekening.
 
-In deze oefening bouw je een simpele rekenmachine, die twee getallen kan optellen, aftrekken, vermenigvuldigen of delen. \
-De gebruiker voert de te bewerken getallen in en kiest dan de berekening.  
+#### Technische analyse <a href="technische-analyse-4" id="technische-analyse-4"></a>
 
-### Technische analyse 
+Delen door 0 kan niet; test dit voor je de deling uitvoert.
 
-Gebruik een variabele om de gekozen bewerking in op te slaan en if-statements om te variëren tussen bewerkingen. 
+Bij invoer van een ander teken dan +, - , \*, / toon je een foutmelding.
 
-Noem je methode voor deze oefening `SimpeleRekenmachine `
+Noem je methode voor deze oefening `SimpeleRekenmachine`
 
-### UI 
+#### Voorbeeldinteractie
 
-Console-applicatie 
 
-### Voorbeeldinteractie 
 
-```
-Geef een eerste getal in: 
-> 5 
-Geef een tweede getal in: 
->  6 
-Welke berekening wil je maken? (+,-,*,/) 
-> * 
-De uitkomst is: 30 
-```
+![](../../.gitbook/assets/Afbeelding20.png)
+
+![](../../.gitbook/assets/Afbeelding21.png)
+
+![](../../.gitbook/assets/Afbeelding22.png)
 
 ## Keuzemenu's maken
 
-### Leerdoelen: 
+#### Leerdoelen: <a href="leerdoelen-5" id="leerdoelen-5"></a>
 
-* Conditionele functionaliteit 
+\-        Conditionele functionaliteit
 
-###  Functionele analyse: 
+#### Functionele analyse: <a href="functionele-analyse-5" id="functionele-analyse-5"></a>
 
-In deze oefening voorzie je elke klasse die je tot hiertoe in dit project gemaakt hebt van een keuzemenu, zodat de gebruiker bij het uitvoeren van je programma eerst kan kiezen uit de hoofdstukken (= klassen) en dan uit de oefeningen (=methodes) binnen het gekozen hoofdstuk.
+We willen dat de gebruiker een menu ter beschikking heeft om eerst te kiezen uit welk hoofdstuk er een oefening moet gekozen worden en vervolgens welke oefening er moet uitgevoerd worden.
 
-### Technische analyse 
+#### Technische analyse
 
-* Maak in je klasse `Program` een methode`Hoofdmenu`. Deze methode laat de gebruiker kiezen uit één van de hoofdstukken. Na de keuze wordt het scherm leeggemaakt en dan wordt de methode `Keuzemenu` van de juiste klasse opgeroepen.
-* Maak in elke klasse uit de vorige labo’s een methode `Keuzemenu.` Deze methode laat de gebruiker kiezen uit de verschillende methodes binnen die klasse. Na de keuze wordt het scherm weer leeggemaakt en wordt de gekozen methode opgestart.
-* In `Program.Main` start je nu de methode `Hoofdmenu`.
+Maak in je klasse Program een hoofdmenu. Deze methode laat de gebruiker kiezen uit één van de hoofdstukken. Na de keuze wordt het scherm leeggemaakt en dan wordt de methode `Keuzemenu` van de juiste klasse opgeroepen.\
+Elke klasse die je tot hiertoe in dit project gemaakt hebt, voorzie je dus van een methode Keuzemenu, zodat de gebruiker kan kiezen uit de oefeningen (=methodes) binnen het gekozen hoofdstuk.
 
-### UI
+#### Voorbeeldinteractie
 
-Console applicatie 
+![](../../.gitbook/assets/Afbeelding26.png)
 
-### Voorbeeldinteractie
+![](../../.gitbook/assets/Afbeelding24.png)
 
-```
-Kies uit volgende klassen door een cijfer te tikken:
-    1 - HoofdstukEen
-    2 – HoofdstukTwee
-    3 – HoofdstukDrie
-    4 – HoofdstukVier
-    5 – HoofdstukVijf
-> 5
+![](../../.gitbook/assets/Afbeelding27.png)
 
-```
+![](../../.gitbook/assets/Afbeelding25.png)
 
-(scherm wordt leeggemaakt)
-
-```
-Kies uit volgende methodes door een cijfer te tikken:
-    1 – BMIBerekenaar
-    2 – Pythagoras
-    3 – Cirkels
-    4 – Orakeltje
-> 2
-```
-
-(scherm wordt leeggemaakt, Pythagoras wordt opgestart en uitgevoerd)
-
-```
-Geef de lengte van de eerste rechthoekszijde: 
-> 4
-Geef de lengte van de tweede rechthoekszijde:
-> 3
-De lengte van de schuine zijde is 5
-```
-
-## APDotCom
-
-### Leerdoelen
-
-* Een bestaande applicatie uitbreiden
-* Conditionele logica integreren
-
-### Functionele analyse
-
-Het programma werkt op dezelfde manier als [H4 apdotcom (deel 2)](https://apwt.gitbook.io/cursus-pro-oo/semester-1-programming-principles/h3-werken-met-data/a_practica#oefening-apdotcom-deel-2), met volgende aanpassingen:
-
-* De gebruiker kan nu op voorhand kiezen of de willekeurige prijsstijgingen van 'Vraag en aanbod' worden toegepast of niet.
-* Een prijsstijging wordt weergegeven in rode tekst, een prijsdaling in groene tekst
-* Als er een korting van meer dan 30% wordt ingevoerd, toont het programma de boodschap _Waarschuwing: het ingevoerde percentage is hoog!_
-
-### Technische analyse
-
-In de klasse `APDotCom` maak je een kopie van de methode `BestelMetVraagEnAanbod`, die je `BestelConditioneel` noemt.
-
-Om _enkel _de prijsstijgingen en -dalingen te kunnen kleuren, ga je gebruik moeten maken van `ConsoleColor.Red`, `ConsoleColor.Green` en `Console.ResetColor()`.
-
-### Voorbeeldinteractie
-
-```
-Basisprijs van een boek?
-> 12.00
-Basisprijs van een CD?
-> 9.95
-Basisprijs van een servies?
-> 75
-Basisprijs van een springkasteel?
-> 150
-Aantal boeken?
-> 4
-Aantal CD's?
-> 2
-Aantal serviezen?
-> 1
-Aantal springkastelen?
-> 1
-Percentage korting?
-> 40
-Waarschuwing: het ingevoerde percentage is hoog!
-
-Worden prijsstijgingen en -dalingen toegepast? (J/N)
-> J
-
-Uw kasticket
-------------
-vraag en aanbod boeken: 20%
-vraag en aanbod CD's: -18%
-vraag en aanbod serviezen: 10%
-vraag en aanbod springkastelen: 48%
-boek x 4: 57.60
-CD x 2 : 16.32
-servies x 1: 82.50
-springkasteel x 1: 222
-KORTING: 40%
-TOTAAL VOOR KORTING: 378.42
-TOTAAL: 227.05
-```
-
-{% hint style="info" %}
-De getallen _20%, 10% en 48% _zouden hierboven in het rood moeten verschijnen en _-18%_ in het groen (lijnen 26-29), maar Gitbook staat dit niet meteen toe.
-{% endhint %}
-
-Of zonder 'vraag en aanbod':
-
-```
-Basisprijs van een boek?
-> 12.00
-Basisprijs van een CD?
-> 9.95
-Basisprijs van een servies?
-> 75
-Basisprijs van een springkasteel?
-> 150
-Aantal boeken?
-> 4
-Aantal CD's?
-> 2
-Aantal serviezen?
-> 1
-Aantal springkastelen?
-> 1
-Percentage korting?
-> 40
-Waarschuwing: het ingevoerde percentage is hoog!
-
-Worden prijsstijgingen en -dalingen toegepast? (J/N)
-> N
-
-Uw kasticket
-------------
-boek x 4: 48.00
-CD x 2 : 19.90
-servies x 1: 75.00
-springkasteel x 1: 150.00
-KORTING: 40%
-TOTAAL VOOR KORTING: 292.90
-TOTAAL: 175.74
-```

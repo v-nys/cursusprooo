@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="tibra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-11 08:17:40 "/>
+        <attribute name="created" value="dGlicmE7TEFQVE9QLTJRSTdSMkNMOzIwMjEtMTAtMTE7IjA3OjQxOjE4ICI7Mjc1Nw=="/>
+        <attribute name="edited" value="dGlicmE7TEFQVE9QLTJRSTdSMkNMOzIwMjEtMTAtMTE7IjA4OjE3OjQwICI7NTsyODY4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="prijs" type="Real" array="False" size=""/>
+            <assign variable="prijs" expression="50"/>
+            <declare name="aantal" type="Integer" array="False" size=""/>
+            <declare name="klantenkaart" type="String" array="False" size=""/>
+            <output expression="&quot;Heb je een klantenkaart? (ja of nee)&quot;" newline="True"/>
+            <input variable="klantenkaart"/>
+            <output expression="&quot;Hoeveel paar schoenen wil je kopen?&quot;" newline="True"/>
+            <input variable="aantal"/>
+            <assign variable="prijs" expression="prijs * aantal"/>
+            <if expression="aantal &gt; 2 &amp;&amp; klantenkaart == &quot;ja&quot;">
+                <then>
+                    <assign variable="prijs" expression="prijs - prijs * 0.10"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;De prijs voor &quot; + aantal + &quot; paar schoenen is &quot; + prijs + &quot; euro.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
