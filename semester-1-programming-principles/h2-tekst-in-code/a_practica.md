@@ -268,7 +268,7 @@ De gebruiker voert enkele persoonlijke gegevens in en op basis hiervan wordt een
 Noem je methode `Toegangscode`. De code van vier tot vijf cijfers wordt als volgt bepaald:
 
 * het eerste symbool is de voorlaatste letter van de naam, in kleine letters
-* de tweede symbool is de laatste letter van de naam, in hoofdletters
+* het tweede symbool is de laatste letter van de naam, in hoofdletters
 * het derde symbool is het laatste cijfer van het geboortejaar
 * het vierde (en eventueel vijfde) symbool is het eerste cijfer van de postcode, in het kwadraat (dus vermenigvuldigd met zichzelf)
 
@@ -278,7 +278,7 @@ Noem je methode `Toegangscode`. De code van vier tot vijf cijfers wordt als volg
 Geef je naam: > Janssens
 Geef je geboortejaar: > 2001
 Geef je postcode: > 2000
-Je toegangscode is sN14
+Je toegangscode is nS14
 ```
 
 ###
