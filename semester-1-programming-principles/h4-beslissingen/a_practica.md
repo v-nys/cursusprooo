@@ -204,65 +204,6 @@ Denk eraan dat de gegeven formule wiskundig gedefinieerd is. Houd rekening met h
 
 ![](../../.gitbook/assets/Afbeelding14.png)
 
-## Oefening: H4-Schrikkeljaar
-
-#### Leerdoelen <a href="leerdoelen-3" id="leerdoelen-3"></a>
-
-* conditionele berekeningen
-* geneste condities
-* flowchart omzetten naar conditionele code
-
-#### Functionele analyse <a href="functionele-analyse-3" id="functionele-analyse-3"></a>
-
-De gebruiker voert een jaartal in en jouw programma toont of het al dan niet een schrikkeljaar is. Een schrikkeljaar is deelbaar door 4, behalve als het ook deelbaar is door 100, tenzij het wél deelbaar is door 400.
-
-#### Technische analyse <a href="technische-analyse-3" id="technische-analyse-3"></a>
-
-Zet de oplossing in een methode genaamd `Schrikkeljaar`. Zet volgende flowchart om in code:
-
-![](<../../.gitbook/assets/Schrikkeljaar - Main.png>)
-
-#### Voorbeeldinteractie(s)
-
-![](../../.gitbook/assets/Afbeelding16.png)
-
-![](../../.gitbook/assets/Afbeelding15.png)
-
-![](../../.gitbook/assets/Afbeelding17.png)
-
-![](../../.gitbook/assets/Afbeelding18.png)
-
-![](../../.gitbook/assets/Afbeelding19.png)
-
-## Oefening: H4-SimpeleRekenmachine
-
-#### Leerdoelen <a href="leerdoelen-4" id="leerdoelen-4"></a>
-
-* Conditionele functionaliteit
-* Geneste `if`
-
-#### Functionele analyse <a href="functionele-analyse-4" id="functionele-analyse-4"></a>
-
-In deze oefening bouw je een simpele rekenmachine, die twee getallen kan optellen, aftrekken, vermenigvuldigen of delen. De gebruiker voert de te bewerken getallen in en kiest dan de berekening.
-
-#### Technische analyse <a href="technische-analyse-4" id="technische-analyse-4"></a>
-
-Delen door 0 kan niet; test dit voor je de deling uitvoert.
-
-Bij invoer van een ander teken dan +, - , \*, / toon je een foutmelding.
-
-Noem je methode voor deze oefening `SimpeleRekenmachine`
-
-#### Voorbeeldinteractie
-
-
-
-![](../../.gitbook/assets/Afbeelding20.png)
-
-![](../../.gitbook/assets/Afbeelding21.png)
-
-![](../../.gitbook/assets/Afbeelding22.png)
-
 ## Keuzemenu's maken
 
 #### Leerdoelen: <a href="leerdoelen-5" id="leerdoelen-5"></a>
@@ -285,6 +226,4 @@ Elke klasse die je tot hiertoe in dit project gemaakt hebt, voorzie je dus van e
 ![](../../.gitbook/assets/Afbeelding24.png)
 
 ![](../../.gitbook/assets/Afbeelding27.png)
-
-![](../../.gitbook/assets/Afbeelding25.png)
 
