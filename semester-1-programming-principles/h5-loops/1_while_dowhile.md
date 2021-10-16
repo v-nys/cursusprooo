@@ -1,10 +1,18 @@
 # While en Do While
 
-{% hint style="success" %}
-[Kennisclip standaard while](https://youtu.be/PjUbLsvAFtk)
-{% endhint %}
-
 ### While
+
+#### Voorbeeld werking
+
+Volgend Flowgorithm programma demonstreert hoe een `while` lus wordt toegepast wanneer je systematisch boodschappen afwerkt.
+
+![Een while wordt aangegeven door een booleaanse expressie waaruit een True-tak vertrekt die er daarna weer in terugkomt. Hier: de oranje zeshoek.](<../../.gitbook/assets/Screenshot from 2021-10-16 10-51-40.png>)
+
+Omdat de `True`-tak terug leidt naar de controle van de voorwaarde, blijven we dezelfde stappen herhalen tot niet meer aan de voorwaarde voldaan is. Dit is het basisconcept achter een `while` lus. Het woord "while" betekent dan ook "zolang als".
+
+Dit is anders dan bij `if`: het woordje "if" betekent gewoonweg "als" en houdt dus niet in dat we dezelfde stappen zullen herhalen. Bij `while` blijven we dezelfde stappen uitvoeren zo lang dat nodig is.
+
+#### Syntax
 
 De syntax van een while loop is eenvoudig:
 
@@ -21,15 +29,11 @@ Zolang de conditie `true` is zal de code binnen de accolades uitgevoerd worden. 
 
 Telkens wanneer het programma aan het einde van het `while` codeblock komt springt het terug naar de conditie bovenaan en zal de test wederom uitvoeren. Is deze weer `true` dan wordt de code weer uitgevoerd. Van zodra de test `false` is zal de code voorbij het codeblock springen en na het `while` codeblok doorgaan.
 
-{% hint style="info" %}
-De `while` is dus bijna identiek aan de `if` zonder `else`.  Het **enige** verschil: nadat het block is uitgevoerd, wordt de voorwaarde opnieuw getest en wordt het block eventueel opnieuw uitgevoerd.
-{% endhint %}
+De code voor ons boodschappenlijstje ziet er dan ook zo uit:
 
-Het diagramma is duidelijk:
+![](<../../.gitbook/assets/Screenshot from 2021-10-16 10-56-33.png>)
 
-![](../../.gitbook/assets/while%20%283%29.png)
-
-Een voorbeeld van een eenvoudige while loop:
+Een tweede voorbeeld van een eenvoudige while loop:
 
 ```csharp
 int myCount = 0;
@@ -41,21 +45,25 @@ while (myCount < 100)
 }
 ```
 
-Zolang `myCount` kleiner is dan 100 \(`myCount < 100`\) zal myCount met 1 verhoogd worden en zal de huidige waarde van myCount getoond worden. We krijgen met dit programma dus alle getallen van 1 tot en met 100 op het scherm onder elkaar te zien.
+Zolang `myCount` kleiner is dan 100 (`myCount < 100`) zal myCount met 1 verhoogd worden en zal de huidige waarde van myCount getoond worden. We krijgen met dit programma dus alle getallen van 1 tot en met 100 op het scherm onder elkaar te zien.
 
 Daar de test gebeurt aan het begin van de loop wil dit zeggen dat het getal 100 nog wel getoond zal worden. **Begrijp je waarom?** Test dit zelf!
 
 ### Do while
 
-{% hint style="success" %}
-[Kennisclip do while](https://youtu.be/X_wMRX_fFiA)
-{% endhint %}
+In tegenstelling tot een while loop, zal een do-while loop sowieso **minstens 1 keer uitgevoerd worden**.
 
-In tegenstelling tot een while loop, zal een do-while loop sowieso **minstens 1 keer uitgevoerd worden**. Ongeacht de opgegeven conditie zal de do-while loop zijn code 1 keer uitvoeren. We herhalen deze zin uitdrukkelijk twee keer zodat het verschil tussen beide type loops duidelijk blijft.
+#### Voorbeelden werking
 
-Vergelijk volgende diagramma van de `do while` met dat van de `while` hierboven:
+Volgende flowchart helpt je bepalen of je klaar bent om een commit operatie uit te voeren in Git. Zoals je in andere vakken leert, moet je in Git eerst de gewenste bestanden in de staging area zetten. Dat kan soms in één commando gebeuren en soms in meerdere commando's, maar je moet altijd wel minstens één keer stagen.
 
-![](../../.gitbook/assets/dowhile%20%282%29.png)
+![Een do-while wordt aangegeven door een booleaanse expressie die na een reeks instructies wordt geëvalueerd en waarbij de True-tak terug tot diezelfde reeks instructies leidt. ](<../../.gitbook/assets/Screenshot from 2021-10-16 13-36-17.png>)
+
+Een tweede voorbeeld: een opstel schrijven. Dat moet je altijd nog eens nakijken. Als het niet goed is, moet je je tekst aanpassen en opnieuw controleren. Pas wanneer je helemaal tevreden bent, mag je inzenden.
+
+![](<../../.gitbook/assets/Screenshot from 2021-10-16 13-45-06.png>)
+
+
 
 De syntax van een do-while is eveneens verraderlijk eenvoudig:
 
@@ -69,78 +77,61 @@ do{
 Merk op dat achteraan de conditie een puntkomma na het ronde haakje staat. **Dit is een véél voorkomende fout. Bij een while is dit niet zo!** Daar de test van een do-while achteraan de code van de loop gebeurt is het logisch dat een do-while dus minstens 1 keer wordt uitgevoerd. Het volgende eenvoudige aftelprogramma toont de werking van de do-while loop.
 {% endhint %}
 
-```csharp
-string antwoord;
-do {
-    antwoord = Console.ReadLine();
-} while (antwoord != "ja" && antwoord != "nee");
-```
+Voor het opstel ziet dit er bijvoorbeeld zo uit:
 
-Begrijp je waarom een gewone `while` hier niet geschikt is?
+![](<../../.gitbook/assets/Screenshot from 2021-10-16 13-47-12.png>)
 
-{% hint style="warning" %}
-Dit is niet om te zeggen dat je dit niet kan schrijven met een gewone `while`. Maar deze werkwijze levert de eenvoudigste code.
-{% endhint %}
+Je kan dit ook doen met een gewone while (je kan elke do while herschrijven met een gewone while), maar dan kost dat meer code. Dat verhoogt dan weer de kans op fouten.
 
 ### Complexe condities
 
-{% hint style="success" %}
-[Kennisclip booleaanse voorwaarden](https://youtu.be/0e56QIzX_nQ)
-{% endhint %}
-
 Uiteraard mag de conditie waaraan een loop moet voldoen complexer zijn door middel van de relationele operatoren.
 
-Volgende `while` bijvoorbeeld zal uitgevoerd worden zolang `teller` groter is dan 5 en de variabele `naam` van het type `string` niet gelijk is aan "tim":
+Volgende `while` bijvoorbeeld zal de gebruiker aanraden in bed te blijven zolang deze ziek of moe is:
 
 ```csharp
-while(teller > 5 && naam != "tim")
+while(gebruikerVoeltZichZiek || gebruikerVoeltZichMoe)
 {
-  //Keep repeating
+  Console.WriteLine("Blijf in bed!");
+  Console.ReadLine();
 }
 ```
 
 ### Oneindige loops
 
-Indien de loop-conditie nooit `false` wordt, dan heb je een oneindige loop gemaakt. Soms is dit gewenst gedrag \(bijvoorbeeld in een programma dat constant je scherm moet updaten, zoals in een game\), soms is dit een bug.
+Indien de loop-conditie nooit `false` wordt, dan heb je een oneindige loop gemaakt. Soms is dit gewenst gedrag (bijvoorbeeld in een programma dat constant je scherm moet updaten, zoals in een game), soms is dit een bug.
 
 Volgende twee voorbeelden tonen dit:
 
-* Een bewust oneindige loop:
+*   Een bewust oneindige loop:
 
-  ```csharp
-  while(true)
-  {
-  //See you in infinity
-  }
-  ```
+    ```csharp
+    while(true)
+    {
+      // code die nooit hoort te stoppen of die zelf het programma kan afsluiten
+    }
+    ```
+*   Een bug die een oneindige loop veroorzaakt:
 
-* Een bug die een oneindige loop veroorzaakt:
-
-  ```csharp
-  int teller = 0; 
-  while(teller<10)
-  {
+    ```csharp
+    int teller = 0; 
+    while(teller<10)
+    {
       Console.WriteLine(teller);
-  }
-  ```
-
-{% hint style="info" %}
-Probeer er altijd zeker van te zijn dat de variabele\(n\) die je gebruikt in je test-conditie ook in de loop aangepast worden. Als deze in de loop constant blijft dan zal ook de test-conditie dezelfde blijven en heb je dus een oneindige loop gemaakt.
-{% endhint %}
+    }
+    ```
 
 ### Scope van variabelen in loops
 
-{% hint style="success" %}
-[Kennisclip scope](https://youtu.be/qRyfmvO6XPE)
-{% endhint %}
+Let er op dat de [scope](../h4-beslissingen/3\_scope.md) van variabelen bij loops zeer belangrijk is. Indien je een variabele binnen de loop definieert dan zal deze steeds terug "verdwijnen" wanneer de cyclus van de loop is afgewerkt. Latere declaraties voor variabelen met dezelfde naam hebben niets meer te maken met de oorspronkelijke variabele.
 
-Let er op dat de [scope](../h4-beslissingen/3_scope.md) van variabelen bij loops zeer belangrijk is. Indien je een variabelen binnen de loop definieert dan zal deze steeds terug "gereset" worden wanneer de volgende cyclus van de loop start. Volgende code toont bijvoorbeeld **foutief** hoe je de som van de eerste 10 getallen \(1+2+3+...+10\) zou maken:
+Volgende code toont bijvoorbeeld **foutief** hoe je de som van de eerste 10 getallen (1+2+3+...+10) zou maken:
 
 ```csharp
 int teller= 1;
 while(teller <= 10)
 {
-   int som= 0;
+   int som = 0;
    som = som+teller;
    teller++;
 }
@@ -154,10 +145,10 @@ int teller= 1;
 int som=0;  
 while(teller <= 10)
 {
-
    som = som+teller;
    teller++
 }
 Console.WriteLine(som);
 ```
 
+Scope is [eerder](../h4-beslissingen/3\_scope.md) al in het algemeen behandeld, maar zeker in loops worden er veel fouten tegen gemaakt. Daarom beklemtonen we het hier nog eens.
