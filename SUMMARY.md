@@ -48,7 +48,6 @@
   * [Casting en conversie](semester-1-programming-principles/h3-werken-met-data/4\_converteren.md)
   * [Math-klasse en berekeningen](semester-1-programming-principles/h3-werken-met-data/4c_math.md)
   * [Random](semester-1-programming-principles/h3-werken-met-data/random.md)
-  * [Oefeningen](semester-1-programming-principles/h3-werken-met-data/a_practica.md)
 * [H6: Loops](semester-1-programming-principles/h5-loops/README.md)
   * [Programma flow analyse](semester-1-programming-principles/h5-loops/4\_programflow.md)
   * [Loops intro](semester-1-programming-principles/h5-loops/0\_loops_intro.md)
@@ -56,17 +55,12 @@
   * [For](semester-1-programming-principles/h5-loops/2\_for.md)
   * [Break en continue](semester-1-programming-principles/h5-loops/break-en-continue.md)
   * [Nesting](semester-1-programming-principles/h5-loops/3\_nesting.md)
-  * [Oefeningen deel 1](semester-1-programming-principles/h5-loops/a_practica.md)
-  * [Oefeningen deel 2](semester-1-programming-principles/h5-loops/c_practica.md)
-  * [Oefeningen deel 3](semester-1-programming-principles/h5-loops/b_practica.md)
-  * [Oefeningen break, continue, nesting](semester-1-programming-principles/h5-loops/oefeningen-break-continue-nesting.md)
 * [H7: Methoden](semester-1-programming-principles/h6-methoden/README.md)
   * [Methoden intro](semester-1-programming-principles/h6-methoden/0\_intromethods.md)
   * [Parameters](semester-1-programming-principles/h6-methoden/parameters.md)
   * [Return waarden](semester-1-programming-principles/h6-methoden/returnwaarden.md)
   * [Geavanceerde methoden](semester-1-programming-principles/h6-methoden/3\_advancedmethod.md)
   * [Documentatie](semester-1-programming-principles/h6-methoden/1\_bibliotheken.md)
-  * [Oefeningen](semester-1-programming-principles/h6-methoden/b_practica.md)
 * [H8: Arrays](semester-1-programming-principles/h7-arrays/README.md)
   * [Array principes](semester-1-programming-principles/h7-arrays/1\_arraysbasics.md)
   * [Alternatieve syntax](semester-1-programming-principles/h7-arrays/alternatieve-syntax.md)
@@ -74,7 +68,6 @@
   * [Value types en reference types](semester-1-programming-principles/h7-arrays/value-types-en-reference-types.md)
   * [Arrays en methoden](semester-1-programming-principles/h7-arrays/3\_arrays_en_methoden.md)
   * [N-dimensionale arrays](semester-1-programming-principles/h7-arrays/4\_ndimensionalarrays.md)
-  * [Oefeningen](semester-1-programming-principles/h7-arrays/oefeningen.md)
 
 ## Semester 2 : OOP
 

@@ -16,7 +16,7 @@ Wij beperken ons tot één niveau van nesting, maar je raadt misschien al dat je
 
 ### Voorbeeld: echte maaltafels
 
-In [de oefening rond maaltafels](a_practica.md#tafels-van-vermenigvuldigen) hebben we de maaltafels van een specifiek getal, de "basis", laten zien. We hebben hiervoor volgende flowchart gevolgd:
+In [de oefening rond maaltafels](broken-reference) hebben we de maaltafels van een specifiek getal, de "basis", laten zien. We hebben hiervoor volgende flowchart gevolgd:
 
 ![Maaltafels voor één specifieke basis.](../../.gitbook/assets/maaltafels.svg)
 
