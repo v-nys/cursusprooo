@@ -4,7 +4,7 @@ Al deze oefeningen maak je in een klasse `Loops`
 
 ## Oefeningen WHILE en DO WHILE
 
-## Oefening: H6-CountDown
+## Oefening: H5-CountDown
 
 ### **Leerdoelen**
 
@@ -31,7 +31,7 @@ Zet volgende flowchart om in code:
 
 Voer een negatief getal in.
 
-## Oefening: H6-Wachtwoord
+## Oefening: H5-Wachtwoord
 
 ## **Leerdoelen**
 
@@ -59,7 +59,7 @@ Zet volgende flowchart om in code:
 
 ·       Duw meteen op ENTER
 
-## Oefening: H6-Gemiddelde
+## Oefening: H5-Gemiddelde
 
 ### **Leerdoelen**
 
@@ -71,10 +71,9 @@ Bereken het gemiddelde van een aantal ingegeven getallen. De invoer van de getal
 
 ### **Technische analyse**
 
-Maak een methode met de naam `Gemiddelde`
+Maak een methode met de naam `Gemiddelde`. Het gemiddelde bereken je door de ingegeven getallen te delen door het aantal ingegeven getallen. De 0 die de reeks getallen stopt, wordt niet meegeteld als ingegeven getal.
 
-Werk een oplossing uit met gebruik van een while lus of een do while lus.\
-Zorg ervoor dat je gemiddelde ook de cijfers na de komma bevat.
+Werk een oplossing uit met gebruik van een while lus of een do while lus. Zorg ervoor dat je gemiddelde ook de cijfers na de komma bevat.
 
 **Voorbeeldinteractie(s**
 
@@ -85,7 +84,7 @@ Zorg ervoor dat je gemiddelde ook de cijfers na de komma bevat.
 * Test met negatieve waarden
 * Geef dadelijk een 0 in. Wat wordt er dan getoond als waarde van het gemiddelde en wat betekent dit?
 
-## Oefening: H6-Feestje
+## Oefening: H5-Feestje
 
 ### **Leerdoelen**
 
@@ -110,7 +109,7 @@ Werk een oplossing uit met gebruik van een while lus.
 * Geef dadelijk “nee” in.
 * Probeer meer dan 20 personen in te schrijven.
 
-## Oefening: H6-AantalDigits
+## Oefening: H5-AantalDigits
 
 ### **Leerdoelen**
 
@@ -118,11 +117,11 @@ Werk een oplossing uit met gebruik van een while lus.
 
 ### **Functionele analyse**
 
-Schrijf een programma dat het aantal digits in een getal telt (het getal 12348 heeft bijvoorbeeld 5 digits). Het is de bedoeling dat je dit doet met een loop, dus niet door het getal als tekst te behandelen.
+Schrijf een programma dat het aantal cijfers in een getal telt (het getal 12348 heeft bijvoorbeeld 5 cijfers). Het is de bedoeling dat je dit doet met een loop, dus **niet door het getal als tekst te behandelen**.
 
 ### **Technische analyse**
 
-Maak een methode met de naam `AantalDigits`
+Maak een methode met de naam `AantalCijfers`
 
 Het is de bedoeling dat je het aantal digits telt  met een do while loop, dus niet door het getal als tekst te behandelen.
 
@@ -130,7 +129,7 @@ Het is de bedoeling dat je het aantal digits telt  met een do while loop, dus ni
 
 ![](../../.gitbook/assets/Afbeelding54.png)
 
-## Oefening: H6-SomEvenGetallen
+## Oefening: H5-SomEvenGetallen
 
 ### **Leerdoelen**
 
@@ -159,7 +158,7 @@ Zet volgende flowchart om in code:
 * Geef 0 in.
 * Geef 1 in.
 
-## Oefening: H6-Factoren
+## Oefening: H5-Factoren
 
 ### **Leerdoelen**
 
@@ -186,7 +185,7 @@ Gebruik een while loop. Gebruik een extra if om ervoor te zorgen dat er op het e
 * Geef een negatief getal in.
 * Geef een priemgetal in.
 
-## Oefening: H6-RNA
+## Oefening: H5-RNA
 
 ### Leerdoelen
 
@@ -223,7 +222,7 @@ Noem de methode voor deze oefening `RNATranscriptie`.
 * Geef een getal in.
 * Druk op ENTER.
 
-## Oefening: H6-boekhouder
+## Oefening: H5-boekhouder
 
 ### Leerdoelen
 
@@ -260,9 +259,7 @@ Voor de eerste drie zaken kom je toe met een variabele. Voor de laatste is dit l
 
 ## Oefeningen FOR
 
-
-
-## Oefening: H6-VanMin100Tot100
+## Oefening: H5-VanMin100Tot100
 
 ### **Leerdoelen**
 
@@ -304,31 +301,7 @@ Uitbreiding:
 
 ![](../../.gitbook/assets/Afbeelding40.png)
 
-## Oefening: H6-Sterren
-
-## **Leerdoelen**
-
-* Gebruiken van een `for`-lus
-
-### **Functionele analyse**
-
-Vraag aan de gebruiker hoeveel sterren (\*) dat zij/hij wil zien en toon deze naast elkaar.
-
-### **Technische analyse**
-
-Maak een methode met de naam `Sterren`.
-
-**voorbeeldinteractie(s)**
-
-![](../../.gitbook/assets/Afbeelding41.png)
-
-**Testscenario's**
-
-* Druk dadelijk op ENTER.
-* Geef 0 in.
-* Geef een negatief getal in.&#x20;
-
-## Oefening: H6-EenTafel
+## Oefening: H5-EenTafel
 
 ### **Leerdoelen**
 
@@ -351,7 +324,7 @@ Maak een methode met de naam `EenTafel`.
 
 Geef 0 in.
 
-## Oefening: H6-Veelvouden6En8
+## Oefening: H5-Veelvouden6En8
 
 ### **Leerdoelen**
 
@@ -371,31 +344,7 @@ Maak een methode met de naam `Veelvouden6En8`.
 
 &#x20;
 
-## Oefening: H6-FibonaccieReeks
-
-### **Leerdoelen**
-
-* Gebruiken van een `for`-lus
-
-### **Functionele analyse**
-
-Toon de reeks van Fibonacci voor een aantal getallen dat door de gebruiker wordt ingegeven.
-
-Zoek informatie op over de reeks van [Fibonacci](https://en.wikipedia.org/wiki/Fibonacci\_number).
-
-### **Technische analyse**
-
-Maak een methode met de naam `FibonacciReeks`.
-
-**voorbeeldinteractie(s)**
-
-![](../../.gitbook/assets/Afbeelding44.png)
-
-**Testscenario's**
-
-Geef de waarde 1 in.&#x20;
-
-## Oefening: H6-Priemchecker
+## Oefening: H5-Priemchecker
 
 ### **Leerdoelen**
 
@@ -422,7 +371,7 @@ Je mag veronderstellen dat de gebruiker minstens 2 intypt**.**
 
 Test met een negatief getal.
 
-## Oefening: H6-PriemGenerator
+## Oefening: H5-PriemGenerator
 
 ### **Leerdoelen**
 
