@@ -48,6 +48,11 @@
   * [For](semester-1-programming-principles/h5-loops/2\_for.md)
   * [Debuggen](semester-1-programming-principles/h5-loops/5\_debuggen.md)
   * [Oefeningen](semester-1-programming-principles/h5-loops/oefeningen.md)
+* [H6: Arrays](semester-1-programming-principles/h7-arrays/README.md)
+  * [Array principes](semester-1-programming-principles/h7-arrays/1\_arraysbasics.md)
+  * [Alternatieve syntax](semester-1-programming-principles/h7-arrays/alternatieve-syntax.md)
+  * [Werken met arrays](semester-1-programming-principles/h7-arrays/2\_werken\_met\_arrays.md)
+  * [Value types en reference types](semester-1-programming-principles/h7-arrays/value-types-en-reference-types.md)
 * [H6: Werken met data](semester-1-programming-principles/h3-werken-met-data/README.md)
   * [Namespace](semester-1-programming-principles/h3-werken-met-data/namespace.md)
   * [Casting en conversie](semester-1-programming-principles/h3-werken-met-data/4\_converteren.md)
@@ -59,13 +64,6 @@
   * [Return waarden](semester-1-programming-principles/h6-methoden/returnwaarden.md)
   * [Geavanceerde methoden](semester-1-programming-principles/h6-methoden/3\_advancedmethod.md)
   * [Documentatie](semester-1-programming-principles/h6-methoden/1\_bibliotheken.md)
-* [H8: Arrays](semester-1-programming-principles/h7-arrays/README.md)
-  * [Array principes](semester-1-programming-principles/h7-arrays/1\_arraysbasics.md)
-  * [Alternatieve syntax](semester-1-programming-principles/h7-arrays/alternatieve-syntax.md)
-  * [Werken met arrays](semester-1-programming-principles/h7-arrays/2\_werken\_met\_arrays.md)
-  * [Value types en reference types](semester-1-programming-principles/h7-arrays/value-types-en-reference-types.md)
-  * [Arrays en methoden](semester-1-programming-principles/h7-arrays/3\_arrays\_en\_methoden.md)
-  * [N-dimensionale arrays](semester-1-programming-principles/h7-arrays/4\_ndimensionalarrays.md)
 
 ## Semester 2 : OOP
 

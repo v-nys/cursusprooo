@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="vincent"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-25 11:53:55 AM"/>
+        <attribute name="created" value="dmluY2VudDtQT1AtT1M7MjAyMS0xMC0yNTsxMTo0Mjo1NiBBTTsyNDY2"/>
+        <attribute name="edited" value="dmluY2VudDtQT1AtT1M7MjAyMS0xMC0yNTsxMTo1Mzo1NSBBTTsxOzI1NzU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Hoe veel items ga je kopen?&quot;" newline="True"/>
+            <declare name="aantalItems" type="Integer" array="False" size=""/>
+            <input variable="aantalItems"/>
+            <declare name="items" type="String" array="True" size="aantalItems"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="aantalItems" direction="inc" step="1">
+                <output expression="&quot;Wat is het &quot; &amp; i &amp; &quot;e item dat je nodig hebt?&quot;" newline="True"/>
+                <declare name="ingelezen" type="String" array="False" size=""/>
+                <input variable="ingelezen"/>
+                <assign variable="items[i-1]" expression="ingelezen"/>
+            </for>
+            <output expression="&quot;Op je lijstje staan:&quot;" newline="True"/>
+            <for variable="i" start="0" end="aantalItems - 1" direction="inc" step="1">
+                <output expression="&quot;* &quot; &amp; items[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
