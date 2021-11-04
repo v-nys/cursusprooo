@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="vincent"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-04 10:52:26 AM"/>
+        <attribute name="created" value="dmluY2VudDtQT1AtT1M7MjAyMS0xMS0wNDsxMDo0OToyNyBBTTsyNDY4"/>
+        <attribute name="edited" value="dmluY2VudDtQT1AtT1M7MjAyMS0xMS0wNDsxMDo1MjoyNiBBTTsxOzI1Njk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="MaakTaart(&quot;appel&quot;)"/>
+            <call expression="MaakTaart(&quot;peer&quot;)"/>
+        </body>
+    </function>
+    <function name="MaakTaart" type="None" variable="">
+        <parameters>
+            <parameter name="fruit" type="String" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Leg taartdeeg in een ronde bakvorm.&quot;" newline="True"/>
+            <output expression="&quot;Doe er wat pudding op.&quot;" newline="True"/>
+            <output expression="&quot;Snijd een &quot; &amp; fruit &amp; &quot; in stukken.&quot;" newline="True"/>
+            <output expression="&quot;Beleg het deeg met de stukjes &quot; &amp; fruit &amp; &quot;.&quot;" newline="True"/>
+            <output expression="&quot;Zet in de oven.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

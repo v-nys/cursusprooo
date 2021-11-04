@@ -62,8 +62,6 @@
   * [Methoden intro](semester-1-programming-principles/h6-methoden/0\_intromethods.md)
   * [Parameters](semester-1-programming-principles/h6-methoden/parameters.md)
   * [Return waarden](semester-1-programming-principles/h6-methoden/returnwaarden.md)
-  * [Geavanceerde methoden](semester-1-programming-principles/h6-methoden/3\_advancedmethod.md)
-  * [Documentatie](semester-1-programming-principles/h6-methoden/1\_bibliotheken.md)
 
 ## Semester 2 : OOP
 

@@ -5,7 +5,7 @@
 {% endhint %}
 
 {% hint style="success" %}
-[Kennisclip return en parameters samen](https://youtu.be/i_RX5Scb06c)
+[Kennisclip return en parameters samen](https://youtu.be/i\_RX5Scb06c)
 {% endhint %}
 
 Een stappenplan, en dus een methode, voer je uit met het oog op een bepaald resultaat. Soms moet dat resultaat terugbezorgd worden aan een opdrachtgever. Soms niet. Methodes staan toe beide variaties op een stappenplan te schrijven.
@@ -14,12 +14,12 @@ We gebruiken opnieuw een proces uit het echte leven om de interactie te omschrij
 
 ## Voorbeeld uit het echte leven
 
-Denk aan een ouderwetse bakker. Het stappenplan dat deze bakker volgt is er een om brood te maken. Om brood te maken heb je bloem nodig. Bloem maken is niet echt een onderdeel van het takenpakket van de bakker. Hij laat de molenaar dit voor hem doen. Hij vraagt niet gewoon aan de molenaar om bloem te **maken**, maar ook om deze aan hem te **bezorgen** zodat hij er zelf mee verder kan werken. De bakker heeft er niets aan als de molenaar bloem maakt en er verder niets mee doet.
+Denk aan een ouderwetse bakker. Het stappenplan dat deze bakker volgt is er een om brood te maken. Om brood te maken heb je bloem nodig. Bloem maken is niet echt een onderdeel van het takenpakket van de bakker. Hij laat de molenaar dit voor hem doen. Hij vraagt niet gewoon aan de molenaar om bloem te **maken**, maar ook om deze aan hem te **bezorgen** zodat hij er zelf mee verder kan werken. De bakker is niet geïnteresseerd in hoe de molenaar bloem maakt, maar hij heeft het eindproduct nodig om zijn brood af te maken.
 
 We vertalen nu deze interactie naar code en verklaren daarna de vertaling:
 
 {% hint style="info" %}
-Dit is maar een voorbeeld om de flow te verduidelijken. Er is geen "juiste" manier om een methode te schrijven om brood te bakken (tenzij je een broodmachine programmeert).
+Dit is maar een voorbeeld om de flow te verduidelijken. Er is geen "juiste" manier om een methode te schrijven om brood te bakken (tenzij je misschien een broodmachine programmeert).
 {% endhint %}
 
 ```csharp
@@ -110,3 +110,7 @@ Bovendien maken we gebruik van het feit dat de methode `Sqrt` (_square root_ is 
 8. de zin wordt correct afgeprint
 
 Meestal is het dus een goed idee zo weinig mogelijk informatie te communiceren met `WriteLine` en zo veel mogelijk met `return` te werken. Meerbepaald: gebruik WriteLine wanneer je de uiteindelijke informatie in haar uiteindelijke vorm hebt en deze echt aan de gebruiker moet tonen. Gebruik `return` wanneer je het resultaat van een deeltaak aan een opdrachtgever wil bezorgen.
+
+Volgend Flowgorithm toont aan hoe je dankzij methoden een probleem kan opbreken in meerdere kleine stappen, waarbij je informatie doorgeeft via parameters en returnwaarden:
+
+{% file src="../../.gitbook/assets/pythagoras-uitgebreid.fprg" %}

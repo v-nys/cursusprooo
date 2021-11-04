@@ -10,23 +10,23 @@ Veel code die we hebben geschreven wordt meerdere keren, al dan niet op verschil
 
 ### Wat is een methode
 
-Een methode \(bijna hetzelfde als een "functie" in andere programmeertalen\) genoemd, is in C\# een stuk code \('block'\) bestaande uit een 0, 1 of meerdere statements. Het is eigenlijk een klein stappenplan voor een onderdeel van je totale programma.
+Een methode (bijna hetzelfde als een "functie" in andere programmeertalen) genoemd, is in C# een stuk code ('block') bestaande uit een 0, 1 of meerdere statements. Het is eigenlijk een klein stappenplan voor een onderdeel van je totale programma.
 
 Zoals bij elk stappenplan is er een verschil tussen het vastleggen van de stappen en het uitvoeren. Het vastleggen van de stappen noemen we **definiëren** van de methode. Vergelijk met het tekenen van een flowchart voor een bepaalde taak, maar dan in code: de **definitie** van de methode stemt overeen met de flowchart die de deeltaak beschrijft.
 
-Het uitvoeren van de stappen, dus het volgen van de flowchart, noemen we het **oproepen** of **uitvoeren** van de methode. De code die dit proces in gang zet noemen we een **oproep** \(in het Engels: _**call**_\) van de methode.
+Het uitvoeren van de stappen, dus het volgen van de flowchart, noemen we het **oproepen** of **uitvoeren** van de methode. De code die dit proces in gang zet noemen we een **oproep** (in het Engels: _**call**_) van de methode.
 
-Je hebt intussen al vaak \(ingebouwde\) methodes opgeroepen, waaronder:
+Je hebt intussen al vaak (ingebouwde) methodes opgeroepen, waaronder:
 
-* de `Main` methode van de klasse `Program` \(voor deze hoef je de call zelf niet te schrijven, ze start automatisch op\)
+* de `Main` methode van de klasse `Program` (voor deze hoef je de call zelf niet te schrijven, ze start automatisch op)
 * de `WriteLine` methode van de klasse `Console`
-* de `Next` methode van een random generator
+* de `Substring` methode van een stuk tekst
 
 ### Basissyntax
 
 #### Definitie
 
-In het begin schrijven we onze methodes zo \(binnenkort zien we uitbreidingen\):
+In het begin schrijven we onze methodes zo (binnenkort zien we uitbreidingen):
 
 ```csharp
 public static void MethodeNaam()
@@ -36,6 +36,14 @@ public static void MethodeNaam()
 ```
 
 Dit stukje code definieert dus hoe het stappenplan er uitziet. Het zorgt er niet voor dat het ook ooit wordt uitgevoerd. Daar is een call voor nodig. `public` zorgt dat deze methode opgeroepen kan worden van uit andere klassen, `static` is nodig omdat we klassen alleen als organisatieprincipe voor onze code gebruiken, `void` behandelen we iets verder op. Deze zaken, samen met de naam en de haakjes, noemen we ook de **signatuur** van de methode.
+
+In Flowgorithm stemt de definitie van een methode overeen met een flowchart die in haar geheel getoond kan worden. Onderstaand voorbeeld bevat drie definities (flowcharts): `Main`, `ToonGroen` en `ToonBlauw`.
+
+{% file src="../../.gitbook/assets/controlflowmethoden.fprg" %}
+
+Je kan elke definitie (flowchart) terugvinden via dit menu:
+
+![](<../../.gitbook/assets/Screenshot from 2021-11-04 10-42-52.png>)
 
 #### Oproep
 
@@ -61,7 +69,12 @@ class Program {
 }
 ```
 
-{% hint style="info" %}
-Het kan informatief zijn om dit eens na te gaan met de debugger.
-{% endhint %}
+In Flowgorithm herken je de oproep als volgt:
 
+![](<../../.gitbook/assets/Screenshot from 2021-11-04 10-44-23.png>)
+
+Een oproep van een methode betekent dus dat je een andere flowchart uitvoert alsof het één stap is van de flowchart waarin je bezig bent.
+
+{% hint style="info" %}
+Net zoals eerder kan je dit ook in C# stap voor stap uitvoeren door de debugger te gebruiken. Om de werking van een methode in detail te zien, gebruik je "step into".
+{% endhint %}

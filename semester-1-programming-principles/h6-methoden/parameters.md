@@ -14,7 +14,7 @@ Het stappenplan voor de appeltaart is als volgt:
 
 1. leg taartdeeg in een ronde bakvorm
 2. doe er wat pudding op
-3. snij een appel in stukken
+3. snijd een appel in stukken
 4. beleg met de stukjes fruit
 5. zet in de oven
 
@@ -22,7 +22,7 @@ Het stappenplan voor de perentaart is als volgt:
 
 1. leg taartdeeg in een ronde bakvorm
 2. doe er wat pudding op
-3. snij een peer in stukken
+3. snijd een peer in stukken
 4. beleg met de stukjes fruit
 5. zet in de oven
 
@@ -36,12 +36,18 @@ Dit is hetzelfde stappenplan, op het gebruikte fruit na. Eigenlijk kan je in sta
 
 Op het moment dat we een taart willen bakken, moeten we pas voor een bepaald stuk fruit kiezen. In de tekst hierboven is "het stuk fruit" dus een soort variabele: we schrijven een naam maar we bedoelen daarmee een waarde die in de uitvoering wordt vastgelegd.
 
-In code zijn dit soort variabelen **parameters** van een methode. In de definitie van de methode werken we met hun naam \(zoals "het stuk fruit"\). Wanneer we de methode oproepen, voorzien we hun waarde \(zoals een appel of een peer of een ananas\). In de call spreken we ook over **argumenten** in plaats van parameters.
+In code zijn dit soort variabelen **parameters** van een methode. In de definitie van de methode werken we met hun naam (zoals "het stuk fruit"). Wanneer we de methode oproepen, voorzien we hun waarde (zoals een appel of een peer of een ananas). In de call spreken we ook over **argumenten** in plaats van parameters. De termen worden soms door elkaar gehaald, maar ze betekenen dus niet exact hetzelfde.
 
-Eerst een voorbeeld in code, daarna lichten we de werking toe. Volgende methode berekent en toont een bepaalde macht van een bepaald getal. De werkwijze is altijd dezelfde, maar de gebruiker beslist zelf welke macht hij wil berekenen en van welk getal:
+In Flowgorithm kunnen kort noteren dat we een appeltaart **en** een perentaart willen maken:
+
+![Het stappenplan om om het even welke fruittaart te maken.](<../../.gitbook/assets/Screenshot from 2021-11-04 10-56-03.png>) ![De code om snel twee fruittaarten te maken op basis van hetzelfde stappenplan.](<../../.gitbook/assets/Screenshot from 2021-11-04 10-56-58.png>)
+
+{% file src="../../.gitbook/assets/taart.fprg" %}
+
+In de praktijk maken we natuurlijk geen taarten, maar doen we bewerkingen met gegevens. Volgende methode berekent en toont een bepaalde macht van een bepaald getal. De werkwijze is altijd dezelfde, maar de gebruiker beslist zelf welke macht hij wil berekenen en van welk getal:
 
 ```csharp
-static void Macht(int grondtal, int macht)
+public static void Macht(int grondtal, int macht)
 {
     int resultaat = grondtal;
     for (int i = 1; i < macht; i++)
@@ -52,7 +58,7 @@ static void Macht(int grondtal, int macht)
 }
 ```
 
-Dit is een definitie van een methode, dus vergelijkbaar met een stappenplan of een flowchart. We geven aan dat er twee stukjes informatie zijn die per uitvoering kunnen verschillen: het grondtal en de macht. Omdat dit eigenlijk variabelen zijn \(met een scope beperkt tot deze methode\) geven we ook hun type, net zoals bij variabelen die we op de reeds gekende wijze declareren.
+Dit is een definitie van een methode, dus vergelijkbaar met een stappenplan of een flowchart. We geven aan dat er twee stukjes informatie zijn die per uitvoering kunnen verschillen: het grondtal en de macht. Omdat dit eigenlijk variabelen zijn (met een scope beperkt tot deze methode) geven we ook hun type, net zoals bij variabelen die we op de reeds gekende wijze declareren.
 
 Als we deze methode willen gebruiken, kunnen we dit doen:
 
@@ -66,7 +72,7 @@ public static void Main() {
 }
 ```
 
-De laatste regel bevat de call van de methode. De definitie bevat een paar "gaten" en de call vult deze in met de gewenste getallen. Het is belangrijk dat de gebruikte types en de verwachte types compatibel zijn. Het is bijvoorbeeld niet mogelijk `Macht("Hello World","blabla");` te schrijven als call want strings kunnen niet automatisch geïnterpreteerd worden als `int` en dat is wat er in de definitie staat.
+De laatste regel bevat de call van de methode. De definitie bevat een paar "gaten" en de call vult deze in met de gewenste getallen. Het is belangrijk dat de gebruikte types en de verwachte types compatibel zijn. Het is bijvoorbeeld niet mogelijk `Macht("Hello World","blabla");` te schrijven als call want strings zijn geen ints.
 
 ### De verbinding van definitie en oproep
 
@@ -85,7 +91,7 @@ Console.WriteLine(b);
 Dit programma zal je eerst `3` tonen en dan, op de volgende regel, `4`. Dit komt omdat de `=` op regel 2 niet betekent "`a` is hetzelfde als `b`", maar wel "kopieer het ding met naam `a` en geef de kopie de naam `b`". Dit is hoe toekenning werkt met alle types die we tot hiertoe gezien hebben.
 
 {% hint style="warning" %}
-Dit is niet hoe toekenning altijd werkt. Wanneer we arrays en eigen objecten zien, zullen de zaken anders liggen.
+Dit is niet hoe toekenning altijd werkt. Met name voor arrays is het wat anders, maar dat geval zullen we later in meer detail behandelen.
 {% endhint %}
 
 Met argumenten van een methode-oproep is het hetzelfde. Nog een voorbeeld:
@@ -104,7 +110,7 @@ public static void Main() {
 }
 ```
 
-Je ziet dat het getal enkel gewijzigd is binnen de methode VeranderGetal en daarna weer teruggezet lijkt op de oude waarde. Dit is niet helemaal correct. Wat eigenlijk gebeurt is het volgende:
+Je ziet dat het getal enkel gewijzigd is binnen de methode VeranderGetal en daarna weer teruggezet lijkt op de oude waarde. Dit is niet helemaal correct. Wat eigenlijk gebeurt, is het volgende:
 
 1. een waarde 4 krijgt de naam `mijnGetal`
 2. de waarde met naam `mijnGetal` wordt getoond
@@ -144,7 +150,6 @@ public static void Main() {
 }
 ```
 
-De parameter `getal` van `VeranderGetal` is niet dezelfde variabele als de variabele `getal` van `Main`. Elke functiedefinitie bakent een scope af. Vermits de definitie van `VeranderGetal` niet genest is in de definitie van `Main` \(en het omgekeerde ook niet waar is\) staan hun scopes los van elkaar. Binnenin `Main` bestaat er een variabele met naam getal, binnenin `VeranderGetal` bestaat er een andere variabele met naam getal.
+De parameter `getal` van `VeranderGetal` is niet dezelfde variabele als de variabele `getal` van `Main`. Elke functiedefinitie bakent een scope af. Vermits de definitie van `VeranderGetal` niet genest is in de definitie van `Main` (en het omgekeerde ook niet waar is) staan hun scopes los van elkaar. Binnenin `Main` bestaat er een variabele met naam getal, binnenin `VeranderGetal` bestaat er een andere variabele met naam getal.
 
 Er staat wel een oproep van `VeranderGetal` in `Main`, maar dit heeft geen effect op de variabelen in scope. Enkel de definities zijn hier van belang.
-

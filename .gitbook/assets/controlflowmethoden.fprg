@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="vincent"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-04 10:39:52 AM"/>
+        <attribute name="created" value="dmluY2VudDtQT1AtT1M7MjAyMS0xMS0wNDsxMDozODoxNSBBTTsyNDYz"/>
+        <attribute name="edited" value="dmluY2VudDtQT1AtT1M7MjAyMS0xMS0wNDsxMDozOTo1MiBBTTsxOzI1NzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="ToonGroen()"/>
+        </body>
+    </function>
+    <function name="ToonBlauw" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Blauw!&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="ToonGroen" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Groen!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

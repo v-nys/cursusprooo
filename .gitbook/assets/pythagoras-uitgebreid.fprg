@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="vincent"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-04 11:24:12 AM"/>
+        <attribute name="created" value="dmluY2VudDtQT1AtT1M7MjAyMS0xMS0wNDsxMToxNDoyNyBBTTsyNDYx"/>
+        <attribute name="edited" value="dmluY2VudDtQT1AtT1M7MjAyMS0xMS0wNDsxMToyNDoxMiBBTTs1OzI1Njg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Real" array="False" size=""/>
+            <assign variable="a" expression="4"/>
+            <declare name="b" type="Real" array="False" size=""/>
+            <assign variable="b" expression="3"/>
+            <declare name="omtrek" type="Real" array="False" size=""/>
+            <assign variable="omtrek" expression="Omtrek(a,b)"/>
+            <output expression="&quot;De omtrek van een rechthoekige driehoek met zijde &quot; &amp; a &amp; &quot;cm en zijde &quot; &amp; b &amp; &quot;cm bedraagt &quot; &amp; omtrek &amp; &quot;cm.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="Omtrek" type="Real" variable="omtrek">
+        <parameters>
+            <parameter name="a" type="Real" array="False"/>
+            <parameter name="b" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="schuineZijde" type="Integer" array="False" size=""/>
+            <assign variable="schuineZijde" expression="Pythagoras(a,b)"/>
+            <declare name="omtrek" type="Real" array="False" size=""/>
+            <assign variable="omtrek" expression="a + b + schuineZijde"/>
+        </body>
+    </function>
+    <function name="Pythagoras" type="Real" variable="c">
+        <parameters>
+            <parameter name="a" type="Real" array="False"/>
+            <parameter name="b" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="c" type="Real" array="False" size=""/>
+            <assign variable="c" expression="Sqrt(a * a + b * b)"/>
+        </body>
+    </function>
+</flowgorithm>
