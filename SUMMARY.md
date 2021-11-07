@@ -53,6 +53,7 @@
   * [Alternatieve syntax](semester-1-programming-principles/h7-arrays/alternatieve-syntax.md)
   * [Werken met arrays](semester-1-programming-principles/h7-arrays/2\_werken\_met\_arrays.md)
   * [Value types en reference types](semester-1-programming-principles/h7-arrays/value-types-en-reference-types.md)
+  * [Oefeningen](semester-1-programming-principles/h7-arrays/oefeningen.md)
 * [H6: Werken met data](semester-1-programming-principles/h3-werken-met-data/README.md)
   * [Namespace](semester-1-programming-principles/h3-werken-met-data/namespace.md)
   * [Casting en conversie](semester-1-programming-principles/h3-werken-met-data/4\_converteren.md)
