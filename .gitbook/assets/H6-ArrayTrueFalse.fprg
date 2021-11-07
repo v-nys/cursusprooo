@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="janvd"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-06 05:32:28 "/>
+        <attribute name="created" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDY7IjA1OjIyOjMzICI7MjgwOQ=="/>
+        <attribute name="edited" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDY7IjA1OjIyOjM3ICI7MTtqYW52ZDtERVNLVE9QLUo5VFY1S1M7MjAyMS0xMS0wNjsiMDQ6NTE6NTIgIjtINi1BcnJheVRydWVGYWxzZV8yLmZwcmc7ODA2MQ=="/>
+        <attribute name="edited" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDY7IjA1OjMyOjI4ICI7MjsyOTIz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="binary" type="Boolean" array="True" size="30"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="trueFalse" expression="true"/>
+            <for variable="i" start="0" end="size(trueFalseArray) - 1" direction="inc" step="1">
+                <if expression="i % 2 == 0">
+                    <then>
+                        <assign variable="trueFalseArray[i]" expression="true"/>
+                    </then>
+                    <else>
+                        <assign variable="trueFalseArray[i]" expression="false"/>
+                    </else>
+                </if>
+                <output expression="ToString(trueFalseArray[i]) &amp; &quot; &quot;" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

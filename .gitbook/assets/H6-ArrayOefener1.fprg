@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="janvd"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-06 06:09:59 "/>
+        <attribute name="created" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDY7IjA1OjMyOjMzICI7MjgxMA=="/>
+        <attribute name="edited" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDY7IjA2OjA5OjU5ICI7NDsyOTM0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="getallen" type="Integer" array="True" size="10"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Voer 10 gehele getallen in&quot;" newline="True"/>
+            <for variable="i" start="0" end="size(getallen) - 1" direction="inc" step="1">
+                <input variable="getallen[i]"/>
+            </for>
+            <declare name="som" type="Integer" array="False" size=""/>
+            <assign variable="som" expression="0"/>
+            <declare name="grootste" type="Integer" array="False" size=""/>
+            <assign variable="grootste" expression="getallen[0]"/>
+            <for variable="i" start="0" end="size(getallen) - 1" direction="inc" step="1">
+                <assign variable="som" expression="som + getallen[i]"/>
+                <if expression="getallen[i] &gt; grootste">
+                    <then>
+                        <assign variable="grootste" expression="getallen[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <declare name="gemiddelde" type="Real" array="False" size=""/>
+            <assign variable="gemiddelde" expression="som / size(getallen)"/>
+            <output expression="&quot;************&quot;" newline="True"/>
+            <output expression="&quot;som is &quot; &amp; som &amp; &quot;, gemiddelde is &quot; &amp; gemiddelde &amp; &quot;, grootste getal is &quot; &amp; grootste" newline="True"/>
+            <output expression="&quot;************&quot;" newline="True"/>
+            <declare name="keuze" type="Integer" array="False" size=""/>
+            <output expression="&quot;Voer een getal in:&quot;" newline="False"/>
+            <input variable="keuze"/>
+            <if expression="keuze &gt; grootste">
+                <then>
+                    <output expression="&quot;Niets is groter&quot;" newline="True"/>
+                </then>
+                <else>
+                    <for variable="i" start="0" end="size(getallen) - 1" direction="inc" step="1">
+                        <if expression="getallen[i] &gt; keuze">
+                            <then>
+                                <output expression="getallen[i] &amp; &quot; &quot;" newline="False"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </for>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="janvd"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-06 09:23:11 "/>
+        <attribute name="created" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDY7IjA4OjMzOjU4ICI7MjgyMQ=="/>
+        <attribute name="edited" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDY7IjA4OjM0OjAzICI7MTtqYW52ZDtERVNLVE9QLUo5VFY1S1M7MjAyMS0xMS0wNjsiMDY6NTc6MTUgIjtINi1CaW5hcnlTZWFyY2guZnByZzs3NzE1"/>
+        <attribute name="edited" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDY7IjA5OjIzOjExICI7MjsyOTE5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Vervang tot het einde van de opvulling van de array door volgende code:&#13;&#10;            string[] autoMerken = { &quot;Citroen&quot;, &quot;Mercedes&quot;, &quot;Peugeot&quot;, &quot;BMW&quot;, &quot;Toyota&quot;, &quot;AstonMartin&quot;, &quot;Ferrari&quot;, &quot;Opel&quot;, &quot;Lexus&quot;, &quot;Wartburg&quot; };&#13;&#10;&#13;&#10;Dan is de array niet gesorteerd, anders dan in Flowgorithm!"/>
+            <declare name="autoMerken" type="String" array="True" size="10"/>
+            <assign variable="autoMerken[0]" expression="&quot;AstonMartin&quot;"/>
+            <assign variable="autoMerken[1]" expression="&quot;BMW&quot;"/>
+            <assign variable="autoMerken[2]" expression="&quot;Citroen&quot;"/>
+            <assign variable="autoMerken[3]" expression="&quot;Ferrari&quot;"/>
+            <assign variable="autoMerken[4]" expression="&quot;Lexus&quot;"/>
+            <assign variable="autoMerken[5]" expression="&quot;Mercedes&quot;"/>
+            <assign variable="autoMerken[6]" expression="&quot;Opel&quot;"/>
+            <assign variable="autoMerken[7]" expression="&quot;Peugeot&quot;"/>
+            <assign variable="autoMerken[8]" expression="&quot;Toyota&quot;"/>
+            <assign variable="autoMerken[9]" expression="&quot;Wartburg&quot;"/>
+            <comment text="Einde opvulling array"/>
+            <declare name="zoekWaarde" type="String" array="False" size=""/>
+            <output expression="&quot;Welk automerk wil je zoeken?&quot;" newline="True"/>
+            <input variable="zoekWaarde"/>
+            <declare name="beginIndex" type="Integer" array="False" size=""/>
+            <declare name="eindIndex" type="Integer" array="False" size=""/>
+            <declare name="middenIndex" type="Integer" array="False" size=""/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <assign variable="beginIndex" expression="0"/>
+            <assign variable="eindIndex" expression="size(autoMerken) - 1"/>
+            <assign variable="index" expression="-1"/>
+            <while expression="beginIndex &lt;= eindIndex">
+                <assign variable="middenIndex" expression="beginIndex + (eindIndex - beginIndex) / 2"/>
+                <if expression="autoMerken[middenIndex] &lt; zoekWaarde">
+                    <then>
+                        <assign variable="beginIndex" expression="middenIndex + 1"/>
+                    </then>
+                    <else>
+                        <if expression="autoMerken[middenIndex] &gt; zoekWaarde">
+                            <then>
+                                <assign variable="eindIndex" expression="middenIndex - 1"/>
+                            </then>
+                            <else>
+                                <assign variable="index" expression="middenIndex"/>
+                                <comment text="spring uit de while loop (simulatie van break)"/>
+                                <assign variable="beginIndex" expression="eindIndex + 1"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <if expression="index == -1">
+                <then>
+                    <output expression="&quot;Je zocht &quot; &amp; zoekWaarde &amp; &quot;, jammer die is niet gevonden&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Je zocht &quot; &amp; zoekWaarde &amp; &quot;, die is gevonden op index &quot; &amp; index" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

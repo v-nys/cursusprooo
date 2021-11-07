@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="janvd"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-07 09:04:35 "/>
+        <attribute name="created" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDY7IjEwOjAwOjUwICI7MjgwMA=="/>
+        <attribute name="edited" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDY7IjEwOjI3OjUyICI7MTtqYW52ZDtERVNLVE9QLUo5VFY1S1M7MjAyMS0xMS0wNjsiMDg6MzM6NTggIjtINi1CaW5hcnlTZWFyY2hfMi5mcHJnOzc4NjI="/>
+        <attribute name="edited" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDc7IjA5OjAyOjQxICI7MTtqYW52ZDtERVNLVE9QLUo5VFY1S1M7MjAyMS0xMS0wNjsiMDk6NTI6NDcgIjtINi1Mb3R0by5mcHJnOzcwMzY="/>
+        <attribute name="edited" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDc7IjA5OjA0OjM1ICI7NDsyOTI3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="aantal" type="Integer" array="False" size=""/>
+            <output expression="&quot;We gaan de boodschappenlijst samenstellen. Hoeveel items wil je opschrijven?&quot;" newline="True"/>
+            <input variable="aantal"/>
+            <declare name="items" type="String" array="True" size="aantal"/>
+            <for variable="i" start="0" end="size(items) - 1" direction="inc" step="1">
+                <output expression="&quot;Wat is item &quot; &amp; (i + 1) &amp; &quot; op je lijst?&quot;" newline="True"/>
+                <input variable="items[i]"/>
+            </for>
+            <comment text="Vervang StringSort door de C# Array methode !"/>
+            <call expression="StringSort(items)"/>
+            <output expression="&quot;Dit is je gesorteerde lijst:&quot;" newline="True"/>
+            <for variable="i" start="0" end="size(items) - 1" direction="inc" step="1">
+                <output expression="(i + 1) &amp; &quot;: &quot; &amp; items[i]" newline="True"/>
+            </for>
+            <output expression="&quot;Op naar de winkel&quot;" newline="True"/>
+            <declare name="gekochtItem" type="String" array="False" size=""/>
+            <declare name="nogWinkelen" type="String" array="False" size=""/>
+            <assign variable="nogWinkelen" expression="&quot;ja&quot;"/>
+            <while expression="nogWinkelen = &quot;ja&quot;">
+                <output expression="&quot;Welk item heb je gekocht?&quot;" newline="True"/>
+                <input variable="gekochtItem"/>
+                <comment text="Vervang StringSort door de C# Array methode !"/>
+                <if expression="StringIndexOf(items, gekochtItem) &lt; 0">
+                    <then>
+                        <output expression="&quot;Dit item bevindt zich niet op de lijst!&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <comment text="Vervang StringSort door de C# Array methode !"/>
+                        <assign variable="items[StringIndexOf(items, gekochtItem)]" expression="&quot;gekocht&quot;"/>
+                    </else>
+                </if>
+                <output expression="&quot;Nog winkelen? (ja of nee)?&quot;" newline="True"/>
+                <input variable="nogWinkelen"/>
+            </while>
+            <output expression="&quot;Naar huis met de boodschappen!&quot;" newline="True"/>
+            <output expression="&quot;Volgende items van je lijst ben je vergeten te kopen: &quot;" newline="True"/>
+            <for variable="i" start="0" end="size(items) - 1" direction="inc" step="1">
+                <if expression="items[i] != &quot;gekocht&quot;">
+                    <then>
+                        <output expression="items[i] &amp; &quot; &quot;" newline="False"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="StringBinarySearch" type="Integer" variable="index">
+        <parameters>
+            <parameter name="array" type="String" array="True"/>
+            <parameter name="zoekWaarde" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="beginIndex" type="Integer" array="False" size=""/>
+            <declare name="eindIndex" type="Integer" array="False" size=""/>
+            <declare name="middenIndex" type="Integer" array="False" size=""/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <assign variable="beginIndex" expression="0"/>
+            <assign variable="eindIndex" expression="size(array) - 1"/>
+            <assign variable="index" expression="-1"/>
+            <while expression="beginIndex &lt;= eindIndex">
+                <assign variable="middenIndex" expression="beginIndex + (eindIndex - beginIndex) / 2"/>
+                <if expression="array[middenIndex] &lt; zoekWaarde">
+                    <then>
+                        <assign variable="beginIndex" expression="middenIndex + 1"/>
+                    </then>
+                    <else>
+                        <if expression="array[middenIndex] &gt; zoekWaarde">
+                            <then>
+                                <assign variable="eindIndex" expression="middenIndex - 1"/>
+                            </then>
+                            <else>
+                                <assign variable="index" expression="middenIndex"/>
+                                <comment text="spring uit de while loop (simulatie van break)"/>
+                                <assign variable="beginIndex" expression="eindIndex + 1"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="StringIndexOf" type="Integer" variable="index">
+        <parameters>
+            <parameter name="array" type="String" array="True"/>
+            <parameter name="waarde" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="index" expression="-1"/>
+            <do expression="i &lt; size(array) &amp;&amp; index == -1">
+                <if expression="array[i] == waarde">
+                    <then>
+                        <assign variable="index" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i + 1"/>
+            </do>
+        </body>
+    </function>
+    <function name="StringSort" type="None" variable="">
+        <parameters>
+            <parameter name="array" type="String" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="grootte" type="Integer" array="False" size=""/>
+            <assign variable="grootte" expression="size(array)"/>
+            <for variable="i" start="0" end="size(array) - 1" direction="inc" step="1">
+                <for variable="j" start="0" end="size(array) - i - 2" direction="inc" step="1">
+                    <if expression="array[j] &gt; array[j + 1]">
+                        <then>
+                            <declare name="temp" type="String" array="False" size=""/>
+                            <assign variable="temp" expression="array[j]"/>
+                            <assign variable="array[j]" expression="array[j + 1]"/>
+                            <assign variable="array[j + 1]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

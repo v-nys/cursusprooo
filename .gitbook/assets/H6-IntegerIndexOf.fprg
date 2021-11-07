@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="janvd"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-06 10:00:44 "/>
+        <attribute name="created" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDY7IjA5OjMzOjUxICI7MjgxNQ=="/>
+        <attribute name="edited" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDY7IjA5OjMzOjU1ICI7MTtqYW52ZDtERVNLVE9QLUo5VFY1S1M7MjAyMS0xMS0wNjsiMDg6MzM6NTggIjtINi1CaW5hcnlTZWFyY2hfMi5mcHJnOzc4NzA="/>
+        <attribute name="edited" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDY7IjA5OjM2OjQxICI7MTtqYW52ZDtERVNLVE9QLUo5VFY1S1M7MjAyMS0xMS0wNjsiMDk6NTI6NDcgIjtINi1Mb3R0by5mcHJnOzcwNDI="/>
+        <attribute name="edited" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMDY7IjEwOjAwOjQ0ICI7MzsyOTEz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="waardes" type="Integer" array="True" size="10"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Geef 10 willekeurige gehele getallen&quot;" newline="True"/>
+            <for variable="i" start="0" end="size(waardes) - 1" direction="inc" step="1">
+                <input variable="waardes[i]"/>
+            </for>
+            <declare name="zoekWaarde" type="Integer" array="False" size=""/>
+            <output expression="&quot;Welk geheel getal wil je zoeken?&quot;" newline="True"/>
+            <input variable="zoekWaarde"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="index" expression="-1"/>
+            <do expression="i &lt; size(waardes) &amp;&amp; index == -1">
+                <if expression="waardes[i] == zoekWaarde">
+                    <then>
+                        <assign variable="index" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i + 1"/>
+            </do>
+            <if expression="index == -1">
+                <then>
+                    <output expression="&quot;Je zocht &quot; &amp; zoekWaarde &amp; &quot;, jammer die is niet gevonden&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Je zocht &quot; &amp; zoekWaarde &amp; &quot;, die is gevonden op index &quot; &amp; index" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
