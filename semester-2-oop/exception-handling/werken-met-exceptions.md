@@ -1,7 +1,7 @@
 # Werken met exceptions
 
 {% hint style="success" %}
-[Kennisclip inleiding](https://youtu.be/v_A8EOOeGj4)
+[Kennisclip inleiding](https://youtu.be/v\_A8EOOeGj4)
 {% endhint %}
 
 Een methode is, in essentie, een stappenplan. Een stappenplan kan niet altijd rekening houden met elke mogelijke situatie. Soms treden er uitzonderlijke situaties op waarin het plan niet meer gevolgd kan worden. Het programmeerconcept dat overeenstemt met zo'n "uitzonderlijke situatie" is de _exception_ (Engels voor "uitzondering").
@@ -46,7 +46,7 @@ Indien je aan het debuggen bent en je krijgt een exception dan zal deze anders g
 ## Try en Catch
 
 {% hint style="success" %}
-[Kennisclip try en catch](https://youtu.be/giXT_Ru061Y)
+[Kennisclip try en catch](https://youtu.be/giXT\_Ru061Y)
 {% endhint %}
 
 Het mechanisme om exceptions af te handelen in C# bestaat uit 2 delen:
@@ -117,7 +117,7 @@ Indien er nu een uitzondering optreedt dan zal de tekst “Verkeerde invoer” g
 ## Meerdere `catch`-blokken
 
 {% hint style="success" %}
-[Kennisclip soorten exceptions](https://youtu.be/L-O8kFSK_UI)
+[Kennisclip soorten exceptions](https://youtu.be/L-O8kFSK\_UI)
 {% endhint %}
 
 `Exception` is een klasse van het .NET framework. Er zijn van deze ouderklasse meerdere exception-klassen afgeleid die een specifieke probleemsituatie beschrijven. Enkele veelvoorkomende zijn:
@@ -163,7 +163,7 @@ Indien een `FormatException` optreedt dan zal het eerste catch-blok uitgevoerd w
 
 ## Welke exceptions worden gegooid?
 
-De MSDN bibliotheek is de manier om te weten te komen welke exceptions een methode mogelijk kan gooien. Gaan we bijvoorbeeld naar [de pagina van de `ReadAllLines` methode van de `File` klasse](https://docs.microsoft.com/en-us/dotnet/api/system.io.file.readalllines?view=netcore-3.1#System_IO_File_ReadAllLines_System_String\_), dan zien we onder "Exceptions" een aantal scenario's waarin het kan foutlopen en hoe deze gesignaleerd worden.
+De MSDN bibliotheek is de manier om te weten te komen welke exceptions een methode mogelijk kan gooien. Gaan we bijvoorbeeld naar [de pagina van de `ReadAllLines` methode van de `File` klasse](https://docs.microsoft.com/en-us/dotnet/api/system.io.file.readalllines?view=netcore-3.1#System\_IO\_File\_ReadAllLines\_System\_String\_), dan zien we onder "Exceptions" een aantal scenario's waarin het kan foutlopen en hoe deze gesignaleerd worden.
 
 ## De stack (trace)
 
@@ -171,7 +171,7 @@ De MSDN bibliotheek is de manier om te weten te komen welke exceptions een metho
 [Kennisclip stack (trace)](https://youtu.be/E2RdKJ1BFXg)
 {% endhint %}
 
-Herinner je uit [het hoofdstuk rond geheugenbeheer](../../semester-1-programming-principles/h7-arrays/value-types-en-reference-types.md#stack-heap-value-en-reference) dat elke methode-oproep data op de stack plaatst, het "snelle programmageheugen". Dus als methode A methode B oproept en methode B roept methode C op, krijg je een stack die er als volgt uitziet:
+Herinner je uit [het hoofdstuk rond geheugenbeheer](broken-reference) dat elke methode-oproep data op de stack plaatst, het "snelle programmageheugen". Dus als methode A methode B oproept en methode B roept methode C op, krijg je een stack die er als volgt uitziet:
 
 |                           |
 | :-----------------------: |

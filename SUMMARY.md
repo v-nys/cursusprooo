@@ -52,7 +52,6 @@
   * [Array principes](semester-1-programming-principles/h7-arrays/1\_arraysbasics.md)
   * [Alternatieve syntax](semester-1-programming-principles/h7-arrays/alternatieve-syntax.md)
   * [Werken met arrays](semester-1-programming-principles/h7-arrays/2\_werken\_met\_arrays.md)
-  * [Value types en reference types](semester-1-programming-principles/h7-arrays/value-types-en-reference-types.md)
   * [Oefeningen](semester-1-programming-principles/h7-arrays/oefeningen.md)
 * [H7: Methoden](semester-1-programming-principles/h6-methoden/README.md)
   * [Methoden intro](semester-1-programming-principles/h6-methoden/0\_intromethods.md)

@@ -1,6 +1,6 @@
 # Immutable datastructuren
 
-De standaard datastructuren van C# zijn [reference types](../../semester-1-programming-principles/h7-arrays/value-types-en-reference-types.md). Dit betekent dat iedereen die zo'n datastructuur te pakken krijgt (bijvoorbeeld omdat je hem als argument meegeeft aan een methode), de inhoud van deze datastructuur ook kan wijzigen. Dit kan met opzet of gewoonweg per vergissing gebeuren.
+De standaard datastructuren van C# zijn [reference types](broken-reference). Dit betekent dat iedereen die zo'n datastructuur te pakken krijgt (bijvoorbeeld omdat je hem als argument meegeeft aan een methode), de inhoud van deze datastructuur ook kan wijzigen. Dit kan met opzet of gewoonweg per vergissing gebeuren.
 
 {% hint style="info" %}
 Hoezo, "met opzet"? Denk eraan dat je typisch niet de enige programmeur bent die met bepaalde code in contact komt.

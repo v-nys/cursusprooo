@@ -9,11 +9,11 @@
 Het .NET gegevenstype `DateTime` is de ideale manier om te leren werken met objecten. Het is een nuttig en toegankelijk gegevenstype. Je kan er je iets bij voorstellen, maar het is ook een beetje abstract.
 
 {% hint style="warning" %}
-Waarom spreken we hier over "gegevenstype" en niet over "klasse"? Omdat klassen in .NET reference types zijn. `DateTime` is echter een value type, dus technisch gezien is het een "struct" en geen "klasse". Wij zullen zelf geen structs schrijven, maar het verschil met klassen is uiterst klein in C\#. Instanties van zowel klassen als structs zijn objecten.
+Waarom spreken we hier over "gegevenstype" en niet over "klasse"? Omdat klassen in .NET reference types zijn. `DateTime` is echter een value type, dus technisch gezien is het een "struct" en geen "klasse". Wij zullen zelf geen structs schrijven, maar het verschil met klassen is uiterst klein in C#. Instanties van zowel klassen als structs zijn objecten.
 {% endhint %}
 
 {% hint style="warning" %}
-Zegt het verschil tussen value types en reference types je niets meer? Kijk dan terug naar [deze pagina](../../semester-1-programming-principles/h7-arrays/value-types-en-reference-types.md).
+Zegt het verschil tussen value types en reference types je niets meer? Kijk dan terug naar [deze pagina](broken-reference).
 {% endhint %}
 
 ## DateTime objecten aanmaken
@@ -21,7 +21,7 @@ Zegt het verschil tussen value types en reference types je niets meer? Kijk dan 
 Er zijn 2 manieren om `DateTime` objecten aan te maken:
 
 1. Door aan de klasse de huidige datum en tijd te vragen via `DateTime.Now`
-2. Door manueel de datum en tijd in te stellen via de **constructor** 
+2. Door manueel de datum en tijd in te stellen via de **constructor**&#x20;
 
 ### DateTime.Now
 
@@ -73,7 +73,7 @@ DateTime timeNow= DateTime.Now;
 DateTime nextWeek= timeNow.AddDays(7);
 ```
 
-\(voorgaande kan ook in 1 lijn: `DateTime nextWeek= DateTime.Now.AddDays(7)`\)
+(voorgaande kan ook in 1 lijn: `DateTime nextWeek= DateTime.Now.AddDays(7)`)
 
 Uiteraard mag je ook een bestaand object overschrijven met het resultaat van deze methoden:
 
@@ -86,7 +86,7 @@ Console.WriteLine(someTime);
 
 ## DateTime properties
 
-**Properties** zijn een zeer uniek aspect van C\#. Ze geven toegang tot de data van een object, maar op een gecontroleerde manier. We zullen deze nog tot in den treure leren maken.
+**Properties** zijn een zeer uniek aspect van C#. Ze geven toegang tot de data van een object, maar op een gecontroleerde manier. We zullen deze nog tot in den treure leren maken.
 
 Enkele nuttige properties van `DateTime` zijn:
 
@@ -107,7 +107,7 @@ Enkele nuttige properties van `DateTime` zijn:
 
 ### Properties gebruiken
 
-**Alle properties van DateTime zijn read-only**. Je kan een bestaande datum dus niet aanpassen \(maar je kan wel een nieuwe datum baseren op een bestaande datum\).
+**Alle properties van DateTime zijn read-only**. Je kan een bestaande datum dus niet aanpassen (maar je kan wel een nieuwe datum baseren op een bestaande datum).
 
 Een voorbeeld:
 
@@ -165,7 +165,7 @@ Wil je nog meer controle over de output dan kan je ook zelf je formaat specifier
 
 ### Localized time
 
-De manier waarop `DateTime` objecten worden getoond \(via `ToString`\) is afhankelijk van de landinstellingen van je systeem. Soms wil je dit echter op een andere manier tonen. Je doet dit door mee te geven volgens welke **culture** de tijd en datum getoond moet worden.
+De manier waarop `DateTime` objecten worden getoond (via `ToString`) is afhankelijk van de landinstellingen van je systeem. Soms wil je dit echter op een andere manier tonen. Je doet dit door mee te geven volgens welke **culture** de tijd en datum getoond moet worden.
 
 Dit vereist dat je eerst een `CultureInfo` object aanmaakt en dat je dan meegeeft:
 
@@ -239,4 +239,3 @@ Maak een applicatie die bestaat uit een oneindige loop. De loop zal iedere secon
 ### Verjaardag
 
 Maak een applicatie die aan de gebruiker vraagt op welke dag hij jarig is. Toon vervolgens over hoeveel dagen z'n verjaardag dan zal zijn.
-

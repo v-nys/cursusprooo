@@ -92,7 +92,7 @@ Je ziet hier al enkele voordelen van encapsulatie:
 
 ## Beginwaarden
 
-Een veld krijgt normaal de defaultwaarde voor zijn type. [Defaultwaarden](../../semester-1-programming-principles/h7-arrays/value-types-en-reference-types.md#defaultwaarden) hebben we reeds gezien. Het is mogelijk de beginwaarde aan te passen met de syntax voor een toekenning:
+Een veld krijgt normaal de defaultwaarde voor zijn type. [Defaultwaarden](broken-reference) hebben we reeds gezien. Het is mogelijk de beginwaarde aan te passen met de syntax voor een toekenning:
 
 ```csharp
 class Auto {

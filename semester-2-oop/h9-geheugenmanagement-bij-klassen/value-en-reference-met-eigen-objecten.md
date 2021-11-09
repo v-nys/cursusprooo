@@ -1,7 +1,7 @@
 # value en reference met eigen objecten
 
 {% hint style="info" %}
-Het verschil tussen value en reference is eerder al eens behandeld op [deze pagina](../../semester-1-programming-principles/h7-arrays/value-types-en-reference-types.md) \(waar je ook een uitgebreide kennisclip terugvindt\). Die leerstof blijft te kennen, maar onderstaande uitleg maakt het verschil duidelijker.
+Het verschil tussen value en reference is eerder al eens behandeld op [deze pagina](broken-reference) (waar je ook een uitgebreide kennisclip terugvindt). Die leerstof blijft te kennen, maar onderstaande uitleg maakt het verschil duidelijker.
 {% endhint %}
 
 {% hint style="success" %}
@@ -20,7 +20,7 @@ Onze eigen klassen zijn **reference types**. Dat wil zeggen dat, in de ruimte di
 
 ### Stack vs. heap
 
-Voor de uitvoering van een programma wordt gebruik gemaakt van twee types geheugen: een stack en een heap. De **stack** is klein, gestructureerd en snel. De **heap** is groot, ongestructureerd en traag. Beide geheugens zijn nodig: **op de stack wordt ruimte voorzien voor de lokale variabelen van alle methoden die momenteel in uitvoering zijn** \(met Main onderaan\). Op de heap staan gegevens waarnaar ergens anders verwezen wordt. Dat kan van op de stack zijn \(als je een lokale variabele hebt van een reference type\) of van ergens anders op de heap \(bijvoorbeeld als je in een object een instantievariabele hebt van een reference type\).
+Voor de uitvoering van een programma wordt gebruik gemaakt van twee types geheugen: een stack en een heap. De **stack** is klein, gestructureerd en snel. De **heap** is groot, ongestructureerd en traag. Beide geheugens zijn nodig: **op de stack wordt ruimte voorzien voor de lokale variabelen van alle methoden die momenteel in uitvoering zijn** (met Main onderaan). Op de heap staan gegevens waarnaar ergens anders verwezen wordt. Dat kan van op de stack zijn (als je een lokale variabele hebt van een reference type) of van ergens anders op de heap (bijvoorbeeld als je in een object een instantievariabele hebt van een reference type).
 
 {% hint style="info" %}
 Deze "stack" is dezelfde stack waarover je informatie kan terugvinden wanneer je de debugger uitvoert in Visual Studio!
@@ -77,4 +77,3 @@ static void WijzigDatums(MiniDatumValue val, MiniDatumReference reference)
 ```
 
 Als je dit programma uitvoert, merk je dat de waarde van `d1` niet gewijzigd is door de methode en `d2` wel. Dat komt omdat val een kopie bevatte van de waarde van `d1`, terwijl reference naar dezelfde data verwees als `d2`.
-
