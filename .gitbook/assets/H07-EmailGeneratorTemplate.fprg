@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="janvd"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-12 05:48:50 "/>
+        <attribute name="created" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMTI7IjExOjE3OjUzICI7MjgwOQ=="/>
+        <attribute name="edited" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjEtMTEtMTI7IjEyOjM1OjMxICI7MzsyOTE2"/>
+        <attribute name="edited" value="SmFuO1ZEUENMVDAwMTsyMDIxLTExLTEyOyIwNTo0ODo1MCAiOzE7MjE4Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="voornaam" type="String" array="False" size=""/>
+            <declare name="achternaam" type="String" array="False" size=""/>
+            <declare name="isStudent" type="Boolean" array="False" size=""/>
+            <output expression="&quot;Geef voornaam: &quot;" newline="False"/>
+            <input variable="voornaam"/>
+            <output expression="&quot;Geef achternaam: &quot;" newline="False"/>
+            <input variable="achternaam"/>
+            <output expression="&quot;student (false/true):&quot;" newline="False"/>
+            <input variable="isStudent"/>
+            <assign variable="voornaam" expression="StringToLower(voornaam)"/>
+            <comment text="Volgende uitvoer is test om te kijken of de methode StringToLower correct werkt. Werk de flowchart verder af vanaf hier."/>
+            <output expression="&quot;Voornaam ToLower: &quot; &amp; voornaam" newline="True"/>
+        </body>
+    </function>
+    <function name="StringToLower" type="String" variable="geconverteerdeTekst">
+        <parameters>
+            <parameter name="tekst" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="geconverteerdeTekst" type="String" array="False" size=""/>
+            <assign variable="geconverteerdeTekst" expression="&quot;&quot;"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="karakter" type="Integer" array="False" size=""/>
+            <assign variable="karakter" expression="0"/>
+            <for variable="i" start="0" end="len(tekst) - 1" direction="inc" step="1">
+                <assign variable="karakter" expression="ToCode(Char(tekst,i))"/>
+                <if expression="karakter &gt;= ToCode(&quot;A&quot;) &amp;&amp;&#13;&#10;karakter &lt;= ToCode(&quot;Z&quot;)">
+                    <then>
+                        <assign variable="karakter" expression="karakter + (ToCode(&quot;a&quot;) - ToCode(&quot;A&quot;))"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="geconverteerdeTekst" expression="geconverteerdeTekst &amp; ToChar(karakter)"/>
+            </for>
+        </body>
+    </function>
+    <function name="StringTrim" type="String" variable="geconverteerdeTekst">
+        <parameters>
+            <parameter name="tekst" type="String" array="False"/>
+        </parameters>
+        <body/>
+    </function>
+</flowgorithm>

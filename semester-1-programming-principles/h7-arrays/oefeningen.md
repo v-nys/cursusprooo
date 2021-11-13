@@ -35,7 +35,7 @@ Implementeer onderstaande flowchart in C#.
 
 #### Voorbeeldinteractie
 
-![](<../../.gitbook/assets/image (69).png>)
+![](<../../.gitbook/assets/image (69) (1).png>)
 
 ### **Oefening: H6-ArrayOefener1**
 
@@ -184,7 +184,7 @@ Probeer d.m.v. Flowgorithm de flowchart te gebruiken en zet dan om naar C#.
 
 ![](<../../.gitbook/assets/image (72).png>)
 
-![](<../../.gitbook/assets/image (67).png>)
+![](<../../.gitbook/assets/image (67) (1).png>)
 
 ### **Oefening: H6-BinarySearch**
 
