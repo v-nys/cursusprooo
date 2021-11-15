@@ -58,6 +58,7 @@
   * [Parameters](semester-1-programming-principles/h6-methoden/parameters.md)
   * [Return waarden](semester-1-programming-principles/h6-methoden/returnwaarden.md)
   * [Oefeningen](semester-1-programming-principles/h6-methoden/oefeningen.md)
+* [Intermezzo: TextCell](semester-1-programming-principles/intermezzo-textcell.md)
 
 ## Semester 2 : OOP
 
