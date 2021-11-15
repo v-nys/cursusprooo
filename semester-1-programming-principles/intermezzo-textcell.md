@@ -198,10 +198,10 @@ while (BevatNullWaarden(berekendRooster)) {
 }
 ```
 
-Voor de hulpmethode `BerekenOntbrekendeCellenEenKeer`, die één stapje op de tekening voorstelt, doorlopen we alle reeds berekende cellen. Telkens we een nog niet berekende cel tegenkomen, zoeken we de formule op en proberen we die uit te rekenen voor enkel die cel. De implementatie ziet er zo uit:
+Voor de hulpmethode `BerekenOntbrekendeWaardenEenKeer`, die één stapje op de tekening voorstelt, doorlopen we alle reeds berekende cellen. Telkens we een nog niet berekende cel tegenkomen, zoeken we de formule op en proberen we die uit te rekenen voor enkel die cel. De implementatie ziet er zo uit:
 
 ```csharp
-public static void BerekenOntbrekendeCellenEenKeer(string[] rooster, string[] berekendRooster) {
+public static void BerekenOntbrekendeWaardenEenKeer(string[] rooster, string[] berekendRooster) {
     for(int cel = 0; cel < rooster.Length; cel++) {
         if (berekendRooster[cel] is null) {
             berekendRooster[cel] = BerekenOntbrekendeCelRechtstreeks(rooster[cel].Substring(1), berekendRooster);
