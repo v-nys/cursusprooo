@@ -1,5 +1,9 @@
 # Intermezzo: TextCell
 
+{% hint style="success" %}
+[Kennisclip](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=429eb98b-38a9-45ef-a114-ade20076a352)
+{% endhint %}
+
 ## Inleiding
 
 Het voelt misschien nog niet zo, maar je kent intussen al redelijk veel programmeerconcepten. Je kent onder meer variabelen van verschillende types, beslissingen, loops, arrays en methoden. Nu is het niet alleen kwestie van die zaken te kennen, maar ook van die zaken te gebruiken. Daarom zullen we deze les een beetje anders aanpakken dan gewoonlijk. We zullen een vereenvoudigde versie van een bestaand programma schrijven. Dit is een uitstekende manier om te leren. Het maakt niet uit dat dat programma al bestaat. Het doel is om bij te leren. Door bestaande software na te bouwen, heb je een duidelijk referentiepunt.
