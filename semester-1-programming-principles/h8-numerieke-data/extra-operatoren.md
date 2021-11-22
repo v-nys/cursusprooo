@@ -35,22 +35,23 @@ Naast het gebruik om te testen of een getal een veelvoud is van een ander getal,
 
 Een vereenvoudigde chronometer in code kan er zo uitzien:
 
-```
+```csharp
 int aantalSeconden = 0;
 while (true) {
   Console.WriteLine(aantalSeconden);
   Thread.Sleep(1000); // dit pauzeert het programma 1 seconde, komt uit System.Threading
+  aantalSeconden = aantalSeconden + 1;
 }
 ```
 
 Een ander voorbeeld is het laatste cijfer van een getal. Als je telt vanaf 0 tot 9, ga je steeds over naar het volgende cijfer. Maar daarna ga je terug naar 0 voor het laatste cijfer. Je kent andere manieren om dit te doen, maar volgend programma zal het getoonde getal steeds resetten:
 
-```
+```csharp
 int getal = 0;
-while (true) {
-  getal = getal + 1;
+while (true) {  
   Console.WriteLine(getal % 10);
   Thread.Sleep (1000);
+  getal = getal + 1;
   // we negeren de uiteindelijke "overflow", waarbij het getal te groot wordt voor het datatype
 }
 ```
@@ -61,7 +62,7 @@ De modulo is dus erg handig als we aan het "einde" van een bepaalde reeks terug 
 string[] tekstOmTeScanderen = {"wij","hebben","honger"};
 int index = 0;
 while (true) {
-  Console.WriteLine($"{tekstOmTeScanderen[i].ToUpper()}!");
+  Console.WriteLine($"{tekstOmTeScanderen[index].ToUpper()}!");
   index = (index + 1) % tekstOmTeScanderen.Length;
   Thread.Sleep(1000);
 }

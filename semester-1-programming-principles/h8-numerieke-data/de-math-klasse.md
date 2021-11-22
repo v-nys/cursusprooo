@@ -55,20 +55,8 @@ double omtrek = Math.PI * 2 * straal;
 
 #### Klassiek afronden
 
-n
+"Klassiek" afronden is afronden tot het dichtstbijzijnde getal. Dit doe je met `Math.Round`. Deze methode  heeft twee parameters: het getal dat je wil afronden en het aantal cijfers na de komma dat je wil bewaren. Let hierbij goed op: dit berekent een nieuwe waarde (van type `double`) met de gewenste **precisie**, maar zorgt er niet automatisch voor dat deze waarde ook met dat aantal cijfers **getoond** wordt. Anders gezegd: `Math.Round(12.0, 2) `kan exact voorgesteld worden met hooguit twee cijfers na de komma, maar wordt standaard niet getoond met twee cijfers na de komma. Dat laatste behandelen we verder bij stringformattering.
 
 #### Afronden naar boven of beneden
 
-Een vaak voorkomende oefening is deze waarbij je een bepaalde variabele continue moet aanpassen. Stel bijvoorbeeld dat je aan de gebruiker de temperatuur van iedere dag vraagt om zo vervolgens het gemiddelde te berekenen. Dit kan je doen door middel van een lopende som: je gaat telkens het ingevoerde getal toevoegen aan wat je reeds hebt bewaard. Meestal dus met behulp van de `+=` operator.
-
-```csharp
-double totaal = 0.0;
-Console.WriteLine("Geef temperatuur dag 1");
-double inp = Convert.ToDouble(Console.ReadLine());
-totaal += inp;
-Console.WriteLine("Geef temperatuur dag 2");
-inp = Convert.ToDouble(Console.ReadLine());
-totaal += inp;
-//enz
-Console.WriteLine($"Gemiddelde temperatuur deze week was: {totaal/7}");
-```
+Naast "klassiek" afronden kan je ook zuiver in één richting afronden. Dan krijg je de dichtste benadering met de gewenste precisie waarvoor geldt benadering =< getal (bij naar beneden afronden) of benadering >= getal (bij naar boven afronden). Dit doen we met Math.Floor en Math.Ceiling. Bijvoorbeeld: Math.Floor(12.6,0) is 12, ook al is 13 een benadering met de gewenste precisie die dichter bij ligt. Dat komt omdat 12 =< 12.6, terwijl 13 > 12.6.
