@@ -142,19 +142,17 @@ Wat betreft het random genereren van 6 getallen tussen 1 en 42. Daar krijg je he
 
 
 
-```
-        Random random = new Random();
-        int lottoGetal;
+```csharp
+Random random = new Random();
+int lottoGetal;
         
-        for (i = 0; i < lottoTrekking.Length; i++)
-        {
-            do
-            {
-                lottoGetal = random.Next(42) + 1;
-            }
-            while (Array.IndexOf(lottoTrekking, lottoGetal) >= 0);
-            lottoTrekking[i] = lottoGetal;
-        }
+for (int i = 0; i < lottoTrekking.Length; i++) {
+    do {
+        lottoGetal = random.Next(42) + 1;
+    }
+    while (Array.IndexOf(lottoTrekking, lottoGetal) >= 0);
+    lottoTrekking[i] = lottoGetal;
+}
 ```
 
 #### Voorbeeldinteractie
