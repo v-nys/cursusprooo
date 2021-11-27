@@ -40,7 +40,7 @@ int aantalSeconden = 0;
 while (true) {
   Console.WriteLine(aantalSeconden);
   Thread.Sleep(1000); // dit pauzeert het programma 1 seconde, komt uit System.Threading
-  aantalSeconden = aantalSeconden + 1;
+  aantalSeconden = (aantalSeconden + 1) % 60;
 }
 ```
 
