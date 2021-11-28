@@ -52,6 +52,7 @@
   * [Array principes](semester-1-programming-principles/h7-arrays/1\_arraysbasics.md)
   * [Alternatieve syntax](semester-1-programming-principles/h7-arrays/alternatieve-syntax.md)
   * [Werken met arrays](semester-1-programming-principles/h7-arrays/2\_werken\_met\_arrays.md)
+  * [Defaultwaarden](semester-1-programming-principles/h7-arrays/defaultwaarden.md)
   * [Oefeningen](semester-1-programming-principles/h7-arrays/oefeningen.md)
 * [H7: Methoden](semester-1-programming-principles/h6-methoden/README.md)
   * [Methoden intro](semester-1-programming-principles/h6-methoden/0\_intromethods.md)
@@ -64,6 +65,9 @@
   * [De Math klasse](semester-1-programming-principles/h8-numerieke-data/de-math-klasse.md)
   * [Casting en conversie](semester-1-programming-principles/h8-numerieke-data/casting-en-conversie.md)
   * [Random](semester-1-programming-principles/h8-numerieke-data/random.md)
+* [H9: meerdimensionaal werken](semester-1-programming-principles/h9-meerdimensionaal-werken/README.md)
+  * [N-dimensionale arrays](semester-1-programming-principles/h9-meerdimensionaal-werken/n-dimensionale-arrays.md)
+  * [Geneste iteratie](semester-1-programming-principles/h9-meerdimensionaal-werken/geneste-iteratie.md)
 
 ## Semester 2 : OOP
 
