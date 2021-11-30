@@ -5,7 +5,7 @@
 Met meerdimensionale arrays kunnen we de richtingen los van elkaar bekijken. Bijvoorbeeld, om ons OXO-rooster af te printen (eerste rij op één regel, tweede rij op een volgende regel, derde rij op een derde regel), kunnen we dit doen:
 
 ```csharp
-public static void PrintRij(rij,array) {
+public static void PrintRij(int rij, string[,] array) {
 	for(int i = 0; i < array.getLength(1); i++) {
 		Console.Write(array[rij,i]);
 	}
@@ -17,8 +17,6 @@ for(int rij = 0; rij < oxoRooster.GetLength(0); rij++) {
     PrintRij(rij,oxoRooster);
 }
 ```
-
-***
 
 Als we het rooster in één dimensie zouden voorstellen met een variabele `oxoArray`, moesten we dit doen:
 
@@ -57,7 +55,7 @@ In het vorige voorbeeld toonden we per rij even veel symbolen. Dus de werking va
 Volgend voorbeeld toont hoe je enkel een driehoekig deel van een rooster toont:
 
 ```csharp
-public static void PrintRij(rij,array,maxI) {
+public static void PrintRij(int rij, string[,] array, int maxI) {
 	for(int i = 0; i < array.getLength(1) && i <= maxI; i++) {
 		Console.Write(array[rij,i]);
 	}

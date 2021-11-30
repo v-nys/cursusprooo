@@ -66,7 +66,7 @@
   * [Casting en conversie](semester-1-programming-principles/h8-numerieke-data/casting-en-conversie.md)
   * [Random](semester-1-programming-principles/h8-numerieke-data/random.md)
   * [Oefeningen](semester-1-programming-principles/h8-numerieke-data/oefeningen.md)
-* [H9: meerdimensionaal werken](semester-1-programming-principles/h9-meerdimensionaal-werken/README.md)
+* [H9: Meerdimensionaal werken](semester-1-programming-principles/h9-meerdimensionaal-werken/README.md)
   * [N-dimensionale arrays](semester-1-programming-principles/h9-meerdimensionaal-werken/n-dimensionale-arrays.md)
   * [Geneste iteratie](semester-1-programming-principles/h9-meerdimensionaal-werken/geneste-iteratie.md)
 
