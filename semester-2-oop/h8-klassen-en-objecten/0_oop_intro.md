@@ -54,4 +54,4 @@ Objecten van dezelfde soort volgen wel dezelfde regels en hebben in dat opzicht 
 Samengevat:
 
 * **Een klasse** is een beschrijving en verzameling van dingen (objecten) met soortgelijke eigenschappen en gedrag.
-* Een individueel **object** is een **instantie** (_exemplaar, voorbeeld, verschijningsvorm) _van een klasse
+* Een individueel **object** is een **instantie** (_exemplaar, voorbeeld, verschijningsvorm)_ van een klasse

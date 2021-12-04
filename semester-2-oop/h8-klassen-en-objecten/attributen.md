@@ -102,7 +102,7 @@ class Auto {
 }
 ```
 
-Nu hebben nieuwe auto's standaard 5 km op de teller staan, enzovoort. Merk op: deze waarde wordt voor elk nieuw object opnieuw berekend. Als je dus twee auto's aanmaakt in je programma, zullen zij beide een **verschillende **datum van het laatste onderhoud bevatten.
+Nu hebben nieuwe auto's standaard 5 km op de teller staan, enzovoort. Merk op: deze waarde wordt voor elk nieuw object opnieuw berekend. Als je dus twee auto's aanmaakt in je programma, zullen zij beide een **verschillende** datum van het laatste onderhoud bevatten.
 
 ## `static` attributen
 

@@ -51,7 +51,7 @@ public static void DemonstreerImmutableListBuilder() {
 
 Beginnende programmeurs denken soms dat ze hetzelfde effect kunnen verkrijgen door een property voor een datastructuur "read only" te maken. Dit doen ze dan door alleen een getter te voorzien en geen setter of, als ze buiten deze cursus gaan zoeken, met het sleutelwoordje `readonly`.
 
-**Dit maakt je datastructuur niet immutable! **Het zorgt er **wel** voor dat je het object op de heap waarin je data staat niet kan vervangen. Het zorgt er **niet** voor dat je de inhoud van dat object niet kan vervangen.
+**Dit maakt je datastructuur niet immutable!** Het zorgt er **wel** voor dat je het object op de heap waarin je data staat niet kan vervangen. Het zorgt er **niet** voor dat je de inhoud van dat object niet kan vervangen.
 
 Bijvoorbeeld, als we personen voorzien van een array met lievelingsgerechten:
 

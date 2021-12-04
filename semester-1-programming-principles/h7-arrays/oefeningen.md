@@ -56,7 +56,7 @@ Vervolgens vraagt het programma de gebruiker om een getal in te voeren. Het prog
 
 Implementeer onderstaande flowchart in C#.
 
-#### ** Technische analyse**
+#### &#x20;**Technische analyse**
 
 {% file src="../../.gitbook/assets/H6-ArrayOefener1.fprg" %}
 

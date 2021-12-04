@@ -927,7 +927,7 @@ In .NET betekent abstractie : gebruik maken van interfaces, of abstracte klassen
 
 Wat is een interface?
 
-**Je hebt geleerd dat een klasse slechts van één klasse kan erven. Een klasse kan echter ook nog interfaces implementeren. Wanneer een klasse een interface implementeert sluit de klasse een **contract** met de compiler dat de klasse zich zal gedragen volgens de interface. Concreet betekent dit dat in de klasse alle eigenschappen (properties) en methoden van de interface moet implementeren. Een interface bevat dus eigenlijk enkel een lijst van eigenschappen en methoden die nog geen concrete invulling hebben.**
+**Je hebt geleerd dat een klasse slechts van één klasse kan erven. Een klasse kan echter ook nog interfaces implementeren. Wanneer een klasse een interface implementeert sluit de klasse een** contract **met de compiler dat de klasse zich zal gedragen volgens de interface. Concreet betekent dit dat in de klasse alle eigenschappen (properties) en methoden van de interface moet implementeren. Een interface bevat dus eigenlijk enkel een lijst van eigenschappen en methoden die nog geen concrete invulling hebben.**
 
 Volgens WIKIPEDIA: Een interface in de programmeertaal als Java of C# is een soort abstracte klasse die een interface aanduidt die klassen kunnen implementeren. Een interface wordt aangeduid met het sleutelwoord interface en bevat alleen ongedefinieerde methoden.
 

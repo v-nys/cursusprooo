@@ -8,7 +8,7 @@
 
 Om een uitvoerbaar C#-programma te maken moeten we bepaalde regels respecteren. We noemen deze regels de **syntaxis** of _syntax_ van de taal.
 
-Een C#-programma bestaat uit een opeenvolging van instructies ook wel **statements** genoemd. Met de uitzondering van **blokken** (ook _blocks_, afgebakend door** **`{`** en **`}`) eindigen deze steeds met een **puntkomma** (**`;`**)
+Een C#-programma bestaat uit een opeenvolging van instructies ook wel **statements** genoemd. Met de uitzondering van **blokken** (ook _blocks_, afgebakend door **** `{` **en** `}`) eindigen deze steeds met een **puntkomma** (**`;`**)
 
 De volgorde van de woorden is niet vrijblijvend en moet aan grammaticale regels voldoen. Enkel indien alle statements correct zijn zal het programma gecompileerd worden naar een werkend en uitvoerbaar programma (zoals in een vorige sectie besproken).
 
@@ -96,7 +96,7 @@ Enkele voorbeelden van toegelaten en niet toegelaten identifiers:
 | \_ILOVE2019    | ja          |                                                         |
 | Tor+Bjorn      | neen        | enkel cijfers, letters en liggende streepjes toegestaan |
 | ALLCAPSMAN     | ja          |                                                         |
-| B_A_L          | ja          |                                                         |
+| B\_A\_L        | ja          |                                                         |
 | class          | neen        | gereserveerd keyword                                    |
 | WriteLine      | ja          |                                                         |
 

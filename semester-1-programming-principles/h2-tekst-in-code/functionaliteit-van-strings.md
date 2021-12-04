@@ -4,7 +4,7 @@ Strings bevatten veel ingebouwde functionaliteit. Als je deze leert gebruiken, k
 
 ## `Length`
 
-De lengte van een string is het aantal symbolen in de weergegeven versie. Je plaatst `.Length` achter de string om de lengte te weten te komen. Enkele voorbeelden: 
+De lengte van een string is het aantal symbolen in de weergegeven versie. Je plaatst `.Length` achter de string om de lengte te weten te komen. Enkele voorbeelden:&#x20;
 
 ```csharp
 Console.WriteLine("hallo".Length); // levert 5 want: 5 symbolen in de uiteindelijke weergave
@@ -27,7 +27,7 @@ Je mag de lengte achterwege laten om vanaf de gegeven index tot het einde van de
 Console.WriteLine("Hallo, wereld".Substring(4)); // toont o, wereld
 ```
 
-Deze methode **verandert een string niet**. Er is geen enkele methode die dat doet, want **je kan een string niet veranderen in C#. Je kan er alleen een nieuwe mee bouwen. **De methode berekent wel een nieuwe string met de gewenste eigenschappen. Dit is een belangrijk onderscheid. Volgende drie voorbeelden tonen het verschil. Voer uit en verklaar.
+Deze methode **verandert een string niet**. Er is geen enkele methode die dat doet, want **je kan een string niet veranderen in C#. Je kan er alleen een nieuwe mee bouwen.** De methode berekent wel een nieuwe string met de gewenste eigenschappen. Dit is een belangrijk onderscheid. Volgende drie voorbeelden tonen het verschil. Voer uit en verklaar.
 
 ```csharp
 string hallo1 = "hallo";

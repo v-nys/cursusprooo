@@ -2,7 +2,7 @@
 
 ## Snippets
 
-Om sneller code te kunnen schrijven in Visual Studio, kan je gebruik maken van zogenaamde Snippets. In de les gebruiken we regelmatig de snippets voor _full properties _`propfull` en _Console.WriteLine()_ `cw`
+Om sneller code te kunnen schrijven in Visual Studio, kan je gebruik maken van zogenaamde Snippets. In de les gebruiken we regelmatig de snippets voor _full properties_ `propfull` en _Console.WriteLine()_ `cw`
 
 Een lijst van beschikbare snippets kan je hier vinden:
 

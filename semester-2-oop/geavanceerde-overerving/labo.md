@@ -8,7 +8,7 @@ We schrijven een bestelsysteem. We kunnen gewone bestellingen en internationale 
 
 ### Technische analyse
 
-Schrijf een klasse Bestelling met een `uint` property `Aantal` en een `double` privé-attribuut `basisPrijs`. Voorzie ook een overschrijfbare property `TotaalPrijs`, namelijk het aantal maal de basisprijs. Schrijf een subklasse `InternationaleBestelling` die de totaalprijs bepaalt door de basisprijs met 10% te verhogen, maar vanaf 100 stuks een vlakke korting van 1000 euro toepast. **Dit zal niet meteen werken! **Doe een zo klein mogelijke aanpassing om het toch te doen werken.
+Schrijf een klasse Bestelling met een `uint` property `Aantal` en een `double` privé-attribuut `basisPrijs`. Voorzie ook een overschrijfbare property `TotaalPrijs`, namelijk het aantal maal de basisprijs. Schrijf een subklasse `InternationaleBestelling` die de totaalprijs bepaalt door de basisprijs met 10% te verhogen, maar vanaf 100 stuks een vlakke korting van 1000 euro toepast. **Dit zal niet meteen werken!** Doe een zo klein mogelijke aanpassing om het toch te doen werken.
 
 Schrijf een methode `DemonstreerBestellingen` in de klasse `EigenObjectOefeningen`. Hierin vraag je of de gebruiker een gewone of internationale bestelling wil plaatsen, vraag je om het aantal en de basisprijs en toon je dan de totaalprijs.
 
@@ -109,7 +109,7 @@ Tabs zijn eigenlijk niet ideaal. Zoek, als je sneller klaar bent, uit hoe je str
 ## H15-figuren
 
 {% hint style="info" %}
-Kopieer eerst je code van [h14-figuren](../h12-overerving/oefeningen.md#oefening-h-14-figuren) naar een nieuwe klasse `VergelijkbareFiguur` met kindklassen `VergelijkbareCirkel` enzovoort. 
+Kopieer eerst je code van [h14-figuren](../h12-overerving/oefeningen.md#oefening-h-14-figuren) naar een nieuwe klasse `VergelijkbareFiguur` met kindklassen `VergelijkbareCirkel` enzovoort.&#x20;
 {% endhint %}
 
 ### Functionele analyse
@@ -128,8 +128,8 @@ De reden dat je de setters afschermt is dat een object niet van hash code mag ve
 
 Voorzie ten slotte een aantal implementaties van `ToString`:
 
-* voor cirkels toon je: `"Dit is een object van klasse VergelijkbareCirkel met straal <straal>" ` (je vult \<straal> correct in en de code moet juist blijven ook als je de klasse van naam verandert)
-* voor driehoeken toon je: `"Dit is een object van klasse VergelijkbareDriehoek met basis <basis> en hoogte <hoogte>" ` (je vult de afmetingen correct in en de code moet juist blijven ook als je de klasse van naam verandert)
+* voor cirkels toon je: `"Dit is een object van klasse VergelijkbareCirkel met straal <straal>"` (je vult \<straal> correct in en de code moet juist blijven ook als je de klasse van naam verandert)
+* voor driehoeken toon je: `"Dit is een object van klasse VergelijkbareDriehoek met basis <basis> en hoogte <hoogte>"` (je vult de afmetingen correct in en de code moet juist blijven ook als je de klasse van naam verandert)
 * voor parallellogram zoals bij de vorige twee
 * voor een rechthoek (en dus vanzelf ook voor een vierkant) genereer je een tekening bestaande uit puntjes. Je doet dit door de breedte en lengte naar boven af te ronden en daaruit het aantal rijen en kolommen in je tekening af te leiden.
 
