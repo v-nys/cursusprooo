@@ -112,7 +112,7 @@ Probeer zelf een flowchart te maken en zet die dan om naar C#.
 
 #### Voorbeeldinteractie
 
-![](<../../.gitbook/assets/image (68).png>)
+![](<../../.gitbook/assets/image (68) (1).png>)
 
 ### **Oefening: H6-Lotto**
 
@@ -157,7 +157,7 @@ for (int i = 0; i < lottoTrekking.Length; i++) {
 
 #### Voorbeeldinteractie
 
-![](<../../.gitbook/assets/image (73).png>)
+![](<../../.gitbook/assets/image (73) (1).png>)
 
 #### Uitbreiding
 
@@ -182,7 +182,7 @@ Probeer d.m.v. Flowgorithm de flowchart te gebruiken en zet dan om naar C#.
 
 ![](<../../.gitbook/assets/image (72).png>)
 
-![](<../../.gitbook/assets/image (67) (1).png>)
+![](<../../.gitbook/assets/image (67) (1) (1).png>)
 
 ### **Oefening: H6-BinarySearch**
 
@@ -205,7 +205,7 @@ Implementeer onderstaande flowchart  in C#.
 
 ![](<../../.gitbook/assets/image (74).png>)
 
-![](<../../.gitbook/assets/image (71).png>)
+![](<../../.gitbook/assets/image (71) (1).png>)
 
 
 

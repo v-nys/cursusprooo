@@ -69,6 +69,7 @@
 * [H9: Meerdimensionaal werken](semester-1-programming-principles/h9-meerdimensionaal-werken/README.md)
   * [N-dimensionale arrays](semester-1-programming-principles/h9-meerdimensionaal-werken/n-dimensionale-arrays.md)
   * [Geneste iteratie](semester-1-programming-principles/h9-meerdimensionaal-werken/geneste-iteratie.md)
+  * [Oefeningen](semester-1-programming-principles/h9-meerdimensionaal-werken/oefeningen.md)
 * [H10: Gevorderde tekstverwerking](semester-1-programming-principles/h10-gevorderde-tekstverwerking/README.md)
   * [Voorstelling van tekst](semester-1-programming-principles/h10-gevorderde-tekstverwerking/voorstelling-van-tekst.md)
   * [Interpolatie met formattering](semester-1-programming-principles/h10-gevorderde-tekstverwerking/interpolatie-met-formattering.md)

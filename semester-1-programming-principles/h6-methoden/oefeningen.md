@@ -25,7 +25,7 @@ Schrijf een methode en toon de werking ervan aan door vanuit een methode Opwarme
 
 #### Voorbeeldinteractie
 
-![](<../../.gitbook/assets/image (67).png>)
+![](<../../.gitbook/assets/image (67) (1).png>)
 
 ### **Oefening H7-EmailadresGenerator**
 
