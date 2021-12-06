@@ -47,6 +47,10 @@ Console.WriteLine("Dit is één symbool: \ud835\udcb3");
 
 Je hoeft de werking van surrogate pairs voor deze cursus niet in detail te kennen, maar als je ooit een applicatie schrijft die emoji,... bevat, vind je [hier](https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-encoding-introduction) de details.
 
+{% hint style="warning" %}
+Je kan emoji gebruiken in je programmatekst, maar je moet de terminal ook verwittigen dat je dit wil doen. Hiervoor zet je de encodering **van de terminal** via `Console.OutputEncoding = Encoding.UTF8`.
+{% endhint %}
+
 ## Verbatim strings
 
 Door een `@` (verbatim character) voor een string te plaatsen zeggen we concreet: "de hele string die nu volgt moet je beschouwen zoals hij er staat. Je mag alle escape karakters negeren en er mogen line breaks voorkomen in deze string."
