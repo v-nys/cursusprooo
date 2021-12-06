@@ -47,18 +47,6 @@ Console.WriteLine("Dit is één symbool: \ud835\udcb3");
 
 Je hoeft de werking van surrogate pairs voor deze cursus niet in detail te kennen, maar als je ooit een applicatie schrijft die emoji,... bevat, vind je [hier](https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-encoding-introduction) de details.
 
-In strings kan je ook emoji noteren, zelfs als die gebruik maken van surrogate pairs. Bijvoorbeeld:
-
-```csharp
-Console.WriteLine("👩🏽‍🚒");
-```
-
-Voor dit specifieke symbool zou je anders 7 Unicode escapes nodig hebben...
-
-{% hint style="warning" %}
-Als je emoji probeert te tonen, is het niet voldoende dat je C# programma juist geschreven is. Je terminal moet dit ook ondersteunen. PowerShell doet dit momenteel standaard niet. De terminal van git bash ook niet. De nieuwe Windows terminal (die je kan downloaden uit de Windows store) doet dit **wel**, dus als je programma in orde is en je voert `dotnet run` uit in de Windows terminal, zou je ook emoji moeten zien.
-{% endhint %}
-
 ## Verbatim strings
 
 Door een `@` (verbatim character) voor een string te plaatsen zeggen we concreet: "de hele string die nu volgt moet je beschouwen zoals hij er staat. Je mag alle escape karakters negeren en er mogen line breaks voorkomen in deze string."
