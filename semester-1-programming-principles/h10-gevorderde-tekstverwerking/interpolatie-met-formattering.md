@@ -86,8 +86,8 @@ Zoals vaak lever je hiermee wat gemak in voor extra flexibiliteit. Je kan nameli
 ```csharp
 Console.WriteLine("Hoe breed wil je de string?");
 int breedte = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"{"hallo".PadLeft(breedte),'!'} wereld");
-Console.WriteLine($"{"hallo".PadRight(breedte),'!'} wereld");
+Console.WriteLine($"{"hallo".PadLeft(breedte,'!')} wereld");
+Console.WriteLine($"{"hallo".PadRight(breedte,'!')} wereld");
 ```
 
 #### Eigen methodes voor formattering
