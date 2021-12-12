@@ -77,6 +77,7 @@
   * [Interpolatie met formattering](semester-1-programming-principles/h10-gevorderde-tekstverwerking/interpolatie-met-formattering.md)
   * [Werken met arrays van strings](semester-1-programming-principles/h10-gevorderde-tekstverwerking/werken-met-arrays-van-strings.md)
   * [Input en output van tekstbestanden](semester-1-programming-principles/h10-gevorderde-tekstverwerking/input-en-output-van-tekstbestanden.md)
+  * [Oefeningen](semester-1-programming-principles/h10-gevorderde-tekstverwerking/oefeningen.md)
 
 ## Semester 2 : OOP
 

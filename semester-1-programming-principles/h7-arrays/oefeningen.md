@@ -35,7 +35,7 @@ Implementeer onderstaande flowchart in C#.
 
 #### Voorbeeldinteractie
 
-![](<../../.gitbook/assets/image (69) (1).png>)
+![](<../../.gitbook/assets/image (69) (1) (1).png>)
 
 ### **Oefening: H6-ArrayOefener1**
 
@@ -62,7 +62,7 @@ Implementeer onderstaande flowchart in C#.
 
 #### **Voorbeeldinteractie**
 
-![](<../../.gitbook/assets/image (70).png>)
+![](<../../.gitbook/assets/image (70) (1).png>)
 
 ### **Oefening: H6-Boodschappenlijst**
 
@@ -157,7 +157,7 @@ for (int i = 0; i < lottoTrekking.Length; i++) {
 
 #### Voorbeeldinteractie
 
-![](<../../.gitbook/assets/image (73) (1).png>)
+![](<../../.gitbook/assets/image (73) (1) (1).png>)
 
 #### Uitbreiding
 
@@ -180,7 +180,7 @@ Probeer d.m.v. Flowgorithm de flowchart te gebruiken en zet dan om naar C#.
 
 #### Voorbeeldinteractie
 
-![](<../../.gitbook/assets/image (72).png>)
+![](<../../.gitbook/assets/image (72) (1).png>)
 
 ![](<../../.gitbook/assets/image (67) (1) (1).png>)
 
@@ -203,11 +203,90 @@ Implementeer onderstaande flowchart  in C#.
 
 #### Voorbeeldinteractie
 
-![](<../../.gitbook/assets/image (74).png>)
+![](<../../.gitbook/assets/image (74) (1).png>)
 
-![](<../../.gitbook/assets/image (71) (1).png>)
-
-
+![](<../../.gitbook/assets/image (71) (1) (1).png>)
 
 
 
+### **Oefening: H6-Boodschappenlijst-list**
+
+#### **Leerdoelen**
+
+* Declareren van een `List`
+* Initialiseren van een `List`
+* `List` gebruiken
+
+#### **Functionele analyse**
+
+Maak een een alternatieve versie van H6-Boodschappenlijst. Maak ditmaal gebruik van List\<T> in plaats van een array.
+
+#### **Technische analyse**
+
+* Je hoeft de grootte van de lijst niet meer op voorhand te vragen.
+* Een lijst `myList` sorteren doe je door `myList.sort()` op te roepen.
+* Je mag elementen die gekocht zijn gewoonweg verwijderen uit de lijst.
+* Op het eindetoon je de resterende items met een `foreach` lus.
+* Je geeft een lege regel in om aan te geven dat je niets wil toevoegen aan je lijstje.
+* Noem je methode `BoodschappenList`
+
+#### **Voorbeeldinteractie**
+
+```
+Wat is item 1 op je lijst?
+> kaas
+Wat is item 2 op je lijst?
+> eieren
+Wat is item 3 op je lijst?
+> boter
+Wat is item 4 op je lijst?
+>
+Dit is je gesorteerde lijst:
+1: boter
+2: eieren
+3: kaas
+Op naar de winkel!
+Welk item heb je gekocht?
+> kaas
+Nog winkelen? (Ja of Nee)
+> nee
+Naar huis met de boodschappen!
+Volgende items van je lijst ben je vergeten te kopen:
+boter eieren
+```
+
+### **Oefening: H6-Kerstinkopen-list**
+
+#### **Leerdoelen**
+
+* Declareren van een `List`
+* Initialiseren van een `List`
+* `List` gebruiken
+
+#### **Functionele analyse**
+
+Maak een een alternatieve versie van H6-Kerstinkopen. Maak ditmaal gebruik van List\<T> in plaats van een array.
+
+#### **Technische analyse**
+
+* Je hoeft niet meer te vragen op voorhand hoe veel cadeautjes er gekocht zullen worden.
+* Je mag stoppen bij een lege regel invoer.
+* Je moet ook stoppen zodra je over budget gaat.
+* Noem je methode `KerstinkopenList`
+
+#### Voorbeeldinteractie
+
+```
+Wat is het budget voor je kerstinkopen?
+> 500
+Prijs van cadeau 1?
+> 200
+Prijs van cadeau 2?
+> 33.0
+Je bent al 30.0 euro over het budget!
+Info over je aankopen:
+Totaal bedrag: 530.0 euro
+Duurste cadeau: 330.0 euro
+Goedkoopste cadeau: 200.0 euro
+Gemiddelde prijs: 265.0 euro
+```

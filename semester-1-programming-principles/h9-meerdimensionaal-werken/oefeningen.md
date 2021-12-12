@@ -128,7 +128,7 @@ Volg de  conventie:
 
 &#x20;
 
-![](<../../.gitbook/assets/image (71).png>)
+![](<../../.gitbook/assets/image (71) (1).png>)
 
 ### Technische analyse
 
