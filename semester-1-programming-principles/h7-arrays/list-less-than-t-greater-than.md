@@ -85,3 +85,7 @@ foreach(int prime in integerList)
    Console.WriteLine(prime);
 }
 ```
+
+{% hint style="warning" %}
+Er bestaat strikt gesproken geen meerdimensionale `List<T>`, maar een lijst kan wel andere lijsten bevatten. Je kan de functionaliteit ervan dus nabootsen.
+{% endhint %}
