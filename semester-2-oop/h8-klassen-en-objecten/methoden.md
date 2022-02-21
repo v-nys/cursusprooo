@@ -1,7 +1,7 @@
 # Methoden
 
 {% hint style="success" %}
-[Kennisclip](https://youtu.be/Wuk9G1_JMWc). Deze bevat een voorbereiding op het labo die niet uitgeschreven staat in de tekst. Je moet deze mee maken.
+[Kennisclip](https://youtu.be/Wuk9G1\_JMWc)
 {% endhint %}
 
 **Instantiemethoden**, ook **objectmethoden** genoemd, weerspiegelen staan toe om functionaliteit toe te voegen aan objecten van een bepaalde klasse. Soms wordt ook gezegd dat ze "**gedrag**" van de objecten voorzien. Ze verschillen van statische methoden omdat ze niet alleen gebruik kunnen maken van statische onderdelen van klassen, maar ook van het object waar ze zelf bij horen.
@@ -12,7 +12,7 @@ Methoden behoren tot een algemenere categorie onderdelen van objecten genaamd **
 
 ## Basisvoorbeelden
 
-We gaan verder met de klasse `Auto`. We willen bijvoorbeeld een applicatie voor de opvolging van deelauto's \(Cambio, Poppy, etc.\) schrijven. Er zijn verschillende soorten functionaliteit die je kan koppelen aan één auto:
+We gaan verder met de klasse `Auto`. We willen bijvoorbeeld een applicatie voor de opvolging van deelauto's (Cambio, Poppy, etc.) schrijven. Er zijn verschillende soorten functionaliteit die je kan koppelen aan één auto:
 
 * voltanken
 * rijden
@@ -122,3 +122,18 @@ class Auto {
 }
 ```
 
+## SchoolAdmin project
+
+We breiden onze klasse `Student` uit zodat ze overeenstemt met volgend diagram:
+
+![](../../.gitbook/assets/student-start-schooladmin-met-methoden.png)
+
+### Toevoegen naamkaartje
+
+Het naamkaartje is een stuk tekst, bestaande uit de naam van de student, gevolgd door `(STUDENT)`.
+
+### Toevoegen werkbelasting
+
+Dit is 10u per week per cursus.
+
+Push je vooruitgang naar Gitlab!
