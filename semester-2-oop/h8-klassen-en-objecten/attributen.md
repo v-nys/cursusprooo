@@ -1,7 +1,7 @@
 # Attributen
 
 {% hint style="success" %}
-[Kennisclip](https://youtu.be/eT5uhSw9nFo). Deze bevat een voorbereiding op het labo die hieronder niet is uitgeschreven. Je moet het SchoolAdmin project mee maken met het filmpje.
+[Kennisclip](https://youtu.be/eT5uhSw9nFo) (let op: de demonstratie SchoolAdmin is verouderd en wordt anders aangepakt in 2022. De tekst heeft voorrang!)
 {% endhint %}
 
 **Attributen**, ook **velden** of **instantievariabelen** genoemd, zijn stukjes data die je bijhoudt in objecten. Ze stellen informatie voor die deel uitmaakt van een (object van een) klasse. Ze werken zoals de variabelen die je al kent, maar hun scope is een klasse of een object van een klasse, afhankelijk van de vraag of ze `static` zijn of niet. Door gebruik te maken van attributen, kunnen we stukjes data die samen horen ook samen houden op het niveau van de code. Alle data die samen hoort netjes groeperen en op een gestructureerd toegankelijk maken valt onder het begrip **encapsulatie** dat reeds eerder aan bod kwam.
@@ -122,3 +122,30 @@ class Auto {
 {% hint style="warning" %}
 Herhaal: `static` **betekent niet "onveranderlijk" of "vast"**. Het betekent dat iets op niveau van de klasse werkt en niet op niveau van de objecten van die klasse.
 {% endhint %}
+
+## Opdracht: SchoolAdmin
+
+Deze opdracht maak je tijdens de les. Als je de les niet kan bijwonen, volg je de demonstratie in de kennisclip.
+
+## Doelstelling
+
+We willen een programma maken dat ons helpt beheren wie is ingeschreven, welke cijfers behaald zijn, enzovoort. Hiervoor brengen we de concepten en functionaliteit die we gebruiken in kaart en stellen we ze voor in code.
+
+We doen dit in een **apart project** `SchoolAdmin`. We gebruiken dus niet het project `IndividueleOefeningen`. Je volgt om dit project op te starten dezelfde stappen als eerder. Let hierbij goed op dat je dit project niet in een bestaande Git repository maakt. Je merkt direct dat je in een Git repository staat als je de nieuwe map `SchoolAdmin` opent in VSC en Git bash tussen haakjes `(main)` of `(master)` toont. Vraag in dat geval aan je lector om na te kijken waar je het project beter _wel_ zet.
+
+### Klasse `Student`
+
+We maken een klasse student, met publieke attributen voor de naam, geboortedatum, het studentennummer en de gevolgde cursussen. Elke student kan vijf cursussen volgen. We houden ook bij _hoe veel_ studenten er zijn via een attribuut.
+
+![](../../.gitbook/assets/student-start-schooladmin.png)
+
+In de `Main` methode maken we enkele studenten. Deze zijn als volgt:
+
+* Said Aziz, geboren 1 juni 2000, volgt Programmeren en Databanken.
+* Mieke Vermeulen, geboren 1 januari 1998, volgt Communicatie.
+
+#### Delen via GitLab
+
+Wanneer je de opdracht gevolgd hebt, deel je deze via Gitlab. Je maakt hiervoor een nieuw project aan op Gitlab, maar wel in dezelfde groep als eerder (die met jouw naam).
+
+Negeer de mappen `bin` en `obj` in je versiebeheer.
