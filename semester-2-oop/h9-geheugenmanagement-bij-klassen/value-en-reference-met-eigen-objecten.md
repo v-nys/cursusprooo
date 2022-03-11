@@ -9,7 +9,9 @@ Je gegevens in een C#-programma zijn altijd van een bepaald type: `string`, `int
 &#x20;Er zijn namelijk twee mogelijkheden:
 
 * bij **value** types overschrijf je de data zelf wanneer je een toekenning doet en geef je een **kopie** van je data mee aan de methode
+  * Deze types kunnen standaard niet de waarde `null` aannemen. Als je een variabele van een van deze types maakt en niet toekent, krijgt hij een defaultwaarde, zoals `0`, `false`,...
 * bij **reference** types noteer je een geheugenadres wanneer je een toekenning doet en geef je een geheugenadres mee wanneer je een methode oproept
+  * deze types kunnen (standaard) de waarde `null` aannemen, wat betekent dat er geen adres voor de data is. Dit is ook de defaultwaarde voor alle reference types.
 
 Dit heeft belangrijke gevolgen. Als je dit systeem niet begrijpt, ga je gegarandeerd bugs in je code zien. Als voorbeeld zullen we het uitvoeren van een methode vergelijken met "iets noteren op papier" in het echte leven. Afhankelijk van de situatie wil je dan met een kopie of met een adres voor het origineel werken.
 
