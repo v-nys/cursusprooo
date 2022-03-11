@@ -24,31 +24,27 @@ Onze eigen klassen zijn **reference types**. Dat wil zeggen dat, in de ruimte di
 
 ### Demonstratie: leeftijd als onderdeel van een klasse en als losse variabele
 
-```
+```csharp
 public class Student {
     public int Leeftijd = 18;
 }
 
 public class Program {
-
-public static void VerhoogLeeftijd(int leeftijd) {
-    leeftijd += 1;
-}
-
-public static void VerhoogLeeftijd(Student student) {
-    Student.Leeftijd += 1;
-}
-
-public static void Main() {
-    int leeftijdAlsInt = 18;
-    Student student = new Student();
-    student.Leeftijd = 18;
-    VerhoogLeeftijd(leeftijdAlsInt);
-    VerhoogLeeftijd(student);
-    Console.WriteLine(leeftijdAlsInt);
-    Console.WriteLine(student.Leeftijd);
-}
-
+    public static void VerhoogLeeftijd(int leeftijd) {
+        leeftijd += 1;
+    }
+    public static void VerhoogLeeftijd(Student student) {
+        Student.Leeftijd += 1;
+    }
+    public static void Main() {
+        int leeftijdAlsInt = 18;
+        Student student = new Student();
+        student.Leeftijd = 18;
+        VerhoogLeeftijd(leeftijdAlsInt);
+        VerhoogLeeftijd(student);
+        Console.WriteLine(leeftijdAlsInt);
+        Console.WriteLine(student.Leeftijd);
+    }
 }
 ```
 
