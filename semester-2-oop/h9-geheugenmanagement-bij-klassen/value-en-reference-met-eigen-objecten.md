@@ -4,10 +4,12 @@
 
 ### Twee soorten datatypes
 
-Je gegevens in een C#-programma zijn altijd van een bepaald type: `string`, `int`, `DateTime`, `Student`, wat dan ook. Je moet voortdurend nadenken over welke datatype je aan het gebruiken bent. Dit is niet alleen belangrijk om te weten welke methoden en attributen je mag gebruiken, maar ook om te begrijpen wat er precies gebeurt als je je data meegeeft bij aanroep van een methode. Er zijn namelijk twee mogelijkheden:
+Je gegevens in een C#-programma zijn altijd van een bepaald type: `string`, `int`, `DateTime`, `Student`, wat dan ook. Je moet voortdurend nadenken over welke datatype je aan het gebruiken bent. Dit is niet alleen belangrijk om te weten welke methoden en attributen je mag gebruiken. Je moet het ook weten om te begrijpen wat gebeurt als je een waarde toekent of als je een waarde meegeeft als argument van een methode.
 
-* bij **value** types geef je een **kopie** van je data mee aan de methode
-* bij **reference** types geef je het geheugenadres van je data mee aan de methode
+&#x20;Er zijn namelijk twee mogelijkheden:
+
+* bij **value** types overschrijf je de data zelf wanneer je een toekenning doet en geef je een **kopie** van je data mee aan de methode
+* bij **reference** types noteer je een geheugenadres wanneer je een toekenning doet en geef je een geheugenadres mee wanneer je een methode oproept
 
 Dit heeft belangrijke gevolgen. Als je dit systeem niet begrijpt, ga je gegarandeerd bugs in je code zien. Als voorbeeld zullen we het uitvoeren van een methode vergelijken met "iets noteren op papier" in het echte leven. Afhankelijk van de situatie wil je dan met een kopie of met een adres voor het origineel werken.
 
@@ -51,6 +53,21 @@ public static void Main() {
 ```
 
 Deze code produceert toont twee verschillende waarden: `18` en `19`.
+
+We verklaren de 18 als volgt:
+
+* `leeftijdAlsInt` is een `int`, dus een value type, waaraan we de waarde 18 geven
+* als we `VerhoogLeeftijd` met een `int` als parameter oproepen, maken we dus een kopie van `18` en geven we die kopie mee aan de methode. Het is alsof we de methode een eigen exemplaar van de toets geven. In de body van de methode is "leeftijd" dus een naam om de kopie aan te duiden.
+* als we `leeftijd` met 1 verhogen (via `leeftijd += 1` ofwel `leeftijd = leeftijd + 1`) koppelen we de naam "leeftijd" aan een nieuwe waarde. **Dat heeft geen enkel effect op `leeftijdAlsInt`, waarvan we bij oproep van `VerhoogLeeftijd` een kopie hadden genomen.**
+* de `Console.WriteLine` toont de originele leeftijd en die is nooit aangepast
+
+We verklaren de 19 als volgt:
+
+* `Student` is een zelf geschreven klasse, dus een reference type
+* als we `student.Leeftijd` instellen op 18, gaan we eerst op zoek naar de geheugenlocatie waar de gegevens over student zijn bijgehouden en overschrijven we daar de bytes die de leeftijd voorstellen.
+* als we `VerhoogLeeftijd` met `student` als parameter aanroepen, vertellen we de methode waar in het geheugen de informatie over `student` gevonden kan worden. Het is alsof we zeggen: "Het geboortekaartje (de student) ligt in de refter".
+* `VerhoogLeeftijd` gaat de leeftijd dus aanpassen bij de bron: de bytes die overschreven worden, zijn dezelfde die we de eerste keer hebben ingevuld.
+* de `Console.WriteLine` gaat naar het adres waar de bytes van het `Student` object zich bevinden en haalt daar de leeftijd op: deze zijn in de vorige stap aangepast.
 
 ## Demonstratie: wat als klassen value types waren?
 
