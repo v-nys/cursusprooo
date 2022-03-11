@@ -1,30 +1,56 @@
 # value en reference met eigen objecten
 
-{% hint style="info" %}
-Het verschil tussen value en reference is eerder al eens behandeld op [deze pagina](broken-reference) (waar je ook een uitgebreide kennisclip terugvindt). Die leerstof blijft te kennen, maar onderstaande uitleg maakt het verschil duidelijker.
-{% endhint %}
+## Value types vs reference types
 
-{% hint style="success" %}
-[Kennisclip](https://youtu.be/1uNugk3wMho)
-{% endhint %}
+### Twee soorten datatypes
 
-{% hint style="success" %}
-[Oudere kennisclip](https://youtu.be/N6f6S9aQukU) over stack en heap. Bekijk deze als het voorgaande materiaal niet helemaal duidelijk is. **De voorbeeldklasse Student heeft niets met SchoolAdmin te maken.**
-{% endhint %}
+Je gegevens in een C#-programma zijn altijd van een bepaald type: `string`, `int`, `DateTime`, `Student`, wat dan ook. Je moet voortdurend nadenken over welke datatype je aan het gebruiken bent. Dit is niet alleen belangrijk om te weten welke methoden en attributen je mag gebruiken, maar ook om te begrijpen wat er precies gebeurt als je je data meegeeft bij aanroep van een methode. Er zijn namelijk twee mogelijkheden:
 
-## Herhaling
+* bij **value** types geef je een **kopie** van je data mee aan de methode
+* bij **reference** types geef je het geheugenadres van je data mee aan de methode
+
+Dit heeft belangrijke gevolgen. Als je dit systeem niet begrijpt, ga je gegarandeerd bugs in je code zien. Als voorbeeld zullen we het uitvoeren van een methode vergelijken met "iets noteren op papier" in het echte leven. Afhankelijk van de situatie wil je dan met een kopie of met een adres voor het origineel werken.
+
+* Op een toets krijgt iedereen een blad met de vragen en vult hij/zij persoonlijke antwoorden in. Elke toets is individueel. Het is niet zo dat het antwoord van persoon 1 zichtbaar mag zijn voor persoon 2. We nemen dan ook geen toetsen af in Google docs.
+* Wanneer er een geboortekaartje moet ondertekend worden, wordt er op de werkvloer vaak een e-mail uitgestuurd waarin staat in welk lokaal het kaartje ligt. Alle aanpassingen komen samen op hetzelfde kaartje.&#x20;
+
+We vragen niet aan iedereen om dezelfde toets in te vullen en we voorzien geen geboortekaartje per persoon die ondertekent. Je ziet dus andere resultaten wanneer je een handeling telkens uitvoert met een **kopie** dan wanneer je ze uitvoert met een **verwijzing** naar het origineel.
 
 ### Klassen zijn reference types
 
-Onze eigen klassen zijn **reference types**. Dat wil zeggen dat, in de ruimte die voorzien wordt wanneer we een variabele van een bepaalde klasse declareren, er een **verwijzing** wordt bijgehouden. Zo'n verwijzing is een adres voor de bytes die ons object vormen. Dit is in tegenstelling tot **value** types. Daarvoor wordt de waarde zelf bijgehouden op de plaats die voorzien is voor de variabele.
+Onze eigen klassen zijn **reference types**. Dat wil zeggen dat, in de ruimte die voorzien wordt wanneer we een variabele van een bepaalde klasse declareren, er een **verwijzing** wordt bijgehouden. Zo'n verwijzing is een adres voor de bytes die ons object vormen. Dit is in tegenstelling tot **value** types. Daarvoor wordt de waarde zelf bijgehouden op de plaats die voorzien is voor de variabele. De meeste types die je in het begin gezien hebt, zijn value types: `int` (en varianten), `boolean`, `float` (en varianten), `enum` types.
 
-### Stack vs. heap
+### Demonstratie: leeftijd als onderdeel van een klasse en als losse variabele
 
-Voor de uitvoering van een programma wordt gebruik gemaakt van twee types geheugen: een stack en een heap. De **stack** is klein, gestructureerd en snel. De **heap** is groot, ongestructureerd en traag. Beide geheugens zijn nodig: **op de stack wordt ruimte voorzien voor de lokale variabelen van alle methoden die momenteel in uitvoering zijn** (met Main onderaan). Op de heap staan gegevens waarnaar ergens anders verwezen wordt. Dat kan van op de stack zijn (als je een lokale variabele hebt van een reference type) of van ergens anders op de heap (bijvoorbeeld als je in een object een instantievariabele hebt van een reference type).
+```
+public class Student {
+    public int Leeftijd = 18;
+}
 
-{% hint style="info" %}
-Deze "stack" is dezelfde stack waarover je informatie kan terugvinden wanneer je de debugger uitvoert in Visual Studio!
-{% endhint %}
+public class Program {
+
+public static void VerhoogLeeftijd(int leeftijd) {
+    leeftijd += 1;
+}
+
+public static void VerhoogLeeftijd(Student student) {
+    Student.Leeftijd += 1;
+}
+
+public static void Main() {
+    int leeftijdAlsInt = 18;
+    Student student = new Student();
+    student.Leeftijd = 18;
+    VerhoogLeeftijd(leeftijdAlsInt);
+    VerhoogLeeftijd(student);
+    Console.WriteLine(leeftijdAlsInt);
+    Console.WriteLine(student.Leeftijd);
+}
+
+}
+```
+
+Deze code produceert toont twee verschillende waarden: `18` en `19`.
 
 ## Demonstratie: wat als klassen value types waren?
 
