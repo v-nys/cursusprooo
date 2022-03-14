@@ -61,11 +61,7 @@ Controleer ook dat al je testmethodes nog dezelfde resultaten leveren als eerder
 Commit je aanpassingen.
 {% endhint %}
 
-## SchoolAdmin project: automatisch Id studenten
-
-Momenteel krijgen studenten nog niet vanzelf een studentennummer. Pas je code aan zodat student 1 automatisch het nummer 1 krijgt, enzovoort.
-
-## SchoolAdmin project: Studieprogramma \(stap 1\)
+## SchoolAdmin project: Studieprogramma (stap 1)
 
 We wensen cursussen te groeperen in studieprogramma's.
 
@@ -77,7 +73,7 @@ Schrijf een klasse `StudieProgramma`. Deze heeft een naam, bevat een aantal curs
 
 Implementeer als volgt:
 
-![](../../.gitbook/assets/studieprogramma%20%281%29.png)
+![](<../../.gitbook/assets/studieprogramma (1).png>)
 
 Gebruik volgende code voor de demonstratiemethode:
 
@@ -102,7 +98,7 @@ Hier loopt iets mis. Benoem zelf de oorzaak en corrigeer de fout.
 Commit je aanpassing.
 {% endhint %}
 
-## Schooladmin project: Studieprogramma \(stap 2\)
+## Schooladmin project: Studieprogramma (stap 2)
 
 Zoals boven, maar gebruik nu volgende code voor de demonstratiemethode:
 
@@ -129,4 +125,3 @@ Opnieuw loopt het fout. Benoem zelf de oorzaak en corrigeer de fout.
 {% hint style="warning" %}
 Commit je aanpassing.
 {% endhint %}
-
