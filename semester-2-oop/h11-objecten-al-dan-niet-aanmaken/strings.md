@@ -13,11 +13,11 @@ CSV wordt vaak gebruikt om objecten tussen programma's te verplaatsen. Een objec
 ```csharp
 // Speler voornaam, familienaam, geboortejaar
 string[] lijnen = File.ReadAllLines(@"C:\spelers.csv");
-Speler[] spelers = new Speler[lines.Length];
+Speler[] spelers = new Speler[lijnen.Length];
 for (int i = 0; i < lijnen.Length; i++)
 {
     string[] kolomwaarden = lijnen[i].Split(',');
-    spelers[i] = new Speler(kolomwaarden[0],kolomwaarden[1],Convert.ToInt32(kolomwaarden[2]);
+    spelers[i] = new Speler(kolomwaarden[0],kolomwaarden[1],Convert.ToInt32(kolomwaarden[2]));
 }
 ```
 
