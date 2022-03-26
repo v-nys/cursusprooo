@@ -1,108 +1,108 @@
 # Oefeningen
 
-## Oefening H14-Figuren
+## Aparte oefeningen overerving
 
-### Leerdoelen
+Deze oefeningen maak je allebei in een klasse genaamd `Overerving`, met haar eigen `ToonSubmenu` methode.
 
-* Overerving gebruiken
-* Abstracte klasse gebruiken
+### Post
 
-### Functionele analyse
+#### Functionele analyse
 
-Dit programma demonstreert het gebruik van enkele klassen die van elkaar overerven, binnen het domein van de meetkunde.
+We werken een systeem uit voor de post, waarin (aangetekende) brieven geregistreerd worden. Dit zal ons toestaan elke brief op te zoeken in het systeem en interessante informatie over de brief op te vragen.
 
-Van meetkundige figuren kunnen we steeds hun oppervlakte bepalen. Indien deze figuren bovendien _regelmatig_ zijn - m.a.w. ze voldoen aan bepaalde criteria - kunnen we hun oppervlakte berekenen met gekende formules. Zo zijn er formules om de oppervlakte van verschillende soorten regelmatige vierhoeken te berekenen, maar ook voor driehoeken en cirkels bestaan deze formules. 
+#### Technische analyse
 
-Het programma onderscheidt volgende regelmatige figuren:
+* Maak een klasse AangetekendeBrief, met een property `ReisAfstand` van type `double`, die steeds groter dan 0 moet zijn en de afstand in kilometer uitdrukt die de brief zal moeten afleggen.
+* Voeg een computed property `Reistijd` (van type byte) en een property `Kostprijs` (van type double) toe.
+  * De reistijd is de reisafstand gedeeld door 100, afgerond naar boven, uitgedrukt in dagen.
+  * De kostprijs is 15 euro voor brieven die minder dan 100km moeten afleggen. Daarna komt er 10 euro bij per 100km.
+* Voorzie voorlopig geen constructor.
+* Maak een klasse `InternationaleAangetekendeBrief`. Voor deze is de reistijd de reisafstand gedeeld door 50, afgerond naar boven. De kostprijs is 20 euro per 100km. Voorzie voorlopig geen constructor.
+* Maak een klasse `HogePrioriteitsAangetekendeBrief`. Voor deze is de reistijd de reisafstand gedeeld door 200, afgerond naar boven. De kostprijs is 30 euro per 100km. Voorzie voorlopig geen constructor.
+* Schrijf een methode `DemonstreerBrieven`. In deze methode vraag je de gebruiker, tot hij wenst te stoppen, om brieven in te geven voor verzending. Deze worden toegevoegd aan een lijst van brieven. Wanneer hij klaar is met brieven in te geven, toon je per brief alle eigenschappen.
 
-* Parallellogram: vierhoekige figuur, waarvan de zijden 2-aan-2 evenwijdig zijn. \
-  De formule om de oppervlakte te berekenen is: basis x hoogte.
-  * Rechthoek: parallellogram, waarvan de hoeken 90° meten.\
-    Oppervlakte rechthoek: lengte x breedte.
-    * Vierkant: rechthoek, waarvan alle zijden even lang zijn.\
-      Oppervlakte vierkant: zijde²
-  * Ruit: parallellogram, waarvan de diagonalen elkaar loodrecht in het midden snijden.\
-    Oppervlakte ruit: lange diagonaal x korte diagonaal / 2
-* Driehoek: driehoekige figuur\
-  Oppervlakte driehoek: basis x hoogte. (hoogte: de afstand tussen het overstaande hoekpunt en de basis)
-* Cirkel: figuur zonder hoeken, waarvan alle punten op de omtrek zich even ver van een middelpunt bevinden.\
-  Oppervlakte cirkel: straal² x π
-
-Het programma maakt elk van deze figuren aan, geeft ze de nodige afmetingen en toont vervolgens hun oppervlakten.
+#### Voorbeeldinteractie
 
 ```
-De oppervlakte van het parallellogram met basis 6 en hoogte 2 is 12.
-De oppervlakte van de rechthoek met lengte 5 en breedte 6 is 30.
-De oppervlakte van het vierkant met zijde 3 is 9.
-De oppervlakte van de ruit met diagonalen 4 en 5 is 10.
-De oppervlakte van de cirkel is 113.10.
-De oppervlakte van de driehoek is 16.5.
+Wil je nog een brief toevoegen? (ja/nee)
+> ja
+Wat voor brief wil je toevoegen?
+1. standaard
+2. internationaal
+3. hoge prioriteit
+4. geen enkele, we zijn klaar met invoeren
+> 1
+Hoe ver moet deze brief gaan?
+> 150
+Wat voor brief wil je toevoegen?
+1. standaard
+2. internationaal
+3. hoge prioriteit
+4. geen enkele, we zijn klaar met invoeren
+> 2
+Hoe ver moet deze brief gaan?
+> 1000
+Wat voor brief wil je toevoegen?
+1. standaard
+2. internationaal
+3. hoge prioriteit
+4. geen enkele, we zijn klaar met invoeren
+> 3
+Hoe ver moet deze brief gaan?
+> 800
+Wat voor brief wil je toevoegen?
+1. standaard
+2. internationaal
+3. hoge prioriteit
+4. geen enkele, we zijn klaar met invoeren
+> 4
+Brief 1: 150km, reistijd 2 dagen, kostprijs 25 euro
+Brief 2: 1000km, reistijd 5 dagen, kostprijs 200 euro
+Brief 3: 800km, reistijd 4 dagen, kostprijs 240 euro
 ```
 
-### Technische analyse
+### Dierenarts
 
-Je schrijft dit programma als een methode `DemonstreerFigurenOvererving` van de klasse `EigenObjectOefeningen` in het project **IndividueleOefeningen**:
+#### Functionele analyse
+
+Een dierenarts moet zijn "patiënten" opvolgen met een geautomatiseerd systeem. Bepaalde aspecten zijn van toepassing voor alle soorten dieren, maar bepaalde zaken zijn afhankelijk van de diersoort.
+
+#### Technische analyse
+
+* Schrijf een abstracte klasse `Dier`, met een property Naam (van type `string`), `Geslacht` (van een enum type, genaamd `Geslachten`, met waarden `Mannelijk` en `Vrouwelijk`), een abstracte property (van type `ImmutableList<string>`) `Allergieen` en een abstracte methode `ToonChip` (van type `void`)
+* Schrijf concrete subklassen `Hond` en`Papegaai`
+  * Voor de implementatie van de allergieën van een hond voorzie je eerst een tweede property, `IndividueleAllergieen`. Voor de implementatie van `Allergieen` geef je dan  de samenvoeging van de individuele allergieën met "druiven", "noten", "chocolade" en "avocado". Voor `ToonChip` toon je de waarde van een property `Chip` die je op Hond voorziet (met type `string`).
+  * Voor papegaaien geef je een lege lijst van allergieën. Voor de chip toon je het bericht "Papegaaien worden niet gechipt."
+
+#### Voorbeeldinteractie
+
+Voeg volgende methode toe aan je klasse en maak oproepbaar uit het keuzemenu. Test dat alle resultaten kloppen.
 
 ```csharp
-public static void DemonstreerFigurenOvererving()
-{
-    Parallellogram parallellogram = new Parallellogram(6, 2);
-    parallellogram.Kleur = ConsoleColor.Cyan;
-    Console.WriteLine($"De oppervlakte van het parallellogram met basis {parallellogram.Basis} en hoogte {parallellogram.Hoogte} is {parallellogram.Oppervlakte}.");
-
-    Rechthoek rechthoek = new Rechthoek(6, 3);
-    rechthoek.Lengte = 5;
-    Console.WriteLine($"De oppervlakte van de rechthoek met lengte {rechthoek.Basis} en breedte {rechthoek.Hoogte} is {rechthoek.Oppervlakte}.");
-
-    Vierkant vierkant1 = new Vierkant(5);
-    vierkant1.Zijde = 3;
-    Console.WriteLine($"De oppervlakte van het vierkant met zijde {vierkant1.Breedte} is {vierkant1.Oppervlakte}.");
-
-    Ruit ruit = new Ruit(4, 5);
-    Console.WriteLine($"De oppervlakte van de ruit met diagonalen {ruit.Diagonaal1} en {ruit.Diagonaal2} is {ruit.Oppervlakte}.");
-
-    Figuur cirkel = new Cirkel(6);
-    Console.WriteLine($"De oppervlakte van de cirkel is {cirkel.Oppervlakte:F2}.");
-
-    Figuur driehoek = new Driehoek(3, 11);
-    Console.WriteLine($"De oppervlakte van de driehoek is {driehoek.Oppervlakte}.");
-
+public static void DemonstreerDieren() {
+    var patientjes = new List<Dier>();
+    var dier1 = new Hond();
+    dier1.IndividueleAllergieen = new ImmutableList<string> {"vis"};
+    dier1.Chip = "ABC123";
+    dier1.Geslacht = Geslachten.Vrouwelijk;
+    dier1.Naam = "Misty";
+    patientjes.Add(dier1);
+    var dier2 = new Papegaai();
+    dier2.Geslacht = Geslachten.Mannelijk;
+    dier2.Naam = "Coco";
+    foreach(var dier in patientjes) {
+        Console.WriteLine(dier.Naam);
+        Console.WriteLine(dier.Geslacht);
+        Console.WriteLine("allergieën:");
+        foreach(var allergie in dier.Allergieen) {
+            Console.WriteLine(allergie);
+        }
+        dier.ToonChip();
+    }
 }
 ```
 
-Zorg er voor dat je deze methode kan opstarten via de methode `ToonSubmenu` in dezelfde klasse.
 
-Bouw vervolgens de klassen, volgens volgend klassediagram. Merk op dat `Oppervlakte` cursief gedrukt staat, omdat het een abstracte methode is:
-
-![Onderverdeling in soorten figuren. Technisch gezien is een vierkant een rechthoek én een ruit, maar dat kunnen we voorlopig niet voorstellen omdat je maar één ouderklasse kan hebben. Later zien we wel een alternatief.](<../../.gitbook/assets/figuren (3).png>)
-
-Begin bij `Figuur` en werk het diagram tak per tak af.
-
-Het kan zijn dat de klassen `Driehoek` en `Rechthoek` bij jou al bestaan en afwijken van het diagram. Refactor de klassen zodanig dat ze overeenkomen met het diagram.
-
-{% hint style="warning" %}
-Gezien vierkanten en rechthoeken allemaal van parallellogrammen zijn, implementeren we in de subklassen `Vierkant` en `Rechthoek`_niet_ de readonly property `Oppervlakte`, maar laten we dit afhandelen door de klasse `Parallellogram`.
-
-We willen echter wél de correcte benamingen voor de afmetingen kunnen gebruiken:
-
-* `Vierkant.Zijde`
-* `Rechthoek.Breedte` en `Rechthoek.Lengte`
-
-in plaats van `Basis` in `Hoogte`. Je zal in resp. `Vierkant` en `Rechthoek` dus iets moeten toevoegen zodat, wanneer iemand de waarde van bijvoorbeeld resp. `Zijde` of `Lengte` aanpast, de onderliggende waarde `Basis` wordt aangepast, net als voor `Zijde` of `Breedte`, die `Hoogte` zullen moeten aanpassen.
-{% endhint %}
-
-{% hint style="danger" %}
-Opgelet voor `Ruit`: je kan deze klasse op dezelfde manier laten overerven van `Parallellogram` als `Rechthoek` en dus de property `Oppervlakte` van `Parallellogram` laten gebruiken.
-
-Je zal dan echter code moeten voorzien die de `Basis` en `Hoogte` zal aanpassen elke keer een diagonaal aangepast wordt. De formule hiervoor staat hieronder. Overschrijf dan `Basis` en `Hoogte` zodat de setters niets meer doen.
-
-Als dit te complex blijkt, mag je `Oppervlakte` gewoon overriden in Ruit, met de formule `diagonaal1 * diagonaal2 / 2`. Aan de base constructor van geef je vanuit `Ruit` dan gewoon twee nullen mee.
-{% endhint %}
-
-$$
-{basis} =  \sqrt{\left(\frac{diagonaal_1} 2\right)^2+\left(\frac{diagonaal_2} 2\right)^2} \newline \newline
-{hoogte} = \frac{diagonaal_1  \cdot diagonaal_2} {2 \cdot basis}
-$$
 
 ## SchoolAdmin: overerving
 
@@ -111,7 +111,7 @@ $$
 Om naast studenten ook andere personen, zoals lectoren en administratief personeel te kunnen beheren in SchoolAdmin, maken we enkele nieuwe klassen aan:
 
 * Persoon: een abstracte klasse, waarvan de andere klassen zijn afgeleid
-* Personeel, met twee kindklassen: 
+* Personeel, met twee kindklassen:&#x20;
   * AdministratiefPersoneel en Lector
 * Student, een klasse die al bestond.
 
@@ -155,7 +155,7 @@ Bijvoorbeeld: Ahmed is 4 jaar in dienst. Hij krijgt dus 2000 EUR basisloon, plus
 
 De werkbelasting van een administratief personeelslid wordt bepaald aan de hand van de taken in zijn of haar takenlijst. De duur van alle taken wordt hiertoe opgeteld.
 
-Het naamkaartje van een administratief personeelslid bevat de naam van het personeelslid, met daarachter de vermelding `(ADMINISTRATIE)`. Bv. 
+Het naamkaartje van een administratief personeelslid bevat de naam van het personeelslid, met daarachter de vermelding `(ADMINISTRATIE)`. Bv.&#x20;
 
 ```
 Ahmed Azzaoui (ADMINISTRATIE)
@@ -179,7 +179,7 @@ Bijvoorbeeld: Anna is 9 jaar in dienst. Ze krijgt dus 2200 EUR basisloon, plus 2
 
 De werkbelasting van een lector wordt bepaald aan de hand van de cursussen die hij of zij geeft. De werkbelasting van elke cursus in de collectie wordt hiertoe opgeteld.
 
-Het naamkaartje van een lector bevat de naam van de lector, met op een nieuwe lijn `Lector voor: `. Vervolgens worden de titels van alle cursussen die deze lector geeft op telkens een nieuwe lijn toegevoegd. Bv. 
+Het naamkaartje van een lector bevat de naam van de lector, met op een nieuwe lijn `Lector voor:` . Vervolgens worden de titels van alle cursussen die deze lector geeft op telkens een nieuwe lijn toegevoegd. Bv.&#x20;
 
 ```
 Anna Bolzano
@@ -191,7 +191,7 @@ Analystische Meetkunde
 
 ### Intermezzo: controle
 
-Schrijf nu een methode `DemonstreerLectoren`. Maak hierin een variabele `anna` met de gegevens van bovenstaande persoon. Maak hierin ook variabelen voor de drie cursussen in het voorbeeld boven. Anna heeft 3u economie, 3u statistiek en 4u analytische meetkunde. Ze is geboren 12 juni 1975. 
+Schrijf nu een methode `DemonstreerLectoren`. Maak hierin een variabele `anna` met de gegevens van bovenstaande persoon. Maak hierin ook variabelen voor de drie cursussen in het voorbeeld boven. Anna heeft 3u economie, 3u statistiek en 4u analytische meetkunde. Ze is geboren 12 juni 1975.&#x20;
 
 Doorloop vervolgens met een `foreach` de lijst met alle personeel en toon zo alle naamkaartjes van alle personeel. Herhaal dit ook voor de lijst met lectoren. Toon dan ook het salaris en de werkbelasting van Anna.
 
