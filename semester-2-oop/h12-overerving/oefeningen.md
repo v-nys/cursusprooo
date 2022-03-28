@@ -17,8 +17,8 @@ We werken een systeem uit voor de post, waarin (aangetekende) brieven geregistre
   * De reistijd is de reisafstand gedeeld door 100, afgerond naar boven, uitgedrukt in dagen.
   * De kostprijs is 15 euro voor brieven die minder dan 100km moeten afleggen. Daarna komt er 10 euro bij per 100km.
 * Voorzie voorlopig geen constructor.
-* Maak een klasse `InternationaleAangetekendeBrief`. Voor deze is de reistijd de reisafstand gedeeld door 50, afgerond naar boven. De kostprijs is 20 euro per 100km. Voorzie voorlopig geen constructor.
-* Maak een klasse `HogePrioriteitsAangetekendeBrief`. Voor deze is de reistijd de reisafstand gedeeld door 200, afgerond naar boven. De kostprijs is 30 euro per 100km. Voorzie voorlopig geen constructor.
+* Maak een subklasse `InternationaleAangetekendeBrief`. Voor deze is de reistijd de reisafstand gedeeld door 50, afgerond naar boven. De kostprijs is 20 euro per 100km. Voorzie voorlopig geen constructor.
+* Maak een subklasse `HogePrioriteitsAangetekendeBrief`. Voor deze is de reistijd de reisafstand gedeeld door 200, afgerond naar boven. De kostprijs is 30 euro per 100km. Voorzie voorlopig geen constructor.
 * Schrijf een methode `DemonstreerBrieven`. In deze methode vraag je de gebruiker, tot hij wenst te stoppen, om brieven in te geven voor verzending. Deze worden toegevoegd aan een lijst van brieven. Wanneer hij klaar is met brieven in te geven, toon je per brief alle eigenschappen.
 
 #### Voorbeeldinteractie
@@ -71,7 +71,7 @@ Een dierenarts moet zijn "patiënten" opvolgen met een geautomatiseerd systeem. 
 
 * Schrijf een abstracte klasse `Dier`, met een property Naam (van type `string`), `Geslacht` (van een enum type, genaamd `Geslachten`, met waarden `Mannelijk` en `Vrouwelijk`), een abstracte property (van type `ImmutableList<string>`) `Allergieen` en een abstracte methode `ToonChip` (van type `void`)
 * Schrijf concrete subklassen `Hond` en`Papegaai`
-  * Voor de implementatie van de allergieën van een hond voorzie je eerst een tweede property, `IndividueleAllergieen`. Voor de implementatie van `Allergieen` geef je dan  de samenvoeging van de individuele allergieën met "druiven", "noten", "chocolade" en "avocado". Voor `ToonChip` toon je de waarde van een property `Chip` die je op Hond voorziet (met type `string`).
+  * Voor de implementatie van de allergieën van een hond voorzie je eerst een tweede property, `IndividueleAllergieen`. Deze mag een gewone `List<string>` zijn, met default getter en setter. Voor de implementatie van `Allergieen` geef je dan  de samenvoeging van de individuele allergieën met "druiven", "noten", "chocolade" en "avocado". Voor `ToonChip` toon je de waarde van een property `Chip` die je op Hond voorziet (met type `string`).
   * Voor papegaaien geef je een lege lijst van allergieën. Voor de chip toon je het bericht "Papegaaien worden niet gechipt."
 
 #### Voorbeeldinteractie
@@ -82,7 +82,7 @@ Voeg volgende methode toe aan je klasse en maak oproepbaar uit het keuzemenu. Te
 public static void DemonstreerDieren() {
     var patientjes = new List<Dier>();
     var dier1 = new Hond();
-    dier1.IndividueleAllergieen = new ImmutableList<string> {"vis"};
+    dier1.IndividueleAllergieen = new List<string> {"vis"};
     dier1.Chip = "ABC123";
     dier1.Geslacht = Geslachten.Vrouwelijk;
     dier1.Naam = "Misty";
@@ -90,6 +90,7 @@ public static void DemonstreerDieren() {
     var dier2 = new Papegaai();
     dier2.Geslacht = Geslachten.Mannelijk;
     dier2.Naam = "Coco";
+    patientjes.Add(dier2);
     foreach(var dier in patientjes) {
         Console.WriteLine(dier.Naam);
         Console.WriteLine(dier.Geslacht);
