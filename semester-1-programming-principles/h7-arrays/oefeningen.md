@@ -128,7 +128,7 @@ Probeer zelf een flowchart te maken en zet die dan om naar C#.
 
 Je vraagt de gebruiker zijn 6  lotto getallen (getal tussen 1 en 42) in te geven. Je hoeft geen controle te doen op de getallen die de gebruiker ingeeft. Je bewaart deze getallen in een array lottoFormulier.
 
-Vervolgens simuleer je een trekking. Dat doe je door random 6 getallen te genereren (Random…) en die ook in een array lottoTrekking te bewaren. Let op: hier moet je wel controleren of het inderdaad 6 verschillende getallen zijn (hoe kan je nagaan of iets aanwezig is in je array?).
+Vervolgens simuleer je een trekking. Dat doe je door random 6 getallen te genereren (zie hiervoor [random.md](../h8-numerieke-data/random.md "mention")) en die ook in een array lottoTrekking te bewaren. Let op: hier moet je wel controleren of het inderdaad 6 verschillende getallen zijn (hoe kan je nagaan of iets aanwezig is in je array?).
 
 Dan doe je een validatie. Heeft de gebruiker 3 juiste cijfers wint hij 10 €, bij 4 juiste cijfers 1000 €, bij 5 juiste cijfers 100.000 € en bij 6 juiste cijfers 10.000.000 €.
 
