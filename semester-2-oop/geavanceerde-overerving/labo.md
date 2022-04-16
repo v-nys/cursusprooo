@@ -8,7 +8,7 @@ We schrijven een bestelsysteem. We kunnen gewone bestellingen en internationale 
 
 ### Technische analyse
 
-Schrijf een klasse Bestelling met een `uint` property `Aantal` en een `double` privé-attribuut `basisPrijs`. Voorzie ook een overschrijfbare property `TotaalPrijs`, namelijk het aantal maal de basisprijs. Schrijf een subklasse `InternationaleBestelling` die de totaalprijs bepaalt door de basisprijs met 10% te verhogen, maar vanaf 100 stuks een vlakke korting van 1000 euro toepast. **Dit zal niet meteen werken!** Doe een zo klein mogelijke aanpassing om het toch te doen werken.
+Schrijf een klasse Bestelling met een `uint` property `Aantal` en een `double` **privé**-attribuut `basisPrijs`. Voorzie ook een overschrijfbare property `TotaalPrijs`, namelijk het aantal maal de basisprijs. Schrijf **daarna** een subklasse `InternationaleBestelling` die de totaalprijs bepaalt door de basisprijs met 10% te verhogen, maar vanaf 100 stuks een vlakke korting van 1000 euro toepast. **Dit zal niet meteen werken!** Doe een zo klein mogelijke aanpassing om het toch te doen werken.
 
 Schrijf een methode `DemonstreerBestellingen` in de klasse `EigenObjectOefeningen`. Hierin vraag je of de gebruiker een gewone of internationale bestelling wil plaatsen, vraag je om het aantal en de basisprijs en toon je dan de totaalprijs.
 
@@ -65,7 +65,7 @@ abstract class Pizza {
 }
 ```
 
-Schrijf nu twee klassen `Margarita` en `Veggie` die overerven van `Pizza`, met basisprijs 5 en 6. Bij constructie krijgt een Margarita sowieso "mozzarella" toegevoegd aan de lijst met ingrediënten en krijgt een Veggie sowieso "tofu" en "spinazie", maar geen "kaas". Je moet hierbij een aanpassing doen aan `Pizza`, maar hou ze zo klein mogelijk. Schrijf een demonstratiemethode `DemonstreerPizzas` in de klasse `EigenObjectOefeningen`.
+Schrijf nu twee klassen `Margarita` en `Veggie` die overerven van `Pizza`, met basisprijs 5 en 6. Bij constructie krijgt een Margarita sowieso "mozzarella" toegevoegd aan de lijst met ingrediënten en krijgt een Veggie sowieso "tofu" en "spinazie", maar geen "kaas". Je moet hierbij een aanpassing doen aan `Pizza`, maar hou ze zo klein mogelijk. Het blijft de bedoeling dat een pizza standaard ook kaas bevat, dus schrijf je code zodat de veggie pizza dit ingrediënt verwijdert. Schrijf een demonstratiemethode `DemonstreerPizzas` in de klasse `EigenObjectOefeningen`.
 
 ### Voorbeeldinteractie
 
