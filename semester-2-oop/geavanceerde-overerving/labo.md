@@ -10,7 +10,7 @@ We schrijven een bestelsysteem. We kunnen gewone bestellingen en internationale 
 
 Schrijf een klasse Bestelling met een `uint` property `Aantal` en een `double` **privé**-attribuut `basisPrijs`. Voorzie ook een overschrijfbare property `TotaalPrijs`, namelijk het aantal maal de basisprijs. Schrijf **daarna** een subklasse `InternationaleBestelling` die de totaalprijs bepaalt door de basisprijs met 10% te verhogen, maar vanaf 100 stuks een vlakke korting van 1000 euro toepast. **Dit zal niet meteen werken!** Doe een zo klein mogelijke aanpassing om het toch te doen werken.
 
-Schrijf een methode `DemonstreerBestellingen` in de klasse `EigenObjectOefeningen`. Hierin vraag je of de gebruiker een gewone of internationale bestelling wil plaatsen, vraag je om het aantal en de basisprijs en toon je dan de totaalprijs.
+Schrijf een methode `DemonstreerBestellingen` in de klasse `Overerving`. Hierin vraag je of de gebruiker een gewone of internationale bestelling wil plaatsen, vraag je om het aantal en de basisprijs en toon je dan de totaalprijs.
 
 ### Voorbeeldinteractie
 
@@ -65,7 +65,7 @@ abstract class Pizza {
 }
 ```
 
-Schrijf nu twee klassen `Margarita` en `Veggie` die overerven van `Pizza`, met basisprijs 5 en 6. Bij constructie krijgt een Margarita sowieso "mozzarella" toegevoegd aan de lijst met ingrediënten en krijgt een Veggie sowieso "tofu" en "spinazie", maar geen "kaas". Je moet hierbij een aanpassing doen aan `Pizza`, maar hou ze zo klein mogelijk. Het blijft de bedoeling dat een pizza standaard ook kaas bevat, dus schrijf je code zodat de veggie pizza dit ingrediënt verwijdert. Schrijf een demonstratiemethode `DemonstreerPizzas` in de klasse `EigenObjectOefeningen`.
+Schrijf nu twee klassen `Margarita` en `Veggie` die overerven van `Pizza`, met basisprijs 5 en 6. Bij constructie krijgt een Margarita sowieso "mozzarella" toegevoegd aan de lijst met ingrediënten en krijgt een Veggie sowieso "tofu" en "spinazie", maar geen "kaas". Je moet hierbij een aanpassing doen aan `Pizza`, maar hou ze zo klein mogelijk. Het blijft de bedoeling dat een pizza standaard ook kaas bevat, dus schrijf je code zodat de veggie pizza dit ingrediënt verwijdert. Schrijf een demonstratiemethode `DemonstreerPizzas` in de klasse `Overerving`.
 
 ### Voorbeeldinteractie
 
@@ -91,7 +91,7 @@ We willen een digitale menukaart tonen in een online restaurant. Op deze kaart v
 * Schrijf een kindklasse `KinderGerecht`
   * Dit werkt hetzelfde als een gewoon gerecht, maar de weergave op het menu gebruikt een willekeurige kleur. Als we bijvoorbeeld het aantal tabs aanpassen naar 5, moet KinderGerecht zonder aanpassingen mee volgen.
     * Je kan een willekeurige kleur krijgen door een willekeurig getal tussen 1 en 15 te bepalen en dat dan te casten naar een waarde van de enum `ConsoleColor`.
-* Maak een methode `DemonstreerGerechten`. Hierin maak je een lijst met minstens 4 gerechten (waarvan minstens 2 kindergerechten) naar keuze en doorloop je de lijst zodat elk gerecht getoond wordt op het menu.
+* Maak een methode `DemonstreerGerechten` in de klasse `Overerving`. Hierin maak je een lijst met minstens 4 gerechten (waarvan minstens 2 kindergerechten) naar keuze en doorloop je de lijst zodat elk gerecht getoond wordt op het menu.
 
 ### Voorbeeldinteractie
 
@@ -105,47 +105,6 @@ Kabouterschnitzel             12.00(deze regel verschijnt in een willekeurige kl
 {% hint style="info" %}
 Tabs zijn eigenlijk niet ideaal. Zoek, als je sneller klaar bent, uit hoe je stringformattering kan gebruiken om de naam van elk gerecht met exact 35 tekens weer te geven.
 {% endhint %}
-
-## H15-figuren
-
-{% hint style="info" %}
-Kopieer eerst je code van [h14-figuren](../h12-overerving/oefeningen.md#oefening-h-14-figuren) naar een nieuwe klasse `VergelijkbareFiguur` met kindklassen `VergelijkbareCirkel` enzovoort.&#x20;
-{% endhint %}
-
-### Functionele analyse
-
-We willen wat basisfunctionaliteit toevoegen aan onze figuren.
-
-### Technische analyse
-
-Voorzie de niet-abstracte subklassen van `VergelijkbareFiguur` van een `Equals` methode. Twee figuren zijn gelijk als ze van hetzelfde type zijn (bijvoorbeeld beide cirkels, beide rechthoeken,...) en dezelfde afmetingen hebben.
-
-Hierna moet je ook de hash code aanpassen. Dit zie je als waarschuwing bovenaan de klasse in Visual Studio. Maak de setters voor de afmetingen `private` (of `protected` waar je ze in de kindklassen gebruikt) en zorg dat de afmetingen alleen bij constructie worden vastgelegd. Gebruik daarna de som van de hash codes van alle afmetingen als hash code voor de figuur.
-
-{% hint style="warning" %}
-De reden dat je de setters afschermt is dat een object niet van hash code mag veranderen wanneer het al in gebruik is.
-{% endhint %}
-
-Voorzie ten slotte een aantal implementaties van `ToString`:
-
-* voor cirkels toon je: `"Dit is een object van klasse VergelijkbareCirkel met straal <straal>"` (je vult \<straal> correct in en de code moet juist blijven ook als je de klasse van naam verandert)
-* voor driehoeken toon je: `"Dit is een object van klasse VergelijkbareDriehoek met basis <basis> en hoogte <hoogte>"` (je vult de afmetingen correct in en de code moet juist blijven ook als je de klasse van naam verandert)
-* voor parallellogram zoals bij de vorige twee
-* voor een rechthoek (en dus vanzelf ook voor een vierkant) genereer je een tekening bestaande uit puntjes. Je doet dit door de breedte en lengte naar boven af te ronden en daaruit het aantal rijen en kolommen in je tekening af te leiden.
-
-Bijvoorbeeld, voor een rechthoek met breedte exact 31 en hoogte 4.5:
-
-```
-...............................
-...............................
-...............................
-...............................
-...............................
-```
-
-### Voorbeeldinteractie
-
-Schrijf een methode `DemonstreerVergelijkbareFiguren` die de werking van Equals test door figuren met dezelfde afmetingen met elkaar te vergelijken, figuren van verschillende types met elkaar te vergelijken, figuren met verschillende afmetingen met elkaar te vergelijken. Gebruik elk type figuur. Toon dan ook voor elke figuur de voorstelling als string.
 
 ## Uitbreidingen SchoolAdmin
 
