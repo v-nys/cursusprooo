@@ -108,6 +108,10 @@ Tabs zijn eigenlijk niet ideaal. Zoek, als je sneller klaar bent, uit hoe je str
 
 ## Uitbreidingen SchoolAdmin
 
+In de volgende stappen, zullen we SchoolAdmin verder uitbouwen. Volgend diagram toont het hele project na al deze wijzigingen:
+
+![](../../.gitbook/assets/SchoolAdmin-na-H15.png)
+
 ### Vergelijkbare objecten
 
 Voorzie `Persoon` en `Cursus` van een eigen versie van Equals. Hiermee zullen we later nagaan dat een van deze objecten niet dubbel voorkomt in de lijst met geregistreerde objecten.
