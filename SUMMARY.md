@@ -125,18 +125,12 @@
   * [Zelf uitzonderingen maken](semester-2-oop/exception-handling/zelf-uitzonderingen-maken.md)
   * [Wanneer exceptions en handling gebruiken](semester-2-oop/exception-handling/waar-exceptions-plaatsen.md)
   * [Labo](semester-2-oop/exception-handling/labo.md)
-  * [Labo (verouderd)](semester-2-oop/exception-handling/labo-verouderd.md)
 * [H17: polymorfisme en interfaces](semester-2-oop/h17-polymorfisme-en-interfaces/README.md)
   * [Polymorfisme](semester-2-oop/h17-polymorfisme-en-interfaces/polymorfisme.md)
   * [Polymorfisme in de praktijk](semester-2-oop/h17-polymorfisme-en-interfaces/polymorfisme-in-de-praktijk.md)
   * [Interfaces](semester-2-oop/h17-polymorfisme-en-interfaces/interfaces.md)
   * [Losse koppeling](semester-2-oop/h17-polymorfisme-en-interfaces/losse-koppeling.md)
   * [Labo](semester-2-oop/h17-polymorfisme-en-interfaces/labo-1.md)
-* [H18: Recursie](semester-2-oop/recursie/README.md)
-  * [Wat is recursie?](semester-2-oop/recursie/wat-is-recursie.md)
-  * [Uitgewerkte voorbeelden](semester-2-oop/recursie/uitgewerkte-voorbeelden.md)
-  * [Labo](semester-2-oop/recursie/labo.md)
-  * [SchoolAdmin - Recursie (versie 2020)](semester-2-oop/recursie/schooladmin-recursie-versie-2020.md)
 
 ## Appendix
 
