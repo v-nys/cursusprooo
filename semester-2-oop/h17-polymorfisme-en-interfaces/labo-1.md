@@ -96,78 +96,6 @@ Verwarm ketel 1 tot 100 graden Celcius… zie interactie:
 
 ![](../../.gitbook/assets/screenshot-from-2021-05-17-17-45-23.png)
 
-## h17-IComparable-implementatie
-
-### Functionele analyse
-
-We willen op een eenvoudige manier objecten van een bepaalde klasse kunnen sorteren.
-
-### Technische analyse
-
-Gegeven volgende klasse `Product`:
-
-```csharp
-namespace IndividueleOefeningen {
-    public class Product {
-        private uint kostprijs;
-        public uint Kostprijs
-        {
-            get { return kostprijs; }
-            set { kostprijs = value; }
-        }
-        
-        private string naam;
-        public string Naam
-        {
-            get { return naam; }
-            set { naam = value; }
-        }
-    }
-}
-```
-
-We moeten producten kunnen sorteren op kostprijs voor we ze aan de gebruiker tonen. We kunnen dit doen door de interface `IComparable<Product>` te implementeren. Door dit te doen, beloven we eigenlijk dat we een object van deze klasse kunnen vergelijken met een product. Anders gezegd: dat we producten met elkaar kunnen vergelijken. Hierdoor kunnen we gebruik maken van algemene methodes om objecten te sorteren.
-
-De interface `IComparable<Product>` vereist dat je `CompareTo(Product p)` implementeert. De afspraak is dat je `-1` teruggeeft als `this` voor `p` moet worden gesorteerd, `0` als ze gelijkwaardig zijn en `1` als `this` na `p` komt.
-
-Implementeer deze interface. Je moet ook rekening houden met de mogelijkheid dat `p` `null` is. `null` moet voor deze oefening helemaal vooraan komen.
-
-Test met volgende code. Sla deze op in `Polymorfisme.DemonstreerVergelijkbareProducten()`.
-
-```csharp
-var p1 = new Product("Fiets", 999);
-var p2 = new Product("Playstation 5", 500);
-var p3 = new Product("Elektrische gitaar", 750);
-var p4 = new Product("Doos ontbijtgranen", 3);
-Product p5 = null;
-var p6 = new Product("Xbox Series X", 500);
-var producten = new List<Product> { p1, p2, p3, p4, p5, p6 };
-producten.Sort();
-foreach(var p in producten) {
-    if (!(p is null)) {
-        System.Console.WriteLine($"{p.Naam}, {p.Kostprijs}");
-    }
-    else {
-        System.Console.WriteLine("NULL");
-    }
-}
-```
-
-### Voorbeelduitvoer
-
-```
-NULL
-Doos ontbijtgranen, 3
-Playstation 5, 500
-Xbox Series X, 500
-Elektrische gitaar, 750
-Fiets, 999
-```
-
-{% hint style="warning" %}
-Probeer eens zonder de code die aangeeft dat `Product` de gevraagde interface implementeert. Wat gebeurt er?
-{% endhint %}
-
 ## h17-Rooster-stap1
 
 ### Functionele analyse
@@ -269,37 +197,17 @@ public void VoegToeLosgekoppeld() {
 
 Merk op dat je maar een heel kleine aanpassing zou moeten doen om `Kalender` uit te breiden met bijvoorbeeld `QualityTime`. Die klasse zou door iemand anders geschreven mogen worden.
 
-## h17-zoek-grootste
-
-### Functionele analyse
-
-We willen te weten komen wat het "grootste" element in een lijst is. We willen deze code gebruiken voor allerlei zaken. De hoogste prijs, de oudste persoon, de cirkel met de grootste straal,...
-
-### Technische analyse
-
-Schrijf een statische methode `ZoekGrootste` in de klasse voor dit labo. Deze heeft als parameter een lijst van `IComparable` objecten en geeft een object terug dat minstens even groot is als alle andere objecten.
-
-Doe dit zonder een sorteermethode te gebruiken.
-
-Implementeer ook `IComparable` (ditmaal zonder `<T>`) in de klasse Figuur (die je eerder geschreven hebt) zodat figuren vergeleken worden op basis van oppervlakte. Implementeer eveneens `IComparable `in de klasse `Pizza`  (die je eerder geschreven hebt) zodat pizza's vergeleken worden op basis van hun totaalprijs. Als je twee objecten van een verschillende klasse vergelijkt, geef je 0 terug. Je kan hiervoor gebruik maken van: `if (obj is Pizza)` of `if (obj is Figuur)`. Als de booleaanse expressie tot true evalueert, weet je dat het om een soort pizza of een soort figuur gaat en dat de vergelijking zinvol is.
-
-Maak dan een lijst met `Figuur`-objecten en een lijst met `Pizza`-objecten. Ga na dat je methode inderdaad de "grootste" oplevert.
-
-{% hint style="info" %}
-Waarom zonder `<T>`? Omdat het gebruik van die `<T>` bepaalde concepten vergt die we niet behandeld hebben.
-{% endhint %}
-
 ## SchoolAdmin project: sorteren volgens criteria
 
 ### Functionele analyse
 
-We willen graag de data in ons systeem gesorteerd weergeven. We willen dit niet doen met één vaste sorteerprocedure (zoals in het geval van CompareTo), maar we willen de gebruiker de keuze geven om te sorteren op verschillende manieren. Dit ben je ongetwijfeld gewoon van op webwinkels waar je kan sorteren volgens prijs, productnaam,...
+We willen graag de data in ons systeem gesorteerd weergeven. We willen de gebruiker de keuze geven om te sorteren op verschillende manieren. Dit ben je ongetwijfeld gewoon van op webwinkels waar je kan sorteren volgens prijs, productnaam,...
 
 ### Technische analyse
 
 * Om dit klaar te spelen, heb je een klasse nodig die de `IComparer<T>` interface implementeert. Deze interface bestaat al. Je hoeft hem niet te schrijven. Je moet hem alleen implementeren.
 * Bijvoorbeeld, om studenten op naam te sorteren, kan je een `StudentenVolgensNaamComparer` schrijven die `IComparer<Student>` implementeert.
-* Deze interface bevat één methode `Compare(T,T)`. Deze werkt gelijkaardig aan de methode `CompareTo`, maar ze bevat twee parameters.
+* Deze interface bevat één methode `Compare(T,T)`. Deze vergelijkt twee objecten van één type.
   * Als het eerste argument voor het tweede gesorteerd moet worden, geeft de methode een negatief getal terug.
   * Als het eerste argument na het tweede gesorteerd moet worden, geeft de methode een positief getal terug.
   * Als het niet uitmaakt, geeft ze 0 terug.
