@@ -211,6 +211,7 @@ We willen graag de data in ons systeem gesorteerd weergeven. We willen de gebrui
   * Als het eerste argument voor het tweede gesorteerd moet worden, geeft de methode een negatief getal terug.
   * Als het eerste argument na het tweede gesorteerd moet worden, geeft de methode een positief getal terug.
   * Als het niet uitmaakt, geeft ze 0 terug.
+* Door een instantie van een `IComparer` als argument mee te geven aan `Sort`, kan je sorteren op basis van de implementatie van `Compare`.
 * Voeg hiermee volgende functionaliteit toe aan je systeem:
   * Een methode `Student.ToonStudenten` die je kan oproepen vanaf het keuzemenu
     * Bij het tonen van studenten, moet de gebruiker kunnen kiezen om ze te tonen in stijgende of dalende alfabetische volgorde.
