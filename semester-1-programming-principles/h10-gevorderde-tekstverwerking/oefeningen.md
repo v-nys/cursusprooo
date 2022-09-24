@@ -83,6 +83,6 @@ Kopieer het bestand TextCell.cs naar TextCellPersistent.cs. Maak gerbuik van de 
 
 ### Voorbeeldinteractie
 
-![](<../../.gitbook/assets/image (71).png>)
+![](<../../.gitbook/assets/image (71) (2).png>)
 
 ![](<../../.gitbook/assets/image (69).png>)
