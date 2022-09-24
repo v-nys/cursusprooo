@@ -11,9 +11,9 @@
 
 ## Semester 1: Programming Principles
 
-* [H1: Werken met Visual Studio Code](semester-1-programming-principles/h0-werken-met-visual-studio/README.md)
+* [H1: Werken met Visual Studio](semester-1-programming-principles/h0-werken-met-visual-studio/README.md)
   * [Introductie tot C#](semester-1-programming-principles/h0-werken-met-visual-studio/1-introductie-tot-c.md)
-  * [Visual Studio Code en .NET Core installeren](semester-1-programming-principles/h0-werken-met-visual-studio/2-visual-studio-installeren.md)
+  * [Visual Studio en .NET Core installeren](semester-1-programming-principles/h0-werken-met-visual-studio/2-visual-studio-installeren.md)
   * [Een C# project maken in Visual Studio](semester-1-programming-principles/h0-werken-met-visual-studio/3-een-c-project-maken-in-visual-studio.md)
   * [Fouten in je code](semester-1-programming-principles/h0-werken-met-visual-studio/fouten-in-je-code.md)
   * [Je eerste stappen in C#](semester-1-programming-principles/h0-werken-met-visual-studio/je-eerste-stappen-in-c.md)

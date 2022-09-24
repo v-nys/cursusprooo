@@ -10,9 +10,7 @@ Volg hiervoor de instructies in het document op DigitAP.
 
 ### Stap 2: een klasse maken `EenProgrammaSchrijvenInCSharp`
 
-Dit is nieuw. Klassen zijn een extra organisatie-eenheid van code. Ze spelen een grote rol in objectgeoriënteerd programmeren, maar kunnen ook gebruikt worden om stukken code verder te groeperen. Dit is voorlopig het enige dat wij er mee zullen doen.
-
-In de verkenner kies je via rechterklik voor "New C# class". Je noemt deze `EenProgrammaSchrijvenInCSharp.cs`. De extensie `.cs` geeft aan dat het om een bestand gaat met daarin C#-code.
+Dit is nieuw. Klassen zijn een extra organisatie-eenheid van code. Ze spelen een grote rol in objectgeoriënteerd programmeren, maar kunnen ook gebruikt worden om stukken code verder te groeperen. Dit is voorlopig het enige dat wij er mee zullen doen. Via "File" maak je een nieuw bestand aan. Je kiest ervoor een nieuwe C#-klasse te maken met de naam `EenProgrammaSchrijvenInCSharp`.
 
 ### Stap 3: een eigen methode maken
 
