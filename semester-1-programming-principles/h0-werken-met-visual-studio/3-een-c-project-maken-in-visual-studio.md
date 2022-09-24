@@ -1,10 +1,10 @@
 ---
 description: >-
-  We gebruiken Visual Studio Code om een C# programma te ontwikkelen. In dit
+  We gebruiken Visual Studio om een C# programma te ontwikkelen. In dit
   onderdeel leren we hoe je een C# project opstart.
 ---
 
-# Een C\# project maken in Visual Studio Code
+# Een C# project maken in Visual Studio
 
 ## Het belang van het maken van afspraken voor het geven namen
 
@@ -20,7 +20,7 @@ description: >-
    1. **PascalNotatie**: geen spaties tussen de woorden en alle woorden beginnen met een hoofdletter: `EenProgrammaOmJeGoedBijTeVoelen`
    2. **camelCasenotatie**: geen spaties tussen de woorden en alle woorden, behalve het eerste, beginnen met een hoofdletter, bijvoorbeeld: `eenProgrammaOmJeGoedBijTeVoelen`
 
-![camelCase](../../.gitbook/assets/image%20%2814%29.png)
+![camelCase](<../../.gitbook/assets/image (14).png>)
 
 ## Rootmap
 
@@ -31,24 +31,6 @@ Ik raad jullie aan een rootmap te maken voor alle vakken die je op AP volgt. Je 
 {% hint style="warning" %}
 Voor vakken waarin met Git gewerkt wordt, vermijden we mappen die automatisch gesynchroniseerd worden. Zet je rootmap dus niet in OneDrive of Dropbox of Google Drive. Dat kan voor technische problemen zorgen. Meer info vind je in [de cursus Git](https://apwt.gitbook.io/leerlijn-git/).
 {% endhint %}
-
-## **Een map voor een project maken**
-
-Als je een nieuw project wil aanmaken, heb je er nog een map voor nodig. Een map aanmaken doe je zo, via rechtermuisklik:
-
-![](../../.gitbook/assets/screenshot-from-2021-09-20-09-11-58.png)
-
-Geef daarna je map een naam die omschrijft over welk project het gaat. Bijvoorbeeld BeginnenMetCSharp:
-
-![](../../.gitbook/assets/screenshot-from-2021-09-20-09-14-12.png)
-
-## Belangrijke bestanden voor C\# aanmaken:
-
-Nu kunnen we deze map openen in Visual Studio Code en van daaruit een nieuw project opstarten. Hiervoor gebruiken we File -&gt; Open Folder -&gt; \(we openen de map voor ons project\) -&gt; View -&gt; Terminal -&gt; \(een tekstvenster verschijnt en we klikken daar in\) -&gt; `dotnet new console` -&gt; \(er zijn bestanden verschenen, waaronder Program.cs en een bestand met de extensie .csproj\)
-
-![](../../.gitbook/assets/start-project.gif)
-
-
 
 
 

@@ -1,7 +1,7 @@
 ---
 description: >-
-  In dit onderdeel analyseren we het standaard programma dat Visual Code voor
-  ons in het bestand program.cs gemaakt heeft. Verder zetten we de eerste
+  In dit onderdeel analyseren we het standaard programma dat Visual Studio voor
+  ons in het bestand Program.cs gemaakt heeft. Verder zetten we de eerste
   stappen in het leren programmeren.
 ---
 

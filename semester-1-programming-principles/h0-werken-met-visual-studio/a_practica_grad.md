@@ -6,15 +6,11 @@ Om je oefeningen ordelijk bij te houden, gaan we al een aantal zaken gebruiken d
 
 ### Stap 1: een project LaboOefeningen maken
 
-Volg hiervoor de instructies op [Een C# project maken in Visual Studio Code](3-een-c-project-maken-in-visual-studio.md).
+Volg hiervoor de instructies in het document op DigitAP.
 
 ### Stap 2: een klasse maken `EenProgrammaSchrijvenInCSharp`
 
 Dit is nieuw. Klassen zijn een extra organisatie-eenheid van code. Ze spelen een grote rol in objectgeoriënteerd programmeren, maar kunnen ook gebruikt worden om stukken code verder te groeperen. Dit is voorlopig het enige dat wij er mee zullen doen.
-
-{% hint style="warning" %}
-Dit zal alleen werken als je de extensies juist hebt geïnstalleerd! Zie [Beginnen met C# in Visual Studio Code](4-beginnen-met-c-in-visual-studio.md).
-{% endhint %}
 
 In de verkenner kies je via rechterklik voor "New C# class". Je noemt deze `EenProgrammaSchrijvenInCSharp.cs`. De extensie `.cs` geeft aan dat het om een bestand gaat met daarin C#-code.
 
