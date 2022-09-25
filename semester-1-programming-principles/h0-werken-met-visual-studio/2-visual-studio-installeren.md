@@ -13,8 +13,6 @@ De "SDK" (software development toolkit) bevat alles wat je nodig hebt om de code
 1. Voor deze opdrachten gebruiken we .NET Core 6.0, maar we gebruiken de (explicietere) template van .NET Core 5.0. Je moet dus beide SDK's installeren.
 2. Sommige afbeeldingen hieronder dateren van de tijd van .NET Core 2.0 en Visual Studio 2017. Soms kunnen zaken er op jouw scherm dus wat anders uitzien dan in deze cursus.
 
-{% file src="../../.gitbook/assets/installatie-vs.pdf" %}
-
 ## Installatie
 
 ### Visual Studio 2022 Community
@@ -43,7 +41,9 @@ Opmerking\
 
 ### Flowgorithm
 
-TODO
+Flowgorithm is een visuele programmeertaal. We zullen deze gebruiken om bepaalde concepten duidelijk zichtbaar te maken. Je moet de Windows Installer van [deze pagina](http://flowgorithm.org/download/files/Flowgorithm-Setup.zip) halen. Tijdens de installatie klik je gewoonweg elke keer op "Next".
+
+Gebruikers van Mac OS installeren dit best via [Wine](https://wiki.winehq.org/Download) of in een virtuele machine. Als dit echt niet lukt, kunnen ze tijdelijk [FlowRun](https://flowrun.io/scratchpad) gebruiken, maar deze software werkt wat anders en ondersteunt geen arrays.
 
 ## Eerste gebruik Visual Studio&#x20;
 
@@ -77,7 +77,7 @@ TODO
 
 Hierbij ga je ervoor zorgen dat je met afkortingen kan coderen die dan automatisch in het goede formaat worden omgezet.
 
-Bv. **cr** wordt dan **Console.ReadLine()**
+Bv. **cr** (gevolgd door twee TABs) **** wordt dan **Console.ReadLine()**
 
 Je kan volgende code kopiëren in een tekstbestand met als extensie .snippet of je kan het hieronder downloaden.
 
