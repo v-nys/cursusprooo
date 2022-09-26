@@ -41,7 +41,7 @@ Opmerking\
 
 ### Flowgorithm
 
-Flowgorithm is een visuele programmeertaal. We zullen deze gebruiken om bepaalde concepten duidelijk zichtbaar te maken. Je moet de Windows Installer van [deze pagina](http://flowgorithm.org/download/files/Flowgorithm-Setup.zip) halen. Tijdens de installatie klik je gewoonweg elke keer op "Next".
+Flowgorithm is een visuele programmeertaal. We zullen deze gebruiken om bepaalde concepten duidelijk zichtbaar te maken. Je moet de Windows Installer van [deze pagina](http://www.flowgorithm.org/download/index.html) halen. Tijdens de installatie klik je gewoonweg elke keer op "Next".
 
 Gebruikers van Mac OS installeren dit best via [Wine](https://wiki.winehq.org/Download) of in een virtuele machine. Als dit echt niet lukt, kunnen ze tijdelijk [FlowRun](https://flowrun.io/scratchpad) gebruiken, maar deze software werkt wat anders en ondersteunt geen arrays.
 
