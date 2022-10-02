@@ -45,6 +45,9 @@ Flowgorithm is een visuele programmeertaal. We zullen deze gebruiken om bepaalde
 
 Gebruikers van Mac OS installeren dit best via [Wine](https://wiki.winehq.org/Download) of in een virtuele machine. Als dit echt niet lukt, kunnen ze tijdelijk [FlowRun](https://flowrun.io/scratchpad) gebruiken, maar deze software werkt wat anders en ondersteunt geen arrays.
 
+Een voorbeeld van hoe je begint te werken met Flowgorithm kan je hier bekijken.\
+[https://www.youtube.com/watch?v=7SuYTvYCqOw](https://www.youtube.com/watch?v=7SuYTvYCqOw)
+
 ## Eerste gebruik Visual Studio&#x20;
 
 1.  Kies voor **Create New Project**\
