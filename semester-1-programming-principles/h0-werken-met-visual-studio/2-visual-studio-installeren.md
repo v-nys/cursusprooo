@@ -63,18 +63,16 @@ Een voorbeeld van hoe je begint te werken met Flowgorithm kan je hier bekijken.\
 
 
     <figure><img src="../../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
-4.  In de volgende stap dien je als **Framework** .NET 5.0 (Out of support) te kiezen\
+4.  In de volgende stap dien je als **Framework** .NET 6.0  te kiezen en de optie "Do not use top-level statements" **aan** te vinken.\
 
 
-    <figure><img src="../../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
-5.  Nu is je project opgestart en dien je nog enkele settings aan te passen. Ga in het menu **Project** naar **Edit Project File**\
 
 
-    <figure><img src="../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
-6.  Het \<TargetFramework> wijzig je in **net6.0**\
-    ****
+    <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Je settings moeten er zo uitzien.</p></figcaption></figure>
 
-    <figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
+Nadat je je project hebt aangemaakt, rechterklik je op je project in de Solution Explorer -> Properties -> Build -> General en schakel je "Implicit global usings" **uit**.
+
+<figure><img src="../../.gitbook/assets/Screenshot from 2022-10-02 14-06-47.png" alt=""><figcaption><p>Je settings moeten er zo uitzien.</p></figcaption></figure>
 
 ## Code Snippet
 
