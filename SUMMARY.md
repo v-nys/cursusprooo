@@ -30,7 +30,6 @@
   * [Strings](semester-1-programming-principles/h2-tekst-in-code/5\_chars\_strings.md)
   * [Strings samenvoegen](semester-1-programming-principles/h2-tekst-in-code/6\_stringinterpolation.md)
   * [Omzetten van en naar strings](semester-1-programming-principles/h2-tekst-in-code/omzetten-van-en-naar-strings.md)
-  * [Input verwerken en omzetten](semester-1-programming-principles/h2-tekst-in-code/4b\_inputconverten.md)
   * [Functionaliteit van strings](semester-1-programming-principles/h2-tekst-in-code/functionaliteit-van-strings.md)
   * [Oefeningen](semester-1-programming-principles/h2-tekst-in-code/a\_practica.md)
 * [H4: Beslissingen](semester-1-programming-principles/h4-beslissingen/README.md)
