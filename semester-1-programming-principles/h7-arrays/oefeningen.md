@@ -54,7 +54,7 @@ Maak een programma dat aan de gebruiker vraagt om 10 waarden (int) in te voeren 
 
 Vervolgens vraagt het programma de gebruiker om een getal in te voeren. Het programma toont dan alle getallen die groter of gelijk zijn aan dit ingevoerde getal zijn die in de array aanwezig zijn. Indien geen getallen groter zijn dan verschijnt een bericht Niets is groter op het scherm.
 
-Implementeer onderstaande flowchart in C#.
+Implementeer onderstaande flowchart in C#. Merk op: je kan in principe de statistieken al bijhouden terwijl de getallen worden ingevoerd, maar hier worden ze pas achteraf berekend. Doe het ook zo.
 
 #### &#x20;**Technische analyse**
 
