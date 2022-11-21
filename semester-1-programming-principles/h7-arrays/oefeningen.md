@@ -195,7 +195,7 @@ Probeer d.m.v. Flowgorithm de flowchart te gebruiken en zet dan om naar C#.
 
 Heel eenvoudig uitgelegd zal het algoritme de te zoeken waarde vergelijken met de middelste waarde (van een gesorteerde array). Als de waarde niet gelijk is wordt dat gedeelte van de array waar de waarde zich niet in kan bevinden weggegooid. De zoektocht gaat verder totdat de waarde is gevonden (of niet gevonden indien alle mogelijkheden zijn doorzocht)
 
-Implementeer onderstaande flowchart  in C#.
+Implementeer onderstaande flowchart  in C#. Om twee strings te ordenen, gebruik je `string1.CompareTo(string2)`. Dit levert -1 als string1 voor string2 komt, 1 als string1 na string2 komt en 0 als ze op dezelfde plaats komen.
 
 #### **Technische analyse**
 
