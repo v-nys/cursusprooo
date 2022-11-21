@@ -282,7 +282,7 @@ Wat is het budget voor je kerstinkopen?
 Prijs van cadeau 1?
 > 200
 Prijs van cadeau 2?
-> 33.0
+> 330
 Je bent al 30.0 euro over het budget!
 Info over je aankopen:
 Totaal bedrag: 530.0 euro
