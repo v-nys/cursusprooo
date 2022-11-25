@@ -54,9 +54,9 @@ Werk volgend flowchart verder af en zet om in C#.
 
 {% file src="../../.gitbook/assets/H07-EmailGeneratorTemplate.fprg" %}
 
-![](<../../.gitbook/assets/image (69) (1).png>)
-
 #### Voorbeeldinteractie
+
+![](<../../.gitbook/assets/image (69) (1).png>)
 
 ### Oefening: H7-ReeksOperatiesMetReturn
 
