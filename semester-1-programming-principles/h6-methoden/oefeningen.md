@@ -84,6 +84,10 @@ De andere methodes zijn:
 * Methode `IsEvenMetReturn` die bepaalt of een getal even of oneven is. De returnwaarde vertelt dus of iets waar of niet waar is.
 * Methode `BepaalEvenGetallenMetReturn.` Deze geeft als antwoord een `List` van alle even getallen tot n. `ReeksOperatiesMetReturn` toont deze getallen dan, gescheiden door een komma.
 
+#### Voorbeeldinteractie
+
+Zoals boven, met de vermelde aanpassingen (afronding tot 1 cijfer na de komma en getallen gescheiden door `,`)
+
 ### Oefening: H7-film-default
 
 #### Leerdoelen
