@@ -87,3 +87,38 @@ De andere methodes zijn:
 #### Voorbeeldinteractie
 
 Zoals boven, met de vermelde aanpassingen (afronding tot 1 cijfer na de komma en getallen gescheiden door `,`)
+
+
+
+### H7-driehoeken
+
+Functionele analyse
+
+We schrijven een simpel tekenprogramma, dat driehoeken van een bepaalde afmeting, met een bepaald patroon kan tekenen.
+
+Technische analyse
+
+Schrijf een methode `TekenDriehoek`. Deze methode verwacht twee zaken: een karakter om het patroon voor te stellen en de hoogte van de driehoek. Ze roept zelf **meermaals** een andere methode `TekenRegel` op, die één regel van de driehoek tekent. TekenRegel toont niets op het scherm via `Console.WriteLine`!
+
+Voorbeeldinteractie
+
+<pre><code><strong>Hoe hoog is de driehoek?
+</strong>> 4
+Welk karakter gebruiken we als patroon?
+> #
+#
+##
+###
+####</code></pre>
+
+
+
+```
+Hoe hoog is de driehoek?
+> 3
+Welk karakter gebruiken we als patroon?
+> .
+.
+..
+...
+```
