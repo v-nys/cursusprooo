@@ -60,7 +60,6 @@
   * [Oefeningen](semester-1-programming-principles/h6-methoden/oefeningen.md)
 * [Intermezzo: TextCell](semester-1-programming-principles/intermezzo-textcell.md)
 * [H8: Numerieke data](semester-1-programming-principles/h8-numerieke-data/README.md)
-  * [Extra operatoren](semester-1-programming-principles/h8-numerieke-data/extra-operatoren.md)
   * [De Math klasse](semester-1-programming-principles/h8-numerieke-data/de-math-klasse.md)
   * [Casting en conversie](semester-1-programming-principles/h8-numerieke-data/casting-en-conversie.md)
   * [Random](semester-1-programming-principles/h8-numerieke-data/random.md)
