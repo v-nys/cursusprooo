@@ -1,6 +1,6 @@
 # Casting en conversie
 
-## Casting en conversie <a href="casting-en-conversie" id="casting-en-conversie"></a>
+## Casting en conversie <a href="#casting-en-conversie" id="casting-en-conversie"></a>
 
 {% hint style="success" %}
 [Kennisclip basis](https://youtu.be/EspjsQkxD3s) (meer kennisclips lager op de pagina)
@@ -19,11 +19,11 @@ Dit kan op o.a. volgende manieren:
 * Via casting: de (klassieke) manier die ook werkt in veel andere programmeertalen.
 * Via de `Convert` klasse. Deze staat omzettingen toe die handig zijn, maar niet op het niveau van de taal zijn vastgelegd.
 
-### Casting <a href="casting" id="casting"></a>
+### Casting <a href="#casting" id="casting"></a>
 
 Een klassieke, in veel talen voorziene manier om date om te zetten is **casten**. Hierbij dien je aan de compiler te zeggen: _"Volgende variabele die van het type x is, moet aan deze variabele van het type y toegekend worden. **Ik besef dat hierbij data verloren kan gaan, maar zet de variabele toch maar om naar het nieuwe type, ik draag alle verantwoordelijkheid voor het verlies.**"_ Je kan bijvoorbeeld bovenstaand kommagetal enkel omzetten naar een geheel getal als je de cijfers na de komma verloren laat gaan. In het Engels betekent _to cast_ "in een vorm gieten".
 
-#### Wat is casting <a href="wat-is-casting" id="wat-is-casting"></a>
+#### Wat is casting <a href="#wat-is-casting" id="wat-is-casting"></a>
 
 Casting heb je nodig om een waarde van een bepaald type om te zetten naar een waarde van een ander type. Stel dat je een complexe berekening hebt waar je werkt met verschillende types (bijvoorbeeld int, double en float). Door te casten kan je het soort bewerkingen sturen. Je gaat namelijk bepaalde types even als andere types gebruiken.
 
@@ -44,7 +44,7 @@ int kommaNietWelkom = (int) kommagetal;
 Console.WriteLine(kommaNietWelkom);
 ```
 
-#### Narrowing <a href="narrowing" id="narrowing"></a>
+#### Narrowing <a href="#narrowing" id="narrowing"></a>
 
 {% hint style="success" %}
 [Kennisclip narrowing en widening](https://youtu.be/2HA96kQI6X0)
@@ -80,7 +80,7 @@ Het resultaat in `var2` zal `20` zijn (alles na de komma wordt bij casting van e
 
 > Merk op dat `var1` nooit van datatype is veranderd; enkel de inhoud ervan (`20.4`) werd eruit gehaald, omgezet ("gecast") naar `20` en dan aan `var2` toegewezen dat enkel `int` aanvaardt.
 
-#### Widening <a href="widening" id="widening"></a>
+#### Widening <a href="#widening" id="widening"></a>
 
 Casting kan je ook gebruiken als je aan **widening** doet (een kleiner type in een groter type steken), als volgt:
 
@@ -94,40 +94,7 @@ var2 = var1;
 
 Deze code zal zonder problemen gaan. `var2` zal de waarde `20.0` bevatten. De inhoud van `var1` wordt _verbreed_ naar een `double`, eenvoudigweg door er een kommagetal van te maken. Er gaat **geen** inhoud verloren. Dit wordt ook **impliciete casting** genoemd. Er bestaan scenario's waarin je dit toch expliciet wil doen, maar die komen minder vaak voor en zullen we benoemen als we ze tegenkomen.
 
-#### Het effect van types op operaties <a href="het-effect-van-types-op-operaties" id="het-effect-van-types-op-operaties"></a>
-
-{% hint style="success" %}
-[Kennisclip effect van types](https://youtu.be/4y86SnSxjzs)
-{% endhint %}
-
-Stel dat temperatuurGisteren en temperatuurVandaag van het type int zijn, maar dat we nu de gemiddelde temperatuur willen weten. De formule voor gemiddelde temperatuur over 2 dagen is:
-
-```
-int temperatuurGemiddeld = (temperatuurGisteren + temperatuurVandaag)/2;
-```
-
-Test dit eens met de waarden `20` en `25` in plaats van de twee variabelen voor de metingen. Wat zou je verwachten als resultaat? Waarschijnlijk 22,5 (omdat (20+25)/2 = 22,5) _Nochtans krijg je 22 op scherm te zien en zal de variabele temperatuurGemiddeld ook effectief de waarde 22 bewaren en niet 22.5._
-
-Het probleem is dat het gemiddelde van 2 getallen niet noodzakelijk een geheel getal is. **Omdat de expressie enkel integers bevat (temperatuurGisteren, temperatuurVandaag en 2) zal ook het resultaat een integer zijn.** In dit geval wordt alles na de komma gewoon _weggegooid_, vandaar de uitkomst.
-
-Hoe krijgen we de correctere uitslag te zien? Door kommagetallen te gebruiken in elke berekening die een onderdeel vormt. Dit kan als volgt:
-
-```
-int temperatuurGemiddeld = (1.0 * temperatuurGisteren + temperatuurVandaag)/2;
-```
-
-Helaas compileert dit niet, omdat we een `double` willen bijhouden in een `int`.
-
-```
-double temperatuurGemiddeld = (1.0 * temperatuurGisteren + temperatuurVandaag)/2;
-```
-
-Nu zal temperatuurGemiddeld wel de waarde 22.5 bevatten.
-
-\
-Dit kon ook met een expliciete cast, bijvoorbeeld door te schrijven `(double)temperatuurGisteren`. Maar casts ondermijnen de hulp die we kunnen krijgen van de compiler en zijn daarom spaarzaam te gebruiken. In deze cursus zal je waarschijnlijk weinig expliciete casts gebruiken.
-
-### Conversie <a href="conversie" id="conversie"></a>
+### Conversie <a href="#conversie" id="conversie"></a>
 
 {% hint style="success" %}
 [Kennisclip Convert klasse](https://youtu.be/5Yj2k2fPI68)
