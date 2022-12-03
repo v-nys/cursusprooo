@@ -192,7 +192,19 @@ string[] berekendRooster = new string[rooster.Length];
 KopieerCellenZonderFormule(rooster,berekendRooster);
 ```
 
-De hulpmethode schrijven we als volgt: (neem over uit modeloplossing). Dit maakt dus een tweede array die er uitziet zoals de eerste, maar zonder de formules (highlight in de tekening). Merk ook op dat de hoofdingen in de tekening wel bestaan, maar in code zijn ze niet aanwezig. Ze stellen gewoon indexposities van een array voor, waarbij A wijst op de eerste cel, B op de tweede,...
+De hulpmethode schrijven we als volgt:
+
+```csharp
+public static void KopieerCellenZonderFormule(string[] roosterIn, string[] roosterUit) {
+    for (int cel = 0; cel < roosterIn.Length; cel++) {
+        if(!roosterIn[cel].StartsWith("=")) {
+            roosterUit[cel] = roosterIn[cel];
+        }
+    }
+}
+```
+
+Dit maakt dus een tweede array die er uitziet zoals de eerste, maar zonder de formules. Merk ook op dat de hoofdingen in de tekening wel bestaan, maar in code zijn ze niet aanwezig. Ze stellen gewoon indexposities van een array voor, waarbij A wijst op de eerste cel, B op de tweede,...
 
 In een volgende stap doorlopen we de berekende array en proberen we de "vraagtekens" in te vullen. Hoe vaak dit moet gebeuren, hangt af van hoe veel formules er staan en wat de verbanden tussen cellen zijn. Zolang onze spreadsheet juist is opgesteld, eindigt het proces uiteindelijk wel en wordt alles ingevuld. We vatten dit als volgt samen:
 
