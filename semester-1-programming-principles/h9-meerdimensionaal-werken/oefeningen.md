@@ -154,11 +154,7 @@ Je gaat vervolgens vertrekkende van deze positie een aantal willekeurige spronge
 
 ### Functionele analyse
 
-Surf naar de webstek: [https://www.compadre.org/osp/EJSS/3577/12.htm](https://www.compadre.org/osp/EJSS/3577/12.htm)
-
-We gaan een vereenvoudigde console versie maken.
-
-
+Surf naar de webstek: [https://www.compadre.org/osp/EJSS/3577/12.htm](https://www.compadre.org/osp/EJSS/3577/12.htm). Hier wordt het "Game of Life" uitgelegd. We gaan een vereenvoudigde console versie maken. Dit wordt bijvoorbeeld gebruikt om automatisch omgevingen te genereren in games met procedurele generatie.
 
 ### Technische analyse
 
