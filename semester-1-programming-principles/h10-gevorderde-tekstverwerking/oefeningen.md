@@ -43,28 +43,6 @@ Schrijf in de klasse `GevorderdeTekstverwerking`een  methode `CentraalAlignerenT
 
 ![](<../../.gitbook/assets/image (70).png>)
 
-## H10-interpolatie-met-formatering
-
-### Leerdoelen
-
-* Gebruik van string interpolatie en formatering
-
-### Functionele analyse
-
-Verander je oefeningen die je tot nu toe gemaakt hebt en waar string concatenatie is gebruikt (+). Maak gebruik van string interpolatie.
-
-Voorbeelden: Schoenenverkoper, maaltafels, ...
-
-
-
-### Technische analyse
-
-Pas de methoden aan. Je hoeft geen nieuwe methodes te maken.
-
-### Voorbeeldinteractie
-
-Niet van toepassing
-
 ## H10-TextCellPersistent
 
 ### Leerdoelen
