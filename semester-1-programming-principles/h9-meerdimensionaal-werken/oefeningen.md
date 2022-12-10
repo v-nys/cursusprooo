@@ -4,6 +4,31 @@
 
 Al deze oefeningen maak je als statische methoden van een klasse Meerdimensionaal. Je kan elk van deze methoden uitvoeren via een keuzemenu, zoals bij vorige hoofdstukken.
 
+## H09-Som-n-de-rij
+
+### Leerdoelen
+
+* Werken met multidimensionale arrays
+
+### Functionele analyse
+
+We wensen de gegevens in één rij te groeperen door hun som te bepalen, een beetje zoals je dat in een Excel spreadsheet zou kunnen doen.
+
+### Technische analyse
+
+Schrijf in de klasse `Meerdimensionaal` een methode `SomNdeRij`. Deze heeft twee parameters: een meerdimensionale array van `double` en een rijnummer (een `int`). De returnwaarde is de som van alle waarden op de rij met het gevraagde nummer.
+
+Deze methode toont niets op de console, maar je kan ze wel testen via deze voorbeeldcode, die je mag gebruiken wanneer deze oefening wordt opgestart via het keuzemenu:
+
+```csharp
+double[,] numbers = {{4.2, 8.1, 3.3},
+                     {2.0, 4.0, 6.0},
+                     {3.1,3.2,3.3}};
+Console.WriteLine("Van welke rij wil je de som zien?");
+int row = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(SomNdeRij(numbers,row));
+```
+
 ## H09-Som-per-rij
 
 ### Leerdoelen
@@ -43,44 +68,6 @@ Sommen per rij:
 16
 ```
 
-## H09-som-per-kolom
-
-### Leerdoelen
-
-* Werken met multidimensionale arrays
-
-### Functionele analyse
-
-We wensen de gegevens in één kolom te groeperen door hun som te bepalen, een beetje zoals je dat in een Excel spreadsheet zou kunnen doen.
-
-### Technische analyse
-
-Schrijf in de klasse `MeerDimensionaal` een methode `SomPerKolom`. Deze werkt zoals de vorige oefening, maar maakt de som per kolom.
-
-### Voorbeeldinteractie
-
-```
-Hoe veel rijen telt je array?
-> 3
-Hoe veel kolommen telt je array?
-> 2
-Waarde voor rij 1, kolom 1?
-> 4
-Waarde voor rij 1, kolom 2?
-> 2
-Waarde voor rij 2, kolom 1?
-> 1
-Waarde voor rij 2, kolom 2?
-> 1
-Waarde voor rij 3, kolom 1?
-> 7
-Waarde voor rij 3, kolom 2?
-> 9
-Sommen per kolom:
-12
-12
-```
-
 ## H09-Pixels
 
 ### Leerdoelen
@@ -109,6 +96,59 @@ Vraag hierin eerst aan de gebruiker welke afmetingen hij wil gebruiken voor zijn
 ### Voorbeeldinteractie
 
 ![](../../.gitbook/assets/paint.png)
+
+## H09-color-filter
+
+### Leerdoelen
+
+* Werken met multidimensionale arrays
+* Werken met enumeratietypes
+
+### Functionele analyse
+
+We zullen ons tekenprogramma uitbreiden met een extra functie die de array bewerkt. Met andere woorden, een (simpele) afbeeldingsfilter. Deze zal bepaalde pixels automatisch rood kleuren.
+
+### Technische analyse
+
+Schrijf een functie `RedFilter`. Deze heeft een afbeelding (een `ConsoleColor[,]`) als invoer en vervangt alle vakjes die zich op en oneven rij **én** een oneven kolom bevinden door de kleur rood. Ze toont de afbeelding niet.
+
+Deze oefening kan je niet rechtstreeks oproepen via het keuzemenu voor deze klasse. Het wordt een extra optie om iets met je afbeelding te doen.
+
+### Voorbeeldinteractie
+
+```
+Wat wil je doen?
+1. een pixel kleuren
+2. afbeelding tonen
+3. roodfilter toepassen
+```
+
+## H09-triangle-filter
+
+### Leerdoelen
+
+* Werken met multidimensionale arrays
+* Werken onderling afhankelijke indexen
+
+### Functionele analyse
+
+We zullen ons tekenprogramma uitbreiden met nog een extra functie die de array bewerkt. Deze functie "knipt" de afbeelding diagonaal in twee.
+
+### Technische analyse
+
+Schrijf een functie `LowerTriangleFilter`. Deze heeft een afbeelding (een `ConsoleColor[,]`). Ze zorgt ervoor dat alle pixels op of onder de diagonaal van links boven tot rechts onder wit worden gemaakt. Dit vereist wat te veel rekenwerk als de afbeelding geen vierkant is, dus geef de foutmelding `"deze filter kan niet worden toegepast op deze afbeelding"` als het aantal rijen verschilt van het aantal kolommen.
+
+Deze oefening kan je niet rechtstreeks oproepen via het keuzemenu voor deze klasse. Het wordt een extra optie om iets met je afbeelding te doen.
+
+### Voorbeeldinteractie
+
+```
+Wat wil je doen?
+1. een pixel kleuren
+2. afbeelding tonen
+3. roodfilter toepassen
+4. driehoeksfilter toepassen
+```
 
 ## H09-HeatmapPaardensprong
 
@@ -154,7 +194,7 @@ Je gaat vervolgens vertrekkende van deze positie een aantal willekeurige spronge
 
 ### Functionele analyse
 
-Surf naar de webstek: [https://www.compadre.org/osp/EJSS/3577/12.htm](https://www.compadre.org/osp/EJSS/3577/12.htm). Hier wordt het "Game of Life" uitgelegd. We gaan een vereenvoudigde console versie maken. Dit wordt bijvoorbeeld gebruikt om automatisch omgevingen te genereren in games met procedurele generatie.
+Surf naar de webstek: [https://www.compadre.org/osp/EJSS/3577/12.htm](https://www.compadre.org/osp/EJSS/3577/12.htm). Hier wordt het "Game of Life" uitgelegd. We gaan een vereenvoudigde console versie maken. Dit wordt bijvoorbeeld veel gebruikt om automatisch omgevingen met structuur te genereren in games met procedurele generatie.
 
 ### Technische analyse
 
