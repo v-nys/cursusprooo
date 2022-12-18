@@ -43,6 +43,32 @@ Schrijf in de klasse `GevorderdeTekstverwerking`een  methode `CentraalAlignerenT
 
 ![](<../../.gitbook/assets/image (70).png>)
 
+## H10-KerstinkopenListNetjes
+
+### Leerdoelen
+
+* stringformattering
+* string methodes
+* gebruik van karakters
+
+### Functionele analyse
+
+De eerdere oefening [KerstinkopenList](oefeningen.md#h10-kerstinkopenlistnetjes) kan wat mooier gepresenteerd worden. Ze zou ook ingezet moeten kunnen worden in regio's waar de euro niet gebruikt wordt.
+
+### Technische analyse
+
+Maak een kopie van KerstinkopenList in deze klasse.
+
+Pas door middel van stringformattering en string methodes de code aan, zodat:
+
+* Een scheidingslijn getekend wordt onder "Info over je aankopen", die net breed genoeg is. Als we later deze hoofding veranderen (bijvoorbeeld naar "Informatie over je aankopen") moet de lijn mee groeien of krimpen.
+* Alle bedragen netjes onder elkaar staan in één kolom. Hiervoor mag je veronderstellen dat de berichten op de linkerkant maximum 25 karakters in beslag zullen nemen.
+* Het symbool voor de munteenheid van de gebruiker vanzelf gebruikt wordt. Dit kan dus € zijn maar ook $ of £ of iets anders.
+
+### Voorbeeldinteractie
+
+<figure><img src="../../.gitbook/assets/Screenshot from 2022-12-18 13-39-53.png" alt=""><figcaption></figcaption></figure>
+
 ## H10-TextCellPersistent
 
 ### Leerdoelen
@@ -64,3 +90,21 @@ Kopieer het bestand TextCell.cs naar TextCellPersistent.cs. Maak gerbuik van de 
 ![](<../../.gitbook/assets/image (71) (2).png>)
 
 ![](<../../.gitbook/assets/image (69).png>)
+
+
+
+## H10-Pixels-Persistent
+
+### Functionele analyse
+
+We wensen de kunstwerken die we in Pixels tekenen op te slaan en in te laden.
+
+### Technische analyse
+
+Kopieer de code voor Pixels naar deze klasse.
+
+Zorg ervoor dat je twee extra opties hebt in je tekenprogramma. Om een tekening op te slaan, moet je elke `ConsoleColor` casten naar een `int`. Dan kan je één rij pixels opslaan als één rij getallen, gescheiden door puntkomma. Om een tekening in te laden, doe je het omgekeerde.
+
+### Voorbeeldinteractie
+
+<figure><img src="../../.gitbook/assets/Screenshot from 2022-12-18 13-54-57.png" alt=""><figcaption></figcaption></figure>
