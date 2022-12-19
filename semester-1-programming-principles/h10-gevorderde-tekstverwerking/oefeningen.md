@@ -43,7 +43,7 @@ Schrijf in de klasse `GevorderdeTekstverwerking`een  methode `CentraalAlignerenT
 
 ![](<../../.gitbook/assets/image (70).png>)
 
-## H10-KerstinkopenListNetjes
+## H10-KerstinkopenNetjes
 
 ### Leerdoelen
 
@@ -53,11 +53,11 @@ Schrijf in de klasse `GevorderdeTekstverwerking`een  methode `CentraalAlignerenT
 
 ### Functionele analyse
 
-De eerdere oefening [KerstinkopenList](oefeningen.md#h10-kerstinkopenlistnetjes) kan wat mooier gepresenteerd worden. Ze zou ook ingezet moeten kunnen worden in regio's waar de euro niet gebruikt wordt.
+De eerdere oefening [Kerstinkopen](oefeningen.md#h10-kerstinkopenlistnetjes) kan wat mooier gepresenteerd worden. Ze zou ook ingezet moeten kunnen worden in regio's waar de euro niet gebruikt wordt.
 
 ### Technische analyse
 
-Maak een kopie van KerstinkopenList in deze klasse.
+Maak een kopie van Kerstinkopen in deze klasse.
 
 Pas door middel van stringformattering en string methodes de code aan, zodat:
 
@@ -66,6 +66,10 @@ Pas door middel van stringformattering en string methodes de code aan, zodat:
 * Het symbool voor de munteenheid van de gebruiker vanzelf gebruikt wordt. Dit kan dus € zijn maar ook $ of £ of iets anders.
 
 ### Voorbeeldinteractie
+
+{% hint style="warning" %}
+Deze voorbeeldinteractie gebruikt de List versie van Kerstinkopen. Maak de oefening met de array versie.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/Screenshot from 2022-12-18 13-39-53.png" alt=""><figcaption></figcaption></figure>
 
