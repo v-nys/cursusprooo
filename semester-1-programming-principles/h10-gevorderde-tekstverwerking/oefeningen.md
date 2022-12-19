@@ -65,6 +65,10 @@ Pas door middel van stringformattering en string methodes de code aan, zodat:
 * Alle bedragen netjes onder elkaar staan in één kolom. Hiervoor mag je veronderstellen dat de berichten op de linkerkant maximum 25 karakters in beslag zullen nemen.
 * Het symbool voor de munteenheid van de gebruiker vanzelf gebruikt wordt. Dit kan dus € zijn maar ook $ of £ of iets anders.
 
+{% hint style="danger" %}
+Als je het symbool voor de munteenheid niet te zien krijgt in de terminal van Visual Studio, ligt dat niet aan jouw code. Voer je code dan uit via het commando `dotnet run` in Git bash.
+{% endhint %}
+
 ### Voorbeeldinteractie
 
 {% hint style="warning" %}
