@@ -68,7 +68,7 @@ Pas door middel van stringformattering en string methodes de code aan, zodat:
 ### Voorbeeldinteractie
 
 {% hint style="warning" %}
-Deze voorbeeldinteractie gebruikt de List versie van Kerstinkopen. Maak de oefening met de array versie.
+Deze voorbeeldinteractie gebruikt de List versie van Kerstinkopen. Maak de oefening met de array versie. Het gaat hem hier over de weergave onderaan en de aanpassingen daar zijn dezelfde voor beide versies.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/Screenshot from 2022-12-18 13-39-53.png" alt=""><figcaption></figcaption></figure>
