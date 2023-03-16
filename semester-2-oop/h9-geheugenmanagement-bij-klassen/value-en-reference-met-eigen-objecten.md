@@ -36,7 +36,7 @@ public class Program {
         leeftijd += 1;
     }
     public static void VerhoogLeeftijd(Student student) {
-        Student.Leeftijd += 1;
+        student.Leeftijd += 1;
     }
     public static void Main() {
         int leeftijdAlsInt = 18;
